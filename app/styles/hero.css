@@ -1,0 +1,495 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 8% 0 8%;
+  overflow: hidden;
+  position: relative;
+
+  background:
+    radial-gradient(circle at 20% 50%, rgba(212,175,55,.18), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(212,175,55,.12), transparent 25%),
+    linear-gradient(
+      180deg,
+      #070707 0%,
+      #020202 60%,
+      #000000 100%
+    );
+}
+
+
+
+/* ========================= */
+/* LEFT */
+/* ========================= */
+
+.hero-left {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 100px; /* غيّر الرقم حسب ما تريد */
+  animation: fadeLeft 1.2s ease forwards;
+}
+
+.hero-image{
+  width:1200px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  margin:100px auto 0;
+
+  filter:
+    drop-shadow(0 0 40px rgba(212,175,55,.25))
+    drop-shadow(0 0 80px rgba(212,175,55,.08));
+
+  animation:floating 6s ease-in-out infinite;
+  transition:.6s;
+}
+
+
+.hero-image:hover {
+
+  transform: translateY(80px) scale(1.05);
+
+}
+
+/* ========================= */
+/* RIGHT */
+/* ========================= */
+
+.hero-right {
+  width: 45%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 150px;   /* غيّر الرقم حسب رغبتك */
+
+  animation: fadeRight 1.2s ease forwards;
+}
+
+
+
+.hero-logo{
+
+    width:520px;
+    height:auto;
+
+    max-width:100%;
+
+    margin:0 auto 20px;
+
+    filter:
+        drop-shadow(0 0 25px rgba(212,175,55,.35));
+
+    animation:floatingLogo 5s ease-in-out infinite;
+    filter:
+drop-shadow(0 0 30px rgba(212,175,55,.35))
+drop-shadow(0 0 70px rgba(212,175,55,.18));
+
+}
+
+
+
+.hero-subtitle{
+
+    font-family: var(--font-cormorant);
+
+    color:#d4af37;
+
+    font-size:32px;
+
+    font-weight:500;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.gold-line{
+
+width:140px;
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#f8e38c,
+#d4af37,
+#f8e38c,
+transparent
+);
+
+margin:28px auto;
+
+box-shadow:
+0 0 18px rgba(212,175,55,.35);
+
+}
+
+
+
+/* ========================= */
+/* SERVICES */
+/* ========================= */
+
+.hero-services h3{
+
+    font-family: var(--font-cormorant);
+
+    color:#d4af37;
+
+    font-size:26px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-services ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.hero-services li{
+
+    font-family: var(--font-cormorant);
+
+    color:#e0e0e0;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    line-height:2;
+
+}
+
+
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.book-btn{
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:700;
+
+    background: linear-gradient(
+        90deg,
+        #9c7400,
+        #f3d66e,
+        #b78609
+    );
+
+    color:black;
+
+    box-shadow: 0 10px 35px rgba(212,175,55,.25);
+
+    transition:.4s;
+}
+
+.book-btn:hover{
+
+transform:
+translateY(-6px)
+scale(1.04);
+
+box-shadow:
+0 0 40px rgba(212,175,55,.45);
+
+}
+
+
+
+.watch-btn{
+    min-width:250px;
+    padding:20px 48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:3px solid #d4af37;
+    border-radius:60px;
+
+    background:#000;
+    color:#d4af37;
+
+    font-family:var(--font-cormorant);
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 35px rgba(212,175,55,.30),
+        inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:.45s ease;
+}
+
+.watch-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+    transition:.8s;
+}
+
+.watch-btn:hover::before{
+    left:150%;
+}
+
+.watch-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        #8d6500 0%,
+        #cfa52b 20%,
+        #f6df82 50%,
+        #c89617 80%,
+        #8d6500 100%
+    );
+
+    color:#000;
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 18px 55px rgba(212,175,55,.55),
+        0 0 30px rgba(212,175,55,.35);
+}
+
+.watch-btn:active{
+    transform:scale(.97);
+}
+
+
+
+
+
+/* ========================= */
+/* GOLD LIGHT */
+/* ========================= */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:8%;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.15);
+
+    filter:blur(140px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.8),
+        transparent,
+        rgba(0,0,0,.8)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes floatingLogo{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:900px){
+
+.hero{
+
+  flex-direction:column;
+  padding:40px 20px;
+
+}
+
+.hero-left,
+.hero-right{
+
+  width:100%;
+  text-align:center;
+
+}
+
+.hero-image{
+
+  width:340px;
+  transform:none;
+  margin:auto;
+
+}
+
+.hero-logo{
+
+  width:320px;
+  margin:auto;
+
+}
+
+.hero-right{
+
+  margin-top:30px;
+
+}
+
+.hero-buttons{
+
+  flex-direction:column;
+  align-items:center;
+
+}
+
+}
+
+
+@keyframes fadeLeft{
+
+from{
+opacity:0;
+transform:translateX(-80px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes fadeRight{
+
+from{
+opacity:0;
+transform:translateX(80px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}

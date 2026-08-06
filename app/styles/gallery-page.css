@@ -1,0 +1,48 @@
+.gallery-page {
+
+  min-height:100vh;
+
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.80),
+    rgba(0,0,0,0.90)
+  ),
+  url("/gallery-bg.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  padding-top:180px;
+
+  padding-bottom:100px;
+
+}
+
+.gallery-page::before {
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at top,
+    rgba(212,175,55,0.25),
+    transparent 40%
+  );
+
+  pointer-events:none;
+
+}
+
+
+.gallery-page {
+
+  position:relative;
+
+}

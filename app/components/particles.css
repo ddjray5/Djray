@@ -1,0 +1,73 @@
+.particles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.particles span{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    filter:blur(.3px);
+
+    box-shadow:
+        0 0 8px rgba(212,175,55,.9),
+        0 0 18px rgba(212,175,55,.55),
+        0 0 35px rgba(212,175,55,.25);
+
+    animation:particleFloat linear infinite,
+              twinkle 4s ease-in-out infinite;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+        transform:
+            translate3d(0,0,0)
+            scale(.2);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    50%{
+        transform:
+            translate3d(35px,-55vh,0)
+            scale(.8);
+    }
+
+    100%{
+        transform:
+            translate3d(-45px,-120vh,0)
+            scale(1.4);
+
+        opacity:0;
+    }
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        filter:brightness(.8);
+    }
+
+    50%{
+        filter:brightness(1.8);
+    }
+
+}
+
+

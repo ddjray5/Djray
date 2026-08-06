@@ -1,0 +1,198 @@
+.footer{
+    width:100%;
+    padding:100px 5% 50px;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,.08),
+    transparent 45%),
+    #050505;
+
+    text-align:center;
+    border-top:1px solid rgba(212,175,55,.15);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-logo h2{
+    color:#d4af37;
+    font-size:52px;
+    letter-spacing:8px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.footer-logo p{
+
+    font-family: var(--font-cormorant);
+
+    color:#d4af37;
+
+    font-size:34px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    margin-top:18px;
+
+}
+
+
+.footer-logo-image{
+    width:280px;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+    transition:.5s ease;
+    filter:drop-shadow(0 0 25px rgba(212,175,55,.35));
+}
+
+.footer-logo-image:hover{
+    transform:scale(1.05);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.footer-description{
+    max-width:900px;
+    margin:40px auto;
+}
+
+.footer-description p{
+
+    font-family: var(--font-cormorant);
+
+    color:#cfcfcf;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    line-height:1.8;
+
+    letter-spacing:1px;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.footer-socials{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+    margin:50px 0;
+}
+
+.footer-socials a{
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    transition:.35s ease;
+}
+
+.footer-socials a:hover{
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+    text-shadow:0 0 20px rgba(212,175,55,.8);
+
+}
+
+/* =========================
+   LINE
+========================= */
+
+.footer-line{
+
+    width:180px;
+
+    height:2px;
+
+    margin:40px auto;
+
+    background:#d4af37;
+
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-copy{
+
+    color:#888;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.footer{
+
+    padding:80px 25px 40px;
+
+}
+
+.footer-logo h2{
+
+    font-size:38px;
+
+}
+
+.footer-logo p{
+
+    font-size:17px;
+
+}
+
+.footer-description p{
+
+    font-size:16px;
+
+}
+
+.footer-socials{
+
+    gap:20px;
+
+}
+
+.footer-socials a{
+
+    font-size:16px;
+
+}
+
+}

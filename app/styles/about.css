@@ -1,0 +1,243 @@
+.about{
+    width:100%;
+    padding:140px 5%;
+    background:#050505;
+}
+
+.about-content{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+/* ===========================
+   SUBTITLE
+=========================== */
+
+.about-subtitle{
+    font-family:var(--font-cormorant);
+    font-size:20px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.about h2{
+    font-family:var(--font-cormorant);
+    color:#d4af37;
+    font-size:42px;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.about p{
+    color:#d6d6d6;
+    font-size:22px;
+    line-height:2;
+    max-width:900px;
+    margin-bottom:28px;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+
+.about-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px 35px;
+    margin:45px 0;
+}
+
+.about-list span{
+    color:#d4af37;
+    font-size:20px;
+    border:1px solid rgba(212,175,55,.25);
+    padding:14px 22px;
+    border-radius:40px;
+    transition:.35s;
+}
+
+.about-list span:hover{
+    background:#d4af37;
+    color:#000;
+    transform:translateY(-5px);
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.about-stats{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:120px;
+    margin-top:70px;
+    flex-wrap:nowrap;
+}
+
+.stat{
+    width:260px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.stat h3{
+    font-family:var(--font-cormorant);
+    color:#d4af37;
+    font-size:78px;
+    font-weight:700;
+    line-height:1;
+    margin:0;
+    height:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* نفس حجم العداد */
+
+.stat h3 span{
+    font:inherit;
+    color:inherit;
+    line-height:1;
+}
+
+/* Abu Dhabi */
+
+.stat:last-child h3{
+    font-size:78px;
+}
+
+/* النص */
+
+.stat span{
+    margin-top:18px;
+    font-family:var(--font-cormorant);
+    color:#d0d0d0;
+    font-size:20px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* الخط الذهبي */
+
+.stat h3::after{
+    content:"";
+    position:absolute;
+    bottom:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90px;
+    height:2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        transparent
+    );
+}
+
+.stat h3{
+    position:relative;
+}
+
+
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+.about-content > *{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp .8s ease forwards;
+}
+
+.about-subtitle{animation-delay:.1s;}
+.about h2{animation-delay:.2s;}
+.about p:nth-of-type(1){animation-delay:.4s;}
+.about p:nth-of-type(2){animation-delay:.6s;}
+.about-list{animation-delay:.8s;}
+.about-stats{animation-delay:1s;}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:900px){
+
+    .about{
+        padding:100px 25px;
+    }
+
+    .about h2{
+        font-size:34px;
+    }
+
+    .about p{
+        font-size:19px;
+        line-height:1.8;
+    }
+
+    .about-list{
+        gap:15px;
+    }
+
+    .about-list span{
+        font-size:16px;
+        padding:12px 18px;
+    }
+
+    .about-stats{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .stat h3{
+        font-size:52px;
+    }
+
+    .stat-events h3{
+        font-size:66px;
+    }
+
+    .stat:last-child h3{
+        font-size:48px;
+    }
+
+    .stat span{
+        font-size:16px;
+    }
+}

@@ -1,0 +1,193 @@
+.testimonials{
+    background:#050505;
+    padding:120px 5%;
+}
+
+.testimonials-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.testimonials-title h2{
+    color:#d4af37;
+    font-size:48px;
+    letter-spacing:4px;
+    margin-bottom:10px;
+}
+
+.testimonials-title p{
+    color:#d0d0d0;
+    font-size:22px;
+}
+
+.testimonials-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#111;
+    border:1px solid rgba(212,175,55,.2);
+    border-radius:25px;
+    padding:35px;
+    transition:.4s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(212,175,55,.25);
+}
+
+.stars{
+    color:#d4af37;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.review{
+    color:#d8d8d8;
+    line-height:1.8;
+    margin-bottom:25px;
+    font-style:italic;
+}
+
+.testimonial-card h3{
+    color:#d4af37;
+    margin-bottom:5px;
+    font-size:22px;
+}
+
+.testimonial-card span{
+    color:#999;
+    font-size:15px;
+}
+
+
+.booking-modal form{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.booking-modal label{
+    color:#d4af37;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+.booking-modal input,
+.booking-modal textarea{
+
+    width:100%;
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#0b0b0b;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    color:white;
+
+    font-size:16px;
+}
+
+.booking-modal textarea{
+
+    min-height:180px;
+
+    resize:none;
+
+}
+
+.booking-modal button{
+
+    width:280px;
+
+    margin:auto;
+
+}
+
+
+.review-button{
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+}
+
+.review-button .watch-btn{
+    width:320px;
+}
+
+
+
+.review-form{
+
+    width:700px;
+    max-width:95%;
+
+    margin:50px auto 0;
+
+    padding:40px;
+
+    background:#0b0b0b;
+
+    border:2px solid #d4af37;
+
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.review-form h2{
+
+    color:#d4af37;
+
+    text-align:center;
+
+    font-size:38px;
+
+}
+
+.review-form input,
+.review-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    background:#111;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.review-form textarea{
+
+    min-height:180px;
+
+    resize:none;
+
+}
+
+.review-form .btn-gold,
+.review-form .watch-btn{
+
+    width:320px;
+
+    margin:auto;
+
+}
