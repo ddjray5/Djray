@@ -12,52 +12,43 @@ import Reveal from "./components/Reveal";
 import Testimonials from "./components/Testimonials";
 import WhyChoose from "./components/WhyChoose";
 
-
-
 export default function Home() {
   return (
-     <>
-  
-    
-  <Preloader />
+    <>
+      <Preloader />
+      <Particles />
+      <Navbar />
+      <Hero />
 
-  <Particles />
+      <Reveal>
+        <Music />
+      </Reveal>
 
-  <Navbar />
+      <Reveal>
+        <Services />
+      </Reveal>
 
-  <Hero />
+      <Reveal>
+        <WhyChoose />
+      </Reveal>
 
-  <Reveal>
-    <Music />
-  </Reveal>
+      <Reveal>
+        <Gallery />
+      </Reveal>
 
-  <Reveal>
-    <Services />
-  </Reveal>
+      <Reveal>
+        <About />
+      </Reveal>
 
-  <Services />
+      <Reveal>
+        <Testimonials />
+      </Reveal>
 
-<WhyChoose />
+      <Reveal>
+        <Contact />
+      </Reveal>
 
-
-  <Reveal>
-    <Gallery />
-  </Reveal>
-
-  <Reveal>
-    <About />
-  </Reveal>
-
-  <Reveal>
-  <Testimonials />
-</Reveal>
-
-  <Reveal>
-    <Contact />
-  </Reveal>
-
-  <Footer />
-</>
-
+      <Footer />
+    </>
   );
 }
