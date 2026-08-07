@@ -19,7 +19,7 @@ export default function Hero() {
         {/* LEFT */}
         <div className="hero-left">
           <img
-            src="/djray-new.jpg"
+            src="/djray-new.webp"
             alt="DJ RAY"
             className="hero-image"
           />
