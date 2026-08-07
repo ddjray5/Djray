@@ -41,8 +41,8 @@
   margin:100px auto 0;
 
   filter:
-    drop-shadow(0 0 40px rgba(212,175,55,.25))
-    drop-shadow(0 0 80px rgba(212,175,55,.08));
+drop-shadow(0 0 22px rgba(212,175,55,.14))
+drop-shadow(0 0 45px rgba(212,175,55,.05));
   transition:.6s;
 }
 
@@ -74,8 +74,8 @@
   margin: 0 auto 20px;
 
   filter:
-    drop-shadow(0 0 30px rgba(212,175,55,.35))
-    drop-shadow(0 0 70px rgba(212,175,55,.18));
+drop-shadow(0 0 18px rgba(212,175,55,.18))
+drop-shadow(0 0 40px rgba(212,175,55,.07));
 }
 
 

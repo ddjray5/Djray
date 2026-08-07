@@ -5,56 +5,64 @@ import Counter from "./Counter";
 
 export default function About() {
   return (
-    <section id="about" className="about">
-      <div className="about-content">
+    <section className="about-section" id="about">
+      <div className="about-container">
 
-        <h3 className="about-subtitle gold-text">
-          ABOUT DJ RAY
-        </h3>
+        
 
-        <h2>Luxury Open Format DJ</h2>
+        {/* CONTENT */}
+        <div className="about-content">
 
-        <p>
-          Professional Open Format DJ based in Abu Dhabi with years of
-          experience creating unforgettable moments at luxury weddings,
-          clubs, beach & pool parties, yacht events, corporate events
-          and exclusive private celebrations.
-        </p>
+          <h3 className="about-subtitle gold-text">
+            ABOUT DJ RAY
+          </h3>
 
-        <p>
-          Specializing in Open Format performances with a unique ability
-          to read the crowd and create unforgettable experiences through
-          Arabic, Commercial, House, Afro House, Hip-Hop, R&B and
-          International music.
-        </p>
+          <h2>Luxury Open Format DJ</h2>
 
-        <div className="about-list">
-          <span>✓ Open Format DJ</span>
-          <span>✓ Luxury Weddings</span>
-          <span>✓ Clubs & Lounges</span>
-          <span>✓ Beach & Pool Parties</span>
-          <span>✓ Yacht Parties</span>
-          <span>✓ Corporate Events</span>
-        </div>
+          <p>
+            Professional Open Format DJ based in Abu Dhabi with years of
+            experience creating unforgettable moments at luxury weddings,
+            clubs, beach & pool parties, yacht events, corporate events
+            and exclusive private celebrations.
+          </p>
 
-        <div className="about-stats">
+          <p>
+            Specializing in Open Format performances with a unique ability
+            to read the crowd and create unforgettable experiences through
+            Arabic, Commercial, House, Afro House, Hip-Hop, R&B and
+            International music.
+          </p>
 
-          <div className="stat">
-  <h3 className="gold-text">2019</h3>
-  <span>DJ Since</span>
-</div>
-
-
-          <div className="stat stat-events">
-            <h3 className="gold-text">
-              <Counter end={200} suffix="+" />
-            </h3>
-            <span>Events</span>
+          {/* SERVICES */}
+          <div className="about-list">
+            <span>✓ Open Format DJ</span>
+            <span>✓ Luxury Weddings</span>
+            <span>✓ Clubs & Lounges</span>
+            <span>✓ Beach & Pool Parties</span>
+            <span>✓ Yacht Parties</span>
+            <span>✓ Corporate Events</span>
           </div>
 
-          <div className="stat">
-            <h3 className="gold-text">Abu Dhabi</h3>
-            <span>Based</span>
+          {/* STATS */}
+          <div className="about-stats">
+
+            <div className="stat stat-events">
+              <h3 className="gold-text">
+                <Counter end={200} suffix="+" />
+              </h3>
+              <span>Events</span>
+            </div>
+
+            <div className="stat">
+              <h3 className="gold-text">2019</h3>
+              <span>DJ Since</span>
+            </div>
+
+            <div className="stat">
+              <h3 className="gold-text">Abu Dhabi</h3>
+              <span>Based</span>
+            </div>
+
           </div>
 
         </div>

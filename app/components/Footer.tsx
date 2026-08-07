@@ -9,8 +9,13 @@ import {
 export default function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer-logo">
-        <img src="/logo.png" alt="DJ RAY" />
+        <img
+          src="/logo.png"
+          alt="DJ RAY"
+          className="footer-logo-image"
+        />
       </div>
 
       <h3>DJ RAY</h3>
@@ -57,10 +62,10 @@ export default function Footer() {
 
       <div className="footer-line"></div>
 
-      <span>
-        © {new Date().getFullYear()} DJ RAY.
-        All Rights Reserved.
+      <span className="footer-copy">
+        © {new Date().getFullYear()} DJ RAY. All Rights Reserved.
       </span>
+
     </footer>
   );
 }

@@ -1,93 +1,203 @@
 "use client";
 
-import Image from "next/image";
+import { useState } from "react";
+import BookingModal from "./BookingModal";
 import "../styles/services.css";
 
 const services = [
   {
     image: "/clubs.webp",
     title: "CLUBS & LOUNGES",
+    bookingType: "Club & Lounge",
     description:
       "High-energy Open Format DJ performances designed for clubs, lounges and nightlife venues.",
-    features: ["Premium Sound", "Luxury Experience", "Crowd Reading"],
+    features: [
+      "Premium Sound",
+      "Luxury Experience",
+      "Crowd Reading",
+    ],
   },
 
   {
     image: "/wedding.webp",
     title: "WEDDINGS",
+    bookingType: "Wedding",
     description:
       "Elegant music experiences for luxury weddings from the ceremony to the final dance.",
-    features: ["Ceremony Music", "Reception", "First Dance"],
+    features: [
+      "Ceremony Music",
+      "Reception",
+      "First Dance",
+    ],
   },
 
   {
     image: "/yacht.webp",
     title: "YACHT PARTIES",
+    bookingType: "Yacht Party",
     description:
       "Premium Open Format DJ entertainment for luxury yachts and sunset cruises.",
-    features: ["Sunset Sessions", "VIP Experience", "Luxury Vibes"],
+    features: [
+      "Sunset Sessions",
+      "VIP Experience",
+      "Luxury Vibes",
+    ],
+  },
+
+  {
+    image: "/corporate.webp",
+    title: "CORPORATE EVENTS",
+    bookingType: "Corporate Event",
+    description:
+      "Professional DJ entertainment for corporate events, gala dinners, exhibitions and special occasions.",
+    features: [
+      "Professional Setup",
+      "Elegant Music",
+      "Event Coordination",
+    ],
   },
 
   {
     image: "/private.webp",
     title: "PRIVATE EVENTS",
+    bookingType: "Private Event",
     description:
-      "Exclusive music experiences for birthdays, engagements and private celebrations.",
-    features: ["Birthdays", "VIP Parties", "Private Celebrations"],
+      "Exclusive DJ experiences for birthdays, engagements, family gatherings and private celebrations.",
+    features: [
+      "Personalized Music",
+      "Premium Experience",
+      "Crowd Interaction",
+    ],
   },
 
   {
-    image: "/beach.webp",
-    title: "BEACH & POOL PARTIES",
+    image: "/vip.webp",
+    title: "VIP EVENTS",
+    bookingType: "VIP Event",
     description:
-      "Luxury Open Format DJ performances for beach clubs, pool parties and exclusive summer events.",
-    features: ["Beach Clubs", "Pool Parties", "Sunset Sessions"],
+      "Premium music experiences created for exclusive VIP parties and luxury celebrations.",
+    features: [
+      "Luxury Atmosphere",
+      "Exclusive Music",
+      "Personalized Experience",
+    ],
   },
 
   {
-    image: "/Birthday.webp",
+    image: "/festival.webp",
+    title: "FESTIVALS",
+    bookingType: "Festival",
+    description:
+      "Powerful Open Format DJ performances for festivals and large-scale public events.",
+    features: [
+      "High Energy",
+      "Live Performance",
+      "Crowd Experience",
+    ],
+  },
+
+  {
+    image: "/birthday.webp",
     title: "BIRTHDAY PARTIES",
+    bookingType: "Birthday Party",
     description:
-      "Luxury birthday celebrations with customized playlists and unforgettable entertainment.",
-    features: ["Custom Playlist", "Professional DJ", "Party Atmosphere"],
+      "Energetic and personalized DJ entertainment designed to make every birthday celebration unforgettable.",
+    features: [
+      "Custom Playlist",
+      "Party Atmosphere",
+      "Guest Interaction",
+    ],
   },
 ];
 
 export default function Services() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+
+  const handleBook = (service: string) => {
+  setSelectedService(service);
+  setIsBookingOpen(true);
+};
+
   return (
-    <section className="services" id="services">
-      <div className="services-title">
-        <h2>SERVICES</h2>
-        <p>Premium Entertainment Experiences</p>
-      </div>
+    <>
+      <section className="services-section">
 
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <Image
-              src={service.image}
-              alt={service.title}
-              width={700}
-              height={500}
-              loading="lazy"
-            />
+        {/* TITLE */}
+        <div className="services-title">
+          <h2>SERVICES</h2>
 
-            <div className="service-content">
-              <h3>{service.title}</h3>
+          <p>
+            Luxury DJ Experiences For Every Occasion
+          </p>
+        </div>
 
-              <p>{service.description}</p>
+        {/* SERVICES GRID */}
+        <div className="services-grid">
 
-              <ul>
-                {service.features.map((feature, i) => (
-                  <li key={i}>✔ {feature}</li>
-                ))}
-              </ul>
+          {services.map((service, index) => (
+            <div
+              className="service-card"
+              key={index}
+            >
 
-              <button>BOOK NOW</button>
+              {/* IMAGE */}
+              <div className="service-image">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="service-content">
+
+                <h3>
+                  {service.title}
+                </h3>
+
+                <p>
+                  {service.description}
+                </p>
+
+                {/* FEATURES */}
+                <ul className="service-features">
+                  {service.features.map(
+                    (feature, featureIndex) => (
+                      <li key={featureIndex}>
+                        {feature}
+                      </li>
+                    )
+                  )}
+                </ul>
+
+                {/* BOOK BUTTON */}
+                <button
+  type="button"
+  className="service-book"
+  onClick={() => {
+    console.log("SERVICE BOOK CLICKED");
+    setSelectedService(service.bookingType);
+    setIsBookingOpen(true);
+  }}
+>
+  BOOK
+</button>
+
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* BOOKING MODAL */}
+      <BookingModal
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+        selectedService={selectedService}
+      />
+    </>
   );
 }

@@ -86,64 +86,9 @@ body{
     margin-bottom:18px;
 }
 
-/* ---------- GOLD LINE ---------- */
 
-.gold-line{
 
-    width:420px;
-    height:2px;
 
-    margin:25px auto 55px;
-
-    position:relative;
-    overflow:hidden;
-
-    border-radius:999px;
-
-    background:linear-gradient(
-        90deg,
-        rgba(255,255,255,0) 0%,
-        rgba(212,175,55,.05) 12%,
-        rgba(212,175,55,.25) 25%,
-        rgba(255,215,120,.95) 50%,
-        rgba(212,175,55,.25) 75%,
-        rgba(212,175,55,.05) 88%,
-        rgba(255,255,255,0) 100%
-    );
-
-    box-shadow:
-        0 0 5px rgba(212,175,55,.18),
-        0 0 12px rgba(212,175,55,.10);
-
-    animation:goldPulse 3s ease-in-out infinite;
-}
-
-.gold-line::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:-8px;
-    left:-120px;
-
-    width:120px;
-    height:18px;
-
-    transform:skewX(-25deg);
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.9),
-        rgba(255,255,255,.2),
-        transparent
-    );
-
-    filter:blur(8px);
-
-    animation:shineLine 3.5s linear infinite;
-}
 
 .gold-line::before{
 
@@ -355,20 +300,7 @@ body{
 
 }
 
-@keyframes goldPulse{
 
-    0%,100%{
-        box-shadow:
-            0 0 6px rgba(255,215,0,.20);
-    }
-
-    50%{
-        box-shadow:
-            0 0 12px rgba(255,215,0,.45),
-            0 0 24px rgba(255,215,0,.20);
-    }
-
-}
 
 @keyframes shineLine{
 

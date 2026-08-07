@@ -1,34 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import "../styles/booking-modal.css";
 
-interface BookingModalProps {
+type BookingModalProps = {
   isOpen: boolean;
   onClose: () => void;
-}
+  selectedService?: string;
+};
 
 export default function BookingModal({
   isOpen,
   onClose,
+  selectedService = "",
 }: BookingModalProps) {
-
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [eventType, setEventType] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [message, setMessage] = useState("");
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    if (selectedService) {
+      setEventType(selectedService);
+    }
+  }, [selectedService]);
 
-  const sendBooking = () => {
+  if (!isOpen) {
+    return null;
+  }
 
-    if (!name || !phone || !eventType) {
+  const handleSubmit = () => {
+    if (!name || !phone || !eventType || !eventDate) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    const text = `Hello DJ RAY,
+    const text = `
+DJ RAY BOOKING REQUEST
 
 Name:
 ${name}
@@ -43,26 +53,31 @@ Event Date:
 ${eventDate}
 
 Message:
-${message}`;
+${message || "No additional message."}
+`;
 
-    const url =
-      `https://wa.me/971554057288?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/971554057288?text=${encodeURIComponent(
+      text
+    )}`;
 
-    window.open(url, "_blank");
+    window.open(whatsappUrl, "_blank");
   };
 
-  return (
-    <div className="booking-overlay" onClick={onClose}>
-
+  return createPortal(
+    <div
+      className="booking-overlay"
+      onClick={onClose}
+    >
       <div
         className="booking-modal"
         onClick={(e) => e.stopPropagation()}
       >
-
         <h2>BOOK NOW</h2>
 
+        {/* NAME */}
         <div className="booking-field">
           <label>Name</label>
+
           <input
             type="text"
             value={name}
@@ -70,8 +85,10 @@ ${message}`;
           />
         </div>
 
+        {/* PHONE */}
         <div className="booking-field">
           <label>Phone Number</label>
+
           <input
             type="tel"
             value={phone}
@@ -79,6 +96,7 @@ ${message}`;
           />
         </div>
 
+        {/* EVENT TYPE */}
         <div className="booking-field">
           <label>Event Type</label>
 
@@ -87,19 +105,21 @@ ${message}`;
             onChange={(e) => setEventType(e.target.value)}
           >
             <option value="">Select Event</option>
-            <option>Luxury Wedding</option>
-            <option>Club & Lounge</option>
-            <option>Private Event</option>
-            <option>Corporate Event</option>
-            <option>Yacht Party</option>
-            <option>Beach & Pool Party</option>
-            <option>Birthday Party</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Private Event">Private Event</option>
+            <option value="Corporate Event">Corporate Event</option>
+            <option value="Club & Lounge">Club & Lounge</option>
+            <option value="Yacht Party">Yacht Party</option>
+            <option value="VIP Event">VIP Event</option>
+            <option value="Festival">Festival</option>
+            <option value="Birthday Party">Birthday Party</option>
           </select>
-
         </div>
 
+        {/* EVENT DATE */}
         <div className="booking-field">
           <label>Event Date</label>
+
           <input
             type="date"
             value={eventDate}
@@ -107,32 +127,37 @@ ${message}`;
           />
         </div>
 
+        {/* MESSAGE */}
         <div className="booking-field">
           <label>Message</label>
+
           <textarea
-            rows={5}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            rows={5}
           />
         </div>
 
+        {/* BUTTONS */}
         <div className="booking-buttons">
-
-          <button onClick={sendBooking}>
-            SEND BOOKING REQUEST
+          <button
+            type="button"
+            className="booking-send"
+            onClick={handleSubmit}
+          >
+            SEND
           </button>
 
           <button
-            className="close-btn"
+            type="button"
+            className="booking-close"
             onClick={onClose}
           >
             CLOSE
           </button>
-
         </div>
-
       </div>
-
-    </div>
+    </div>,
+    document.body
   );
 }
