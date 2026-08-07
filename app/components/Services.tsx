@@ -115,13 +115,14 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState("");
 
   const handleBook = (service: string) => {
-  setSelectedService(service);
-  setIsBookingOpen(true);
-};
+    setSelectedService(service);
+    setIsBookingOpen(true);
+  };
 
   return (
     <>
-      <section className="services-section">
+      {/* SERVICES SECTION */}
+      <section id="services" className="services">
 
         {/* TITLE */}
         <div className="services-title">
@@ -173,16 +174,12 @@ export default function Services() {
 
                 {/* BOOK BUTTON */}
                 <button
-  type="button"
-  className="service-book"
-  onClick={() => {
-    console.log("SERVICE BOOK CLICKED");
-    setSelectedService(service.bookingType);
-    setIsBookingOpen(true);
-  }}
->
-  BOOK
-</button>
+                  type="button"
+                  className="service-book"
+                  onClick={() => handleBook(service.bookingType)}
+                >
+                  BOOK
+                </button>
 
               </div>
             </div>

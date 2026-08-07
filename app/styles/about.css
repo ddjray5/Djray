@@ -1,11 +1,13 @@
-/* ================================
+/* =================================
    ABOUT SECTION
-================================ */
+================================= */
 
 .about-section {
   position: relative;
   width: 100%;
+
   padding: 110px 7% 120px;
+
   background:
     radial-gradient(
       circle at 50% 20%,
@@ -13,102 +15,205 @@
       transparent 45%
     ),
     #050505;
+
   overflow: hidden;
-}
 
-
-
-/* CONTAINER */
-
-.about-container {
-  position: relative;
-  max-width: 1250px;
-  margin: 0 auto;
   text-align: center;
 }
 
-/* CONTENT */
+
+/* =================================
+   CONTAINER
+================================= */
+
+.about-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
 
 .about-content {
   width: 100%;
   max-width: 1100px;
+
   margin: 0 auto;
 }
 
-/* SUBTITLE */
 
- .about-subtitle {
-  margin: 0 0 22px;
-  font-family: "Times New Roman", serif !important;
-  font-size: 18px;
+/* =================================
+   ABOUT SUBTITLE
+================================= */
+
+.about-subtitle {
+  margin: 0 0 15px;
+
+  font-family:
+    "Times New Roman",
+    serif !important;
+
+  font-size: 32px;
+
   font-weight: 500;
-  letter-spacing: 7px;
+
+  letter-spacing: 8px;
+
+  line-height: 1.2;
+
   text-transform: uppercase;
+
+  color: #d4af37;
+
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.15);
 }
 
 
-/* MAIN TITLE */
+/* =================================
+   GOLD LINE UNDER ABOUT DJ RAY
+================================= */
+
+.about-subtitle::after {
+  content: "";
+
+  display: block;
+
+  width: 120px;
+  height: 1px;
+
+  margin: 14px auto 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d4af37,
+      transparent
+    );
+
+  box-shadow:
+    0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+
+/* =================================
+   MAIN TITLE
+================================= */
 
 .about-content h2 {
-  margin: 0 0 25px;
-  font-family: "Times New Roman", serif !important;
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.15;
+  margin: 22px 0 25px;
+
+  font-family:
+    "Times New Roman",
+    serif !important;
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
   font-weight: 600;
+
   letter-spacing: 2px;
-  color: #f2f2f2;
+
+  color: #d4af37;
+
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.18);
 }
 
 
-/* PARAGRAPHS */
+/* =================================
+   PARAGRAPHS
+================================= */
 
 .about-content > p {
   max-width: 1000px;
+
   margin: 0 auto 18px;
+
   color: #c8c8c8;
+
+  font-family:
+    "Times New Roman",
+    serif !important;
+
   font-size: 17px;
+
   line-height: 1.8;
+
   letter-spacing: 0.2px;
 }
 
-/* GOLD TEXT */
+
+/* =================================
+   GOLD TEXT
+================================= */
 
 .gold-text {
   color: #d4af37;
+
   text-shadow:
     0 0 8px rgba(212, 175, 55, 0.25),
     0 0 20px rgba(212, 175, 55, 0.12);
 }
 
-/* ================================
+
+/* =================================
    ABOUT LIST
-================================ */
+================================= */
 
 .about-list {
   display: flex;
+
   justify-content: center;
   align-items: center;
+
   flex-wrap: wrap;
+
   gap: 16px;
+
+  width: 100%;
   max-width: 1050px;
+
   margin: 42px auto 0;
 }
 
+
 .about-list span {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
   padding: 13px 22px;
 
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  border:
+    1px solid rgba(212, 175, 55, 0.35);
+
   border-radius: 30px;
 
   color: #d4af37;
-  background: rgba(212, 175, 55, 0.025);
+
+  background:
+    rgba(212, 175, 55, 0.025);
+
+  font-family:
+    "Times New Roman",
+    serif !important;
 
   font-size: 16px;
+
   font-weight: 500;
+
   letter-spacing: 0.3px;
 
   transition:
@@ -118,278 +223,421 @@
     background 0.35s ease;
 }
 
+
+/* =================================
+   LIST HOVER
+================================= */
+
 .about-list span:hover {
   transform: translateY(-3px);
 
   border-color: #d4af37;
 
-  background: rgba(212, 175, 55, 0.06);
+  background:
+    rgba(212, 175, 55, 0.06);
 
   box-shadow:
     0 0 12px rgba(212, 175, 55, 0.25),
     0 0 30px rgba(212, 175, 55, 0.08);
 }
 
-/* ================================
+
+/* =================================
    STATS
-================================ */
+================================= */
 
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 
-  gap: 70px;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-  max-width: 900px;
-  margin: 85px auto 0;
-}
+  align-items: start;
 
-.stat {
-  min-width: 0;
+  justify-items: center;
+
+  gap: 60px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 80px auto 0;
+
   text-align: center;
 }
 
-/* NUMBERS */
 
-.stat h3 {
+.about-stats .stat {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  text-align: center;
+}
+
+
+/* =================================
+   STAT NUMBERS
+================================= */
+
+.about-stats .stat h3 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+  min-height: 75px;
 
-  font-size: clamp(42px, 5vw, 68px);
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size:
+    clamp(42px, 5vw, 68px);
+
   line-height: 1;
 
   font-weight: 600;
-  white-space: nowrap;
 
   letter-spacing: 1px;
+
+  white-space: nowrap;
+
+  color: #d4af37;
 }
 
-/* ABU DHABI SPECIAL FIX */
 
-.stat:not(.stat-events) h3 {
-  font-size: clamp(38px, 4vw, 58px);
+/* =================================
+   EVENTS NUMBER
+================================= */
+
+.about-stats .stat-events h3 {
+  font-size:
+    clamp(42px, 5vw, 68px);
 }
 
-/* LABEL */
 
-.stat span {
+/* =================================
+   ABU DHABI
+================================= */
+
+.about-stats .stat:nth-child(3) h3 {
+  font-size:
+    clamp(38px, 4vw, 58px);
+
+  color: #d4af37;
+
+  white-space: nowrap;
+
+  text-shadow: none !important;
+
+  filter: none !important;
+
+  opacity: 1;
+}
+
+
+/* =================================
+   STAT LABEL
+================================= */
+
+.about-stats .stat span {
   display: block;
 
-  margin-top: 16px;
+  margin-top: 10px;
 
   color: #bdbdbd;
 
+  font-family:
+    "Times New Roman",
+    serif !important;
+
   font-size: 14px;
+
   font-weight: 500;
 
   letter-spacing: 5px;
+
   text-transform: uppercase;
+
+  white-space: nowrap;
+
+  text-align: center;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
+
+/* =================================
+   GOLD DECORATIVE GLOW
+================================= */
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 50%;
+  bottom: -320px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    rgba(212, 175, 55, 0.06);
+
+  border-radius: 50%;
+
+  filter: blur(130px);
+
+  pointer-events: none;
+}
+
+
+/* =================================
+   TABLET
+================================= */
 
 @media (max-width: 900px) {
 
   .about-section {
-    padding: 90px 6% 100px;
-  }
-
-  .about-stats {
-    gap: 35px;
+    padding:
+      90px 6% 100px;
   }
 
   .about-content > p {
     font-size: 16px;
   }
 
-}
-
-@media (max-width: 650px) {
-
-  .about-section {
-    padding: 75px 20px 85px;
-  }
-
-  .about-subtitle {
-    font-size: 15px;
-    letter-spacing: 5px;
-  }
-
-  .about-content h2 {
-    font-size: 30px;
-  }
-
-  .about-content > p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .about-list {
-    gap: 10px;
-    margin-top: 32px;
-  }
-
-  .about-list span {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
   .about-stats {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    margin-top: 65px;
+    gap: 35px;
   }
-
-  .stat h3,
-  .stat:not(.stat-events) h3 {
-    font-size: 48px;
-  }
-
-  .stat span {
-    font-size: 12px;
-    letter-spacing: 4px;
-  }
-}
-
-/* ================================
-   FINAL ABOUT FIX
-================================ */
-
-/* Luxury Open Format DJ - GOLD */
-.about-content h2 {
-  color: #d4af37;
-  text-shadow:
-    0 0 8px rgba(212, 175, 55, 0.18);
-}
-
-/* Abu Dhabi - clean gold, no blur */
-.stat:not(.stat-events) h3 {
-  color: #d4af37;
-  font-size: clamp(38px, 4vw, 58px);
-  white-space: nowrap;
-
-  text-shadow: none !important;
-  filter: none !important;
-  opacity: 1;
-}
-
-/* Keep Abu Dhabi perfectly clean */
-.stat:not(.stat-events) h3 span {
-  color: inherit;
-  text-shadow: none !important;
-  filter: none !important;
-}
-
-
-/* =========================
-   ABOUT STATS FIX
-========================= */
-
-.about-stats {
-  width: 100%;
-  max-width: 1000px;
-  margin: 80px auto 0;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
-  justify-items: center;
-
-  text-align: center;
-  gap: 60px;
-}
-
-.about-stats .stat {
-  width: 100%;
-  min-width: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  text-align: center;
-}
-
-.about-stats .stat h3 {
-  margin: 0;
-  min-height: 75px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  white-space: nowrap;
-}
-
-.about-stats .stat span {
-  display: block;
-  margin-top: 8px;
-
-  white-space: nowrap;
-  text-align: center;
-}
-
-/* Abu Dhabi must stay on one line */
-.about-stats .stat:nth-child(3) h3 {
-  white-space: nowrap;
-  font-size: 48px;
-}
-
-/* =========================
-   GOLD DECORATIVE LINE
-========================= */
-
-.about-section {
-  position: relative;
-}
-
-
-
-
-/* ABOUT TITLE */
-.about-subtitle {
-  font-size: 32px !important;
-  letter-spacing: 8px;
-  margin-bottom: 15px;
-}
-
-/* MAIN TITLE */
-.about-section h2 {
-  font-size: 38px !important;
-  margin-top: 0;
 }
 
 
 /* =================================
-   UNIFIED WEBSITE FONT
+   MOBILE
 ================================= */
 
-.about-section,
-.about-section * {
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 650px) {
+
+  .about-section {
+    padding:
+      70px 18px 80px;
+  }
+
+
+  /* CONTAINER */
+
+  .about-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ABOUT DJ RAY */
+
+  .about-subtitle {
+    font-size: 25px !important;
+
+    letter-spacing: 5px !important;
+
+    line-height: 1.2;
+
+    margin-bottom: 0;
+
+    white-space: nowrap;
+  }
+
+
+  /* GOLD LINE */
+
+  .about-subtitle::after {
+    width: 100px;
+
+    margin-top: 12px;
+  }
+
+
+  /* MAIN TITLE */
+
+  .about-content h2 {
+    font-size: 25px !important;
+
+    letter-spacing: 1px;
+
+    line-height: 1.25;
+
+    margin:
+      20px 0 22px;
+  }
+
+
+  /* PARAGRAPHS */
+
+  .about-content > p {
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    letter-spacing: 0;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* ABOUT LIST */
+
+  .about-list {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+
+  .about-list span {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding:
+      11px 14px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    text-align: center;
+  }
+
+
+  /* STATS */
+
+  .about-stats {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 60px;
+  }
+
+
+  .about-stats .stat {
+    width: 100%;
+  }
+
+
+  .about-stats .stat h3 {
+    min-height: auto;
+
+    font-size: 46px !important;
+
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+
+  .about-stats .stat span {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+  }
+
+
+  /* ABU DHABI */
+
+  .about-stats .stat:nth-child(3) h3 {
+    font-size: 42px !important;
+
+    white-space: nowrap;
+  }
 }
 
 
-/* ================================
-   GLOBAL SITE FONT - ABOUT
-================================ */
+/* =================================
+   SMALL MOBILE
+================================= */
 
-.about-section,
-.about-section * {
-  font-family: Arial, Helvetica, sans-serif;
-}
+@media (max-width: 420px) {
+
+  .about-section {
+    padding:
+      60px 15px 70px;
+  }
 
 
-/* UNIFIED ABOUT FONT */
-.about-section,
-.about-section h2,
-.about-section h3,
-.about-section p,
-.about-section span,
-.about-section div {
-  font-family: "Times New Roman", serif !important;
+  .about-subtitle {
+    font-size: 22px !important;
+
+    letter-spacing: 4px !important;
+  }
+
+
+  .about-subtitle::after {
+    width: 90px;
+  }
+
+
+  .about-content h2 {
+    font-size: 23px !important;
+  }
+
+
+  .about-content > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .about-stats {
+    gap: 30px;
+
+    margin-top: 50px;
+  }
+
+
+  .about-stats .stat h3 {
+    font-size: 42px !important;
+  }
+
+
+  .about-stats .stat:nth-child(3) h3 {
+    font-size: 38px !important;
+  }
 }

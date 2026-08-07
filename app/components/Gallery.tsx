@@ -1,66 +1,33 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import "../styles/gallery.css";
 
 const images = [
-  "/gallery1.jpg",
-  "/gallery2.jpg",
-  "/gallery3.jpg",
+  "/gallery1.webp",
+  "/gallery2.webp",
+  "/gallery3.webp",
 ];
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   return (
-    <section className="gallery" id="gallery">
+    <section className="gallery">
 
       <div className="gallery-title">
-        <h2>GALLERY</h2>
-        <p>Luxury Moments • DJ RAY</p>
+        <h2>Gallery</h2>
+        <p>Moments, Energy & Unforgettable Nights</p>
       </div>
 
       <div className="gallery-grid">
-
         {images.map((image, index) => (
-
-          <div
-            className="gallery-card"
-            key={index}
-            onClick={() => setSelectedImage(image)}
-          >
-
-            <Image
+          <div className="gallery-card" key={index}>
+            <img
               src={image}
-              alt={`Gallery ${index + 1}`}
-              fill
+              alt={`DJ RAY Gallery ${index + 1}`}
               className="gallery-image"
             />
-
           </div>
-
         ))}
-
       </div>
-
-      {selectedImage && (
-
-        <div
-          className="lightbox"
-          onClick={() => setSelectedImage(null)}
-        >
-
-          <Image
-            src={selectedImage}
-            alt="Gallery Preview"
-            fill
-            className="lightbox-image"
-          />
-
-        </div>
-
-      )}
 
     </section>
   );

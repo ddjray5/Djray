@@ -45,21 +45,25 @@ export default function Hero() {
             LUXURY OPEN FORMAT DJ
           </p>
 
-          <div className="gold-line"></div>
+          
 
           <div className="hero-services">
-            <h3>AVAILABLE FOR</h3>
 
-            <ul>
-              <li>LUXURY WEDDINGS</li>
-              <li>CLUBS &amp; LOUNGES</li>
-              <li>PRIVATE EVENTS</li>
-              <li>CORPORATE EVENTS</li>
-              <li>YACHT PARTIES</li>
-              <li>BEACH &amp; POOL PARTIES</li>
-              <li>BIRTHDAY PARTIES</li>
-            </ul>
-          </div>
+  <h3>AVAILABLE FOR</h3>
+
+  <div className="gold-line"></div>
+
+  <ul>
+    <li>LUXURY WEDDINGS</li>
+    <li>CLUBS &amp; LOUNGES</li>
+    <li>PRIVATE EVENTS</li>
+    <li>CORPORATE EVENTS</li>
+    <li>YACHT PARTIES</li>
+    <li>BEACH &amp; POOL PARTIES</li>
+    <li>BIRTHDAY PARTIES</li>
+  </ul>
+
+</div>
 
           <div className="hero-buttons">
 

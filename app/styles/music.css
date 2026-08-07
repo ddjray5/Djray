@@ -1,216 +1,414 @@
-.music{
+/* =====================================================
+   MUSIC STYLE - DJ RAY
+   Luxury Black & Gold
+===================================================== */
 
-    padding:120px 5%;
+.music {
+  width: 100%;
+  padding: 100px 8%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 
-    background:#050505;
-
-    text-align:center;
-
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(212, 175, 55, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(212, 175, 55, 0.04),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #090909 0%,
+      #050505 60%,
+      #000000 100%
+    );
 }
 
-/* ===========================
+/* =====================================================
    TITLE
-=========================== */
+===================================================== */
 
-.music-title h2{
-
-    font-family:var(--font-cormorant);
-
-    color:#d4af37;
-
-    font-size:48px;
-
-    font-weight:600;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    text-shadow:0 0 15px rgba(212,175,55,.2);
-
-    margin-bottom:15px;
-
+.music-title {
+  text-align: center;
+  margin-bottom: 55px;
 }
 
-.music-title p{
+/* MUSIC STYLE */
 
-    font-family:var(--font-cormorant);
+.music-title h2 {
+  font-family: var(--font-cormorant);
 
-    color:#cfcfcf;
+  color: #d4af37;
 
-    font-size:26px;
+  font-size: 48px;
 
-    font-weight:400;
+  font-weight: 600;
 
-    letter-spacing:1px;
+  letter-spacing: 5px;
 
-    line-height:1.6;
+  text-transform: uppercase;
 
-    max-width:750px;
+  margin: 0;
 
-    margin:15px auto 80px;
-
+  line-height: 1.2;
 }
 
-/* ===========================
-   GRID
-=========================== */
+/* =====================================================
+   SOFT GOLD LINE
+   نفس شكل ABOUT DJ RAY
+===================================================== */
 
-.music-grid{
+.music-title h2::after {
+  content: "";
 
-    display:grid;
+  display: block;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  width: 110px;
+  height: 2px;
 
-    gap:25px;
+  margin: 25px auto 0;
 
-    max-width:1400px;
-
-    margin:auto;
-
-}
-
-/* ===========================
-   CARD
-=========================== */
-
-.music-card{
-
-    height:95px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:linear-gradient(
-        145deg,
-        #111,
-        #050505
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d4af37,
+      #f8e38c,
+      #d4af37,
+      transparent
     );
 
-    border:1px solid rgba(212,175,55,.25);
-
-    border-radius:18px;
-
-    cursor:pointer;
-
-    transition:.4s ease;
-
-    opacity:0;
-
-    animation:musicFade .8s ease forwards;
-
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.18);
 }
 
-.music-card:nth-child(1){animation-delay:.05s;}
-.music-card:nth-child(2){animation-delay:.10s;}
-.music-card:nth-child(3){animation-delay:.15s;}
-.music-card:nth-child(4){animation-delay:.20s;}
-.music-card:nth-child(5){animation-delay:.25s;}
-.music-card:nth-child(6){animation-delay:.30s;}
-.music-card:nth-child(7){animation-delay:.35s;}
-.music-card:nth-child(8){animation-delay:.40s;}
-.music-card:nth-child(9){animation-delay:.45s;}
-.music-card:nth-child(10){animation-delay:.50s;}
+/* =====================================================
+   SUBTITLE
+===================================================== */
 
-.music-card:hover{
+.music-title p {
+  font-family: var(--font-cormorant);
 
-    transform:translateY(-8px);
+  color: #d0d0d0;
 
-    border-color:#d4af37;
+  font-size: 24px;
 
-    box-shadow:0 15px 40px rgba(212,175,55,.35);
+  font-weight: 400;
 
+  line-height: 1.8;
+
+  letter-spacing: 1px;
+
+  max-width: 700px;
+
+  margin: 25px auto 0;
 }
 
-.music-card span{
+/* =====================================================
+   MUSIC GRID
+===================================================== */
 
-    font-family:var(--font-cormorant);
+.music-grid {
+  width: 100%;
 
-    color:#ffffff;
+  max-width: 1000px;
 
-    font-size:24px;
+  margin: 0 auto;
 
-    font-weight:500;
+  display: grid;
 
-    letter-spacing:1px;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
-    transition:.35s;
-
+  gap: 22px;
 }
 
-.music-card:hover span{
+/* =====================================================
+   MUSIC CARD
+===================================================== */
 
-    color:#d4af37;
+.music-card {
+  min-height: 100px;
 
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 20, 20, 0.98),
+      rgba(5, 5, 5, 0.98)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.30);
+
+  border-radius: 16px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
 }
 
-/* ===========================
-   ANIMATION
-=========================== */
+/* =====================================================
+   GOLD SHINE
+===================================================== */
 
-@keyframes musicFade{
+.music-card::before {
+  content: "";
 
-    from{
+  position: absolute;
 
-        opacity:0;
+  top: 0;
+  left: -120%;
 
-        transform:translateY(35px);
+  width: 60%;
+  height: 100%;
 
-    }
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(248, 227, 140, 0.12),
+      transparent
+    );
 
-    to{
+  transform: skewX(-25deg);
 
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
+  transition: 0.8s;
 }
 
-/* ===========================
+/* =====================================================
+   MUSIC TEXT
+===================================================== */
+
+.music-card span {
+  font-family: var(--font-cormorant);
+
+  color: #d4af37;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 2;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.music-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(212, 175, 55, 0.75);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 28, 28, 1),
+      rgba(8, 8, 8, 1)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(212, 175, 55, 0.12);
+}
+
+.music-card:hover::before {
+  left: 150%;
+}
+
+.music-card:hover span {
+  color: #f8e38c;
+
+  transform: scale(1.04);
+}
+
+/* =====================================================
    MOBILE
-=========================== */
+===================================================== */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-.music{
+  .music {
+    padding: 80px 25px;
+  }
 
-    padding:90px 20px;
+  .music-title {
+    margin-bottom: 45px;
+  }
 
+  .music-title h2 {
+    font-size: 40px;
+
+    letter-spacing: 4px;
+  }
+
+  .music-title h2::after {
+    width: 100px;
+
+    height: 2px;
+
+    margin-top: 22px;
+  }
+
+  .music-title p {
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    max-width: 620px;
+
+    margin-top: 25px;
+  }
+
+  .music-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    max-width: 600px;
+  }
+
+  .music-card {
+    min-height: 95px;
+
+    padding: 20px;
+  }
+
+  .music-card span {
+    font-size: 19px;
+
+    letter-spacing: 1.5px;
+  }
 }
 
-.music-title h2{
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
-    font-size:40px;
+@media (max-width: 480px) {
 
+  .music {
+    padding: 70px 20px;
+  }
+
+  .music-title {
+    margin-bottom: 40px;
+  }
+
+  .music-title h2 {
+    font-size: 34px;
+
+    letter-spacing: 3px;
+  }
+
+  .music-title h2::after {
+    width: 90px;
+
+    height: 2px;
+
+    margin-top: 20px;
+  }
+
+  .music-title p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-top: 22px;
+  }
+
+  .music-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .music-card {
+    min-height: 90px;
+
+    padding: 15px 10px;
+
+    border-radius: 14px;
+  }
+
+  .music-card span {
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.3;
+  }
 }
 
-.music-title p{
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
 
-    font-size:22px;
+@media (max-width: 360px) {
 
-}
+  .music {
+    padding: 60px 15px;
+  }
 
-.music-grid{
+  .music-title h2 {
+    font-size: 30px;
 
-    grid-template-columns:repeat(2,1fr);
+    letter-spacing: 2.5px;
+  }
 
-}
+  .music-title h2::after {
+    width: 85px;
 
-.music-card{
+    margin-top: 18px;
+  }
 
-    height:85px;
+  .music-title p {
+    font-size: 18px;
+  }
 
-}
+  .music-grid {
+    gap: 12px;
+  }
 
-.music-card span{
+  .music-card {
+    min-height: 82px;
 
-    font-size:18px;
+    padding: 12px 8px;
+  }
 
-}
-
+  .music-card span {
+    font-size: 14px;
+  }
 }

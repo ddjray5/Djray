@@ -1,118 +1,585 @@
+/* =====================================================
+   NAVBAR - DJ RAY
+   Luxury Black & Gold
+===================================================== */
+
 .navbar {
-
-  position:fixed;
-
-  top:0;
-
-  left:0;
-
-  width:100%;
-
-  z-index:1000;
-
-  background:rgba(0,0,0,0.65);
-
-  backdrop-filter:blur(12px);
-
-  border-bottom:1px solid rgba(212,175,55,0.35);
-
-}
-
-
-.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 7px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 150px;
+
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.96);
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.55);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-sizing: border-box;
 }
 
 
+/* =====================================================
+   NAVBAR CONTAINER
+===================================================== */
 
-/* LOGO */
+.navbar-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
 
 .nav-logo {
+  display: flex;
+  align-items: center;
 
-  color:#d4af37;
+  flex-shrink: 0;
 
-  font-size:32px;
+  width: auto;
+  height: 100%;
 
-  font-weight:700;
+  text-decoration: none;
 
-  letter-spacing:3px;
+  overflow: visible;
+}
 
+.nav-logo img {
+  display: block;
+
+  width: 150px !important;
+  height: auto !important;
+
+  max-height: 120px;
+
+  object-fit: contain;
+  object-position: center;
+
+  opacity: 0.96;
+
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover img {
+  opacity: 1;
 }
 
 
-.nav-logo span {
-
-  color:white;
-
-}
-
-
-
-/* LINKS */
+/* =====================================================
+   DESKTOP MENU
+===================================================== */
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+
+  gap: 42px;
+
+  margin-left: auto;
 }
 
 .nav-links a {
-  color: white;
+  position: relative;
+
+  color: #f2f2f2;
+
   text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 1px;
-  transition: 0.4s ease;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
+/* Gold line under menu item */
 
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 0;
+  height: 1px;
+
+  background: #d4af37;
+
+  transform: translateX(-50%);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5);
+
+  transition: width 0.3s ease;
+}
 
 .nav-links a:hover {
+  color: #d4af37;
 
-  color:#d4af37;
+  transform: translateY(-2px);
+}
 
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
 
-/* MOBILE */
+.mobile-menu-button {
+  display: none;
 
-@media(max-width:900px){
+  position: relative;
 
+  width: 100px;
+  height: 100px;
 
-.nav-container {
+  padding: 0;
+  margin: 0;
 
-  padding:7px 15px;
+  border: 2px solid #d4af37;
+  border-radius: 28px;
 
+  background: rgba(0, 0, 0, 0.9);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  border-color: #f0d46a;
+
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 40px;
+  height: 4px;
+
+  border-radius: 5px;
+
+  background: #d4af37;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease;
 }
 
 
-.nav-links {
+/* =====================================================
+   MOBILE MENU ACTIVE
+===================================================== */
 
-  gap:12px;
+.mobile-menu-button.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
 
+.mobile-menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
 }
 
 
-.nav-logo {
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
-  font-size:19px;
+.mobile-nav {
+  position: absolute;
 
+  top: 150px;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, 0.98);
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-15px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.mobile-nav a {
+  width: 100%;
+
+  padding: 20px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #f2f2f2;
+
+  text-decoration: none;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #d4af37;
+
+  background: rgba(212, 175, 55, 0.04);
 }
 
 
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: 130px;
+  }
+
+  .navbar-container {
+    padding: 0 18px;
+  }
+
+  .nav-logo img {
+    width: 130px !important;
+    max-height: 105px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
 }
-.logo-wrapper {
 
-  display:flex;
 
-  align-items:center;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-  gap:8px;
+@media (max-width: 768px) {
 
+  .navbar {
+    height: 130px;
+
+    overflow: visible;
+  }
+
+  .navbar-container {
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+  }
+
+
+  /* =================================================
+     LOGO
+  ================================================= */
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: 130px;
+    height: 130px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: visible;
+  }
+
+  .nav-logo img {
+    display: block;
+
+    width: 130px !important;
+    height: auto !important;
+
+    max-height: 105px;
+
+    object-fit: contain;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none !important;
+  }
+
+
+  /* =================================================
+     HIDE DESKTOP MENU
+  ================================================= */
+
+  .nav-links {
+    display: none;
+  }
+
+
+  /* =================================================
+     MOBILE MENU BUTTON
+     62px x 62px
+  ================================================= */
+
+  .mobile-menu-button {
+    display: flex !important;
+
+    position: absolute !important;
+
+    right: 18px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 62px !important;
+    height: 62px !important;
+
+    min-width: 62px !important;
+    min-height: 62px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    border: 2px solid #d4af37;
+    border-radius: 18px;
+
+    background: #050505;
+
+    z-index: 9999;
+
+    cursor: pointer;
+  }
+
+  .mobile-menu-button span {
+    display: block !important;
+
+    width: 28px !important;
+    height: 3px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #d4af37;
+
+    border-radius: 5px;
+  }
+
+
+  /* =================================================
+     MOBILE NAV
+  ================================================= */
+
+  .mobile-nav {
+    top: 130px;
+  }
+
+  .mobile-nav a {
+    padding: 21px 20px;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
 }
 
 
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 115px;
+  }
+
+  .navbar-container {
+    padding: 0;
+  }
+
+
+  /* LOGO */
+
+  .nav-logo {
+    width: 115px;
+    height: 115px;
+  }
+
+  .nav-logo img {
+    width: 115px !important;
+    max-height: 95px;
+  }
+
+
+  /* MENU BUTTON */
+
+  .mobile-menu-button {
+    width: 58px !important;
+    height: 58px !important;
+
+    min-width: 58px;
+    min-height: 58px;
+
+    margin-right: 12px;
+
+    border-radius: 18px;
+
+    gap: 7px;
+  }
+
+  .mobile-menu-button span {
+    width: 28px !important;
+    height: 3px !important;
+  }
+
+
+  /* MOBILE NAV */
+
+  .mobile-nav {
+    top: 115px;
+  }
+
+  .mobile-nav a {
+    padding: 19px 15px;
+
+    font-size: 17px;
+
+    letter-spacing: 2.5px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .navbar {
+    height: 105px;
+  }
+
+  .nav-logo {
+    width: 105px;
+    height: 105px;
+  }
+
+  .nav-logo img {
+    width: 105px !important;
+    max-height: 90px;
+  }
+
+  .mobile-menu-button {
+    width: 54px !important;
+    height: 54px !important;
+
+    min-width: 54px;
+    min-height: 54px;
+
+    margin-right: 10px;
+
+    border-radius: 17px;
+
+    gap: 6px;
+  }
+
+  .mobile-menu-button span {
+    width: 27px !important;
+    height: 3px !important;
+  }
+
+  .mobile-nav {
+    top: 105px;
+  }
+}

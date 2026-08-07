@@ -5,10 +5,8 @@ import Counter from "./Counter";
 
 export default function About() {
   return (
-    <section className="about-section" id="about">
+    <section id="about" className="about-section">
       <div className="about-container">
-
-        
 
         {/* CONTENT */}
         <div className="about-content">
@@ -50,16 +48,23 @@ export default function About() {
               <h3 className="gold-text">
                 <Counter end={200} suffix="+" />
               </h3>
+
               <span>Events</span>
             </div>
 
             <div className="stat">
-              <h3 className="gold-text">2019</h3>
+              <h3 className="gold-text">
+                2019
+              </h3>
+
               <span>DJ Since</span>
             </div>
 
             <div className="stat">
-              <h3 className="gold-text">Abu Dhabi</h3>
+              <h3 className="gold-text">
+                Abu Dhabi
+              </h3>
+
               <span>Based</span>
             </div>
 

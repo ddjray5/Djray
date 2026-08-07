@@ -1,11 +1,16 @@
+/* =====================================================
+   WHY CHOOSE - DJ RAY
+===================================================== */
+
 .why {
   background: #050505;
   padding: 120px 5%;
 }
 
-/* ========================= */
-/* TITLE */
-/* ========================= */
+
+/* =====================================================
+   TITLE
+===================================================== */
 
 .why-title {
   text-align: center;
@@ -14,38 +19,94 @@
 
 .why-title h2 {
   font-family: var(--font-cormorant);
+
   color: #d4af37;
+
   font-size: 48px;
+
   font-weight: 500;
+
   letter-spacing: 4px;
-  margin-bottom: 12px;
+
+  margin: 0;
+
+  line-height: 1.2;
 }
+
+
+/* =====================================================
+   SOFT GOLD LINE
+===================================================== */
+
+.why-title h2::after {
+  content: "";
+
+  display: block;
+
+  width: 110px;
+
+  height: 2px;
+
+  margin: 25px auto 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.45) 20%,
+      #f8e38c 50%,
+      rgba(212, 175, 55, 0.45) 80%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.18),
+    0 0 18px rgba(212, 175, 55, 0.08);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
 
 .why-title p {
   font-family: var(--font-cormorant);
+
   color: #bfbfbf;
+
   font-size: 24px;
+
   font-weight: 400;
+
   letter-spacing: 1px;
+
+  margin: 22px 0 0;
 }
 
-/* ========================= */
-/* GRID */
-/* ========================= */
+
+/* =====================================================
+   GRID
+===================================================== */
 
 .why-grid {
   max-width: 1400px;
+
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
 
   gap: 30px;
 }
 
-/* ========================= */
-/* CARDS */
-/* ========================= */
+
+/* =====================================================
+   CARDS
+===================================================== */
 
 .why-card {
   background: #111;
@@ -66,15 +127,18 @@
 
   border-color: #d4af37;
 
-  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 20px 60px rgba(212, 175, 55, 0.25);
 }
 
-/* ========================= */
-/* ICON */
-/* ========================= */
+
+/* =====================================================
+   ICON
+===================================================== */
 
 .why-icon {
   width: 90px;
+
   height: 90px;
 
   margin: auto;
@@ -84,19 +148,23 @@
   border: 2px solid #d4af37;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   font-size: 40px;
 
   margin-bottom: 25px;
 
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 0 25px rgba(212, 175, 55, 0.25);
 }
 
-/* ========================= */
-/* CARD TITLE */
-/* ========================= */
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
 
 .why-card h3 {
   font-family: var(--font-cormorant);
@@ -104,6 +172,7 @@
   color: #d4af37;
 
   font-size: 28px;
+
   font-weight: 500;
 
   letter-spacing: 1px;
@@ -111,9 +180,10 @@
   margin-bottom: 15px;
 }
 
-/* ========================= */
-/* CARD TEXT */
-/* ========================= */
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
 
 .why-card p {
   font-family: var(--font-cormorant);
@@ -123,14 +193,17 @@
   line-height: 1.8;
 
   font-size: 20px;
+
   font-weight: 400;
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 900px) {
+
   .why-title h2 {
     font-size: 38px;
   }
@@ -145,5 +218,37 @@
 
   .why-card p {
     font-size: 19px;
+  }
+}
+
+
+/* =====================================================
+   WHY CHOOSE - MOBILE TITLE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .why-title h2 {
+    white-space: nowrap;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.2;
+
+    text-align: center;
+  }
+
+  .why-title h2::after {
+    width: 90px;
+
+    height: 2px;
+
+    margin-top: 18px;
+  }
+
+  .why-title p {
+    margin-top: 18px;
   }
 }
