@@ -1,24 +1,23 @@
 /* =====================================================
    TESTIMONIALS SECTION
-   DJ RAY — BLACK & GOLD
 ===================================================== */
 
 .testimonials-section {
   width: 100%;
-  background: #050505 !important;
-  color: #f5f5f5 !important;
+  box-sizing: border-box;
 
-  padding: 110px 30px 120px;
+  padding: 90px 30px 100px;
+
+  background: #080808;
+
+  color: #ffffff;
 
   position: relative;
-  overflow: hidden;
-
-  box-sizing: border-box;
 }
 
 
 /* =====================================================
-   HEADER
+   TESTIMONIALS HEADER
 ===================================================== */
 
 .testimonials-header {
@@ -28,9 +27,6 @@
   margin: 0 auto 70px;
 
   text-align: center;
-
-  position: relative;
-  z-index: 2;
 }
 
 
@@ -43,14 +39,12 @@
 
   font-family: "Times New Roman", serif;
 
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
 
   letter-spacing: 8px;
 
-  margin: 0 0 0;
-
-  text-align: center;
+  margin: 0;
 }
 
 
@@ -60,22 +54,17 @@
   width: 260px;
   height: 2px;
 
-  margin: 12px auto 45px;
+  margin: 18px auto 45px;
 
   background: linear-gradient(
     90deg,
-    transparent 0%,
-    #8f7220 15%,
-    #d4af37 50%,
-    #8f7220 85%,
-    transparent 100%
+    transparent,
+    #d4af37,
+    transparent
   );
 
   box-shadow:
-    0 0 8px rgba(212, 175, 55, 0.25),
-    0 0 18px rgba(212, 175, 55, 0.12);
-
-  border-radius: 50%;
+    0 0 12px rgba(212, 175, 55, 0.35);
 }
 
 
@@ -100,23 +89,22 @@
 
 
 /* =====================================================
-   REVIEWS GRID
+   TESTIMONIALS GRID
 ===================================================== */
 
 .testimonials-grid {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1200px;
 
   margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 28px;
 
-  position: relative;
-  z-index: 2;
+  box-sizing: border-box;
 }
 
 
@@ -125,50 +113,51 @@
 ===================================================== */
 
 .testimonial-card {
+  position: relative;
+
   width: 100%;
 
   min-height: 430px;
 
+  padding: 55px 38px 45px;
+
   box-sizing: border-box;
 
-  padding: 55px 45px 50px;
-
-  background: #090909 !important;
+  background: #0b0b0b;
 
   border: 1px solid rgba(212, 175, 55, 0.65);
 
-  border-radius: 34px;
+  border-radius: 38px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
+  justify-content: space-between;
 
   text-align: center;
 
-  position: relative;
-
   overflow: hidden;
 
-  color: #f5f5f5 !important;
-
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.45);
+    0 0 25px rgba(212, 175, 55, 0.04);
 
   transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
 .testimonial-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 
   border-color: #d4af37;
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(212, 175, 55, 0.08);
+    0 10px 35px rgba(212, 175, 55, 0.10);
 }
 
 
@@ -177,7 +166,7 @@
 ===================================================== */
 
 .quote-mark {
-  color: #d4af37 !important;
+  color: #d4af37;
 
   font-family: Georgia, serif;
 
@@ -185,11 +174,15 @@
 
   line-height: 0.7;
 
-  height: 70px;
+  height: 65px;
 
-  margin-bottom: 45px;
+  display: flex;
 
-  opacity: 0.9;
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: 0.95;
 }
 
 
@@ -198,20 +191,15 @@
 ===================================================== */
 
 .stars {
-  color: #ffffff !important;
+  color: #ffffff;
 
-  font-size: 42px;
+  font-size: 48px;
 
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 
   line-height: 1;
 
-  margin-bottom: 65px;
-
-  white-space: nowrap;
-
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.08);
+  margin: 25px 0 25px;
 }
 
 
@@ -219,18 +207,18 @@
    REVIEW TEXT
 ===================================================== */
 
-.testimonial-card .review {
+.review {
+  width: 100%;
+
   margin: 0;
 
-  color: #f2f2f2 !important;
+  color: #eeeeee;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 
-  font-size: 22px;
+  font-size: 20px;
 
-  font-weight: 400;
-
-  line-height: 1.7;
+  line-height: 1.65;
 
   text-align: center;
 }
@@ -241,15 +229,13 @@
 ===================================================== */
 
 .testimonial-card h3 {
-  margin: auto 0 0;
+  margin: 30px 0 0;
 
-  padding-top: 35px;
-
-  color: #d4af37 !important;
+  color: #d4af37;
 
   font-family: "Times New Roman", serif;
 
-  font-size: 32px;
+  font-size: 30px;
 
   font-weight: 400;
 
@@ -263,69 +249,68 @@
    FEATURED REVIEW
 ===================================================== */
 
-.testimonial-card.featured-review {
+.featured-review {
   border-color: rgba(212, 175, 55, 0.8);
+
+  box-shadow:
+    0 0 30px rgba(212, 175, 55, 0.06);
 }
 
 
 /* =====================================================
-   WRITE A REVIEW
+   WRITE A REVIEW BUTTON
 ===================================================== */
 
 .review-button-wrapper {
   width: 100%;
 
+  max-width: 1200px;
+
+  margin: 55px auto 0;
+
   display: flex;
 
   justify-content: center;
-
-  margin-top: 55px;
-
-  position: relative;
-  z-index: 3;
 }
 
 
 .write-review-btn {
-  min-width: 260px;
+  min-width: 280px;
 
-  padding: 17px 35px;
+  padding: 18px 45px;
 
-  background: transparent !important;
+  background: transparent;
 
-  color: #d4af37 !important;
+  color: #d4af37;
 
   border: 1px solid #d4af37;
 
-  border-radius: 40px;
+  border-radius: 50px;
 
   font-family: "Times New Roman", serif;
 
-  font-size: 18px;
+  font-size: 19px;
 
   letter-spacing: 4px;
 
   cursor: pointer;
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 
 .write-review-btn:hover {
-  background: #d4af37 !important;
+  background: #d4af37;
 
-  color: #050505 !important;
+  color: #000000;
 
   box-shadow:
-    0 0 20px rgba(212, 175, 55, 0.25);
+    0 0 25px rgba(212, 175, 55, 0.25);
 }
 
 
 /* =====================================================
-   REVIEW MODAL
+   REVIEW MODAL OVERLAY
 ===================================================== */
 
 .review-modal-overlay {
@@ -334,153 +319,217 @@
   inset: 0;
 
   width: 100%;
-  height: 100%;
+
+  height: 100dvh;
+
+  box-sizing: border-box;
 
   background: rgba(0, 0, 0, 0.88);
 
   display: flex;
 
-  justify-content: center;
   align-items: center;
 
-  padding: 20px;
+  justify-content: center;
 
-  box-sizing: border-box;
+  padding: 30px 20px;
+
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
 
   z-index: 99999;
 }
 
 
+/* =====================================================
+   REVIEW MODAL
+===================================================== */
+
 .review-modal {
+  position: relative;
+
   width: 100%;
 
-  max-width: 560px;
+  max-width: 680px;
 
-  max-height: 90vh;
+  margin: auto;
 
-  overflow-y: auto;
+  padding: 55px 50px 50px;
 
   box-sizing: border-box;
 
-  padding: 45px 35px;
-
-  background: #090909 !important;
-
-  color: #f5f5f5 !important;
+  background: #090909;
 
   border: 1px solid #d4af37;
 
   border-radius: 28px;
 
-  position: relative;
-
   box-shadow:
-    0 0 50px rgba(212, 175, 55, 0.15);
+    0 0 40px rgba(212, 175, 55, 0.12),
+    inset 0 0 30px rgba(212, 175, 55, 0.02);
 }
 
 
-/* CLOSE */
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
 
 .review-modal-close {
   position: absolute;
 
-  top: 15px;
-  right: 20px;
+  top: 18px;
 
-  background: transparent !important;
+  right: 22px;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 0;
 
   border: none;
 
-  color: #d4af37 !important;
+  background: transparent;
 
-  font-size: 36px;
+  color: #d4af37;
+
+  font-size: 38px;
+
+  line-height: 1;
 
   cursor: pointer;
+
+  z-index: 5;
 }
 
 
-/* ICON */
+.review-modal-close:hover {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MODAL ICON
+===================================================== */
 
 .review-modal-icon {
   text-align: center;
 
-  color: #d4af37 !important;
+  color: #d4af37;
 
-  font-size: 35px;
+  font-size: 60px;
 
-  margin-bottom: 15px;
+  line-height: 1;
+
+  margin-bottom: 35px;
 }
 
 
-/* MODAL TITLE */
+/* =====================================================
+   MODAL TITLE
+===================================================== */
 
 .review-modal h2 {
   margin: 0;
 
-  color: #d4af37 !important;
+  color: #d4af37;
 
   font-family: "Times New Roman", serif;
 
-  font-size: 32px;
+  font-size: 42px;
 
   font-weight: 400;
 
-  letter-spacing: 4px;
+  letter-spacing: 7px;
+
+  line-height: 1.25;
 
   text-align: center;
 }
 
+
+/* =====================================================
+   MODAL SUBTITLE
+===================================================== */
 
 .review-modal-subtitle {
-  color: #cccccc !important;
+  margin: 25px 0 35px;
+
+  color: #eeeeee;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.5;
 
   text-align: center;
-
-  margin: 12px 0 25px;
 }
 
 
-/* MODAL STARS */
+/* =====================================================
+   MODAL STAR RATING
+===================================================== */
 
 .review-modal-stars {
   display: flex;
 
   justify-content: center;
 
-  gap: 5px;
+  align-items: center;
 
-  margin-bottom: 25px;
+  gap: 8px;
+
+  margin-bottom: 35px;
 }
 
 
 .review-modal-stars button {
-  background: transparent !important;
+  padding: 0;
 
   border: none;
 
-  color: #444 !important;
+  background: transparent;
 
-  font-size: 34px;
+  color: #333333;
+
+  font-size: 52px;
+
+  line-height: 1;
 
   cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 
 .review-modal-stars button.active {
-  color: #d4af37 !important;
+  color: #d4af37;
 }
 
 
-/* FORM */
+.review-modal-stars button:hover {
+  color: #d4af37;
+
+  transform: scale(1.08);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
 
 .review-modal form {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 16px;
+  width: 100%;
 }
 
+
+/* =====================================================
+   INPUT
+===================================================== */
 
 .review-modal input,
 .review-modal textarea {
@@ -488,56 +537,130 @@
 
   box-sizing: border-box;
 
-  padding: 15px 17px;
+  background: #111111;
 
-  background: #111111 !important;
+  border: 1px solid rgba(212, 175, 55, 0.65);
 
-  color: #ffffff !important;
+  border-radius: 18px;
 
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #ffffff;
 
-  border-radius: 10px;
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+
+  padding: 20px 24px;
 
   outline: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-  font-size: 16px;
+
+.review-modal input {
+  height: 70px;
+
+  margin-bottom: 25px;
+}
+
+
+.review-modal textarea {
+  min-height: 180px;
+
+  margin-bottom: 25px;
+
+  resize: vertical;
 }
 
 
 .review-modal input::placeholder,
 .review-modal textarea::placeholder {
-  color: #888888 !important;
+  color: #888888;
 }
 
 
 .review-modal input:focus,
 .review-modal textarea:focus {
   border-color: #d4af37;
+
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.12);
 }
 
 
-/* SUBMIT */
+/* =====================================================
+   SEND REVIEW BUTTON
+===================================================== */
 
 .modal-submit-btn {
-  padding: 15px;
+  width: 100%;
 
-  background: #d4af37 !important;
+  min-height: 68px;
 
-  color: #050505 !important;
+  padding: 16px 25px;
 
-  border: none;
+  border: 1px solid #d4af37;
 
-  border-radius: 30px;
+  border-radius: 40px;
+
+  background: #d4af37;
+
+  color: #000000;
 
   font-family: "Times New Roman", serif;
 
-  font-size: 17px;
+  font-size: 20px;
 
-  letter-spacing: 3px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
 
   cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.modal-submit-btn:hover {
+  background: #000000;
+
+  color: #d4af37;
+
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .testimonials-section {
+    padding: 75px 25px 90px;
+  }
+
+
+  .testimonials-header h2 {
+    font-size: 48px;
+  }
+
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 760px;
+
+    gap: 25px;
+  }
+
+
+  .testimonial-card {
+    min-height: 420px;
+  }
 }
 
 
@@ -545,16 +668,18 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   .testimonials-section {
-    padding: 75px 20px 90px !important;
+    width: 100%;
 
-    background: #050505 !important;
+    padding: 65px 20px 80px;
 
-    color: #f5f5f5 !important;
+    overflow: hidden;
   }
 
+
+  /* HEADER */
 
   .testimonials-header {
     margin-bottom: 55px;
@@ -562,72 +687,70 @@
 
 
   .testimonials-header .section-kicker {
-    font-size: 17px;
+    font-size: 20px;
 
-    letter-spacing: 6px;
+    letter-spacing: 7px;
   }
 
 
   .testimonials-header .gold-line {
-    width: 220px;
+    width: 230px;
 
-    margin-top: 12px;
-
-    margin-bottom: 38px;
+    margin: 16px auto 38px;
   }
 
 
   .testimonials-header h2 {
-    font-size: 42px;
+    font-size: 43px;
 
     letter-spacing: 3px;
+
+    line-height: 1.25;
   }
 
+
+  /* GRID */
 
   .testimonials-grid {
+    width: 100%;
+
+    display: grid;
+
     grid-template-columns: 1fr;
 
-    gap: 25px;
-
-    max-width: 780px;
+    gap: 28px;
   }
 
 
+  /* CARD */
+
   .testimonial-card {
-    min-height: 440px;
+    width: 100%;
 
-    padding: 50px 30px 45px;
+    min-height: 520px;
 
-    border-radius: 32px;
+    padding: 55px 28px 45px;
 
-    background: #090909 !important;
-
-    color: #f5f5f5 !important;
+    border-radius: 34px;
   }
 
 
   .quote-mark {
-    font-size: 65px;
-
-    margin-bottom: 40px;
+    font-size: 62px;
   }
 
 
   .stars {
-    font-size: 36px;
+    font-size: 43px;
 
-    letter-spacing: 3px;
-
-    margin-bottom: 60px;
+    letter-spacing: 1px;
   }
 
 
-  .testimonial-card .review {
-    font-size: 20px;
+  .review {
+    font-size: 19px;
 
-    line-height: 1.65;
-
-    color: #f2f2f2 !important;
+    line-height: 1.7;
   }
 
 
@@ -635,15 +758,156 @@
     font-size: 29px;
 
     letter-spacing: 5px;
-
-    color: #d4af37 !important;
   }
 
+
+  /* WRITE BUTTON */
 
   .review-button-wrapper {
     margin-top: 45px;
   }
 
+
+  .write-review-btn {
+    width: 100%;
+
+    max-width: 360px;
+
+    min-width: 0;
+
+    padding: 18px 25px;
+
+    font-size: 18px;
+  }
+
+
+  /* =================================================
+     MODAL OVERLAY
+  ================================================= */
+
+  .review-modal-overlay {
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 20px 12px 40px;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    height: 100dvh;
+  }
+
+
+  /* =================================================
+     MODAL
+  ================================================= */
+
+  .review-modal {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 20px auto;
+
+    padding: 55px 22px 30px;
+
+    border-radius: 24px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* CLOSE */
+
+  .review-modal-close {
+    top: 12px;
+
+    right: 14px;
+
+    font-size: 34px;
+  }
+
+
+  /* ICON */
+
+  .review-modal-icon {
+    font-size: 52px;
+
+    margin-bottom: 28px;
+  }
+
+
+  /* TITLE */
+
+  .review-modal h2 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    line-height: 1.25;
+  }
+
+
+  /* SUBTITLE */
+
+  .review-modal-subtitle {
+    font-size: 17px;
+
+    margin: 20px 0 28px;
+  }
+
+
+  /* STARS */
+
+  .review-modal-stars {
+    gap: 3px;
+
+    margin-bottom: 28px;
+  }
+
+
+  .review-modal-stars button {
+    font-size: 43px;
+  }
+
+
+  /* INPUT */
+
+  .review-modal input {
+    height: 64px;
+
+    font-size: 17px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* TEXTAREA */
+
+  .review-modal textarea {
+    min-height: 170px;
+
+    font-size: 17px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* SUBMIT */
+
+  .modal-submit-btn {
+    min-height: 64px;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+  }
 }
 
 
@@ -651,117 +915,173 @@
    SMALL PHONES
 ===================================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
 
   .testimonials-section {
-    padding: 65px 16px 80px !important;
+    padding-left: 15px;
 
-    background: #050505 !important;
+    padding-right: 15px;
   }
 
 
   .testimonials-header .section-kicker {
-    font-size: 16px;
+    font-size: 18px;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
   }
 
 
   .testimonials-header .gold-line {
-    width: 190px;
-
-    margin-top: 11px;
+    width: 210px;
 
     margin-bottom: 32px;
   }
 
 
   .testimonials-header h2 {
-    font-size: 35px;
+    font-size: 36px;
 
     letter-spacing: 2px;
-  }
-
-
-  .testimonials-grid {
-    gap: 22px;
   }
 
 
   .testimonial-card {
-    min-height: 410px;
+    min-height: 500px;
 
-    padding: 45px 22px 40px;
+    padding: 48px 22px 40px;
 
-    border-radius: 28px;
-  }
-
-
-  .quote-mark {
-    font-size: 58px;
-
-    margin-bottom: 35px;
+    border-radius: 30px;
   }
 
 
   .stars {
-    font-size: 31px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 50px;
+    font-size: 39px;
   }
 
 
-  .testimonial-card .review {
+  .review {
     font-size: 18px;
 
     line-height: 1.65;
-
-    color: #f2f2f2 !important;
   }
 
 
   .testimonial-card h3 {
     font-size: 27px;
 
-    letter-spacing: 5px;
+    letter-spacing: 4px;
   }
 
 
-  .write-review-btn {
-    min-width: 220px;
+  /* MODAL */
 
-    padding: 15px 25px;
+  .review-modal-overlay {
+    padding: 10px 8px 30px;
+
+    align-items: flex-start;
+  }
+
+
+  .review-modal {
+    padding: 52px 17px 25px;
+
+    border-radius: 20px;
+
+    margin: 10px auto 20px;
+  }
+
+
+  .review-modal h2 {
+    font-size: 27px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .review-modal-subtitle {
+    font-size: 16px;
+
+    margin-top: 18px;
+  }
+
+
+  .review-modal-stars {
+    margin-bottom: 25px;
+  }
+
+
+  .review-modal-stars button {
+    font-size: 38px;
+  }
+
+
+  .review-modal input {
+    height: 60px;
 
     font-size: 16px;
   }
 
+
+  .review-modal textarea {
+    min-height: 160px;
+
+    font-size: 16px;
+  }
+
+
+  .modal-submit-btn {
+    min-height: 60px;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
 }
 
 
 /* =====================================================
-   FORCE DARK MODE / MOBILE BROWSER OVERRIDES
+   VERY SMALL PHONES
 ===================================================== */
 
-@media (prefers-color-scheme: light) {
+@media (max-width: 360px) {
 
-  .testimonials-section {
-    background: #050505 !important;
-    color: #f5f5f5 !important;
+  .testimonials-header h2 {
+    font-size: 32px;
   }
+
 
   .testimonial-card {
-    background: #090909 !important;
-    color: #f5f5f5 !important;
+    padding-left: 18px;
+
+    padding-right: 18px;
   }
 
-  .testimonial-card .review {
-    color: #f2f2f2 !important;
+
+  .stars {
+    font-size: 35px;
   }
 
-  .testimonial-card h3 {
-    color: #d4af37 !important;
+
+  .review {
+    font-size: 17px;
   }
 
+
+  .review-modal {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+
+  .review-modal h2 {
+    font-size: 24px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .review-modal-stars button {
+    font-size: 34px;
+  }
 }

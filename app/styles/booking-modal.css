@@ -1,115 +1,233 @@
+/* =====================================================
+   BOOKING MODAL
+   DJ RAY - LUXURY BLACK & GOLD
+   ===================================================== */
+
 .booking-overlay {
   position: fixed;
+
   inset: 0;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
-  background: rgba(0, 0, 0, 0.86);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.82);
 
   display: flex;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
 
-  padding: 30px 20px;
+  padding: 30px;
 
-  overflow-y: auto;
+  box-sizing: border-box;
 
   z-index: 99999;
 
-  box-sizing: border-box;
+  overflow-y: auto;
+
+  backdrop-filter: blur(5px);
 }
 
 
-.booking-modal {
-  width: 90%;
-  max-width: 700px;
+/* =====================================================
+   MODAL
+   ===================================================== */
 
-  max-height: calc(100vh - 60px);
+.booking-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 760px;
+
+  max-height: 90vh;
 
   overflow-y: auto;
 
-  background: #050505;
-
-  border: 2px solid #d4af37;
-  border-radius: 24px;
-
-  padding: 35px 40px;
+  padding: 55px 40px 35px;
 
   box-sizing: border-box;
 
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(212, 175, 55, 0.06),
+      transparent 45%
+    ),
+    #050505;
+
+  border: 2px solid #d4af37;
+
+  border-radius: 28px;
+
   box-shadow:
-    0 0 35px rgba(212, 175, 55, 0.25),
-    0 20px 80px rgba(0, 0, 0, 0.8);
+    0 0 30px rgba(212, 175, 55, 0.12),
+    0 25px 80px rgba(0, 0, 0, 0.8);
 }
 
 
-/* TITLE */
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
 
-.booking-modal h2 {
-  margin: 0 0 35px;
+.booking-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.booking-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.booking-modal::-webkit-scrollbar-thumb {
+  background: #b08d2c;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   CLOSE X
+   ===================================================== */
+
+.booking-modal-close {
+  position: absolute;
+
+  top: 12px;
+  right: 14px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: #d4af37;
+
+  border: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 38px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.booking-modal-close:hover {
+  color: #f0cc55;
+
+  transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.booking-title {
+  margin: 0 0 45px;
 
   text-align: center;
 
   color: #d4af37;
 
-  font-size: 42px;
+  font-family: "Times New Roman", serif;
 
-  letter-spacing: 4px;
+  font-size: 52px;
 
-  font-weight: 700;
+  font-weight: 400;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
 }
 
 
-/* FIELD */
+/* =====================================================
+   FIELD
+   ===================================================== */
 
 .booking-field {
   width: 100%;
 
-  margin-bottom: 22px;
+  margin-bottom: 25px;
+
+  box-sizing: border-box;
 }
 
+
+/* =====================================================
+   LABEL
+   ===================================================== */
 
 .booking-field label {
   display: block;
 
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
   color: #d4af37;
 
-  font-size: 15px;
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
 
   letter-spacing: 1px;
 }
 
 
-/* INPUTS */
+/* =====================================================
+   INPUT / SELECT / TEXTAREA
+   ===================================================== */
 
 .booking-field input,
 .booking-field select,
 .booking-field textarea {
+  display: block;
+
   width: 100%;
+
+  max-width: 100%;
 
   box-sizing: border-box;
 
-  background: #0a0a0a;
+  background: #0b0b0b;
 
-  color: white;
+  color: #f5f5f5;
 
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.55);
 
-  border-radius: 12px;
+  border-radius: 18px;
 
-  padding: 15px 16px;
+  padding: 17px 18px;
 
-  font-size: 15px;
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
 
   outline: none;
 
-  transition: 0.3s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+
+/* =====================================================
+   INPUT FOCUS
+   ===================================================== */
 
 .booking-field input:focus,
 .booking-field select:focus,
@@ -117,11 +235,13 @@
   border-color: #d4af37;
 
   box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.18);
+    0 0 15px rgba(212, 175, 55, 0.12);
 }
 
 
-/* SELECT */
+/* =====================================================
+   SELECT
+   ===================================================== */
 
 .booking-field select {
   appearance: auto;
@@ -130,101 +250,108 @@
 }
 
 
-/* DATE */
+/* =====================================================
+   DATE
+   ===================================================== */
 
 .booking-field input[type="date"] {
   color-scheme: dark;
 }
 
 
-/* MESSAGE */
+/* =====================================================
+   TEXTAREA
+   ===================================================== */
 
 .booking-field textarea {
   min-height: 130px;
 
   resize: vertical;
+
+  line-height: 1.5;
 }
 
 
-/* BUTTONS */
+/* =====================================================
+   BUTTONS
+   ===================================================== */
 
 .booking-buttons {
   display: flex;
 
-  justify-content: space-between;
+  gap: 15px;
 
-  align-items: center;
+  width: 100%;
 
-  gap: 20px;
-
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 
-/* SEND */
+/* =====================================================
+   SEND
+   ===================================================== */
 
-.booking-send {
+.booking-send,
+.booking-close {
   flex: 1;
 
-  padding: 15px 25px;
+  min-width: 0;
 
-  border: none;
+  padding: 16px 20px;
 
-  border-radius: 30px;
+  border-radius: 40px;
 
-  background: linear-gradient(
-    135deg,
-    #d4af37,
-    #f1d36a,
-    #b8860b
-  );
+  font-family: Arial, sans-serif;
 
-  color: #050505;
-
-  font-size: 15px;
+  font-size: 17px;
 
   font-weight: 700;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   cursor: pointer;
 
-  transition: 0.3s ease;
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.booking-send {
+  background: #d4af37;
+
+  color: #050505;
+
+  border: 1px solid #d4af37;
+
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.15);
 }
 
 
 .booking-send:hover {
+  background: #e2bd48;
+
   transform: translateY(-2px);
 
   box-shadow:
-    0 0 20px rgba(212, 175, 55, 0.35);
+    0 0 25px rgba(212, 175, 55, 0.3);
 }
 
 
-/* CLOSE */
+/* =====================================================
+   CLOSE BUTTON
+   ===================================================== */
 
 .booking-close {
-  flex: 1;
-
-  padding: 15px 25px;
-
-  border: 1px solid #d4af37;
-
-  border-radius: 30px;
-
   background: transparent;
 
   color: #d4af37;
 
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
+  border: 1px solid #b08d2c;
 }
 
 
@@ -232,38 +359,198 @@
   background: #d4af37;
 
   color: #050505;
+
+  transform: translateY(-2px);
 }
 
 
-/* MOBILE */
+/* =====================================================
+   TABLET
+   ===================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+
   .booking-overlay {
-    padding: 20px 12px;
+    padding: 20px;
   }
 
   .booking-modal {
-    width: 95%;
+    max-width: 680px;
 
-    max-height: calc(100vh - 40px);
-
-    padding: 28px 22px;
-
-    border-radius: 20px;
+    padding: 48px 30px 30px;
   }
 
-  .booking-modal h2 {
-    font-size: 30px;
+  .booking-title {
+    font-size: 46px;
+
+    margin-bottom: 35px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .booking-overlay {
+    align-items: center;
+
+    padding: 12px;
+
+    overflow-y: auto;
+  }
+
+  .booking-modal {
+    width: 100%;
+
+    max-width: 560px;
+
+    max-height: 88vh;
+
+    padding: 45px 22px 25px;
+
+    border-radius: 22px;
+  }
+
+  .booking-modal-close {
+    top: 7px;
+    right: 8px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 32px;
+  }
+
+  .booking-title {
+    font-size: 38px;
+
+    letter-spacing: 4px;
 
     margin-bottom: 28px;
   }
 
+  .booking-field {
+    margin-bottom: 18px;
+  }
+
+  .booking-field label {
+    font-size: 17px;
+
+    margin-bottom: 7px;
+  }
+
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 13px 14px;
+
+    font-size: 16px;
+
+    border-radius: 15px;
+  }
+
+  .booking-field textarea {
+    min-height: 110px;
+  }
+
+  .booking-buttons {
+    gap: 12px;
+
+    margin-top: 5px;
+  }
+
+  .booking-send,
+  .booking-close {
+    padding: 13px 15px;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .booking-overlay {
+    padding: 8px;
+  }
+
+  .booking-modal {
+    width: 100%;
+
+    max-width: 430px;
+
+    max-height: 86vh;
+
+    padding: 40px 16px 20px;
+
+    border-radius: 20px;
+  }
+
+  .booking-modal-close {
+    top: 5px;
+    right: 6px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 30px;
+  }
+
+  .booking-title {
+    font-size: 32px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 24px;
+  }
+
+  .booking-field {
+    margin-bottom: 15px;
+  }
+
+  .booking-field label {
+    font-size: 16px;
+  }
+
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea {
+    padding: 12px 13px;
+
+    font-size: 16px;
+
+    border-radius: 14px;
+  }
+
+  .booking-field textarea {
+    min-height: 95px;
+  }
+
   .booking-buttons {
     flex-direction: column;
+
+    gap: 10px;
   }
 
   .booking-send,
   .booking-close {
     width: 100%;
+
+    padding: 13px 15px;
+
+    font-size: 15px;
   }
 }
