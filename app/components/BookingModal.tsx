@@ -27,18 +27,6 @@ export default function BookingModal({
     }
   }, [selectedService]);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   if (!isOpen) {
     return null;
   }
@@ -72,11 +60,14 @@ ${message || "No additional message."}
       text
     )}`;
 
-    window.open(whatsappUrl, "_blank");
+   window.location.href = whatsappUrl;
   };
 
   return createPortal(
-    <div className="booking-overlay" onClick={onClose}>
+    <div
+      className="booking-modal-overlay"
+      onClick={onClose}
+    >
       <div
         className="booking-modal"
         onClick={(e) => e.stopPropagation()}
@@ -93,9 +84,7 @@ ${message || "No additional message."}
         </button>
 
         {/* TITLE */}
-        <h2 className="booking-title">
-          BOOK NOW
-        </h2>
+        <h2>BOOK NOW</h2>
 
         {/* NAME */}
         <div className="booking-field">
@@ -108,6 +97,7 @@ ${message || "No additional message."}
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder=""
           />
         </div>
 
@@ -122,6 +112,7 @@ ${message || "No additional message."}
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            placeholder=""
           />
         </div>
 
@@ -199,12 +190,14 @@ ${message || "No additional message."}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={4}
+            placeholder=""
           />
         </div>
 
         {/* BUTTONS */}
         <div className="booking-buttons">
 
+          {/* SEND */}
           <button
             type="button"
             className="booking-send"
@@ -213,6 +206,7 @@ ${message || "No additional message."}
             SEND
           </button>
 
+          {/* CLOSE */}
           <button
             type="button"
             className="booking-close"
