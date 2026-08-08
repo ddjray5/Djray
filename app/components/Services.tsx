@@ -97,7 +97,7 @@ const services = [
   },
 
   {
-    image: "/birthday.webp",
+    image: "/Birthday.webp",
     title: "BIRTHDAY PARTIES",
     bookingType: "Birthday Party",
     description:
