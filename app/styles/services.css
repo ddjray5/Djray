@@ -610,3 +610,51 @@
     font-size: 16px;
   }
 }
+
+/* =====================================================
+   MOBILE BOOK BUTTON FIX
+===================================================== */
+
+.service-card {
+  position: relative;
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+}
+
+.service-book {
+  position: relative;
+  z-index: 10;
+
+  pointer-events: auto;
+  touch-action: manipulation;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Make sure nothing blocks the button on mobile */
+@media (max-width: 768px) {
+  .service-card {
+    position: relative;
+  }
+
+  .service-content {
+    position: relative;
+    z-index: 5;
+  }
+
+  .service-book {
+    position: relative;
+    z-index: 20;
+
+    display: block;
+    width: 100%;
+
+    pointer-events: auto;
+    touch-action: manipulation;
+
+    cursor: pointer;
+  }
+}
