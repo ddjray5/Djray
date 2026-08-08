@@ -5,28 +5,43 @@
 
 .contact {
   width: 100%;
-  padding: 110px 8% 100px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
 
   background:
     radial-gradient(
-      circle at 20% 20%,
-      rgba(212, 175, 55, 0.07),
-      transparent 30%
+      circle at center,
+      rgba(176, 141, 44, 0.04),
+      transparent 60%
     ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(212, 175, 55, 0.05),
-      transparent 30%
-    ),
-    linear-gradient(
-      180deg,
-      #090909 0%,
-      #050505 60%,
-      #000000 100%
-    );
+    #050505;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+  padding: 80px 20px 100px;
+
+  scroll-margin-top: 130px;
+}
+
+
+/* =====================================================
+   CONTACT CONTENT
+===================================================== */
+
+.contact-content {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
 
@@ -35,66 +50,36 @@
 ===================================================== */
 
 .contact-title {
-  text-align: center;
   margin: 0 0 35px;
-}
-
-.contact-title h2 {
-  display: inline-block;
-
-  font-family: var(--font-cormorant);
 
   color: #d4af37;
 
-  font-size: 48px;
+  font-family: "Times New Roman", serif;
 
+  font-size: 58px;
   font-weight: 500;
 
-  letter-spacing: 5px;
-
-  text-transform: uppercase;
-
-  margin: 0;
-
-  line-height: 1.2;
+  letter-spacing: 6px;
 
   text-align: center;
-
-  position: relative;
 }
 
-
-/* =====================================================
-   SOFT GOLD LINE
-===================================================== */
-
-.contact-title h2::after {
+.contact-title::after {
   content: "";
 
   display: block;
 
-  width: 110px;
-
+  width: 150px;
   height: 2px;
 
-  margin: 12px auto 0;
+  margin: 28px auto 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(212, 175, 55, 0.75),
-      #f8e38c,
-      rgba(212, 175, 55, 0.75),
-      transparent
-    );
-
-  opacity: 0.75;
-
-  border-radius: 50%;
-
-  box-shadow:
-    0 0 8px rgba(212, 175, 55, 0.12);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b08d2c,
+    transparent
+  );
 }
 
 
@@ -103,178 +88,110 @@
 ===================================================== */
 
 .contact-subtitle {
-  font-family: var(--font-cormorant);
+  max-width: 750px;
 
-  color: #d0d0d0;
+  margin: 25px auto 65px;
 
-  font-size: 27px;
+  color: #e5e5e5;
 
-  font-weight: 400;
+  font-family: "Times New Roman", serif;
 
-  letter-spacing: 1px;
+  font-size: 32px;
 
   line-height: 1.6;
 
+  letter-spacing: 1px;
+
   text-align: center;
-
-  max-width: 800px;
-
-  margin: 30px auto 60px;
 }
 
 
 /* =====================================================
-   BUTTON CONTAINER
+   CONTACT BUTTONS
 ===================================================== */
 
 .contact-buttons {
   width: 100%;
 
-  max-width: 650px;
-
-  margin: 0 auto;
-
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
 
-  gap: 25px;
+  gap: 22px;
+
+  box-sizing: border-box;
 }
 
 
 /* =====================================================
-   CONTACT BUTTON
-   SHARED STYLE
+   GOLD BORDER BUTTONS
 ===================================================== */
 
-.contact-button {
-  width: 100%;
-
-  max-width: 520px;
-
-  min-height: 95px;
-
-  box-sizing: border-box;
-
+.btn-gold,
+.btn-outline {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 22px;
+  gap: 18px;
 
-  padding: 20px 35px;
+  width: 500px;
+  max-width: 500px;
 
-  background: #000000;
+  height: 82px;
+  min-height: 82px;
 
-  color: #d4af37;
+  padding: 12px 25px;
 
-  border: 2px solid #d4af37;
-
-  border-radius: 60px;
-
-  font-family: var(--font-cormorant);
-
-  font-size: 30px;
-
-  font-weight: 600;
-
-  letter-spacing: 1.5px;
-
-  text-decoration: none;
-
-  text-transform: uppercase;
-
-  line-height: 1;
-
-  cursor: pointer;
+  margin: 0;
 
   box-sizing: border-box;
 
-  box-shadow:
-    0 10px 35px rgba(212, 175, 55, 0.16);
+  background: #050505;
 
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
+  color: #b08d2c;
 
+  border: 2px solid #b08d2c;
 
-/* =====================================================
-   WHATSAPP
-===================================================== */
+  border-radius: 45px;
 
-.contact-whatsapp {
-  background: #000000;
+  text-decoration: none;
 
-  color: #d4af37;
+  font-family: "Times New Roman", serif;
 
-  border-color: #d4af37;
-}
+  font-size: 22px;
 
+  font-weight: 500;
 
-/* =====================================================
-   EMAIL
-===================================================== */
+  letter-spacing: 2px;
 
-.contact-email {
-  background: #000000;
-
-  color: #d4af37;
-
-  border-color: #d4af37;
-}
-
-
-/* =====================================================
-   ICON
-===================================================== */
-
-.contact-icon {
-  width: 34px;
-
-  height: 34px;
-
-  min-width: 34px;
-
-  min-height: 34px;
-
-  flex: 0 0 34px;
-
-  display: block;
-
-  color: #d4af37;
-
-  margin: 0;
-
-  padding: 0;
+  cursor: pointer;
 
   transition:
     transform 0.3s ease,
-    color 0.3s ease;
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
 /* =====================================================
-   BUTTON TEXT
+   ICONS
 ===================================================== */
 
-.contact-button span {
-  display: inline-block;
+.btn-gold svg,
+.btn-outline svg {
+  width: 28px;
+  height: 28px;
 
-  margin: 0;
+  font-size: 28px;
 
-  padding: 0;
+  color: #b08d2c;
 
-  color: inherit;
-
-  line-height: 1;
+  flex-shrink: 0;
 }
 
 
@@ -282,109 +199,85 @@
    HOVER
 ===================================================== */
 
-.contact-button:hover {
-  transform: translateY(-5px);
+.btn-gold:hover,
+.btn-outline:hover {
+  background: rgba(176, 141, 44, 0.06);
 
-  background: #d4af37;
+  color: #c9a83e;
 
-  color: #000000;
+  border-color: #c9a83e;
 
-  border-color: #d4af37;
+  transform: translateY(-2px);
 
   box-shadow:
-    0 18px 45px rgba(212, 175, 55, 0.30);
+    0 0 20px rgba(176, 141, 44, 0.20);
 }
 
 
-.contact-button:hover .contact-icon {
-  color: #000000;
-
-  transform: scale(1.08);
-}
-
-
-/* =====================================================
-   ACTIVE
-===================================================== */
-
-.contact-button:active {
-  transform: scale(0.98);
+.btn-gold:hover svg,
+.btn-outline:hover svg {
+  color: #c9a83e;
 }
 
 
 /* =====================================================
-   TABLET
+   MOBILE
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   .contact {
-    padding: 85px 25px 80px;
+    padding: 70px 18px 80px;
   }
-
 
   .contact-title {
-    margin-bottom: 30px;
-  }
-
-
-  .contact-title h2 {
-    font-size: 40px;
+    font-size: 42px;
 
     letter-spacing: 4px;
   }
 
+  .contact-title::after {
+    width: 110px;
 
-  .contact-title h2::after {
-    width: 90px;
-
-    margin-top: 10px;
+    margin-top: 20px;
   }
-
 
   .contact-subtitle {
-    font-size: 23px;
+    margin: 25px auto 50px;
+
+    font-size: 25px;
 
     line-height: 1.55;
-
-    max-width: 520px;
-
-    margin-top: 25px;
-
-    margin-bottom: 50px;
   }
-
 
   .contact-buttons {
-    max-width: 600px;
-
-    gap: 22px;
-  }
-
-
-  .contact-button {
-    max-width: 520px;
-
-    min-height: 88px;
-
-    padding: 18px 28px;
-
-    font-size: 27px;
-
     gap: 20px;
   }
 
+  .btn-gold,
+  .btn-outline {
+    width: 85%;
 
-  .contact-icon {
-    width: 32px;
+    max-width: 500px;
 
-    height: 32px;
+    height: 78px;
+    min-height: 78px;
 
-    min-width: 32px;
+    padding: 10px 20px;
 
-    min-height: 32px;
+    gap: 15px;
 
-    flex-basis: 32px;
+    border-radius: 42px;
+
+    font-size: 20px;
+  }
+
+  .btn-gold svg,
+  .btn-outline svg {
+    width: 26px;
+    height: 26px;
+
+    font-size: 26px;
   }
 }
 
@@ -396,80 +289,45 @@
 @media (max-width: 480px) {
 
   .contact {
-    padding: 70px 20px 65px;
+    padding: 55px 14px 70px;
   }
-
 
   .contact-title {
-    margin-bottom: 28px;
-  }
-
-
-  .contact-title h2 {
     font-size: 34px;
 
     letter-spacing: 3px;
   }
 
-
-  .contact-title h2::after {
-    width: 85px;
-
-    height: 2px;
-
-    margin-top: 9px;
-  }
-
-
   .contact-subtitle {
-    font-size: 20px;
+    margin: 22px auto 45px;
 
-    line-height: 1.55;
-
-    max-width: 330px;
-
-    margin-top: 24px;
-
-    margin-bottom: 45px;
+    font-size: 22px;
   }
-
 
   .contact-buttons {
-    width: 100%;
-
-    gap: 20px;
+    gap: 18px;
   }
 
+  .btn-gold,
+  .btn-outline {
+    width: 88%;
 
-  .contact-button {
-    width: 100%;
+    height: 72px;
+    min-height: 72px;
 
-    max-width: 340px;
+    padding: 9px 18px;
 
-    min-height: 80px;
+    border-radius: 40px;
 
-    padding: 16px 20px;
-
-    font-size: 23px;
-
-    letter-spacing: 1.2px;
-
-    gap: 16px;
-
-    border-width: 2px;
+    font-size: 18px;
   }
 
+  .btn-gold svg,
+  .btn-outline svg {
+    width: 24px;
+    height: 24px;
 
-  .contact-icon {
-    width: 30px;
-
-    height: 30px;
-
-    min-width: 30px;
-
-    min-height: 30px;
-
-    flex-basis: 30px;
+    font-size: 24px;
   }
 }
 
@@ -481,55 +339,69 @@
 @media (max-width: 360px) {
 
   .contact {
-    padding: 60px 15px 60px;
+    padding: 50px 12px 60px;
   }
 
-
-  .contact-title h2 {
+  .contact-title {
     font-size: 30px;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
   }
-
-
-  .contact-title h2::after {
-    width: 75px;
-
-    margin-top: 8px;
-  }
-
 
   .contact-subtitle {
-    font-size: 19px;
-
-    max-width: 290px;
+    font-size: 20px;
 
     margin-bottom: 40px;
   }
 
+  .btn-gold,
+  .btn-outline {
+    width: 88%;
 
-  .contact-button {
-    max-width: 300px;
+    height: 68px;
+    min-height: 68px;
 
-    min-height: 74px;
+    border-radius: 38px;
 
-    padding: 14px 18px;
-
-    font-size: 21px;
-
-    gap: 14px;
+    font-size: 17px;
   }
 
+  .btn-gold svg,
+  .btn-outline svg {
+    width: 23px;
+    height: 23px;
 
-  .contact-icon {
-    width: 28px;
+    font-size: 23px;
+  }
+}
 
-    height: 28px;
+/* =====================================================
+   CONTACT - REDUCE EMPTY SPACE
+===================================================== */
 
-    min-width: 28px;
+.contact {
+  height: auto !important;
+  min-height: auto !important;
+  padding-bottom: 60px !important;
+}
 
-    min-height: 28px;
+/* Keep contact content compact */
+.contact-content {
+  height: auto !important;
+  min-height: auto !important;
+  padding-bottom: 40px !important;
+}
 
-    flex-basis: 28px;
+/* Mobile */
+@media (max-width: 768px) {
+  .contact {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 40px !important;
+  }
+
+  .contact-content {
+    min-height: auto !important;
+    padding-bottom: 20px !important;
   }
 }

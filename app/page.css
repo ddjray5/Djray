@@ -638,3 +638,11 @@ body{
     radial-gradient(circle at 50% 80%, rgba(212,175,55,.06), transparent 35%);
 
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px;
+}

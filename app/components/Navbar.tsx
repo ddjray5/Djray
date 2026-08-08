@@ -1,14 +1,60 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import "../styles/navbar.css";
 
 export default function Navbar() {
+  const router = useRouter();
+
+const handleHome = () => {
+  closeMenu();
+
+  if (window.location.pathname === "/") {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  } else {
+    router.push("/");
+  }
+};
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+
+    const section = document.getElementById(id);
+
+    if (!section) {
+      console.log(`Section #${id} not found`);
+      return;
+    }
+
+    const navbarHeight = 130;
+
+    const sectionTop =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      navbarHeight;
+
+    window.scrollTo({
+  top: sectionTop,
+  behavior: "auto",
+});
+
     setMenuOpen(false);
   };
 
@@ -37,43 +83,68 @@ export default function Navbar() {
           />
         </Link>
 
-
         {/* DESKTOP MENU */}
         <nav className="nav-links">
 
-          <Link href="/" onClick={closeMenu}>
-            Home
-          </Link>
+          <a
+  href="#top"
+  onClick={(e) => {
+    e.preventDefault();
 
-          <Link href="/#about" onClick={closeMenu}>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    closeMenu();
+  }}
+>
+  Home
+</a>
+
+          <a
+            href="#about"
+            onClick={(e) => scrollToSection(e, "about")}
+          >
             About
-          </Link>
+          </a>
 
-          <Link href="/#music" onClick={closeMenu}>
+          <a
+            href="#music"
+            onClick={(e) => scrollToSection(e, "music")}
+          >
             Music
-          </Link>
+          </a>
 
-          <Link href="/#services" onClick={closeMenu}>
+          <a
+            href="#services"
+            onClick={(e) => scrollToSection(e, "services")}
+          >
             Services
-          </Link>
+          </a>
 
-          <Link href="/gallery" onClick={closeMenu}>
+          <a
+            href="#gallery"
+            onClick={(e) => scrollToSection(e, "gallery")}
+          >
             Gallery
-          </Link>
+          </a>
 
-          <Link href="/#contact" onClick={closeMenu}>
+          <a
+            href="#contact"
+            onClick={(e) => scrollToSection(e, "contact")}
+          >
             Contact
-          </Link>
+          </a>
 
         </nav>
-
 
         {/* MOBILE MENU BUTTON */}
         <button
           className={`mobile-menu-button ${
             menuOpen ? "active" : ""
           }`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           type="button"
@@ -83,7 +154,6 @@ export default function Navbar() {
           <span></span>
         </button>
 
-
         {/* MOBILE MENU */}
         <nav
           className={`mobile-nav ${
@@ -91,29 +161,58 @@ export default function Navbar() {
           }`}
         >
 
-          <Link href="/" onClick={closeMenu}>
-            Home
-          </Link>
+          <button
+  type="button"
+  className="nav-home-button"
+  onClick={handleHome}
+>
+  Home
+</button>
 
-          <Link href="/#about" onClick={closeMenu}>
+          <a
+            href="#about"
+            onClick={(e) =>
+              scrollToSection(e, "about")
+            }
+          >
             About
-          </Link>
+          </a>
 
-          <Link href="/#music" onClick={closeMenu}>
+          <a
+            href="#music"
+            onClick={(e) =>
+              scrollToSection(e, "music")
+            }
+          >
             Music
-          </Link>
+          </a>
 
-          <Link href="/#services" onClick={closeMenu}>
+          <a
+            href="#services"
+            onClick={(e) =>
+              scrollToSection(e, "services")
+            }
+          >
             Services
-          </Link>
+          </a>
 
-          <Link href="/gallery" onClick={closeMenu}>
+          <a
+            href="#gallery"
+            onClick={(e) =>
+              scrollToSection(e, "gallery")
+            }
+          >
             Gallery
-          </Link>
+          </a>
 
-          <Link href="/#contact" onClick={closeMenu}>
+          <a
+            href="#contact"
+            onClick={(e) =>
+              scrollToSection(e, "contact")
+            }
+          >
             Contact
-          </Link>
+          </a>
 
         </nav>
 

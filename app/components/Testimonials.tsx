@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import ReviewModal from "./ReviewModal";
+import { useState, useEffect } from "react";
 import "../styles/testimonials.css";
 
 const reviews = [
@@ -25,63 +24,197 @@ const reviews = [
 export default function Testimonials() {
   const [openReview, setOpenReview] = useState(false);
 
+  const [name, setName] = useState("");
+  const [review, setReview] = useState("");
+  const [rating, setRating] = useState(0);
+
+  /*
+   * =====================================================
+   * STOP BACKGROUND PAGE SCROLL WHEN REVIEW IS OPEN
+   * =====================================================
+   */
+  useEffect(() => {
+    if (openReview) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openReview]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!name.trim() || !review.trim() || rating === 0) {
+      return;
+    }
+
+    console.log({
+      name,
+      review,
+      rating,
+    });
+
+    setName("");
+    setReview("");
+    setRating(0);
+    setOpenReview(false);
+  };
+
   return (
-    <section className="testimonials">
-      <div className="testimonials-title">
-        <h2>TESTIMONIALS</h2>
-        <p>What Clients Say</p>
+    <>
+      {/* TITLE */}
+      <div className="testimonials-header">
+        <span className="section-kicker">
+          TESTIMONIALS
+        </span>
+        <div className="gold-line"></div>
+
+        <h2>
+          What Clients Say
+        </h2>
+
+        
       </div>
 
+      {/* REVIEWS */}
       <div className="testimonials-grid">
         {reviews.map((item, index) => (
-          <div className="testimonial-card" key={index}>
-            <div className="stars">★★★★★</div>
+          <div
+            className={`testimonial-card ${
+              index === 2 ? "featured-review" : ""
+            }`}
+            key={index}
+          >
+            {/* QUOTE */}
+            <div className="quote-mark">
+              “
+            </div>
 
+            {/* STARS */}
+            <div className="stars">
+              ★★★★★
+            </div>
+
+            {/* REVIEW */}
             <p className="review">
               "{item.review}"
             </p>
 
-            <h3>{item.name}</h3>
+            {/* NAME */}
+            <h3>
+              {item.name}
+            </h3>
           </div>
         ))}
       </div>
 
-      <div className="review-button">
-  {!openReview ? (
-    <button
-      className="watch-btn"
-      onClick={() => setOpenReview(true)}
-    >
-      Write a Review
-    </button>
-  ) : (
-    <div className="review-form">
+      {/* WRITE A REVIEW BUTTON */}
+      <div className="review-button-wrapper">
+        <button
+          type="button"
+          className="write-review-btn"
+          onClick={() => setOpenReview(true)}
+        >
+          WRITE A REVIEW
+        </button>
+      </div>
 
-      <h2>Leave a Review</h2>
+      {/* REVIEW MODAL */}
+      {openReview && (
+        <div
+          className="review-modal-overlay"
+          onClick={() => setOpenReview(false)}
+        >
+          <div
+            className="review-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* CLOSE BUTTON */}
+            <button
+              type="button"
+              className="review-modal-close"
+              onClick={() => setOpenReview(false)}
+              aria-label="Close"
+            >
+              ×
+            </button>
 
-      <input
-        type="text"
-        placeholder="Your Name"
-      />
+            {/* ICON */}
+            <div className="review-modal-icon">
+              ★
+            </div>
 
-      <textarea
-        placeholder="Your Review"
-      />
+            {/* TITLE */}
+            <h2>
+              WRITE A REVIEW
+            </h2>
 
-      <button className="btn-gold">
-        Send
-      </button>
+            <p className="review-modal-subtitle">
+              Share your experience with DJ RAY
+            </p>
 
-      <button
-        className="watch-btn"
-        onClick={() => setOpenReview(false)}
-      >
-        Close
-      </button>
+            {/* STAR RATING */}
+            <div className="review-modal-stars">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <button
+                  key={star}
+                  type="button"
+                  className={
+                    star <= rating
+                      ? "active"
+                      : ""
+                  }
+                  onClick={() =>
+                    setRating(star)
+                  }
+                  aria-label={`${star} star${
+                    star > 1 ? "s" : ""
+                  }`}
+                >
+                  ★
+                </button>
+              ))}
+            </div>
 
-    </div>
-  )}
-</div>
-    </section>
+            {/* FORM */}
+            <form onSubmit={handleSubmit}>
+
+              {/* NAME */}
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) =>
+                  setName(e.target.value)
+                }
+              />
+
+              {/* REVIEW */}
+              <textarea
+                placeholder="Your Review"
+                value={review}
+                onChange={(e) =>
+                  setReview(e.target.value)
+                }
+                rows={5}
+              />
+
+              {/* SEND */}
+              <button
+                type="submit"
+                className="modal-submit-btn"
+              >
+                SEND REVIEW
+              </button>
+
+            </form>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

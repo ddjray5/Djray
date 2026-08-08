@@ -214,3 +214,57 @@
 .footer > span {
   font-size: 16px;
 }
+
+/* =====================================================
+   SOCIAL ICONS - ABOVE GOLD LINE
+===================================================== */
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 26px;
+
+  margin-bottom: 0;
+
+  position: relative;
+  top: 8px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d4af37;
+
+  font-size: 22px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #f0d46a;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   GOLD LINE
+===================================================== */
+
+.footer-gold-line {
+  width: 360px;
+  max-width: 80%;
+
+  height: 2px;
+
+  margin: 0 auto;
+
+  background: #d4af37;
+
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.35);
+}

@@ -10,7 +10,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="gallery">
+    <section id="gallery" className="gallery">
 
       <div className="gallery-title">
         <h2>Gallery</h2>

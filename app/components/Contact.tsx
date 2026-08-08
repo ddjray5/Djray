@@ -3,78 +3,62 @@
 import "../styles/contact.css";
 
 import {
+  FaPhoneAlt,
   FaWhatsapp,
   FaEnvelope,
 } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
 
-      {/* =====================================================
-          CONTACT TITLE
-      ===================================================== */}
+      <div className="contact-content">
 
-      <div className="contact-title">
-        <h2>
+        {/* TITLE */}
+        <h2 className="contact-title">
           CONTACT
         </h2>
-      </div>
 
+        {/* SUBTITLE */}
+        <p className="contact-subtitle">
+          Ready to book DJ RAY for your next event?
+        </p>
 
-      {/* =====================================================
-          CONTACT SUBTITLE
-      ===================================================== */}
+        {/* CONTACT BUTTONS */}
+        <div className="contact-buttons">
 
-      <p className="contact-subtitle">
-        Ready to book DJ RAY for your next event?
-      </p>
+          {/* CALL */}
+          <a
+            href="tel:+971554057288"
+            className="btn-gold"
+          >
+            <FaPhoneAlt />
+            <span>CALL</span>
+          </a>
 
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/971554057288"
+            className="btn-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+            <span>WHATSAPP</span>
+          </a>
 
-      {/* =====================================================
-          CONTACT BUTTONS
-      ===================================================== */}
+          {/* EMAIL */}
+          <a
+            href="mailto:YOUR@email.com"
+            className="btn-gold"
+          >
+            <FaEnvelope />
+            <span>EMAIL</span>
+          </a>
 
-      <div className="contact-buttons">
-
-
-        {/* ================= WHATSAPP ================= */}
-
-        <a
-          href="https://wa.me/971554057288"
-          className="contact-button contact-whatsapp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <FaWhatsapp className="contact-icon" />
-
-          <span>
-            WhatsApp
-          </span>
-
-        </a>
-
-
-
-        {/* ================= EMAIL ================= */}
-
-        <a
-          href="mailto:djray5@gmail.com"
-          className="contact-button contact-email"
-        >
-
-          <FaEnvelope className="contact-icon" />
-
-          <span>
-            Email
-          </span>
-
-        </a>
-
+        </div>
 
       </div>
-
 
     </section>
   );

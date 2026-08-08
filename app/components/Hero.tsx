@@ -14,6 +14,9 @@ export default function Hero() {
 
   return (
     <>
+      {/* ==============================
+          HERO
+      ============================== */}
       <section className="hero">
 
         {/* LEFT */}
@@ -28,57 +31,51 @@ export default function Hero() {
         {/* RIGHT */}
         <div className="hero-right">
 
-          <Image
-            src="/logo.png"
-            alt="DJ RAY Logo"
-            width={1600}
-            height={1000}
-            priority
-            className="hero-logo"
-            style={{
-              width: "520px",
-              height: "auto",
-            }}
-          />
+          {/* LOGO */}
+         <img
+  src="/logo.png"
+  alt="DJ RAY Logo"
+  className="hero-logo"
+/>
 
-          <p className="hero-subtitle">
-            LUXURY OPEN FORMAT DJ
-          </p>
+          {/* GOLD LINE */}
+          
+          {/* SUBTITLE */}
+         <p className="hero-subtitle">
+  LUXURY OPEN FORMAT DJ
+</p>
+
+<div className="gold-line"></div>
+
+<div className="hero-services">
+  <span>CLUBS</span>
+  <span>WEDDINGS</span>
+  <span>YACHTS</span>
+  <span>PRIVATE EVENTS</span>
+  <span>POOL & BEACH</span>
+</div>
 
           
 
-          <div className="hero-services">
-
-  <h3>AVAILABLE FOR</h3>
-
-  <div className="gold-line"></div>
-
-  <ul>
-    <li>LUXURY WEDDINGS</li>
-    <li>CLUBS &amp; LOUNGES</li>
-    <li>PRIVATE EVENTS</li>
-    <li>CORPORATE EVENTS</li>
-    <li>YACHT PARTIES</li>
-    <li>BEACH &amp; POOL PARTIES</li>
-    <li>BIRTHDAY PARTIES</li>
-  </ul>
-
-</div>
-
+          {/* BUTTONS */}
           <div className="hero-buttons">
 
+            {/* BOOK NOW */}
             <button
-              className="btn-gold"
+              type="button"
+              className="hero-book-btn"
               onClick={() => setOpenBooking(true)}
             >
-              Book Now
+              BOOK NOW
             </button>
 
+            {/* WATCH PROMO */}
             <button
-              className="watch-btn"
+              type="button"
+              className="hero-promo-btn"
               onClick={() => setOpenPromo(true)}
             >
-              Watch Promo
+              WATCH PROMO
             </button>
 
           </div>
@@ -87,11 +84,13 @@ export default function Hero() {
 
       </section>
 
+      {/* PROMO MODAL */}
       <PromoModal
         isOpen={openPromo}
         onClose={() => setOpenPromo(false)}
       />
 
+      {/* BOOKING MODAL */}
       <BookingModal
         isOpen={openBooking}
         onClose={() => setOpenBooking(false)}

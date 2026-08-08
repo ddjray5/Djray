@@ -13,18 +13,38 @@ import WhyChoose from "./components/WhyChoose";
 export default function Home() {
   return (
     <>
+      {/* PRELOADER */}
       <Preloader />
-      
+
+      {/* NAVBAR */}
       <Navbar />
+
+      {/* ==============================
+          HERO — FIRST SECTION
+      ============================== */}
       <Hero />
-<Music />
-<Services />
-<WhyChoose />
-<Gallery />
-<About />
-<Testimonials />
-<Contact />
-<Footer />
+
+      {/* ==============================
+          MAIN SECTIONS
+      ============================== */}
+      <Music />
+
+      <Services />
+
+      <About />
+
+      <WhyChoose />
+
+      <Gallery />
+
+      <Testimonials />
+
+      <Contact />
+
+      {/* ==============================
+          FOOTER — LAST SECTION
+      ============================== */}
+      <Footer />
     </>
   );
 }
