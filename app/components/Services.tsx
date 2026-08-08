@@ -122,7 +122,7 @@ export default function Services() {
   return (
     <>
       {/* SERVICES SECTION */}
-      <section id="services" className="services">
+      <section className="services">
 
         {/* TITLE */}
         <div className="services-title">
@@ -176,7 +176,9 @@ export default function Services() {
                 <button
                   type="button"
                   className="service-book"
-                  onClick={() => handleBook(service.bookingType)}
+                  onClick={() =>
+                    handleBook(service.bookingType)
+                  }
                 >
                   BOOK
                 </button>
