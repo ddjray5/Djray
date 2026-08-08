@@ -29,11 +29,10 @@ export default function Testimonials() {
   const [rating, setRating] = useState(0);
 
   /*
-   =====================================================
-   STOP BACKGROUND PAGE SCROLL WHEN REVIEW IS OPEN
-   =====================================================
-  */
-
+   * =====================================================
+   * STOP BACKGROUND PAGE SCROLL WHEN REVIEW IS OPEN
+   * =====================================================
+   */
   useEffect(() => {
     if (openReview) {
       document.body.style.overflow = "hidden";
@@ -66,22 +65,23 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="testimonials">
+    <section className="testimonials-section">
 
       {/* =====================================================
-          HEADER
+          TESTIMONIALS HEADER
       ===================================================== */}
 
       <div className="testimonials-header">
 
+        {/* TESTIMONIALS */}
         <span className="section-kicker">
           TESTIMONIALS
         </span>
 
         {/* GOLD LINE DIRECTLY UNDER TESTIMONIALS */}
-
         <div className="gold-line"></div>
 
+        {/* WHAT CLIENTS SAY */}
         <h2>
           What Clients Say
         </h2>
@@ -105,28 +105,24 @@ export default function Testimonials() {
           >
 
             {/* QUOTE */}
-
             <div className="quote-mark">
               “
             </div>
 
 
             {/* STARS */}
-
             <div className="stars">
               ★★★★★
             </div>
 
 
             {/* REVIEW */}
-
             <p className="review">
               "{item.review}"
             </p>
 
 
             {/* NAME */}
-
             <h3>
               {item.name}
             </h3>
@@ -139,7 +135,7 @@ export default function Testimonials() {
 
 
       {/* =====================================================
-          WRITE A REVIEW
+          WRITE A REVIEW BUTTON
       ===================================================== */}
 
       <div className="review-button-wrapper">
@@ -171,8 +167,7 @@ export default function Testimonials() {
             onClick={(e) => e.stopPropagation()}
           >
 
-            {/* CLOSE */}
-
+            {/* CLOSE BUTTON */}
             <button
               type="button"
               className="review-modal-close"
@@ -184,25 +179,26 @@ export default function Testimonials() {
 
 
             {/* ICON */}
-
             <div className="review-modal-icon">
               ★
             </div>
 
 
             {/* TITLE */}
-
             <h2>
               WRITE A REVIEW
             </h2>
 
 
+            {/* SUBTITLE */}
             <p className="review-modal-subtitle">
               Share your experience with DJ RAY
             </p>
 
 
-            {/* STAR RATING */}
+            {/* =================================================
+                STAR RATING
+            ================================================= */}
 
             <div className="review-modal-stars">
 
@@ -231,12 +227,13 @@ export default function Testimonials() {
             </div>
 
 
-            {/* FORM */}
+            {/* =================================================
+                FORM
+            ================================================= */}
 
             <form onSubmit={handleSubmit}>
 
               {/* NAME */}
-
               <input
                 type="text"
                 placeholder="Your Name"
@@ -248,7 +245,6 @@ export default function Testimonials() {
 
 
               {/* REVIEW */}
-
               <textarea
                 placeholder="Your Review"
                 value={review}
@@ -260,7 +256,6 @@ export default function Testimonials() {
 
 
               {/* SEND */}
-
               <button
                 type="submit"
                 className="modal-submit-btn"
