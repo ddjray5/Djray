@@ -13,10 +13,6 @@
   color: #ffffff;
 
   position: relative;
-
-  /* FIX: allow the complete section to be visible */
-  min-height: auto;
-  overflow: visible;
 }
 
 
@@ -195,8 +191,7 @@
 ===================================================== */
 
 .stars {
-  color: #ffffff;
-
+  color: #D4AF37;
   font-size: 48px;
 
   letter-spacing: 2px;
@@ -645,8 +640,6 @@
 
   .testimonials-section {
     padding: 75px 25px 90px;
-
-    overflow: visible;
   }
 
 
@@ -679,15 +672,9 @@
   .testimonials-section {
     width: 100%;
 
-    padding: 65px 20px 80px;
+    padding: 160px 20px 80px;
 
-    /*
-      IMPORTANT:
-      Do not hide the bottom of the testimonials section.
-    */
     overflow: visible;
-
-    min-height: auto;
   }
 
 
@@ -930,16 +917,7 @@
 @media (max-width: 430px) {
 
   .testimonials-section {
-    padding-left: 15px;
-
-    padding-right: 15px;
-
-    /*
-      Keep the entire section visible.
-    */
-    overflow: visible;
-
-    min-height: auto;
+    padding: 160px 15px 80px;
   }
 
 
@@ -998,8 +976,6 @@
     padding: 10px 8px 30px;
 
     align-items: flex-start;
-
-    overflow-y: auto;
   }
 
 
@@ -1009,8 +985,6 @@
     border-radius: 20px;
 
     margin: 10px auto 20px;
-
-    flex-shrink: 0;
   }
 
 
@@ -1106,40 +1080,5 @@
 
   .review-modal-stars button {
     font-size: 34px;
-  }
-}
-
-/* =========================================================
-   MOBILE REVIEW - TOP CLIPPING FIX
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .testimonials-section {
-    position: relative;
-    top: 0;
-    transform: none !important;
-    margin-top: 0 !important;
-    padding-top: 80px !important;
-    overflow: visible !important;
-  }
-
-  .testimonials-container {
-    position: relative;
-    top: 0;
-    transform: none !important;
-    margin-top: 0 !important;
-  }
-
-  .testimonials-title {
-    position: relative;
-    top: 0;
-    margin-top: 0 !important;
-  }
-
-  .review-stars {
-    position: relative;
-    top: 0;
-    transform: none !important;
   }
 }
