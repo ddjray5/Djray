@@ -13,6 +13,10 @@
   color: #ffffff;
 
   position: relative;
+
+  /* FIX: allow the complete section to be visible */
+  min-height: auto;
+  overflow: visible;
 }
 
 
@@ -641,6 +645,8 @@
 
   .testimonials-section {
     padding: 75px 25px 90px;
+
+    overflow: visible;
   }
 
 
@@ -675,7 +681,13 @@
 
     padding: 65px 20px 80px;
 
-    overflow: hidden;
+    /*
+      IMPORTANT:
+      Do not hide the bottom of the testimonials section.
+    */
+    overflow: visible;
+
+    min-height: auto;
   }
 
 
@@ -921,6 +933,13 @@
     padding-left: 15px;
 
     padding-right: 15px;
+
+    /*
+      Keep the entire section visible.
+    */
+    overflow: visible;
+
+    min-height: auto;
   }
 
 
@@ -979,6 +998,8 @@
     padding: 10px 8px 30px;
 
     align-items: flex-start;
+
+    overflow-y: auto;
   }
 
 
@@ -988,6 +1009,8 @@
     border-radius: 20px;
 
     margin: 10px auto 20px;
+
+    flex-shrink: 0;
   }
 
 
