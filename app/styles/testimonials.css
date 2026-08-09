@@ -1108,3 +1108,38 @@
     font-size: 34px;
   }
 }
+
+/* =========================================================
+   MOBILE REVIEW - TOP CLIPPING FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .testimonials-section {
+    position: relative;
+    top: 0;
+    transform: none !important;
+    margin-top: 0 !important;
+    padding-top: 80px !important;
+    overflow: visible !important;
+  }
+
+  .testimonials-container {
+    position: relative;
+    top: 0;
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+
+  .testimonials-title {
+    position: relative;
+    top: 0;
+    margin-top: 0 !important;
+  }
+
+  .review-stars {
+    position: relative;
+    top: 0;
+    transform: none !important;
+  }
+}
