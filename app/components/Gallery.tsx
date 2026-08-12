@@ -10,12 +10,23 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="gallery">
+    <section className="gallery luxury-section">
 
-      <div className="gallery-title">
-        <h2>Gallery</h2>
-        <p>Moments, Energy & Unforgettable Nights</p>
+      {/* =====================================================
+          GALLERY TITLE
+          ===================================================== */}
+
+      <div className="gallery-title luxury-section-title">
+        <h2>GALLERY</h2>
+
+        <p>
+          Moments, Energy & Unforgettable Nights
+        </p>
       </div>
+
+      {/* =====================================================
+          GALLERY GRID
+          ===================================================== */}
 
       <div className="gallery-grid">
         {images.map((image, index) => (

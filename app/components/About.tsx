@@ -5,16 +5,20 @@ import Counter from "./Counter";
 
 export default function About() {
   return (
-    <section id="about" className="about-section">
+    <section className="about-section">
+
+      {/* ===== START DIVIDER ===== */}
+      <div className="about-section-divider">
+        <span className="about-section-divider-diamond"></span>
+      </div>
+
       <div className="about-container">
 
-        {/* CONTENT */}
         <div className="about-content">
 
-          <h3 className="about-subtitle gold-text">
-            ABOUT DJ RAY
-          </h3>
-
+          <h3 className="about-subtitle">
+    ABOUT DJ RAY
+</h3>
           <h2>Luxury Open Format DJ</h2>
 
           <p>
@@ -31,7 +35,6 @@ export default function About() {
             International music.
           </p>
 
-          {/* SERVICES */}
           <div className="about-list">
             <span>✓ Open Format DJ</span>
             <span>✓ Luxury Weddings</span>
@@ -41,14 +44,12 @@ export default function About() {
             <span>✓ Corporate Events</span>
           </div>
 
-          {/* STATS */}
           <div className="about-stats">
 
             <div className="stat stat-events">
               <h3 className="gold-text">
                 <Counter end={200} suffix="+" />
               </h3>
-
               <span>Events</span>
             </div>
 
@@ -56,7 +57,6 @@ export default function About() {
               <h3 className="gold-text">
                 2019
               </h3>
-
               <span>DJ Since</span>
             </div>
 
@@ -64,7 +64,6 @@ export default function About() {
               <h3 className="gold-text">
                 Abu Dhabi
               </h3>
-
               <span>Based</span>
             </div>
 
@@ -73,6 +72,12 @@ export default function About() {
         </div>
 
       </div>
+
+      {/* ===== END DIVIDER ===== */}
+      <div className="about-section-divider about-section-divider-bottom">
+        <span className="about-section-divider-diamond"></span>
+      </div>
+
     </section>
   );
 }

@@ -84,51 +84,84 @@ export default function Services() {
 
   return (
     <>
-      <section className="services" id="services">
-        {/* TITLE */}
-        <div className="services-title">
+      <section className="services luxury-section">
+
+        {/* =====================================================
+            SERVICES TITLE
+            ===================================================== */}
+
+        <div className="services-title luxury-section-title">
           <h2>SERVICES</h2>
 
-          <p>Luxury DJ Experiences For Every Occasion</p>
+          <p>
+            Luxury DJ Experiences For Every Occasion
+          </p>
         </div>
 
-        {/* SERVICES GRID */}
+        {/* =====================================================
+            SERVICES GRID
+            ===================================================== */}
+
         <div className="services-grid">
+
           {services.map((service, index) => (
             <div className="service-card" key={index}>
+
               {/* IMAGE */}
+
               <div className="service-image">
-                <img src={service.image} alt={service.title} />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                />
               </div>
 
               {/* CONTENT */}
+
               <div className="service-content">
+
                 <h3>{service.title}</h3>
 
                 <p>{service.description}</p>
 
                 {/* FEATURES */}
+
                 <ul className="service-features">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>{feature}</li>
-                  ))}
+
+                  {service.features.map(
+                    (feature, featureIndex) => (
+                      <li key={featureIndex}>
+                        {feature}
+                      </li>
+                    )
+                  )}
+
                 </ul>
 
                 {/* BOOK BUTTON */}
+
                 <button
                   type="button"
                   className="service-book"
-                  onClick={() => handleBook(service.bookingType)}
+                  onClick={() =>
+                    handleBook(service.bookingType)
+                  }
                 >
                   BOOK
                 </button>
+
               </div>
             </div>
           ))}
+
         </div>
+
       </section>
 
-      {/* BOOKING MODAL */}
+      {/* =====================================================
+          BOOKING MODAL
+          ===================================================== */}
+
       <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}

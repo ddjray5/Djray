@@ -1,414 +1,716 @@
-/* =====================================================
+/* =========================================================
    MUSIC STYLE - DJ RAY
    Luxury Black & Gold
-===================================================== */
+   EXACT LUXURY FRAME DESIGN
+========================================================= */
 
-.music {
-  width: 100%;
-  padding: 100px 8%;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+.music-section {
+    width: 100%;
+    min-height: auto;
 
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(212, 175, 55, 0.07),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(212, 175, 55, 0.04),
-      transparent 30%
-    ),
-    linear-gradient(
-      180deg,
-      #090909 0%,
-      #050505 60%,
-      #000000 100%
-    );
+    padding: 0px 20px 0px;
+
+    box-sizing: border-box;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(212, 175, 55, 0.035),
+            transparent 42%
+        ),
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #030303 65%,
+            #000000 100%
+        );
 }
 
-/* =====================================================
+
+/* =========================================================
+   LUXURY SIDE FRAME
+========================================================= */
+
+.music-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: 45px;
+
+    width: 1px;
+    height: calc(100% + 240px);
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #d4af37 10%,
+        rgba(212, 175, 55, 0.65) 35%,
+        rgba(212, 175, 55, 0.18) 70%,
+        transparent 100%
+    );
+
+    transform: rotate(13deg);
+
+    transform-origin: center;
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.18);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.music-section::after {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    right: 45px;
+
+    width: 1px;
+    height: calc(100% + 240px);
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #d4af37 10%,
+        rgba(212, 175, 55, 0.65) 35%,
+        rgba(212, 175, 55, 0.18) 70%,
+        transparent 100%
+    );
+
+    transform: rotate(-13deg);
+
+    transform-origin: center;
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.18);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   KEEP CONTENT ABOVE FRAME
+========================================================= */
+
+.music-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
    TITLE
-===================================================== */
+========================================================= */
 
 .music-title {
-  text-align: center;
-  margin-bottom: 55px;
+    text-align: center;
+
+    margin-bottom: 45px;
+
+    position: relative;
 }
 
-/* MUSIC STYLE */
+
+/* =========================================================
+   MUSIC STYLE TITLE
+========================================================= */
 
 .music-title h2 {
-  font-family: var(--font-cormorant);
+    margin: 0;
 
-  color: #d4af37;
+    font-family: var(--font-cormorant);
 
-  font-size: 48px;
+    color: #d4af37;
 
-  font-weight: 600;
+    font-size: 48px;
 
-  letter-spacing: 5px;
+    font-weight: 600;
 
-  text-transform: uppercase;
+    letter-spacing: 5px;
 
-  margin: 0;
+    text-transform: uppercase;
 
-  line-height: 1.2;
+    line-height: 1.2;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.08);
 }
 
-/* =====================================================
-   SOFT GOLD LINE
-   نفس شكل ABOUT DJ RAY
-===================================================== */
+
+/* =========================================================
+   GOLD LINE UNDER TITLE
+========================================================= */
 
 .music-title h2::after {
   content: "";
 
   display: block;
 
-  width: 110px;
-  height: 2px;
+  width: 380px;
+  height: 1px;
 
-  margin: 25px auto 0;
+  margin: 24px auto 0;
 
   background:
     linear-gradient(
       90deg,
       transparent,
+      rgba(212, 175, 55, 0.25),
       #d4af37,
       #f8e38c,
       #d4af37,
+      rgba(212, 175, 55, 0.25),
       transparent
     );
 
   box-shadow:
     0 0 8px rgba(212, 175, 55, 0.18);
-}
-
-/* =====================================================
-   SUBTITLE
-===================================================== */
-
-.music-title p {
-  font-family: var(--font-cormorant);
-
-  color: #d0d0d0;
-
-  font-size: 24px;
-
-  font-weight: 400;
-
-  line-height: 1.8;
-
-  letter-spacing: 1px;
-
-  max-width: 700px;
-
-  margin: 25px auto 0;
-}
-
-/* =====================================================
-   MUSIC GRID
-===================================================== */
-
-.music-grid {
-  width: 100%;
-
-  max-width: 1000px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 22px;
-}
-
-/* =====================================================
-   MUSIC CARD
-===================================================== */
-
-.music-card {
-  min-height: 100px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 25px;
-
-  box-sizing: border-box;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(20, 20, 20, 0.98),
-      rgba(5, 5, 5, 0.98)
-    );
-
-  border: 1px solid rgba(212, 175, 55, 0.30);
-
-  border-radius: 16px;
 
   position: relative;
+}
 
-  overflow: hidden;
 
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease,
-    background 0.4s ease;
+/* =========================================================
+   DIAMOND UNDER TITLE
+========================================================= */
+
+.music-title h2::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 78px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #d4af37;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.5);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.music-title p {
+    margin: 25px auto 0;
+
+    max-width: 700px;
+
+    font-family: var(--font-cormorant);
+
+    color: #d0d0d0;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MUSIC STYLE LIST
+========================================================= */
+
+.music-style-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   MUSIC STYLE ITEM
+========================================================= */
+
+.music-style-item {
+    width: 575px;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 8, 8, 0.98),
+            rgba(2, 2, 2, 0.98)
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.72);
+
+    border-radius: 8px;
+
+    color: #d4af37;
+
+    font-family: var(--font-cormorant);
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    transition:
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.music-style-item:hover {
+    border-color: #f0c94b;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 15, 15, 1),
+            rgba(4, 4, 4, 1)
+        );
+
+    color: #f8e38c;
+
+    box-shadow:
+        0 0 16px rgba(212, 175, 55, 0.12);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BOTTOM GOLD SEPARATOR
+========================================================= */
+
+.music-style-list::after {
+    content: "";
+
+    width: 100vw;
+
+    height: 1px;
+
+    margin-top: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.45) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.45) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.15);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   DIAMOND ON BOTTOM SEPARATOR
+========================================================= */
+
+.music-style-list::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #d4af37;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.5);
+
+    z-index: 5;
+
+    pointer-events: none;
+    bottom: -3px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .music-section {
+        padding: 85px 20px 65px;
+    }
+
+
+    /* SIDE FRAME */
+
+    .music-section::before {
+        left: 12px;
+
+        transform: rotate(8deg);
+    }
+
+
+    .music-section::after {
+        right: 12px;
+
+        transform: rotate(-8deg);
+    }
+
+
+    /* TITLE */
+
+    .music-title {
+        margin-bottom: 40px;
+    }
+
+
+    .music-title h2 {
+        font-size: 40px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .music-title h2::after {
+        width: 280px;
+
+        margin-top: 21px;
+    }
+
+
+    .music-title h2::before {
+        top: 67px;
+    }
+
+
+    .music-title p {
+        max-width: 620px;
+
+        font-size: 21px;
+
+        line-height: 1.7;
+
+        margin-top: 24px;
+    }
+
+
+    /* LIST */
+
+    .music-style-list {
+        gap: 10px;
+    }
+
+
+    /* ITEMS */
+
+    .music-style-item {
+        width: min(575px, 82vw);
+
+        height: 54px;
+
+        font-size: 20px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .music-style-list::after {
+        margin-top: 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .music-section {
+        padding: 70px 15px 60px;
+    }
+
+
+    /* SIDE FRAME */
+
+    .music-section::before {
+        left: 3px;
+
+        transform: rotate(6deg);
+    }
+
+
+    .music-section::after {
+        right: 3px;
+
+        transform: rotate(-6deg);
+    }
+
+
+    /* TITLE */
+
+    .music-title {
+        margin-bottom: 35px;
+    }
+
+
+    .music-title h2 {
+        font-size: 34px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .music-title h2::after {
+        width: 210px;
+
+        height: 1px;
+
+        margin-top: 19px;
+    }
+
+
+    .music-title h2::before {
+        top: 57px;
+
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .music-title p {
+        font-size: 18px;
+
+        line-height: 1.7;
+
+        margin-top: 21px;
+
+        padding: 0 8px;
+    }
+
+
+    /* LIST */
+
+    .music-style-list {
+        gap: 9px;
+    }
+
+
+    /* ITEMS */
+
+    .music-style-item {
+        width: calc(100vw - 70px);
+
+        max-width: 575px;
+
+        height: 50px;
+
+        border-radius: 8px;
+
+        font-size: 18px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* BOTTOM LINE */
+
+    .music-style-list::after {
+        margin-top: 17px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .music-section {
+        padding: 60px 12px 55px;
+    }
+
+
+    .music-title h2 {
+        font-size: 30px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .music-title h2::after {
+        width: 175px;
+
+        margin-top: 17px;
+    }
+
+
+    .music-title h2::before {
+        top: 51px;
+    }
+
+
+    .music-title p {
+        font-size: 17px;
+    }
+
+
+    .music-style-list {
+        gap: 8px;
+    }
+
+
+    .music-style-item {
+        width: calc(100vw - 50px);
+
+        height: 48px;
+
+        font-size: 16px;
+
+        letter-spacing: 1.2px;
+    }
+}
+
+
+/* =========================================================
+   REMOVE SIDE GOLD LINES - MUSIC SECTION
+========================================================= */
+
+.music-section::before,
+.music-section::after {
+    display: none !important;
+    content: none !important;
+}
+
+.music-section {
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none;
 }
 
 /* =====================================================
-   GOLD SHINE
+   MUSIC TOP DIVIDER
+   LINE + CENTER DIAMOND
 ===================================================== */
 
-.music-card::before {
-  content: "";
+.music-section .section-top-divider {
+  position: relative;
 
-  position: absolute;
+  width: 100%;
+  height: 1px;
 
-  top: 0;
-  left: -120%;
-
-  width: 60%;
-  height: 100%;
+  margin: 0 0 10px;
 
   background:
     linear-gradient(
       90deg,
-      transparent,
-      rgba(248, 227, 140, 0.12),
-      transparent
-    );
-
-  transform: skewX(-25deg);
-
-  transition: 0.8s;
-}
-
-/* =====================================================
-   MUSIC TEXT
-===================================================== */
-
-.music-card span {
-  font-family: var(--font-cormorant);
-
-  color: #d4af37;
-
-  font-size: 22px;
-
-  font-weight: 600;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  text-align: center;
-
-  position: relative;
-
-  z-index: 2;
-
-  transition:
-    color 0.4s ease,
-    transform 0.4s ease;
-}
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.music-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(212, 175, 55, 0.75);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(28, 28, 28, 1),
-      rgba(8, 8, 8, 1)
+      transparent 0%,
+      rgba(212, 175, 55, 0.12) 10%,
+      rgba(212, 175, 55, 0.40) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.40) 70%,
+      rgba(212, 175, 55, 0.12) 90%,
+      transparent 100%
     );
 
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.55),
-    0 0 22px rgba(212, 175, 55, 0.12);
+    0 0 10px rgba(212, 175, 55, 0.18);
+
+  z-index: 20;
 }
 
-.music-card:hover::before {
-  left: 150%;
-}
-
-.music-card:hover span {
-  color: #f8e38c;
-
-  transform: scale(1.04);
-}
 
 /* =====================================================
-   MOBILE
+   MUSIC TOP DIAMOND
 ===================================================== */
 
-@media (max-width: 900px) {
+.music-section .section-top-divider-diamond {
+  position: absolute;
 
-  .music {
-    padding: 80px 25px;
-  }
+  left: 50%;
+  top: 50%;
 
-  .music-title {
-    margin-bottom: 45px;
-  }
+  width: 10px;
+  height: 10px;
 
-  .music-title h2 {
-    font-size: 40px;
+  background: #d4af37;
 
-    letter-spacing: 4px;
-  }
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
 
-  .music-title h2::after {
-    width: 100px;
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.20);
 
-    height: 2px;
+  z-index: 30;
 
-    margin-top: 22px;
-  }
-
-  .music-title p {
-    font-size: 22px;
-
-    line-height: 1.7;
-
-    max-width: 620px;
-
-    margin-top: 25px;
-  }
-
-  .music-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 18px;
-
-    max-width: 600px;
-  }
-
-  .music-card {
-    min-height: 95px;
-
-    padding: 20px;
-  }
-
-  .music-card span {
-    font-size: 19px;
-
-    letter-spacing: 1.5px;
-  }
-}
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media (max-width: 480px) {
-
-  .music {
-    padding: 70px 20px;
-  }
-
-  .music-title {
-    margin-bottom: 40px;
-  }
-
-  .music-title h2 {
-    font-size: 34px;
-
-    letter-spacing: 3px;
-  }
-
-  .music-title h2::after {
-    width: 90px;
-
-    height: 2px;
-
-    margin-top: 20px;
-  }
-
-  .music-title p {
-    font-size: 19px;
-
-    line-height: 1.7;
-
-    margin-top: 22px;
-  }
-
-  .music-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 14px;
-  }
-
-  .music-card {
-    min-height: 90px;
-
-    padding: 15px 10px;
-
-    border-radius: 14px;
-  }
-
-  .music-card span {
-    font-size: 16px;
-
-    letter-spacing: 1px;
-
-    line-height: 1.3;
-  }
-}
-
-/* =====================================================
-   VERY SMALL SCREENS
-===================================================== */
-
-@media (max-width: 360px) {
-
-  .music {
-    padding: 60px 15px;
-  }
-
-  .music-title h2 {
-    font-size: 30px;
-
-    letter-spacing: 2.5px;
-  }
-
-  .music-title h2::after {
-    width: 85px;
-
-    margin-top: 18px;
-  }
-
-  .music-title p {
-    font-size: 18px;
-  }
-
-  .music-grid {
-    gap: 12px;
-  }
-
-  .music-card {
-    min-height: 82px;
-
-    padding: 12px 8px;
-  }
-
-  .music-card span {
-    font-size: 14px;
-  }
+  pointer-events: none;
 }

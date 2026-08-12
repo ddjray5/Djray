@@ -646,3 +646,166 @@ html {
 section {
   scroll-margin-top: 180px;
 }
+
+/* =========================================================
+   LUXURY SECTION SEPARATORS - DJ RAY
+   ========================================================= */
+
+.luxury-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- TOP SEPARATOR ---------- */
+
+.luxury-section-title {
+  position: relative;
+  text-align: center;
+}
+
+/* الخط تحت العنوان */
+.luxury-section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 380px;
+  max-width: 70vw;
+
+  height: 1px;
+
+  margin: 24px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.25),
+    #d4af37,
+    #f8e38c,
+    #d4af37,
+    rgba(212, 175, 55, 0.25),
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.18);
+}
+
+/* الماسة في منتصف خط العنوان */
+.luxury-section-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5);
+
+  z-index: 5;
+}
+
+/* ---------- BOTTOM SEPARATOR ---------- */
+
+.luxury-section::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 100vw;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.18) 10%,
+    rgba(212, 175, 55, 0.45) 30%,
+    #d4af37 50%,
+    rgba(212, 175, 55, 0.45) 70%,
+    rgba(212, 175, 55, 0.18) 90%,
+    transparent 100%
+  );
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.15);
+
+  pointer-events: none;
+}
+
+/* الماسة في نهاية القسم */
+.luxury-section::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+  .luxury-section-title::after {
+    width: 280px;
+  }
+
+  .luxury-section-title::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .luxury-section::before {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .luxury-section-title::after {
+    width: 210px;
+  }
+
+  .luxury-section-title::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .luxury-section::before {
+    width: 6px;
+    height: 6px;
+  }
+}

@@ -1,407 +1,569 @@
 /* =====================================================
-   CONTACT - DJ RAY
-   Luxury Black & Gold
+CONTACT - DJ RAY
+Luxury Black & Gold
 ===================================================== */
 
 .contact {
-  width: 100%;
-  min-height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(176, 141, 44, 0.04),
-      transparent 60%
-    ),
-    #050505;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(176, 141, 44, 0.04),
+            transparent 60%
+        ),
+        #050505;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  padding: 80px 20px 100px;
+    padding: 20px 20px 100px;
 
-  scroll-margin-top: 130px;
+    scroll-margin-top: 130px;
 }
 
 
 /* =====================================================
-   CONTACT CONTENT
+CONTACT CONTENT
 ===================================================== */
 
 .contact-content {
-  width: 100%;
-  max-width: 900px;
+    width: 100%;
+    max-width: 900px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  text-align: center;
+    text-align: center;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 /* =====================================================
-   TITLE
+TITLE
 ===================================================== */
 
 .contact-title {
-  margin: 0 0 35px;
+    margin: 0 0 35px;
 
-  color: #d4af37;
+    color: #d4af37;
 
-  font-family: "Times New Roman", serif;
+    font-family: "Times New Roman", serif;
 
-  font-size: 58px;
-  font-weight: 500;
+    font-size: 58px;
+    font-weight: 500;
 
-  letter-spacing: 6px;
+    letter-spacing: 6px;
 
-  text-align: center;
+    text-align: center;
 }
 
-.contact-title::after {
-  content: "";
 
-  display: block;
-
-  width: 150px;
-  height: 2px;
-
-  margin: 28px auto 0;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #b08d2c,
-    transparent
-  );
-}
 
 
 /* =====================================================
-   SUBTITLE
+SUBTITLE
 ===================================================== */
 
 .contact-subtitle {
-  max-width: 750px;
+    max-width: 750px;
 
-  margin: 25px auto 65px;
+    margin: 25px auto 65px;
 
-  color: #e5e5e5;
+    color: #e5e5e5;
 
-  font-family: "Times New Roman", serif;
+    font-family: "Times New Roman", serif;
 
-  font-size: 32px;
+    font-size: 32px;
 
-  line-height: 1.6;
+    line-height: 1.6;
 
-  letter-spacing: 1px;
+    letter-spacing: 1px;
 
-  text-align: center;
+    text-align: center;
 }
 
 
 /* =====================================================
-   CONTACT BUTTONS
+CONTACT BUTTONS
 ===================================================== */
 
 .contact-buttons {
-  width: 100%;
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
+    align-items: center;
 
-  gap: 22px;
+    gap: 22px;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 /* =====================================================
-   GOLD BORDER BUTTONS
+GOLD BORDER BUTTONS
 ===================================================== */
 
 .btn-gold,
 .btn-outline {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  gap: 18px;
+    gap: 18px;
 
-  width: 500px;
-  max-width: 500px;
+    width: 500px;
+    max-width: 500px;
 
-  height: 82px;
-  min-height: 82px;
+    height: 82px;
+    min-height: 82px;
 
-  padding: 12px 25px;
+    padding: 12px 25px;
 
-  margin: 0;
+    margin: 0;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  background: #050505;
+    background: #050505;
 
-  color: #b08d2c;
+    color: #b08d2c;
 
-  border: 2px solid #b08d2c;
+    border: 2px solid #b08d2c;
 
-  border-radius: 45px;
+    border-radius: 45px;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  font-family: "Times New Roman", serif;
+    font-family: "Times New Roman", serif;
 
-  font-size: 22px;
+    font-size: 22px;
 
-  font-weight: 500;
+    font-weight: 500;
 
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 /* =====================================================
-   ICONS
+ICONS
 ===================================================== */
 
 .btn-gold svg,
 .btn-outline svg {
-  width: 28px;
-  height: 28px;
+    width: 28px;
+    height: 28px;
 
-  font-size: 28px;
+    font-size: 28px;
 
-  color: #b08d2c;
+    color: #b08d2c;
 
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 
 /* =====================================================
-   HOVER
+HOVER
 ===================================================== */
 
 .btn-gold:hover,
 .btn-outline:hover {
-  background: rgba(176, 141, 44, 0.06);
+    background: rgba(176, 141, 44, 0.06);
 
-  color: #c9a83e;
+    color: #c9a83e;
 
-  border-color: #c9a83e;
+    border-color: #c9a83e;
 
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 
-  box-shadow:
-    0 0 20px rgba(176, 141, 44, 0.20);
+    box-shadow:
+        0 0 20px rgba(176, 141, 44, 0.20);
 }
-
 
 .btn-gold:hover svg,
 .btn-outline:hover svg {
-  color: #c9a83e;
+    color: #c9a83e;
 }
 
 
 /* =====================================================
-   MOBILE
+MOBILE
 ===================================================== */
 
 @media (max-width: 768px) {
 
-  .contact {
-    padding: 70px 18px 80px;
-  }
+    .contact {
+        padding: 70px 18px 80px;
+    }
 
-  .contact-title {
-    font-size: 42px;
+    .contact-title {
+        font-size: 42px;
 
-    letter-spacing: 4px;
-  }
+        letter-spacing: 4px;
+    }
 
-  .contact-title::after {
-    width: 110px;
+    .contact-title::after {
+        width: 110px;
 
-    margin-top: 20px;
-  }
+        margin-top: 20px;
+    }
 
-  .contact-subtitle {
-    margin: 25px auto 50px;
+    .contact-subtitle {
+        margin: 25px auto 50px;
 
-    font-size: 25px;
+        font-size: 25px;
 
-    line-height: 1.55;
-  }
+        line-height: 1.55;
+    }
 
-  .contact-buttons {
-    gap: 20px;
-  }
+    .contact-buttons {
+        gap: 20px;
+    }
 
-  .btn-gold,
-  .btn-outline {
-    width: 85%;
+    .btn-gold,
+    .btn-outline {
+        width: 85%;
 
-    max-width: 500px;
+        max-width: 500px;
 
-    height: 78px;
-    min-height: 78px;
+        height: 78px;
+        min-height: 78px;
 
-    padding: 10px 20px;
+        padding: 10px 20px;
 
-    gap: 15px;
+        gap: 15px;
 
-    border-radius: 42px;
+        border-radius: 42px;
 
-    font-size: 20px;
-  }
+        font-size: 20px;
+    }
 
-  .btn-gold svg,
-  .btn-outline svg {
-    width: 26px;
-    height: 26px;
+    .btn-gold svg,
+    .btn-outline svg {
+        width: 26px;
+        height: 26px;
 
-    font-size: 26px;
-  }
+        font-size: 26px;
+    }
 }
 
 
 /* =====================================================
-   SMALL MOBILE
+SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 480px) {
 
-  .contact {
-    padding: 55px 14px 70px;
-  }
+    .contact {
+        padding: 55px 14px 70px;
+    }
 
-  .contact-title {
-    font-size: 34px;
+    .contact-title {
+        font-size: 34px;
 
-    letter-spacing: 3px;
-  }
+        letter-spacing: 3px;
+    }
 
-  .contact-subtitle {
-    margin: 22px auto 45px;
+    .contact-subtitle {
+        margin: 22px auto 45px;
 
-    font-size: 22px;
-  }
+        font-size: 22px;
+    }
 
-  .contact-buttons {
-    gap: 18px;
-  }
+    .contact-buttons {
+        gap: 18px;
+    }
 
-  .btn-gold,
-  .btn-outline {
-    width: 88%;
+    .btn-gold,
+    .btn-outline {
+        width: 88%;
 
-    height: 72px;
-    min-height: 72px;
+        height: 72px;
+        min-height: 72px;
 
-    padding: 9px 18px;
+        padding: 9px 18px;
 
-    border-radius: 40px;
+        border-radius: 40px;
 
-    font-size: 18px;
-  }
+        font-size: 18px;
+    }
 
-  .btn-gold svg,
-  .btn-outline svg {
-    width: 24px;
-    height: 24px;
+    .btn-gold svg,
+    .btn-outline svg {
+        width: 24px;
+        height: 24px;
 
-    font-size: 24px;
-  }
+        font-size: 24px;
+    }
 }
 
 
 /* =====================================================
-   VERY SMALL MOBILE
+VERY SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 360px) {
 
-  .contact {
-    padding: 50px 12px 60px;
-  }
+    .contact {
+        padding: 50px 12px 60px;
+    }
 
-  .contact-title {
-    font-size: 30px;
+    .contact-title {
+        font-size: 30px;
 
-    letter-spacing: 2px;
-  }
+        letter-spacing: 2px;
+    }
 
-  .contact-subtitle {
-    font-size: 20px;
+    .contact-subtitle {
+        font-size: 20px;
 
-    margin-bottom: 40px;
-  }
+        margin-bottom: 40px;
+    }
 
-  .btn-gold,
-  .btn-outline {
-    width: 88%;
+    .btn-gold,
+    .btn-outline {
+        width: 88%;
 
-    height: 68px;
-    min-height: 68px;
+        height: 68px;
+        min-height: 68px;
 
-    border-radius: 38px;
+        border-radius: 38px;
 
-    font-size: 17px;
-  }
+        font-size: 17px;
+    }
 
-  .btn-gold svg,
-  .btn-outline svg {
-    width: 23px;
-    height: 23px;
+    .btn-gold svg,
+    .btn-outline svg {
+        width: 23px;
+        height: 23px;
 
-    font-size: 23px;
-  }
+        font-size: 23px;
+    }
 }
 
+
 /* =====================================================
-   CONTACT - REDUCE EMPTY SPACE
+CONTACT - REDUCE EMPTY SPACE
 ===================================================== */
 
 .contact {
-  height: auto !important;
-  min-height: auto !important;
-  padding-bottom: 60px !important;
+    height: auto !important;
+    min-height: auto !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 60px !important;
 }
+
 
 /* Keep contact content compact */
+
 .contact-content {
-  height: auto !important;
-  min-height: auto !important;
-  padding-bottom: 40px !important;
+    height: auto !important;
+    min-height: auto !important;
+
+    padding-bottom: 40px !important;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .contact {
-    min-height: auto !important;
-    height: auto !important;
-    padding-bottom: 40px !important;
-  }
 
-  .contact-content {
-    min-height: auto !important;
-    padding-bottom: 20px !important;
-  }
+/* =====================================================
+MOBILE COMPACT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .contact {
+        min-height: auto !important;
+        height: auto !important;
+
+        padding-top: 0 !important;
+        padding-bottom: 40px !important;
+    }
+
+    .contact-content {
+        min-height: auto !important;
+
+        padding-bottom: 20px !important;
+    }
+}
+
+/* =====================================================
+CONTACT TOP & BOTTOM DIVIDERS
+===================================================== */
+
+.contact-section-divider {
+    position: relative;
+
+    width: 400px;
+    height: 1px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.55) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.55) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+CENTER DIAMOND
+===================================================== */
+
+.contact-section-divider-diamond {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    background: #d4af37;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+TOP DIVIDER
+===================================================== */
+
+.contact-section-divider-top {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+BOTTOM DIVIDER
+===================================================== */
+
+.contact-section-divider-bottom {
+    margin-top: 80px;
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contact-section-divider {
+        width: 260px;
+    }
+
+    .contact-section-divider-diamond {
+        width: 8px;
+        height: 8px;
+    }
+
+    .contact-section-divider-top {
+        margin-bottom: 30px;
+    }
+
+    .contact-section-divider-bottom {
+        margin-top: 60px;
+    }
+
+}
+
+/* =====================================================
+CONTACT BOTTOM DIVIDER - FINAL SIZE
+===================================================== */
+
+.contact-section-divider-bottom {
+    width: 440px !important;
+    height: 1px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.contact-section-divider-bottom {
+    transform: translateX(-25px);
+}
+
+/* =====================================================
+REMOVE SPACE AFTER CONTACT
+===================================================== */
+
+.contact {
+    padding-bottom: 0 !important;
+}
+
+.contact-content {
+    padding-bottom: 0 !important;
+}
+
+.contact-section-divider-bottom {
+    margin-bottom: 0 !important;
+}
+
+/* =====================================================
+CONTACT BOTTOM DIAMOND - FINAL POSITION
+===================================================== */
+
+.contact-section-divider-bottom {
+    position: relative !important;
+    height: 1px !important;
+    z-index: 100 !important;
+}
+
+
+    .contact-section-divider-bottom .contact-section-divider-diamond {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: -6px !important;
+
+    width: 10px !important;
+    height: 10px !important;
+
+    background: #d4af37 !important;
+
+    transform: translateX(-50%) rotate(45deg) !important;
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18) !important;
+
+    z-index: 9999 !important;
 }

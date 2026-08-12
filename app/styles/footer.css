@@ -268,3 +268,62 @@
   box-shadow:
     0 0 15px rgba(212, 175, 55, 0.35);
 }
+
+/* =====================================================
+CONTACT BOTTOM DIAMOND - FINAL FIX
+===================================================== */
+
+.contact {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.contact-section-divider-bottom {
+    position: relative !important;
+    z-index: 10 !important;
+    overflow: visible !important;
+}
+
+.contact-section-divider-bottom .contact-section-divider-diamond {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 10px !important;
+    height: 10px !important;
+
+    background: #d4af37 !important;
+
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18) !important;
+
+    z-index: 20 !important;
+}
+
+/* Footer stays behind the bottom divider */
+.footer {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* =====================================================
+   FOOTER - LOGO 2 ABOVE MAIN LOGO
+===================================================== */
+
+.footer-logo-2 {
+  width: 120px;
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto 25px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 10px rgba(212, 175, 55, 0.20));
+}

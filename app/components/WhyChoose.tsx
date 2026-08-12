@@ -1,5 +1,6 @@
 import "../styles/whychoose.css";
 
+
 const features = [
   {
     icon: "🎧",
@@ -30,28 +31,37 @@ const features = [
     icon: "🕒",
     title: "Always On Time & Fully Equipped",
     text: "Professional setup with reliable service every time.",
-},
-    {
-  icon: "🎚️",
-  title: "Premium DJ Equipment",
-  text: "Professional sound, lighting and high-end DJ setup for every event.",
-},
-{
-  icon: "💃",
-  title: "Crowd Reading Expertise",
-  text: "Creating the perfect vibe by reading the crowd and adapting the music live.",
-
+  },
+  {
+    icon: "🎚️",
+    title: "Premium DJ Equipment",
+    text: "Professional sound, lighting and high-end DJ setup for every event.",
+  },
+  {
+    icon: "💃",
+    title: "Crowd Reading Expertise",
+    text: "Creating the perfect vibe by reading the crowd and adapting the music live.",
   },
 ];
+
 
 export default function WhyChoose() {
   return (
     <section className="why">
 
+
       <div className="why-title">
         <h2>WHY CHOOSE DJ RAY</h2>
+
+
+        <div className="why-title-divider">
+          <span className="why-title-divider-diamond"></span>
+        </div>
+
+
         <p>More Than Music... An Unforgettable Experience.</p>
       </div>
+
 
       <div className="why-grid">
         {features.map((item, index) => (
@@ -63,8 +73,14 @@ export default function WhyChoose() {
         ))}
       </div>
 
+
+      {/* ===== WHY SECTION BOTTOM DIVIDER ===== */}
+
+      <div className="why-section-divider why-section-divider-bottom">
+        <span className="why-section-divider-diamond"></span>
+      </div>
+
+
     </section>
   );
 }
-
-

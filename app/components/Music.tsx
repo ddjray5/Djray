@@ -1,54 +1,62 @@
+"use client";
+
 import "../styles/music.css";
 
-export default function Music() {
+type MusicStyle = {
+  name: string;
+};
 
-  const genres = [
-    "Arabic Hits",
-    "Commercial",
-    "House",
-    "Afro House",
-    "Tech House",
-    "Deep House",
-    "Hip-Hop",
-    "R&B",
-    "EDM",
-    "International"
+export default function Music() {
+  const musicStyles: MusicStyle[] = [
+    { name: "ARABIC" },
+    { name: "COMMERCIAL" },
+    { name: "HOUSE" },
+    { name: "AFRO HOUSE" },
+    { name: "DEEP HOUSE" },
+    { name: "TECH HOUSE" },
+    { name: "HIP-HOP" },
+    { name: "R&B" },
+    { name: "EDM" },
+    { name: "INTERNATIONAL" },
   ];
 
   return (
+    <section className="music-section">
 
-    <section id="music" className="music">
+  
+
+  {/* ===== MUSIC CONTENT ===== */}
+
+      {/* =====================================================
+          TITLE
+      ===================================================== */}
 
       <div className="music-title">
-
-        <h2>
-          MUSIC STYLE
-        </h2>
+        <h2>MUSIC STYLE</h2>
 
         <p>
-          A premium Open Format experience designed for every crowd and every event.
+          A premium Open Format experience
+          designed for every crowd and every event.
         </p>
-
       </div>
 
-      <div className="music-grid">
+      {/* =====================================================
+          MUSIC STYLES
+      ===================================================== */}
 
-        {genres.map((genre, index) => (
+      <div className="music-style-list">
 
+        {musicStyles.map((style) => (
           <div
-            className="music-card"
-            key={index}
+            className="music-style-item"
+            key={style.name}
           >
-
-            <span>{genre}</span>
-
+            {style.name}
           </div>
-
         ))}
 
       </div>
 
     </section>
-
   );
 }

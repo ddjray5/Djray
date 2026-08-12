@@ -1,333 +1,272 @@
-/* =====================================================
-   SERVICES - DJ RAY
-   Luxury Black & Gold
-===================================================== */
+/* SERVICES - DJ RAY | Luxury Black & Gold */
 
 .services {
   width: 100%;
-  padding: 100px 20px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(176, 141, 44, 0.04),
-      transparent 60%
-    ),
-    #050505;
-
+  min-height: auto;
+  padding: 35px 20px 35px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.035), transparent 42%),
+    linear-gradient(180deg, #050505 0%, #030303 65%, #000000 100%);
 }
-
-
-/* =====================================================
-   SERVICES TITLE
-===================================================== */
 
 .services-title {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 55px;
+  position: relative;
 }
 
 .services-title h2 {
   margin: 0;
-
+  font-family: var(--font-cormorant);
   color: #d4af37;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 58px;
-  font-weight: 400;
-
+  font-size: 48px;
+  font-weight: 600;
   letter-spacing: 5px;
-
   text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.08);
 }
 
 .services-title h2::after {
   content: "";
-
   display: block;
-
-  width: 130px;
-  height: 2px;
-
-  margin: 25px auto 0;
-
+  width: 380px;
+  height: 1px;
+  margin: 24px auto 0;
   background: linear-gradient(
     90deg,
     transparent,
-    #b08d2c,
+    rgba(212, 175, 55, 0.25),
+    #d4af37,
+    #f8e38c,
+    #d4af37,
+    rgba(212, 175, 55, 0.25),
     transparent
   );
-
-  box-shadow:
-    0 0 12px rgba(176, 141, 44, 0.35);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.18);
 }
+
+.services-title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 62px;
+  width: 7px;
+  height: 7px;
+  background: #d4af37;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  z-index: 3;
+}
+
+
+.services-grid {
+  position: relative;
+  padding-bottom: 35px;
+}
+
+.services-grid::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 100vw;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.18) 10%,
+    rgba(212, 175, 55, 0.45) 30%,
+    #d4af37 50%,
+    rgba(212, 175, 55, 0.45) 70%,
+    rgba(212, 175, 55, 0.18) 90%,
+    transparent 100%
+  );
+
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.15);
+
+  pointer-events: none;
+}
+
+.services-grid::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform: translateX(-50%) rotate(45deg);
+
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
 
 .services-title p {
-  margin: 40px auto 0;
-
-  color: #d5d5d5;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 28px;
-
-  letter-spacing: 2px;
-
-  line-height: 1.5;
+  margin: 25px auto 0;
+  max-width: 700px;
+  font-family: var(--font-cormorant);
+  color: #d0d0d0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  text-align: center;
 }
-
-
-/* =====================================================
-   SERVICES GRID
-===================================================== */
 
 .services-grid {
   width: 100%;
   max-width: 1200px;
-
   margin: 0 auto;
-
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 45px;
 }
 
-
-/* =====================================================
-   SERVICE CARD
-===================================================== */
-
 .service-card {
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(20, 20, 20, 0.98),
-      rgba(5, 5, 5, 0.98)
-    );
-
-  border: 1px solid rgba(176, 141, 44, 0.45);
-
+  background: linear-gradient(145deg, rgba(8, 8, 8, 0.98), rgba(2, 2, 2, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.72);
   border-radius: 20px;
-
   box-sizing: border-box;
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+  position: relative;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-
-  border-color: #b08d2c;
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.5),
-    0 0 25px rgba(176, 141, 44, 0.12);
+  transform: translateY(-4px);
+  border-color: #d4af37;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.10);
 }
-
-
-/* =====================================================
-   SERVICE IMAGE
-===================================================== */
 
 .service-image {
   width: 100%;
   height: 300px;
-
   overflow: hidden;
 }
 
 .service-image img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
   transition: transform 0.5s ease;
 }
 
 .service-card:hover .service-image img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
-
-
-/* =====================================================
-   SERVICE CONTENT
-===================================================== */
 
 .service-content {
   padding: 35px 30px 32px;
-
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .service-content h3 {
   margin: 0 0 18px;
-
-  color: #b08d2c;
-
-  font-family: "Times New Roman", serif;
-
+  color: #d4af37;
+  font-family: var(--font-cormorant);
   font-size: 28px;
-  font-weight: 400;
-
+  font-weight: 600;
   letter-spacing: 3px;
-
   text-transform: uppercase;
 }
 
 .service-content p {
   margin: 0 auto 25px;
-
   color: #d0d0d0;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 17px;
-
+  font-family: var(--font-cormorant);
+  font-size: 19px;
   line-height: 1.7;
-
   letter-spacing: 0.5px;
 }
 
-
-/* =====================================================
-   FEATURES
-===================================================== */
-
 .service-features {
   margin: 0 auto 28px;
-
   padding: 0;
-
   list-style: none;
-
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: center;
-
   gap: 10px;
 }
 
 .service-features li {
   padding: 8px 15px;
-
-  color: #b08d2c;
-
-  border: 1px solid rgba(176, 141, 44, 0.35);
-
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.40);
   border-radius: 20px;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 14px;
-
+  font-family: var(--font-cormorant);
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
-
-/* =====================================================
-   BOOK BUTTON
-   DARK LUXURY GOLD
-===================================================== */
-
 .service-book {
   width: 100%;
-
   padding: 16px 30px;
-
   margin-top: 10px;
-
-  background: #b08d2c;
-
-  color: #050505;
-
-  border: 1px solid #c9a83e;
-
-  border-radius: 40px;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 18px;
-
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  font-family: var(--font-cormorant);
+  font-size: 20px;
   font-weight: 600;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
-
   cursor: pointer;
-
   box-sizing: border-box;
-
-  box-shadow:
-    0 0 12px rgba(176, 141, 44, 0.18);
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.08);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
-
-
-/* =====================================================
-   BOOK HOVER
-===================================================== */
 
 .service-book:hover {
-  background: #c9a83e;
-
+  background: #d4af37;
   color: #050505;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 0 22px rgba(176, 141, 44, 0.30);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.20);
 }
-
-
-/* =====================================================
-   BOOK ACTIVE
-===================================================== */
 
 .service-book:active {
   transform: translateY(0);
-
-  box-shadow:
-    0 0 10px rgba(176, 141, 44, 0.20);
 }
 
-
-/* =====================================================
-   TABLET
-===================================================== */
-
 @media (max-width: 900px) {
-
   .services {
-    padding: 80px 18px;
+    padding: 35px 18px 35px;
   }
 
   .services-title h2 {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   .services-title p {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .services-grid {
@@ -343,50 +282,42 @@
   }
 
   .service-content h3 {
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
 @media (max-width: 768px) {
-
   .services {
-    padding: 70px 15px;
+    padding: 30px 15px 30px;
   }
 
   .services-title {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .services-title h2 {
-    font-size: 42px;
-
+    font-size: 40px;
     letter-spacing: 4px;
   }
 
   .services-title h2::after {
-    width: 100px;
+    width: 280px;
+    margin-top: 21px;
+  }
 
-    margin-top: 20px;
+  .services-title h2::before {
+    top: 67px;
   }
 
   .services-title p {
-    margin-top: 30px;
-
-    font-size: 22px;
-
-    line-height: 1.5;
+    font-size: 21px;
+    line-height: 1.7;
+    margin-top: 24px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-
     gap: 30px;
-
     max-width: 600px;
   }
 
@@ -400,40 +331,51 @@
 
   .service-content h3 {
     font-size: 25px;
-
     letter-spacing: 2px;
   }
 
   .service-content p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .service-book {
+    display: block;
+    width: 100%;
     padding: 15px 25px;
-
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
 @media (max-width: 480px) {
-
   .services {
-    padding: 60px 12px;
+    padding: 25px 12px 25px;
+  }
+
+  .services-title {
+    margin-bottom: 40px;
   }
 
   .services-title h2 {
-    font-size: 36px;
-
+    font-size: 34px;
     letter-spacing: 3px;
   }
 
+  .services-title h2::after {
+    width: 210px;
+    margin-top: 19px;
+  }
+
+  .services-title h2::before {
+    top: 57px;
+    width: 6px;
+    height: 6px;
+  }
+
   .services-title p {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 21px;
+    padding: 0 8px;
   }
 
   .services-grid {
@@ -453,8 +395,7 @@
   }
 
   .service-content p {
-    font-size: 15px;
-
+    font-size: 16px;
     line-height: 1.6;
   }
 
@@ -463,26 +404,68 @@
   }
 
   .service-features li {
-    font-size: 13px;
-
+    font-size: 14px;
     padding: 7px 12px;
   }
 
   .service-book {
     padding: 14px 20px;
-
-    font-size: 16px;
-
+    font-size: 18px;
     letter-spacing: 2px;
   }
 }
 
-/* =====================================================
-   BOOKING MODAL - MOBILE FIX
-   ===================================================== */
+@media (max-width: 360px) {
+  .services {
+    padding: 22px 10px 22px;
+  }
+
+  .services-title h2 {
+    font-size: 30px;
+    letter-spacing: 2.5px;
+  }
+
+  .services-title h2::after {
+    width: 175px;
+    margin-top: 17px;
+  }
+
+  .services-title h2::before {
+    top: 51px;
+  }
+
+  .services-title p {
+    font-size: 17px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .service-image {
+    height: 220px;
+  }
+
+  .service-content {
+    padding: 22px 15px;
+  }
+
+  .service-content h3 {
+    font-size: 20px;
+  }
+
+  .service-content p {
+    font-size: 15px;
+  }
+
+  .service-book {
+    font-size: 17px;
+  }
+}
+
+/* BOOKING MODAL - MOBILE FIX */
 
 @media (max-width: 768px) {
-
   .booking-modal {
     padding: 15px;
     align-items: center;
@@ -494,12 +477,9 @@
   .booking-modal-content {
     width: calc(100% - 24px);
     max-width: 520px;
-
     max-height: 90vh;
     overflow-y: auto;
-
     padding: 28px 20px 24px;
-
     box-sizing: border-box;
   }
 
@@ -518,11 +498,8 @@
   .booking-modal-content textarea {
     width: 100%;
     max-width: 100%;
-
     box-sizing: border-box;
-
     padding: 14px 15px;
-
     font-size: 16px;
   }
 
@@ -532,51 +509,36 @@
 
   .booking-modal-close {
     position: absolute;
-
     top: 10px;
     right: 12px;
-
     width: 42px;
     height: 42px;
-
     font-size: 30px;
-
     z-index: 20;
   }
 
   .booking-modal-content button[type="submit"] {
     width: 100%;
     padding: 14px 20px;
-
     font-size: 17px;
   }
 }
 
-
-/* =====================================================
-   SMALL MOBILE
-   ===================================================== */
-
 @media (max-width: 480px) {
-
   .booking-modal {
     padding: 10px;
   }
 
   .booking-modal-content {
     width: calc(100% - 16px);
-
     max-height: 88vh;
-
     padding: 25px 16px 20px;
-
     border-radius: 20px;
   }
 
   .booking-modal-content h2 {
     font-size: 32px;
     letter-spacing: 2px;
-
     margin-bottom: 20px;
   }
 
@@ -598,10 +560,8 @@
   .booking-modal-close {
     top: 8px;
     right: 8px;
-
     width: 38px;
     height: 38px;
-
     font-size: 28px;
   }
 
@@ -611,50 +571,4 @@
   }
 }
 
-/* =====================================================
-   MOBILE BOOK BUTTON FIX
-===================================================== */
-
-.service-card {
-  position: relative;
-}
-
-.service-content {
-  position: relative;
-  z-index: 2;
-}
-
-.service-book {
-  position: relative;
-  z-index: 10;
-
-  pointer-events: auto;
-  touch-action: manipulation;
-
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Make sure nothing blocks the button on mobile */
-@media (max-width: 768px) {
-  .service-card {
-    position: relative;
-  }
-
-  .service-content {
-    position: relative;
-    z-index: 5;
-  }
-
-  .service-book {
-    position: relative;
-    z-index: 20;
-
-    display: block;
-    width: 100%;
-
-    pointer-events: auto;
-    touch-action: manipulation;
-
-    cursor: pointer;
-  }
-}
+/* No extra diamond under the subtitle. */

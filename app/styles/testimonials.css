@@ -1,5 +1,5 @@
 /* =====================================================
-   TESTIMONIALS SECTION
+TESTIMONIALS SECTION
 ===================================================== */
 
 .testimonials-section {
@@ -15,9 +15,8 @@
   position: relative;
 }
 
-
 /* =====================================================
-   TESTIMONIALS HEADER
+TESTIMONIALS HEADER
 ===================================================== */
 
 .testimonials-header {
@@ -28,7 +27,6 @@
 
   text-align: center;
 }
-
 
 /* TESTIMONIALS */
 
@@ -46,7 +44,6 @@
 
   margin: 0;
 }
-
 
 /* GOLD LINE DIRECTLY UNDER TESTIMONIALS */
 
@@ -67,7 +64,6 @@
     0 0 12px rgba(212, 175, 55, 0.35);
 }
 
-
 /* WHAT CLIENTS SAY */
 
 .testimonials-header h2 {
@@ -87,9 +83,8 @@
   text-align: center;
 }
 
-
 /* =====================================================
-   TESTIMONIALS GRID
+TESTIMONIALS GRID
 ===================================================== */
 
 .testimonials-grid {
@@ -107,9 +102,8 @@
   box-sizing: border-box;
 }
 
-
 /* =====================================================
-   TESTIMONIAL CARD
+TESTIMONIAL CARD
 ===================================================== */
 
 .testimonial-card {
@@ -150,7 +144,6 @@
     box-shadow 0.3s ease;
 }
 
-
 .testimonial-card:hover {
   transform: translateY(-5px);
 
@@ -160,9 +153,8 @@
     0 10px 35px rgba(212, 175, 55, 0.10);
 }
 
-
 /* =====================================================
-   QUOTE
+QUOTE
 ===================================================== */
 
 .quote-mark {
@@ -185,9 +177,8 @@
   opacity: 0.95;
 }
 
-
 /* =====================================================
-   STARS
+STARS
 ===================================================== */
 
 .stars {
@@ -203,7 +194,21 @@
 
 
 /* =====================================================
-   REVIEW TEXT
+   EMPTY STARS
+===================================================== */
+
+.empty-stars {
+  color: #d4af37 !important;
+  font-size: 48px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 25px 0 25px;
+  text-align: center;
+}
+
+
+/* =====================================================
+REVIEW TEXT
 ===================================================== */
 
 .review {
@@ -222,9 +227,8 @@
   text-align: center;
 }
 
-
 /* =====================================================
-   CLIENT NAME
+CLIENT NAME
 ===================================================== */
 
 .testimonial-card h3 {
@@ -243,9 +247,8 @@
   text-align: center;
 }
 
-
 /* =====================================================
-   FEATURED REVIEW
+FEATURED REVIEW
 ===================================================== */
 
 .featured-review {
@@ -255,9 +258,8 @@
     0 0 30px rgba(212, 175, 55, 0.06);
 }
 
-
 /* =====================================================
-   WRITE A REVIEW BUTTON
+WRITE A REVIEW BUTTON
 ===================================================== */
 
 .review-button-wrapper {
@@ -271,7 +273,6 @@
 
   justify-content: center;
 }
-
 
 .write-review-btn {
   min-width: 280px;
@@ -297,7 +298,6 @@
   transition: 0.3s ease;
 }
 
-
 .write-review-btn:hover {
   background: #d4af37;
 
@@ -307,9 +307,8 @@
     0 0 25px rgba(212, 175, 55, 0.25);
 }
 
-
 /* =====================================================
-   REVIEW MODAL OVERLAY
+REVIEW MODAL OVERLAY
 ===================================================== */
 
 .review-modal-overlay {
@@ -340,9 +339,8 @@
   z-index: 99999;
 }
 
-
 /* =====================================================
-   REVIEW MODAL
+REVIEW MODAL
 ===================================================== */
 
 .review-modal {
@@ -369,9 +367,8 @@
     inset 0 0 30px rgba(212, 175, 55, 0.02);
 }
 
-
 /* =====================================================
-   CLOSE BUTTON
+CLOSE BUTTON
 ===================================================== */
 
 .review-modal-close {
@@ -402,14 +399,12 @@
   z-index: 5;
 }
 
-
 .review-modal-close:hover {
   color: #ffffff;
 }
 
-
 /* =====================================================
-   MODAL ICON
+MODAL ICON
 ===================================================== */
 
 .review-modal-icon {
@@ -424,9 +419,8 @@
   margin-bottom: 35px;
 }
 
-
 /* =====================================================
-   MODAL TITLE
+MODAL TITLE
 ===================================================== */
 
 .review-modal h2 {
@@ -447,9 +441,8 @@
   text-align: center;
 }
 
-
 /* =====================================================
-   MODAL SUBTITLE
+MODAL SUBTITLE
 ===================================================== */
 
 .review-modal-subtitle {
@@ -466,9 +459,8 @@
   text-align: center;
 }
 
-
 /* =====================================================
-   MODAL STAR RATING
+MODAL STAR RATING
 ===================================================== */
 
 .review-modal-stars {
@@ -482,7 +474,6 @@
 
   margin-bottom: 35px;
 }
-
 
 .review-modal-stars button {
   padding: 0;
@@ -504,11 +495,9 @@
     transform 0.25s ease;
 }
 
-
 .review-modal-stars button.active {
   color: #d4af37;
 }
-
 
 .review-modal-stars button:hover {
   color: #d4af37;
@@ -516,18 +505,16 @@
   transform: scale(1.08);
 }
 
-
 /* =====================================================
-   FORM
+FORM
 ===================================================== */
 
 .review-modal form {
   width: 100%;
 }
 
-
 /* =====================================================
-   INPUT
+INPUT
 ===================================================== */
 
 .review-modal input,
@@ -557,13 +544,11 @@
     box-shadow 0.25s ease;
 }
 
-
 .review-modal input {
   height: 70px;
 
   margin-bottom: 25px;
 }
-
 
 .review-modal textarea {
   min-height: 180px;
@@ -573,12 +558,10 @@
   resize: vertical;
 }
 
-
 .review-modal input::placeholder,
 .review-modal textarea::placeholder {
   color: #888888;
 }
-
 
 .review-modal input:focus,
 .review-modal textarea:focus {
@@ -588,9 +571,8 @@
     0 0 15px rgba(212, 175, 55, 0.12);
 }
 
-
 /* =====================================================
-   SEND REVIEW BUTTON
+SEND REVIEW BUTTON
 ===================================================== */
 
 .modal-submit-btn {
@@ -621,7 +603,6 @@
   transition: 0.3s ease;
 }
 
-
 .modal-submit-btn:hover {
   background: #000000;
 
@@ -631,9 +612,8 @@
     0 0 20px rgba(212, 175, 55, 0.25);
 }
 
-
 /* =====================================================
-   TABLET
+TABLET
 ===================================================== */
 
 @media (max-width: 900px) {
@@ -642,11 +622,9 @@
     padding: 75px 25px 90px;
   }
 
-
   .testimonials-header h2 {
     font-size: 48px;
   }
-
 
   .testimonials-grid {
     grid-template-columns: 1fr;
@@ -656,15 +634,13 @@
     gap: 25px;
   }
 
-
   .testimonial-card {
     min-height: 420px;
   }
 }
 
-
 /* =====================================================
-   MOBILE
+MOBILE
 ===================================================== */
 
 @media (max-width: 768px) {
@@ -677,13 +653,11 @@
     overflow: visible;
   }
 
-
   /* HEADER */
 
   .testimonials-header {
     margin-bottom: 55px;
   }
-
 
   .testimonials-header .section-kicker {
     font-size: 20px;
@@ -691,13 +665,11 @@
     letter-spacing: 7px;
   }
 
-
   .testimonials-header .gold-line {
     width: 230px;
 
     margin: 16px auto 38px;
   }
-
 
   .testimonials-header h2 {
     font-size: 43px;
@@ -706,7 +678,6 @@
 
     line-height: 1.25;
   }
-
 
   /* GRID */
 
@@ -720,7 +691,6 @@
     gap: 28px;
   }
 
-
   /* CARD */
 
   .testimonial-card {
@@ -733,11 +703,9 @@
     border-radius: 34px;
   }
 
-
   .quote-mark {
     font-size: 62px;
   }
-
 
   .stars {
     font-size: 43px;
@@ -745,13 +713,11 @@
     letter-spacing: 1px;
   }
 
-
   .review {
     font-size: 19px;
 
     line-height: 1.7;
   }
-
 
   .testimonial-card h3 {
     font-size: 29px;
@@ -759,13 +725,11 @@
     letter-spacing: 5px;
   }
 
-
   /* WRITE BUTTON */
 
   .review-button-wrapper {
     margin-top: 45px;
   }
-
 
   .write-review-btn {
     width: 100%;
@@ -778,7 +742,6 @@
 
     font-size: 18px;
   }
-
 
   /* =================================================
      MODAL OVERLAY
@@ -798,7 +761,6 @@
     height: 100dvh;
   }
 
-
   /* =================================================
      MODAL
   ================================================= */
@@ -817,7 +779,6 @@
     flex-shrink: 0;
   }
 
-
   /* CLOSE */
 
   .review-modal-close {
@@ -828,7 +789,6 @@
     font-size: 34px;
   }
 
-
   /* ICON */
 
   .review-modal-icon {
@@ -836,7 +796,6 @@
 
     margin-bottom: 28px;
   }
-
 
   /* TITLE */
 
@@ -848,7 +807,6 @@
     line-height: 1.25;
   }
 
-
   /* SUBTITLE */
 
   .review-modal-subtitle {
@@ -856,7 +814,6 @@
 
     margin: 20px 0 28px;
   }
-
 
   /* STARS */
 
@@ -866,11 +823,9 @@
     margin-bottom: 28px;
   }
 
-
   .review-modal-stars button {
     font-size: 43px;
   }
-
 
   /* INPUT */
 
@@ -884,7 +839,6 @@
     margin-bottom: 20px;
   }
 
-
   /* TEXTAREA */
 
   .review-modal textarea {
@@ -897,7 +851,6 @@
     margin-bottom: 20px;
   }
 
-
   /* SUBMIT */
 
   .modal-submit-btn {
@@ -909,9 +862,8 @@
   }
 }
 
-
 /* =====================================================
-   SMALL PHONES
+SMALL PHONES
 ===================================================== */
 
 @media (max-width: 430px) {
@@ -920,13 +872,11 @@
     padding: 160px 15px 80px;
   }
 
-
   .testimonials-header .section-kicker {
     font-size: 18px;
 
     letter-spacing: 6px;
   }
-
 
   .testimonials-header .gold-line {
     width: 210px;
@@ -934,13 +884,11 @@
     margin-bottom: 32px;
   }
 
-
   .testimonials-header h2 {
     font-size: 36px;
 
     letter-spacing: 2px;
   }
-
 
   .testimonial-card {
     min-height: 500px;
@@ -950,11 +898,9 @@
     border-radius: 30px;
   }
 
-
   .stars {
     font-size: 39px;
   }
-
 
   .review {
     font-size: 18px;
@@ -962,13 +908,11 @@
     line-height: 1.65;
   }
 
-
   .testimonial-card h3 {
     font-size: 27px;
 
     letter-spacing: 4px;
   }
-
 
   /* MODAL */
 
@@ -978,7 +922,6 @@
     align-items: flex-start;
   }
 
-
   .review-modal {
     padding: 52px 17px 25px;
 
@@ -987,13 +930,11 @@
     margin: 10px auto 20px;
   }
 
-
   .review-modal h2 {
     font-size: 27px;
 
     letter-spacing: 3px;
   }
-
 
   .review-modal-subtitle {
     font-size: 16px;
@@ -1001,16 +942,13 @@
     margin-top: 18px;
   }
 
-
   .review-modal-stars {
     margin-bottom: 25px;
   }
 
-
   .review-modal-stars button {
     font-size: 38px;
   }
-
 
   .review-modal input {
     height: 60px;
@@ -1018,13 +956,11 @@
     font-size: 16px;
   }
 
-
   .review-modal textarea {
     min-height: 160px;
 
     font-size: 16px;
   }
-
 
   .modal-submit-btn {
     min-height: 60px;
@@ -1035,9 +971,8 @@
   }
 }
 
-
 /* =====================================================
-   VERY SMALL PHONES
+VERY SMALL PHONES
 ===================================================== */
 
 @media (max-width: 360px) {
@@ -1046,23 +981,19 @@
     font-size: 32px;
   }
 
-
   .testimonial-card {
     padding-left: 18px;
 
     padding-right: 18px;
   }
 
-
   .stars {
     font-size: 35px;
   }
 
-
   .review {
     font-size: 17px;
   }
-
 
   .review-modal {
     padding-left: 14px;
@@ -1070,15 +1001,166 @@
     padding-right: 14px;
   }
 
-
   .review-modal h2 {
     font-size: 24px;
 
     letter-spacing: 2px;
   }
 
-
   .review-modal-stars button {
     font-size: 34px;
   }
+}
+
+/* =====================================================
+TESTIMONIALS TITLE DIVIDER
+===================================================== */
+
+.testimonials-title-divider {
+  position: relative;
+
+  width: 320px;
+  height: 1px;
+
+  margin: 18px auto 45px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.18) 10%,
+      rgba(212, 175, 55, 0.55) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.55) 70%,
+      rgba(212, 175, 55, 0.18) 90%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+CENTER DIAMOND
+===================================================== */
+
+.testimonials-title-divider-diamond {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background: #d4af37;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.18);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .testimonials-title-divider {
+    width: 260px;
+  }
+
+  .testimonials-title-divider-diamond {
+    width: 8px;
+    height: 8px;
+  }
+
+}
+
+/* =====================================================
+TESTIMONIALS BOTTOM DIVIDER
+===================================================== */
+
+.testimonials-section-divider {
+  position: relative;
+
+  width: 420px;
+  height: 1px;
+
+  margin: 30px auto 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.18) 10%,
+      rgba(212, 175, 55, 0.55) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.55) 70%,
+      rgba(212, 175, 55, 0.18) 90%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+BOTTOM CENTER DIAMOND
+===================================================== */
+
+.testimonials-section-divider-diamond {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background: #d4af37;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.18);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .testimonials-section-divider {
+    width: 400px;
+
+    margin-top: 40px;
+    transform: translateX(-20px);
+  }
+
+  .testimonials-section-divider-diamond {
+    width: 8px;
+    height: 8px;
+  }
+
 }

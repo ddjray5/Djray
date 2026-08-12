@@ -1,4 +1,7 @@
+"use client";
+
 import "../styles/footer.css";
+
 import {
   FaInstagram,
   FaTiktok,
@@ -11,14 +14,22 @@ export default function Footer() {
     <footer className="footer">
 
       <div className="footer-logo">
+
+        {/* LOGO 2 */}
+        <img
+          src="/logo2.png"
+          alt="DJ RAY"
+          className="footer-logo-2"
+        />
+
+        {/* MAIN LOGO */}
         <img
           src="/logo.png"
           alt="DJ RAY"
           className="footer-logo-image"
         />
-      </div>
 
-      <h3>DJ RAY</h3>
+      </div>
 
       <p>
         Luxury Open Format DJ
@@ -27,6 +38,7 @@ export default function Footer() {
       </p>
 
       <div className="footer-socials">
+
         <a
           href="https://instagram.com/djray.5"
           target="_blank"
@@ -58,6 +70,7 @@ export default function Footer() {
         >
           <FaWhatsapp />
         </a>
+
       </div>
 
       <div className="footer-line"></div>

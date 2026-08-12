@@ -1,123 +1,201 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { supabase } from "../components/utils/supabase";
+
 import "../styles/testimonials.css";
 
-const reviews = [
-  {
-    name: "Sarah",
-    review:
-      "DJ RAY created an unforgettable atmosphere. Every guest was on the dance floor all night.",
-  },
-  {
-    name: "Michael",
-    review:
-      "Professional, stylish and energetic. Exactly the experience we wanted for our guests.",
-  },
-  {
-    name: "Emily",
-    review:
-      "Exceptional music selection and perfect crowd reading. Highly recommended for premium events.",
-  },
-];
+type Review = {
+  id: number;
+  created_at: string;
+  name: string;
+  rating: number;
+  message: string;
+  approved: boolean;
+};
 
 export default function Testimonials() {
+  // =====================================================
+  // REVIEWS
+  // =====================================================
+
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // =====================================================
+  // REVIEW MODAL
+  // =====================================================
+
   const [openReview, setOpenReview] = useState(false);
 
   const [name, setName] = useState("");
-  const [review, setReview] = useState("");
+  const [message, setMessage] = useState("");
   const [rating, setRating] = useState(0);
 
-  const [mounted, setMounted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  /*
-   * =====================================================
-   * CLIENT MOUNT
-   * =====================================================
-   */
+  // =====================================================
+  // LOAD APPROVED REVIEWS
+  // =====================================================
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const fetchApprovedReviews = async () => {
+    setLoading(true);
 
-  /*
-   * =====================================================
-   * STOP BACKGROUND SCROLL
-   * =====================================================
-   */
+    const { data, error } = await supabase
+      .from("reviews")
+      .select("*")
+      .eq("approved", true)
+      .order("created_at", { ascending: false });
 
-  useEffect(() => {
-    if (!openReview) {
-      document.body.style.overflow = "";
+    if (error) {
+      console.error("Error loading reviews:", error);
+      setReviews([]);
+      setLoading(false);
       return;
     }
 
-    document.body.style.overflow = "hidden";
+    setReviews(data || []);
+    setLoading(false);
+  };
 
+  // =====================================================
+  // INITIAL LOAD
+  // =====================================================
+
+  useEffect(() => {
+    fetchApprovedReviews();
+  }, []);
+
+  // =====================================================
+  // OPEN REVIEW MODAL
+  // =====================================================
+
+  const openReviewModal = () => {
+    setSubmitMessage("");
+    setOpenReview(true);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  // =====================================================
+  // CLOSE REVIEW MODAL
+  // =====================================================
+
+  const closeReviewModal = () => {
+    setOpenReview(false);
+
+    document.body.style.overflow = "";
+
+    setSubmitMessage("");
+  };
+
+  // =====================================================
+  // SUBMIT REVIEW
+  // =====================================================
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!name.trim()) {
+      setSubmitMessage("Please enter your name.");
+      return;
+    }
+
+    if (!message.trim()) {
+      setSubmitMessage("Please write your review.");
+      return;
+    }
+
+    if (rating === 0) {
+      setSubmitMessage("Please select a star rating.");
+      return;
+    }
+
+    setSubmitting(true);
+    setSubmitMessage("");
+
+    const { error } = await supabase
+      .from("reviews")
+      .insert([
+        {
+          name: name.trim(),
+          rating,
+          message: message.trim(),
+          approved: false,
+        },
+      ]);
+
+    if (error) {
+      console.error(
+        "Error submitting review:",
+        JSON.stringify(error, null, 2)
+      );
+
+      setSubmitMessage(
+        "Unable to submit your review. Please try again."
+      );
+
+      setSubmitting(false);
+      return;
+    }
+
+    // ===================================================
+    // SUCCESS
+    // ===================================================
+
+    setName("");
+    setMessage("");
+    setRating(0);
+
+    setSubmitMessage(
+      "Thank you! Your review has been submitted and is awaiting approval."
+    );
+
+    setSubmitting(false);
+
+    // Keep modal open for a moment so the user sees success
+    setTimeout(() => {
+      closeReviewModal();
+    }, 2200);
+  };
+
+  // =====================================================
+  // CLEAN UP BODY SCROLL
+  // =====================================================
+
+  useEffect(() => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [openReview]);
+  }, []);
 
-  /*
-   * =====================================================
-   * SUBMIT REVIEW
-   * =====================================================
-   */
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!name.trim() || !review.trim() || rating === 0) {
-      return;
-    }
-
-    console.log({
-      name,
-      review,
-      rating,
-    });
-
-    setName("");
-    setReview("");
-    setRating(0);
-    setOpenReview(false);
-  };
-
-  /*
-   * =====================================================
-   * REVIEW MODAL
-   *
-   * IMPORTANT:
-   * The modal is rendered directly into document.body.
-   * This prevents parent transforms from clipping it.
-   * =====================================================
-   */
+  // =====================================================
+  // REVIEW MODAL
+  // =====================================================
 
   const reviewModal =
-    openReview && mounted
+    openReview && typeof document !== "undefined"
       ? createPortal(
           <div
             className="review-modal-overlay"
-            onClick={() => setOpenReview(false)}
+            onClick={closeReviewModal}
           >
             <div
               className="review-modal"
               onClick={(e) => e.stopPropagation()}
             >
-
-              {/* CLOSE BUTTON */}
+              {/* CLOSE */}
 
               <button
                 type="button"
                 className="review-modal-close"
-                onClick={() => setOpenReview(false)}
-                aria-label="Close"
+                onClick={closeReviewModal}
+                aria-label="Close review form"
               >
                 ×
               </button>
-
 
               {/* ICON */}
 
@@ -125,25 +203,21 @@ export default function Testimonials() {
                 ★
               </div>
 
-
               {/* TITLE */}
 
               <h2>
                 WRITE A REVIEW
               </h2>
 
-
-              {/* SUBTITLE */}
-
               <p className="review-modal-subtitle">
                 Share your experience with DJ RAY
               </p>
 
-
-              {/* STAR RATING */}
+              {/* =================================================
+                  STAR RATING
+              ================================================= */}
 
               <div className="review-modal-stars">
-
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
                     key={star}
@@ -159,14 +233,13 @@ export default function Testimonials() {
                     ★
                   </button>
                 ))}
-
               </div>
 
-
-              {/* FORM */}
+              {/* =================================================
+                  FORM
+              ================================================= */}
 
               <form onSubmit={handleSubmit}>
-
                 {/* NAME */}
 
                 <input
@@ -176,129 +249,210 @@ export default function Testimonials() {
                   onChange={(e) =>
                     setName(e.target.value)
                   }
+                  maxLength={80}
+                  required
                 />
 
-
-                {/* REVIEW */}
+                {/* MESSAGE */}
 
                 <textarea
                   placeholder="Your Review"
-                  value={review}
+                  value={message}
                   onChange={(e) =>
-                    setReview(e.target.value)
+                    setMessage(e.target.value)
                   }
                   rows={5}
+                  maxLength={500}
+                  required
                 />
 
+                {/* SUBMIT MESSAGE */}
 
-                {/* SEND */}
+                {submitMessage && (
+                  <p
+                    className={
+                      submitMessage.startsWith("Thank you")
+                        ? "review-success"
+                        : "review-error"
+                    }
+                  >
+                    {submitMessage}
+                  </p>
+                )}
+
+                {/* SUBMIT */}
 
                 <button
                   type="submit"
                   className="modal-submit-btn"
+                  disabled={submitting}
                 >
-                  SEND REVIEW
+                  {submitting
+                    ? "SUBMITTING..."
+                    : "SEND REVIEW"}
                 </button>
-
               </form>
-
             </div>
           </div>,
           document.body
         )
       : null;
 
+  // =====================================================
+  // RENDER
+  // =====================================================
+
   return (
-    <>
-      {/* =====================================================
-          TESTIMONIALS SECTION
-      ===================================================== */}
+    <section className="testimonials-section">
 
-      <section className="testimonials-section">
+      {/* =================================================
+          HEADER
+      ================================================= */}
 
-        {/* =====================================================
-            HEADER
-        ===================================================== */}
+      <div className="testimonials-header">
 
-        <div className="testimonials-header">
+        <span className="section-kicker">
+          TESTIMONIALS
+        </span>
 
-          <span className="section-kicker">
-            TESTIMONIALS
-          </span>
+        {/* ===== TESTIMONIALS TITLE DIVIDER ===== */}
 
-          <div className="gold-line"></div>
-
-          <h2>
-            What Clients Say
-          </h2>
-
+        <div className="testimonials-title-divider">
+          <span className="testimonials-title-divider-diamond"></span>
         </div>
 
+        <h2>
+          What Clients Say
+        </h2>
 
-        {/* =====================================================
-            REVIEWS
-        ===================================================== */}
+      </div>
 
-        <div className="testimonials-grid">
 
-          {reviews.map((item, index) => (
-            <div
-              className={`testimonial-card ${
-                index === 2
-                  ? "featured-review"
-                  : ""
-              }`}
-              key={index}
+      {/* =================================================
+          REVIEWS
+      ================================================= */}
+
+      <div className="testimonials-grid">
+
+        {loading ? (
+
+          <div className="testimonials-loading">
+            Loading reviews...
+          </div>
+
+        ) : reviews.length === 0 ? (
+
+          <div className="testimonials-empty">
+
+            <div className="empty-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              Be the first to share your experience with DJ RAY.
+            </p>
+
+          </div>
+
+        ) : (
+
+          reviews.map((item) => (
+
+            <article
+              className="testimonial-card"
+              key={item.id}
             >
+
+              {/* QUOTE */}
 
               <div className="quote-mark">
                 “
               </div>
 
+
+              {/* STARS */}
+
               <div className="stars">
-                ★★★★★
+
+                {Array.from(
+                  { length: 5 },
+                  (_, index) => (
+
+                    <span key={index}>
+                      {index < item.rating
+                        ? "★"
+                        : "☆"}
+                    </span>
+
+                  )
+                )}
+
               </div>
 
+
+              {/* MESSAGE */}
+
               <p className="review">
-                "{item.review}"
+                “{item.message}”
               </p>
+
+
+              {/* NAME */}
 
               <h3>
                 {item.name}
               </h3>
 
-            </div>
-          ))}
 
-        </div>
+              {/* DATE */}
 
+              <small className="review-date">
+                {new Date(
+                  item.created_at
+                ).toLocaleDateString()}
+              </small>
 
-        {/* =====================================================
-            WRITE REVIEW BUTTON
-        ===================================================== */}
+            </article>
 
-        <div className="review-button-wrapper">
+          ))
 
-          <button
-            type="button"
-            className="write-review-btn"
-            onClick={() => setOpenReview(true)}
-          >
-            WRITE A REVIEW
-          </button>
+        )}
 
-        </div>
-
-      </section>
+      </div>
 
 
-      {/* =====================================================
-          MODAL
-          Rendered outside Testimonials section
-      ===================================================== */}
+      {/* =================================================
+          WRITE A REVIEW BUTTON
+      ================================================= */}
+
+      <div className="review-button-wrapper">
+
+        <button
+          type="button"
+          className="write-review-btn"
+          onClick={openReviewModal}
+        >
+          WRITE A REVIEW
+        </button>
+
+      </div>
+
+
+      {/* ===== TESTIMONIALS BOTTOM DIVIDER ===== */}
+
+      <div className="testimonials-section-divider testimonials-section-divider-bottom">
+        <span className="testimonials-section-divider-diamond"></span>
+      </div>
+
+
+      {/* =================================================
+          REVIEW MODAL
+          IMPORTANT:
+          Rendered directly inside BODY using Portal
+      ================================================= */}
 
       {reviewModal}
 
-    </>
+    </section>
   );
 }

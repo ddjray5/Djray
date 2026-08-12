@@ -1,0 +1,732 @@
+/* =====================================================
+   DJ RAY — REVIEWS ADMIN
+   LUXURY BLACK & GOLD
+===================================================== */
+
+.admin-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(212, 175, 55, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(212, 175, 55, 0.05),
+      transparent 35%
+    ),
+    #050505;
+
+  color: #ffffff;
+  padding: 60px 24px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+
+.admin-login-card {
+  width: 100%;
+  max-width: 460px;
+  margin: 80px auto;
+
+  padding: 50px 40px;
+
+  background: rgba(15, 15, 15, 0.96);
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(212, 175, 55, 0.05);
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.admin-logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 5px;
+
+  color: #ffffff;
+
+  margin-bottom: 25px;
+}
+
+.admin-logo span {
+  color: #d4af37;
+}
+
+
+/* =====================================================
+   KICKER
+===================================================== */
+
+.admin-kicker {
+  color: #d4af37;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TITLES
+===================================================== */
+
+.admin-page h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(28px, 4vw, 44px);
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.admin-login-card h1 {
+  font-size: 28px;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.admin-subtitle {
+  margin-top: 12px;
+
+  color: #999999;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   LOGIN FORM
+===================================================== */
+
+.admin-login-card form {
+  margin-top: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.admin-login-card input {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  background: #0a0a0a;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.admin-login-card input::placeholder {
+  color: #666666;
+}
+
+.admin-login-card input:focus {
+  border-color: #d4af37;
+
+  box-shadow:
+    0 0 0 3px rgba(212, 175, 55, 0.08);
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.admin-login-card form button {
+  margin-top: 8px;
+
+  padding: 15px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #d4af37,
+    #f0d878,
+    #b8860b
+  );
+
+  color: #050505;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-login-card form button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(212, 175, 55, 0.18);
+}
+
+.admin-login-card form button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.admin-error {
+  margin: 0;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(180, 40, 40, 0.12);
+
+  border: 1px solid rgba(220, 70, 70, 0.25);
+
+  color: #ff8b8b;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   ADMIN HEADER
+===================================================== */
+
+.admin-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.logout-button {
+  flex-shrink: 0;
+
+  padding: 12px 20px;
+
+  border: 1px solid rgba(212, 175, 55, 0.4);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #d4af37;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.logout-button:hover {
+  background: #d4af37;
+
+  color: #050505;
+
+  border-color: #d4af37;
+}
+
+
+/* =====================================================
+   ADMIN SECTIONS
+===================================================== */
+
+.admin-section {
+  margin-top: 45px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.admin-section-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.admin-section-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.admin-section-title span {
+  min-width: 32px;
+
+  height: 32px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(212, 175, 55, 0.1);
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+
+  color: #d4af37;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   REVIEWS LIST
+===================================================== */
+
+.admin-reviews {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =====================================================
+   REVIEW CARD
+===================================================== */
+
+.admin-review-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 26px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(25, 25, 25, 0.98),
+      rgba(10, 10, 10, 0.98)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-review-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(212, 175, 55, 0.4);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.04);
+}
+
+
+/* =====================================================
+   APPROVED CARD
+===================================================== */
+
+.approved-card {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+
+/* =====================================================
+   REVIEW INFO
+===================================================== */
+
+.review-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =====================================================
+   REVIEW TOP
+===================================================== */
+
+.review-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.review-top h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.admin-stars {
+  color: #d4af37;
+
+  font-size: 17px;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.admin-message {
+  margin: 13px 0 10px;
+
+  color: #c7c7c7;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.review-info small {
+  color: #666666;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.review-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.review-actions button {
+  min-width: 100px;
+
+  padding: 11px 15px;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =====================================================
+   APPROVE
+===================================================== */
+
+.approve-button {
+  border: 1px solid #d4af37;
+
+  background: #d4af37;
+
+  color: #050505;
+}
+
+.approve-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+   HIDE
+===================================================== */
+
+.hide-button {
+  border: 1px solid rgba(212, 175, 55, 0.5);
+
+  background: transparent;
+
+  color: #d4af37;
+}
+
+.hide-button:hover {
+  background: rgba(212, 175, 55, 0.1);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   DELETE
+===================================================== */
+
+.delete-button {
+  border: 1px solid rgba(180, 60, 60, 0.5);
+
+  background: transparent;
+
+  color: #e47777;
+}
+
+.delete-button:hover {
+  background: rgba(180, 60, 60, 0.1);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(180, 60, 60, 0.08);
+}
+
+
+/* =====================================================
+   EMPTY / LOADING
+===================================================== */
+
+.admin-empty {
+  margin: 0;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: #666666;
+
+  background: rgba(10, 10, 10, 0.7);
+
+  border: 1px dashed rgba(212, 175, 55, 0.15);
+
+  border-radius: 12px;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .admin-page {
+    padding: 35px 16px;
+  }
+
+  .admin-login-card {
+    margin: 40px auto;
+
+    padding: 40px 25px;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+
+  .admin-review-card {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 22px;
+  }
+
+  .review-actions {
+    width: 100%;
+  }
+
+  .review-actions button {
+    flex: 1;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .admin-page h1 {
+    font-size: 25px;
+
+    letter-spacing: 2px;
+  }
+
+  .admin-section-title h2 {
+    font-size: 14px;
+  }
+
+  .review-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .review-actions {
+    flex-direction: column;
+  }
+
+  .review-actions button {
+    width: 100%;
+  }
+
+}

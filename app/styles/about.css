@@ -1,643 +1,790 @@
 /* =================================
-   ABOUT SECTION
+ABOUT SECTION
+DJ RAY - LUXURY BLACK & GOLD
 ================================= */
 
 .about-section {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 
-  padding: 110px 7% 120px;
+    padding: 110px 7% 120px;
 
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(212, 175, 55, 0.06),
-      transparent 45%
-    ),
-    #050505;
+    box-sizing: border-box;
 
-  overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(212, 175, 55, 0.06),
+            transparent 45%
+        ),
+        #050505;
 
-  text-align: center;
+    overflow: hidden;
+
+    text-align: center;
 }
 
 
 /* =================================
-   CONTAINER
+CONTAINER
 ================================= */
 
 .about-container {
-  position: relative;
+    position: relative;
 
-  width: 100%;
-  max-width: 1250px;
+    width: 100%;
+    max-width: 1250px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 
-  text-align: center;
+    text-align: center;
 }
 
 
 /* =================================
-   CONTENT
+CONTENT
 ================================= */
 
 .about-content {
-  width: 100%;
-  max-width: 1100px;
+    width: 100%;
+    max-width: 1100px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 
 /* =================================
-   ABOUT SUBTITLE
+ABOUT DJ RAY
 ================================= */
 
 .about-subtitle {
-  margin: 0 0 15px;
+    position: relative;
 
-  font-family:
-    "Times New Roman",
-    serif !important;
+    display: block;
 
-  font-size: 32px;
+    margin: 0;
 
-  font-weight: 500;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-  letter-spacing: 8px;
+    font-size: 32px;
 
-  line-height: 1.2;
+    font-weight: 500;
 
-  text-transform: uppercase;
+    letter-spacing: 8px;
 
-  color: #d4af37;
+    line-height: 1.2;
 
-  text-shadow:
-    0 0 10px rgba(212, 175, 55, 0.15);
+    text-transform: uppercase;
+
+    color: #d4af37;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.15);
+
+        opacity: 1;
+visibility: visible;
+
+position: relative;
+z-index: 20;
 }
 
 
 /* =================================
-   GOLD LINE UNDER ABOUT DJ RAY
+GOLD LINE
 ================================= */
 
-.about-subtitle::after {
-  content: "";
+.about-subtitle {
+    position: relative;
 
-  display: block;
+    display: block;
 
-  width: 120px;
-  height: 1px;
+    margin: 0;
 
-  margin: 14px auto 0;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #d4af37,
-      transparent
-    );
+    font-size: 32px;
 
-  box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.25);
+    font-weight: 500;
+
+    letter-spacing: 8px;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    color: #d4af37;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.15);
+
+    /* GOLD LINE */
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.55) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.55) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    background-repeat: no-repeat;
+
+    background-size: 220px 1px;
+
+    background-position: center bottom;
+
+    padding-bottom: 18px;
 }
 
 
 /* =================================
-   MAIN TITLE
+DIAMOND - EXACTLY ON THE LINE
+================================= */
+
+.about-subtitle::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #d4af37;
+
+    transform:
+        translate(-50%, 50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =================================
+MAIN TITLE
 ================================= */
 
 .about-content h2 {
-  margin: 22px 0 25px;
+    margin: 55px 0 25px;
 
-  font-family:
-    "Times New Roman",
-    serif !important;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-  font-size: 38px;
+    font-size: 38px;
 
-  line-height: 1.2;
+    line-height: 1.2;
 
-  font-weight: 600;
+    font-weight: 600;
 
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 
-  color: #d4af37;
+    color: #d4af37;
 
-  text-shadow:
-    0 0 8px rgba(212, 175, 55, 0.18);
+    text-align: center;
+
+    text-shadow:
+        0 0 8px rgba(212, 175, 55, 0.18);
 }
 
 
 /* =================================
-   PARAGRAPHS
+PARAGRAPHS
 ================================= */
 
 .about-content > p {
-  max-width: 1000px;
+    max-width: 1000px;
 
-  margin: 0 auto 18px;
+    margin: 0 auto 18px;
 
-  color: #c8c8c8;
+    color: #c8c8c8;
 
-  font-family:
-    "Times New Roman",
-    serif !important;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-  font-size: 17px;
+    font-size: 17px;
 
-  line-height: 1.8;
+    line-height: 1.8;
 
-  letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
+
+    text-align: center;
 }
 
 
 /* =================================
-   GOLD TEXT
+GOLD TEXT
 ================================= */
 
 .gold-text {
-  color: #d4af37;
+    color: #d4af37;
 
-  text-shadow:
-    0 0 8px rgba(212, 175, 55, 0.25),
-    0 0 20px rgba(212, 175, 55, 0.12);
+    text-shadow:
+        0 0 8px rgba(212, 175, 55, 0.25),
+        0 0 20px rgba(212, 175, 55, 0.12);
 }
 
 
 /* =================================
-   ABOUT LIST
+ABOUT LIST
 ================================= */
 
 .about-list {
-  display: flex;
+    display: flex;
 
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  gap: 16px;
+    gap: 16px;
 
-  width: 100%;
-  max-width: 1050px;
+    width: 100%;
+    max-width: 1050px;
 
-  margin: 42px auto 0;
+    margin: 42px auto 0;
 }
 
 
 .about-list span {
-  display: inline-flex;
+    display: inline-flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  padding: 13px 22px;
+    padding: 13px 22px;
 
-  border:
-    1px solid rgba(212, 175, 55, 0.35);
+    border:
+        1px solid rgba(212, 175, 55, 0.35);
 
-  border-radius: 30px;
+    border-radius: 30px;
 
-  color: #d4af37;
+    color: #d4af37;
 
-  background:
-    rgba(212, 175, 55, 0.025);
+    background:
+        rgba(212, 175, 55, 0.025);
 
-  font-family:
-    "Times New Roman",
-    serif !important;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-  font-size: 16px;
+    font-size: 16px;
 
-  font-weight: 500;
+    font-weight: 500;
 
-  letter-spacing: 0.3px;
+    letter-spacing: 0.3px;
 
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    background 0.35s ease;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
 }
 
 
 /* =================================
-   LIST HOVER
+LIST HOVER
 ================================= */
 
 .about-list span:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  border-color: #d4af37;
+    border-color: #d4af37;
 
-  background:
-    rgba(212, 175, 55, 0.06);
+    background:
+        rgba(212, 175, 55, 0.06);
 
-  box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.25),
-    0 0 30px rgba(212, 175, 55, 0.08);
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.25),
+        0 0 30px rgba(212, 175, 55, 0.08);
 }
 
 
 /* =================================
-   STATS
+STATS
 ================================= */
 
 .about-stats {
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-  align-items: start;
+    align-items: start;
 
-  justify-items: center;
+    justify-items: center;
 
-  gap: 60px;
+    gap: 60px;
 
-  width: 100%;
-  max-width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 
-  margin: 80px auto 0;
+    margin: 80px auto 0;
 
-  text-align: center;
+    text-align: center;
 }
 
 
 .about-stats .stat {
-  width: 100%;
-
-  min-width: 0;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: flex-start;
-
-  text-align: center;
-}
-
-
-/* =================================
-   STAT NUMBERS
-================================= */
-
-.about-stats .stat h3 {
-  margin: 0;
-
-  min-height: 75px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif !important;
-
-  font-size:
-    clamp(42px, 5vw, 68px);
-
-  line-height: 1;
-
-  font-weight: 600;
-
-  letter-spacing: 1px;
-
-  white-space: nowrap;
-
-  color: #d4af37;
-}
-
-
-/* =================================
-   EVENTS NUMBER
-================================= */
-
-.about-stats .stat-events h3 {
-  font-size:
-    clamp(42px, 5vw, 68px);
-}
-
-
-/* =================================
-   ABU DHABI
-================================= */
-
-.about-stats .stat:nth-child(3) h3 {
-  font-size:
-    clamp(38px, 4vw, 58px);
-
-  color: #d4af37;
-
-  white-space: nowrap;
-
-  text-shadow: none !important;
-
-  filter: none !important;
-
-  opacity: 1;
-}
-
-
-/* =================================
-   STAT LABEL
-================================= */
-
-.about-stats .stat span {
-  display: block;
-
-  margin-top: 10px;
-
-  color: #bdbdbd;
-
-  font-family:
-    "Times New Roman",
-    serif !important;
-
-  font-size: 14px;
-
-  font-weight: 500;
-
-  letter-spacing: 5px;
-
-  text-transform: uppercase;
-
-  white-space: nowrap;
-
-  text-align: center;
-}
-
-
-/* =================================
-   GOLD DECORATIVE GLOW
-================================= */
-
-.about-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  left: 50%;
-  bottom: -320px;
-
-  transform:
-    translateX(-50%);
-
-  background:
-    rgba(212, 175, 55, 0.06);
-
-  border-radius: 50%;
-
-  filter: blur(130px);
-
-  pointer-events: none;
-}
-
-
-/* =================================
-   TABLET
-================================= */
-
-@media (max-width: 900px) {
-
-  .about-section {
-    padding:
-      90px 6% 100px;
-  }
-
-  .about-content > p {
-    font-size: 16px;
-  }
-
-  .about-stats {
-    gap: 35px;
-  }
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 650px) {
-
-  .about-section {
-    padding:
-      70px 18px 80px;
-  }
-
-
-  /* CONTAINER */
-
-  .about-container {
     width: 100%;
-    max-width: 100%;
-  }
 
-
-  .about-content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-
-  /* ABOUT DJ RAY */
-
-  .about-subtitle {
-    font-size: 25px !important;
-
-    letter-spacing: 5px !important;
-
-    line-height: 1.2;
-
-    margin-bottom: 0;
-
-    white-space: nowrap;
-  }
-
-
-  /* GOLD LINE */
-
-  .about-subtitle::after {
-    width: 100px;
-
-    margin-top: 12px;
-  }
-
-
-  /* MAIN TITLE */
-
-  .about-content h2 {
-    font-size: 25px !important;
-
-    letter-spacing: 1px;
-
-    line-height: 1.25;
-
-    margin:
-      20px 0 22px;
-  }
-
-
-  /* PARAGRAPHS */
-
-  .about-content > p {
-    max-width: 100%;
-
-    font-size: 15px;
-
-    line-height: 1.75;
-
-    letter-spacing: 0;
-
-    margin-bottom: 18px;
-  }
-
-
-  /* ABOUT LIST */
-
-  .about-list {
-    width: 100%;
-    max-width: 100%;
+    min-width: 0;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: stretch;
+    align-items: center;
 
-    gap: 10px;
-
-    margin-top: 30px;
-  }
-
-
-  .about-list span {
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding:
-      11px 14px;
-
-    font-size: 14px;
-
-    letter-spacing: 0.5px;
+    justify-content: flex-start;
 
     text-align: center;
-  }
-
-
-  /* STATS */
-
-  .about-stats {
-    width: 100%;
-    max-width: 100%;
-
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    margin-top: 60px;
-  }
-
-
-  .about-stats .stat {
-    width: 100%;
-  }
-
-
-  .about-stats .stat h3 {
-    min-height: auto;
-
-    font-size: 46px !important;
-
-    line-height: 1;
-
-    white-space: nowrap;
-  }
-
-
-  .about-stats .stat span {
-    margin-top: 10px;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-  }
-
-
-  /* ABU DHABI */
-
-  .about-stats .stat:nth-child(3) h3 {
-    font-size: 42px !important;
-
-    white-space: nowrap;
-  }
 }
 
 
 /* =================================
-   SMALL MOBILE
+STAT NUMBERS
+================================= */
+
+.about-stats .stat h3 {
+    margin: 0;
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size:
+        clamp(42px, 5vw, 68px);
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    color: #d4af37;
+}
+
+
+/* =================================
+EVENTS NUMBER
+================================= */
+
+.about-stats .stat-events h3 {
+    font-size:
+        clamp(42px, 5vw, 68px);
+}
+
+
+/* =================================
+ABU DHABI
+================================= */
+
+.about-stats .stat:nth-child(3) h3 {
+    font-size:
+        clamp(38px, 4vw, 58px);
+
+    color: #d4af37;
+
+    white-space: nowrap;
+
+    text-shadow: none !important;
+
+    filter: none !important;
+
+    opacity: 1;
+}
+
+
+/* =================================
+STAT LABEL
+================================= */
+
+.about-stats .stat span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #bdbdbd;
+
+    font-family:
+        "Times New Roman",
+        serif !important;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+
+/* =================================
+GOLD DECORATIVE GLOW
+================================= */
+
+.about-section::before {
+    display: none;
+}
+
+
+/* =================================
+TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+     .about-section {
+        padding:
+            90px 6% 0;
+    }
+
+    .about-content > p {
+        font-size: 16px;
+    }
+
+    .about-stats {
+        gap: 35px;
+    }
+}
+
+
+/* =================================
+MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+    .about-section {
+        padding:
+            60px 15px 70px;
+    }
+
+
+    /* CONTAINER */
+
+    .about-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ABOUT DJ RAY */
+
+    .about-subtitle {
+        font-size: 25px !important;
+
+        letter-spacing: 5px !important;
+
+        line-height: 1.2;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    /* GOLD LINE */
+
+    .about-subtitle::after {
+        width: 260px;
+
+        margin-top: 15px;
+    }
+
+
+    /*
+    IMPORTANT:
+    No separate ::before rule here.
+
+    The main diamond rule above
+    controls the diamond.
+    */
+
+
+    /* MAIN TITLE */
+
+    .about-content h2 {
+        font-size: 25px !important;
+
+        letter-spacing: 1px;
+
+        line-height: 1.25;
+
+        margin:
+            48px 0 22px;
+    }
+
+
+    /* PARAGRAPHS */
+
+    .about-content > p {
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.75;
+
+        letter-spacing: 0;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* ABOUT LIST */
+
+    .about-list {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-top: 30px;
+    }
+
+
+    .about-list span {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding:
+            11px 14px;
+
+        font-size: 14px;
+
+        letter-spacing: 0.5px;
+
+        text-align: center;
+    }
+
+
+    /* STATS */
+
+    .about-stats {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-top: 60px;
+    }
+
+
+    .about-stats .stat {
+        width: 100%;
+    }
+
+
+    .about-stats .stat h3 {
+        min-height: auto;
+
+        font-size: 46px !important;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+
+    .about-stats .stat span {
+        margin-top: 10px;
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* ABU DHABI */
+
+    .about-stats .stat:nth-child(3) h3 {
+        font-size: 42px !important;
+
+        white-space: nowrap;
+    }
+}
+
+
+/* =================================
+SMALL MOBILE
 ================================= */
 
 @media (max-width: 420px) {
 
-  .about-section {
-    padding:
-      60px 15px 70px;
-  }
+    .about-section {
+        padding:
+            60px 15px 70px;
+    }
 
 
-  .about-subtitle {
-    font-size: 22px !important;
+    .about-subtitle {
+        font-size: 22px !important;
 
-    letter-spacing: 4px !important;
-  }
-
-
-  .about-subtitle::after {
-    width: 90px;
-  }
+        letter-spacing: 4px !important;
+    }
 
 
-  .about-content h2 {
-    font-size: 23px !important;
-  }
+    .about-subtitle::after {
+        width: 220px;
+
+        margin-top: 14px;
+    }
 
 
-  .about-content > p {
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-
-
-  .about-stats {
-    gap: 30px;
-
-    margin-top: 50px;
-  }
+    /*
+    IMPORTANT:
+    No ::before rule here either.
+    The main diamond rule remains active.
+    */
 
 
-  .about-stats .stat h3 {
-    font-size: 42px !important;
-  }
+    .about-content h2 {
+        font-size: 23px !important;
+
+        margin-top: 45px;
+    }
 
 
-  .about-stats .stat:nth-child(3) h3 {
-    font-size: 38px !important;
-  }
+    .about-content > p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-stats {
+        gap: 30px;
+
+        margin-top: 50px;
+    }
+
+
+    .about-stats .stat h3 {
+        font-size: 42px !important;
+    }
+
+
+    .about-stats .stat:nth-child(3) h3 {
+        font-size: 38px !important;
+    }
+}
+
+/* =================================
+ABOUT BOTTOM DIVIDER
+SAME GOLD LINE + DIAMOND
+================================= */
+
+.about-section-divider-bottom {
+    position: relative;
+
+    width: 450px;
+    height: 1px;
+
+    margin: 20px auto 0;
+transform: translateX(-35px);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.55) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.55) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.18);
+
+    z-index: 2;
+}
+
+
+/* =================================
+BOTTOM DIAMOND
+================================= */
+
+.about-section-divider-bottom
+.about-section-divider-diamond {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    background: #d4af37;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 5;
+}
+
+/* =================================
+FORCE ABOUT BACKGROUND
+================================= */
+
+.about-section {
+    background: #050505 !important;
 }

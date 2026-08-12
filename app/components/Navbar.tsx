@@ -8,33 +8,44 @@ import "../styles/navbar.css";
 
 export default function Navbar() {
   const router = useRouter();
-
-const handleHome = () => {
-  closeMenu();
-
-  if (window.location.pathname === "/") {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  } else {
-    router.push("/");
-  }
-};
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // ==============================
+  // CLOSE MENU
+  // ==============================
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
+  // ==============================
+  // HOME
+  // ==============================
+  const handleHome = () => {
+    closeMenu();
+
+    if (window.location.pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "auto",
+      });
+
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    } else {
+      router.push("/");
+    }
+  };
+
+  // ==============================
+  // SCROLL TO SECTION
+  // ==============================
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string
   ) => {
     e.preventDefault();
+
+    closeMenu();
 
     const section = document.getElementById(id);
 
@@ -51,22 +62,22 @@ const handleHome = () => {
       navbarHeight;
 
     window.scrollTo({
-  top: sectionTop,
-  behavior: "auto",
-});
-
-    setMenuOpen(false);
+      top: sectionTop,
+      behavior: "auto",
+    });
   };
 
   return (
     <header className="navbar">
-      <div className="navbar-container">
+      <div className="navbar-inner">
 
-        {/* LOGO */}
+        {/* ==============================
+            LOGO
+        ============================== */}
         <Link
           href="/"
           className="nav-logo"
-          onClick={closeMenu}
+          onClick={handleHome}
         >
           <Image
             src="/logo2.png"
@@ -74,34 +85,33 @@ const handleHome = () => {
             width={220}
             height={220}
             priority
-            style={{
-              width: "220px",
-              height: "auto",
-              objectFit: "contain",
-              opacity: 0.9,
-            }}
+            className="nav-logo-image"
           />
         </Link>
 
-        {/* DESKTOP MENU */}
+        {/* ==============================
+            DESKTOP MENU
+        ============================== */}
         <nav className="nav-links">
 
+          {/* HOME */}
           <a
-  href="#top"
-  onClick={(e) => {
-    e.preventDefault();
+            href="#top"
+            onClick={(e) => {
+              e.preventDefault();
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+              window.scrollTo({
+                top: 0,
+                behavior: "auto",
+              });
 
-    closeMenu();
-  }}
->
-  Home
-</a>
+              closeMenu();
+            }}
+          >
+            Home
+          </a>
 
+          {/* ABOUT */}
           <a
             href="#about"
             onClick={(e) => scrollToSection(e, "about")}
@@ -109,6 +119,7 @@ const handleHome = () => {
             About
           </a>
 
+          {/* MUSIC */}
           <a
             href="#music"
             onClick={(e) => scrollToSection(e, "music")}
@@ -116,6 +127,7 @@ const handleHome = () => {
             Music
           </a>
 
+          {/* SERVICES */}
           <a
             href="#services"
             onClick={(e) => scrollToSection(e, "services")}
@@ -123,6 +135,7 @@ const handleHome = () => {
             Services
           </a>
 
+          {/* GALLERY */}
           <a
             href="#gallery"
             onClick={(e) => scrollToSection(e, "gallery")}
@@ -130,6 +143,7 @@ const handleHome = () => {
             Gallery
           </a>
 
+          {/* CONTACT */}
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
@@ -139,7 +153,9 @@ const handleHome = () => {
 
         </nav>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* ==============================
+            MOBILE MENU BUTTON
+        ============================== */}
         <button
           className={`mobile-menu-button ${
             menuOpen ? "active" : ""
@@ -154,21 +170,25 @@ const handleHome = () => {
           <span></span>
         </button>
 
-        {/* MOBILE MENU */}
+        {/* ==============================
+            MOBILE MENU
+        ============================== */}
         <nav
           className={`mobile-nav ${
             menuOpen ? "open" : ""
           }`}
         >
 
+          {/* HOME */}
           <button
-  type="button"
-  className="nav-home-button"
-  onClick={handleHome}
->
-  Home
-</button>
+            type="button"
+            className="nav-home-button"
+            onClick={handleHome}
+          >
+            Home
+          </button>
 
+          {/* ABOUT */}
           <a
             href="#about"
             onClick={(e) =>
@@ -178,6 +198,7 @@ const handleHome = () => {
             About
           </a>
 
+          {/* MUSIC */}
           <a
             href="#music"
             onClick={(e) =>
@@ -187,6 +208,7 @@ const handleHome = () => {
             Music
           </a>
 
+          {/* SERVICES */}
           <a
             href="#services"
             onClick={(e) =>
@@ -196,6 +218,7 @@ const handleHome = () => {
             Services
           </a>
 
+          {/* GALLERY */}
           <a
             href="#gallery"
             onClick={(e) =>
@@ -205,6 +228,7 @@ const handleHome = () => {
             Gallery
           </a>
 
+          {/* CONTACT */}
           <a
             href="#contact"
             onClick={(e) =>

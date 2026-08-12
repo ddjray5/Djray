@@ -14,12 +14,16 @@ export default function Hero() {
 
   return (
     <>
-      {/* ==============================
-          HERO
-      ============================== */}
-      <section className="hero">
+      {/* =====================================================
+          HERO SECTION
+      ===================================================== */}
 
-        {/* LEFT */}
+      <section className="hero" id="top">
+
+        {/* =====================================================
+            LEFT — DJ IMAGE
+        ===================================================== */}
+
         <div className="hero-left">
           <img
             src="/djray-new.webp"
@@ -28,39 +32,64 @@ export default function Hero() {
           />
         </div>
 
-        {/* RIGHT */}
+        {/* =====================================================
+            RIGHT — CONTENT
+        ===================================================== */}
+
         <div className="hero-right">
 
-          {/* LOGO */}
-         <img
-  src="/logo.png"
-  alt="DJ RAY Logo"
-  className="hero-logo"
-/>
+          {/* =====================================================
+              LOGO
+          ===================================================== */}
 
-          {/* GOLD LINE */}
-          
-          {/* SUBTITLE */}
-         <p className="hero-subtitle">
-  LUXURY OPEN FORMAT DJ
-</p>
+          <img
+            src="/logo.png"
+            alt="DJ RAY Logo"
+            className="hero-logo"
+          />
 
-<div className="gold-line"></div>
+          {/* =====================================================
+              SUBTITLE
+          ===================================================== */}
 
-<div className="hero-services">
-  <span>CLUBS</span>
-  <span>WEDDINGS</span>
-  <span>YACHTS</span>
-  <span>PRIVATE EVENTS</span>
-  <span>POOL & BEACH</span>
+          <p className="hero-subtitle">
+            LUXURY OPEN FORMAT DJ
+          </p>
+
+          {/* =====================================================
+              GOLD LINE
+          ===================================================== */}
+
+         <div className="gold-line">
+  <div className="gold-line-diamond"></div>
 </div>
 
-          
+          {/* =====================================================
+              SERVICES
+          ===================================================== */}
 
-          {/* BUTTONS */}
+          <div className="hero-services">
+
+            <span>CLUBS</span>
+
+            <span>WEDDINGS</span>
+
+            <span>YACHTS</span>
+
+            <span>PRIVATE EVENTS</span>
+
+            <span>POOL &amp; BEACH</span>
+
+          </div>
+
+          {/* =====================================================
+              BUTTONS
+          ===================================================== */}
+
           <div className="hero-buttons">
 
             {/* BOOK NOW */}
+
             <button
               type="button"
               className="hero-book-btn"
@@ -70,6 +99,7 @@ export default function Hero() {
             </button>
 
             {/* WATCH PROMO */}
+
             <button
               type="button"
               className="hero-promo-btn"
@@ -80,21 +110,38 @@ export default function Hero() {
 
           </div>
 
+          {/* =====================================================
+              HERO END DIVIDER
+              GOLD LINE + DIAMOND
+              DIRECTLY UNDER WATCH PROMO
+          ===================================================== */}
+
+          <div className="hero-section-divider-bottom">
+            <div className="hero-section-divider-diamond"></div>
+          </div>
+
         </div>
 
       </section>
 
-      {/* PROMO MODAL */}
+      {/* =====================================================
+          PROMO MODAL
+      ===================================================== */}
+
       <PromoModal
         isOpen={openPromo}
         onClose={() => setOpenPromo(false)}
       />
 
-      {/* BOOKING MODAL */}
+      {/* =====================================================
+          BOOKING MODAL
+      ===================================================== */}
+
       <BookingModal
         isOpen={openBooking}
         onClose={() => setOpenBooking(false)}
       />
+
     </>
   );
 }

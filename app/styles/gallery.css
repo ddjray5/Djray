@@ -1,11 +1,12 @@
-/* =================================
-   GALLERY SECTION
-================================= */
+/* =========================================================
+   GALLERY - DJ RAY
+   Luxury Black & Gold
+   ========================================================= */
 
 .gallery {
   position: relative;
   width: 100%;
-  padding: 90px 5% 120px;
+  padding: 20px 5% 55px;
 
   background:
     radial-gradient(
@@ -17,14 +18,15 @@
 
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-
-/* =================================
+/* =========================================================
    GALLERY TITLE
-================================= */
+   ========================================================= */
 
 .gallery-title {
+  position: relative;
   text-align: center;
   margin-bottom: 65px;
 }
@@ -51,36 +53,68 @@
     0 0 10px rgba(212, 175, 55, 0.15);
 }
 
-
-/* =================================
-   GOLD LINE UNDER GALLERY
-================================= */
+/* =========================================================
+   GOLD LINE UNDER TITLE
+   ========================================================= */
 
 .gallery-title h2::after {
   content: "";
 
   display: block;
 
-  width: 120px;
+  width: 380px;
+  max-width: 70vw;
+
   height: 1px;
 
-  margin: 15px auto 0;
+  margin: 24px auto 0;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #d4af37,
-    transparent
-  );
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 175, 55, 0.25),
+      #d4af37,
+      #f8e38c,
+      #d4af37,
+      rgba(212, 175, 55, 0.25),
+      transparent
+    );
 
   box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.25);
+    0 0 8px rgba(212, 175, 55, 0.18);
 }
 
+/* =========================================================
+   DIAMOND ON TITLE LINE
+   ========================================================= */
 
-/* =================================
-   GALLERY DESCRIPTION
-================================= */
+.gallery-title h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5);
+
+  z-index: 5;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
 .gallery-title p {
   max-width: 900px;
@@ -99,10 +133,9 @@
   letter-spacing: 1px;
 }
 
-
-/* =================================
+/* =========================================================
    GALLERY GRID
-================================= */
+   ========================================================= */
 
 .gallery-grid {
   position: relative;
@@ -120,12 +153,77 @@
   max-width: 1400px;
 
   margin: 0 auto;
+
+  padding-bottom: 35px;
 }
 
+/* =========================================================
+   BOTTOM GOLD SEPARATOR
+   ========================================================= */
 
-/* =================================
+.gallery-grid::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 100vw;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.18) 10%,
+      rgba(212, 175, 55, 0.45) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.45) 70%,
+      rgba(212, 175, 55, 0.18) 90%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.15);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DIAMOND ON BOTTOM SEPARATOR
+   ========================================================= */
+
+.gallery-grid::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* =========================================================
    GALLERY CARD
-================================= */
+   ========================================================= */
 
 .gallery-card {
   position: relative;
@@ -154,10 +252,9 @@
     box-shadow 0.5s ease;
 }
 
-
-/* =================================
+/* =========================================================
    CARD ANIMATION DELAYS
-================================= */
+   ========================================================= */
 
 .gallery-card:nth-child(1) {
   animation-delay: 0.1s;
@@ -171,25 +268,24 @@
   animation-delay: 0.4s;
 }
 
-
-/* =================================
+/* =========================================================
    DESKTOP HOVER
-================================= */
+   ========================================================= */
 
 .gallery-card:hover {
   transform: translateY(-8px);
 
-  border-color: rgba(212, 175, 55, 0.85);
+  border-color:
+    rgba(212, 175, 55, 0.85);
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.6),
     0 0 30px rgba(212, 175, 55, 0.15);
 }
 
-
-/* =================================
+/* =========================================================
    IMAGE
-================================= */
+   ========================================================= */
 
 .gallery-image {
   width: 100%;
@@ -206,10 +302,9 @@
     filter 0.8s ease;
 }
 
-
-/* =================================
+/* =========================================================
    DESKTOP IMAGE HOVER
-================================= */
+   ========================================================= */
 
 .gallery-card:hover .gallery-image {
   transform: scale(1.06);
@@ -219,10 +314,9 @@
     saturate(1.05);
 }
 
-
-/* =================================
+/* =========================================================
    GOLD IMAGE OVERLAY
-================================= */
+   ========================================================= */
 
 .gallery-card::after {
   content: "";
@@ -241,10 +335,9 @@
   pointer-events: none;
 }
 
-
-/* =================================
+/* =========================================================
    LIGHTBOX
-================================= */
+   ========================================================= */
 
 .lightbox {
   position: fixed;
@@ -266,10 +359,9 @@
   cursor: pointer;
 }
 
-
-/* =================================
+/* =========================================================
    LIGHTBOX IMAGE
-================================= */
+   ========================================================= */
 
 .lightbox-image {
   max-width: 92%;
@@ -285,10 +377,9 @@
     0 0 50px rgba(212, 175, 55, 0.3);
 }
 
-
-/* =================================
+/* =========================================================
    GALLERY FADE
-================================= */
+   ========================================================= */
 
 @keyframes galleryFade {
   from {
@@ -302,16 +393,15 @@
   }
 }
 
-
-/* =================================
+/* =========================================================
    TABLET
-================================= */
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
   .gallery {
     padding:
-      80px 4% 100px;
+      80px 4% 50px;
   }
 
   .gallery-title {
@@ -320,6 +410,10 @@
 
   .gallery-title h2 {
     font-size: 50px;
+  }
+
+  .gallery-title h2::after {
+    width: 320px;
   }
 
   .gallery-title p {
@@ -338,18 +432,16 @@
   }
 }
 
-
-/* =================================
+/* =========================================================
    MOBILE
-================================= */
+   ========================================================= */
 
 @media (max-width: 650px) {
 
   .gallery {
     padding:
-      75px 18px 90px;
+      75px 18px 45px;
   }
-
 
   /* TITLE */
 
@@ -362,15 +454,18 @@
     letter-spacing: 5px;
   }
 
-
   /* GOLD LINE */
 
   .gallery-title h2::after {
-    width: 100px;
+    width: 280px;
     height: 1px;
-    margin-top: 13px;
+    margin-top: 20px;
   }
 
+  .gallery-title h2::before {
+    width: 6px;
+    height: 6px;
+  }
 
   /* DESCRIPTION */
 
@@ -386,8 +481,7 @@
     letter-spacing: 0.8px;
   }
 
-
-  /* ONE IMAGE PER ROW */
+  /* GRID */
 
   .gallery-grid {
     grid-template-columns: 1fr;
@@ -395,10 +489,11 @@
     gap: 28px;
 
     width: 100%;
+
+    padding-bottom: 32px;
   }
 
-
-  /* BIG MOBILE IMAGES */
+  /* IMAGE */
 
   .gallery-card {
     width: 100%;
@@ -412,9 +507,6 @@
       mobileGalleryGlow 2.2s ease-in-out infinite;
   }
 
-
-  /* MOBILE IMAGE */
-
   .gallery-image {
     width: 100%;
     height: 100%;
@@ -426,10 +518,7 @@
       filter 0.8s ease;
   }
 
-
-  /* =================================
-     MOBILE AUTO ZOOM
-  ================================= */
+  /* MOBILE AUTO ZOOM */
 
   .gallery-card:nth-child(1) .gallery-image {
     animation:
@@ -450,10 +539,7 @@
     animation-delay: 0.6s;
   }
 
-
-  /* =================================
-     MOBILE GLOW DELAYS
-  ================================= */
+  /* MOBILE GLOW DELAYS */
 
   .gallery-card:nth-child(1) {
     animation-delay: 0.1s, 0s;
@@ -467,10 +553,7 @@
     animation-delay: 0.4s, 1.4s;
   }
 
-
-  /* =================================
-     DISABLE DESKTOP HOVER
-  ================================= */
+  /* DISABLE DESKTOP HOVER */
 
   .gallery-card:hover {
     transform: none;
@@ -487,10 +570,7 @@
     filter: none;
   }
 
-
-  /* =================================
-     LIGHTBOX MOBILE
-  ================================= */
+  /* LIGHTBOX */
 
   .lightbox {
     padding: 15px;
@@ -505,10 +585,9 @@
   }
 }
 
-
-/* =================================
+/* =========================================================
    MOBILE GOLD GLOW
-================================= */
+   ========================================================= */
 
 @keyframes mobileGalleryGlow {
 
@@ -537,10 +616,9 @@
   }
 }
 
-
-/* =================================
+/* =========================================================
    MOBILE IMAGE ZOOM
-================================= */
+   ========================================================= */
 
 @keyframes mobileImageZoom {
 
@@ -553,16 +631,15 @@
   }
 }
 
-
-/* =================================
+/* =========================================================
    SMALL MOBILE
-================================= */
+   ========================================================= */
 
 @media (max-width: 420px) {
 
   .gallery {
     padding:
-      65px 15px 80px;
+      65px 15px 40px;
   }
 
   .gallery-title {
@@ -575,8 +652,13 @@
   }
 
   .gallery-title h2::after {
-    width: 90px;
-    margin-top: 11px;
+    width: 220px;
+    margin-top: 17px;
+  }
+
+  .gallery-title h2::before {
+    width: 6px;
+    height: 6px;
   }
 
   .gallery-title p {
@@ -589,6 +671,8 @@
 
   .gallery-grid {
     gap: 24px;
+
+    padding-bottom: 30px;
   }
 
   .gallery-card {

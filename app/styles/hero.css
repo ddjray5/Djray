@@ -19,7 +19,7 @@
     ),
     #050505;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -114,29 +114,56 @@
 
 
 /* =====================================================
-   GOLD LINE
-   UNDER HERO SUBTITLE
+   GOLD LINE + DIAMOND
 ===================================================== */
 
 .gold-line {
+  position: relative;
+
   width: 300px;
-
   max-width: 70%;
-
-  height: 2px;
+  height: 1px;
 
   margin: 18px auto 0;
 
   background:
     linear-gradient(
       90deg,
-      transparent,
-      #d4af37,
-      transparent
+      transparent 0%,
+      rgba(212, 175, 55, 0.18) 10%,
+      rgba(212, 175, 55, 0.55) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.55) 70%,
+      rgba(212, 175, 55, 0.18) 90%,
+      transparent 100%
     );
 
   box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.35);
+    0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+/* DIAMOND */
+
+.gold-line-diamond {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  background: #d4af37;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.20);
+
+  z-index: 10;
+
+  pointer-events: none;
 }
 
 
@@ -295,6 +322,149 @@
 
 
 /* =====================================================
+   HERO INTERNAL DIVIDER
+   إذا كان مستخدمًا داخل HERO
+===================================================== */
+
+.hero-section-divider {
+  position: relative;
+
+  width: 360px;
+
+  height: 1px;
+
+  margin: 28px auto 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.18) 10%,
+      rgba(212, 175, 55, 0.55) 30%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.55) 70%,
+      rgba(212, 175, 55, 0.18) 90%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.18);
+
+  overflow: visible;
+}
+
+
+/* =====================================================
+   INTERNAL DIVIDER DIAMOND
+===================================================== */
+
+.hero-section-divider .hero-section-divider-diamond {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background: #d4af37;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.18);
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   HERO END DIVIDER
+   BETWEEN HERO AND MUSIC
+===================================================== */
+
+.hero-section-divider-bottom {
+  position: relative;
+
+  width: 300px;
+  max-width: 80%;
+
+  height: 1px;
+
+  margin: 20px auto 0;
+
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+
+  transform: none;
+
+  display: block;
+
+  /*
+     نفس شكل الخط المطلوب:
+     قوي في المنتصف
+     ومتلاشي تدريجياً عند الأطراف
+  */
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.10) 10%,
+      rgba(212, 175, 55, 0.35) 25%,
+      #d4af37 50%,
+      rgba(212, 175, 55, 0.35) 75%,
+      rgba(212, 175, 55, 0.10) 90%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.18);
+
+  z-index: 9999;
+
+  overflow: visible;
+}
+
+
+/* =====================================================
+   HERO END DIVIDER DIAMOND
+===================================================== */
+
+.hero-section-divider-bottom
+.hero-section-divider-diamond {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background: #d4af37;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 18px rgba(212, 175, 55, 0.20);
+
+  z-index: 10000;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
    TABLET
 ===================================================== */
 
@@ -316,13 +486,11 @@
 
   .hero-logo {
     width: 250px !important;
-
     max-width: 250px !important;
   }
 
   .hero-subtitle {
     font-size: 23px;
-
     letter-spacing: 5px;
   }
 
@@ -336,13 +504,11 @@
 
   .hero-services span {
     font-size: 21px;
-
     letter-spacing: 4px;
   }
 
   .hero-buttons {
     margin-top: 45px;
-
     gap: 22px;
   }
 
@@ -354,6 +520,7 @@
 
     font-size: 29px;
   }
+
 }
 
 
@@ -368,10 +535,7 @@
 
     flex-direction: column;
 
-    padding:
-      70px
-      20px
-      60px;
+    padding: 45px 20px 40px;
   }
 
 
@@ -386,7 +550,7 @@
   .hero-image {
     width: 100%;
 
-    max-width: 420px;
+    max-width: 360px;
 
     margin: 0 auto;
   }
@@ -399,55 +563,55 @@
 
     order: 2;
 
-    padding: 20px 10px;
+    padding: 10px 10px 0;
   }
 
 
   /* LOGO */
 
   .hero-logo {
-    width: 220px !important;
+    width: 200px !important;
 
-    max-width: 220px !important;
+    max-width: 200px !important;
   }
 
 
   /* SUBTITLE */
 
   .hero-subtitle {
-    margin-top: 14px;
+    margin-top: 12px;
 
-    font-size: 20px;
+    font-size: 19px;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
 
 
   /* GOLD LINE */
 
   .gold-line {
-    width: 260px;
+    width: 240px;
 
     max-width: 75%;
 
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
 
   /* SERVICES */
 
   .hero-services {
-    gap: 20px;
+    gap: 12px;
 
-    margin-top: 28px;
+    margin-top: 18px;
   }
 
   .hero-services span {
-    font-size: 22px;
+    font-size: 20px;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
-    line-height: 1.3;
+    line-height: 1.25;
   }
 
 
@@ -456,27 +620,61 @@
   .hero-buttons {
     width: 100%;
 
-    margin-top: 50px;
+    margin-top: 28px;
 
-    gap: 25px;
+    gap: 15px;
   }
 
   .hero-book-btn,
   .hero-promo-btn {
-    width: 85%;
+    width: 88%;
 
-    max-width: 430px;
+    max-width: 400px;
 
-    padding: 18px 25px;
+    padding: 14px 20px;
 
-    font-size: 27px;
+    font-size: 23px;
 
     letter-spacing: 2px;
 
     border-width: 2px;
 
-    border-radius: 70px;
+    border-radius: 60px;
   }
+
+
+  /* HERO INTERNAL DIVIDER */
+
+  .hero-section-divider {
+    width: 260px;
+
+    margin: 24px auto 28px;
+  }
+
+  .hero-section-divider-diamond {
+    width: 8px;
+
+    height: 8px;
+  }
+
+
+  /* HERO END DIVIDER */
+
+  .hero-section-divider-bottom {
+    width: 260px;
+
+    max-width: 80%;
+
+    margin: 20px auto 0;
+  }
+
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+    width: 8px;
+
+    height: 8px;
+  }
+
 }
 
 
@@ -556,4 +754,37 @@
 
     border-radius: 60px;
   }
+
+
+  /* HERO END DIVIDER */
+
+  .hero-section-divider-bottom {
+    width: 230px;
+
+    max-width: 80%;
+
+    margin-top: 20px;
+  }
+
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+    width: 8px;
+
+    height: 8px;
+  }
+
+}
+
+/* =====================================================
+   ENLARGE HERO GOLD DIVIDER
+===================================================== */
+
+.hero-section-divider-bottom {
+  width: 450px !important;
+  max-width: none !important;
+  height: 2px !important;
+}
+
+.hero-section-divider-bottom {
+  transform: translateX(-40px) !important;
 }
