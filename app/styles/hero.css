@@ -11,14 +11,14 @@
 
   position: relative;
 
-   background:
-        radial-gradient(
-            circle at center,
-            rgba(212, 175, 55, 0.10) 0%,
-            rgba(212, 175, 55, 0.05) 30%,
-            transparent 65%
-        ),
-        #050505;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.10) 0%,
+      rgba(212, 175, 55, 0.05) 30%,
+      transparent 65%
+    ),
+    #050505;
 
   overflow: visible;
 }
@@ -48,6 +48,14 @@
   display: block;
 
   object-fit: contain;
+
+  opacity: 0;
+
+  transform: translateX(-35px);
+
+  transition:
+    opacity 1s ease,
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
@@ -70,6 +78,33 @@
 
   position: relative;
   z-index: 2;
+
+  opacity: 0;
+
+  transform: translateX(35px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =====================================================
+   HERO VISIBLE
+===================================================== */
+
+.hero.hero-visible .hero-image {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+.hero.hero-visible .hero-right {
+  opacity: 1;
+
+  transform: translateX(0);
+
+  transition-delay: 0.15s;
 }
 
 
@@ -88,6 +123,26 @@
   object-fit: contain;
 
   margin: 0 auto;
+}
+
+
+/* =====================================================
+   SMALL LOGO ABOVE MAIN LOGO
+===================================================== */
+
+.hero-small-logo {
+  display: block;
+
+  width: 200px;
+  max-width: 200px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  margin: 0 auto -5px;
+
+  opacity: 1;
 }
 
 
@@ -115,7 +170,7 @@
 
 
 /* =====================================================
-   GOLD LINE + DIAMOND
+   GOLD LINE
 ===================================================== */
 
 .gold-line {
@@ -123,6 +178,7 @@
 
   width: 300px;
   max-width: 70%;
+
   height: 1px;
 
   margin: 18px auto 0;
@@ -143,7 +199,10 @@
     0 0 10px rgba(212, 175, 55, 0.18);
 }
 
-/* DIAMOND */
+
+/* =====================================================
+   GOLD LINE DIAMOND
+===================================================== */
 
 .gold-line-diamond {
   position: absolute;
@@ -156,7 +215,9 @@
 
   background: #d4af37;
 
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
 
   box-shadow:
     0 0 8px rgba(212, 175, 55, 0.55),
@@ -221,10 +282,15 @@
 
 
 /* =====================================================
-   BOOK NOW
+   HERO BUTTON BASE
 ===================================================== */
 
-.hero-book-btn {
+.hero-book-btn,
+.hero-promo-btn {
+  position: relative;
+
+  overflow: hidden;
+
   width: 560px;
 
   max-width: 90%;
@@ -254,20 +320,78 @@
   box-shadow:
     0 0 18px rgba(212, 175, 55, 0.18);
 
-  transition: all 0.3s ease;
+  isolation: isolate;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease,
+    background 0.4s ease;
 }
 
+
+/* =====================================================
+   GOLD LIGHT SWEEP
+===================================================== */
+
+.hero-book-btn::before,
+.hero-promo-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.02) 30%,
+      rgba(248, 227, 140, 0.18) 50%,
+      rgba(255, 255, 255, 0.02) 70%,
+      transparent 100%
+    );
+
+  transform: skewX(-20deg);
+
+  transition:
+    left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   BOOK NOW
+===================================================== */
+
 .hero-book-btn:hover {
-  background: #0b0b0b;
+  transform:
+    translateY(-4px)
+    scale(1.015);
 
-  color: #f0d46a;
+  color: #f8e38c;
 
-  border-color: #f0d46a;
+  border-color: #f8e38c;
+
+  background:
+    linear-gradient(
+      145deg,
+      #090909,
+      #111111
+    );
 
   box-shadow:
-    0 0 25px rgba(212, 175, 55, 0.35);
-
-  transform: translateY(-2px);
+    0 0 15px rgba(212, 175, 55, 0.30),
+    0 0 38px rgba(212, 175, 55, 0.18),
+    inset 0 0 20px rgba(212, 175, 55, 0.05);
 }
 
 
@@ -275,56 +399,56 @@
    WATCH PROMO
 ===================================================== */
 
-.hero-promo-btn {
-  width: 560px;
+.hero-promo-btn:hover {
+  transform:
+    translateY(-4px)
+    scale(1.015);
 
-  max-width: 90%;
+  color: #f8e38c;
 
-  padding: 24px 40px;
+  border-color: #f8e38c;
 
-  background: #050505;
-
-  border: 2px solid #d4af37;
-
-  border-radius: 80px;
-
-  color: #d4af37;
-
-  font-family: "Times New Roman", serif;
-
-  font-size: 34px;
-
-  font-weight: 400;
-
-  letter-spacing: 3px;
-
-  text-align: center;
-
-  cursor: pointer;
+  background:
+    linear-gradient(
+      145deg,
+      #090909,
+      #111111
+    );
 
   box-shadow:
-    0 0 18px rgba(212, 175, 55, 0.18);
-
-  transition: all 0.3s ease;
+    0 0 12px rgba(212, 175, 55, 0.24),
+    0 0 28px rgba(212, 175, 55, 0.14),
+    inset 0 0 18px rgba(212, 175, 55, 0.04);
 }
 
-.hero-promo-btn:hover {
-  background: #0b0b0b;
 
-  color: #f0d46a;
+/* =====================================================
+   LIGHT SWEEP ACTIVE
+===================================================== */
 
-  border-color: #f0d46a;
+.hero-book-btn:hover::before,
+.hero-promo-btn:hover::before {
+  left: 140%;
+}
+
+
+/* =====================================================
+   CLICK EFFECT
+===================================================== */
+
+.hero-book-btn:active,
+.hero-promo-btn:active {
+  transform:
+    translateY(-1px)
+    scale(0.99);
 
   box-shadow:
-    0 0 25px rgba(212, 175, 55, 0.35);
-
-  transform: translateY(-2px);
+    0 0 12px rgba(212, 175, 55, 0.20);
 }
 
 
 /* =====================================================
    HERO INTERNAL DIVIDER
-   إذا كان مستخدمًا داخل HERO
 ===================================================== */
 
 .hero-section-divider {
@@ -392,10 +516,11 @@
 .hero-section-divider-bottom {
   position: relative;
 
-  width: 300px;
-  max-width: 80%;
+  width: 1700px;
 
-  height: 1px;
+  max-width: none;
+
+  height: 2px;
 
   margin: 20px auto 0;
 
@@ -404,15 +529,7 @@
   top: auto;
   bottom: auto;
 
-  transform: none;
-
   display: block;
-
-  /*
-     نفس شكل الخط المطلوب:
-     قوي في المنتصف
-     ومتلاشي تدريجياً عند الأطراف
-  */
 
   background:
     linear-gradient(
@@ -432,6 +549,8 @@
   z-index: 9999;
 
   overflow: visible;
+
+  transform: translate(-890px, 35px);
 }
 
 
@@ -466,10 +585,31 @@
 
 
 /* =====================================================
+   DESKTOP POSITIONING
+===================================================== */
+
+@media (min-width: 769px) {
+
+  .hero-right {
+    top: 60px;
+  }
+
+  .hero-section-divider {
+    transform: translateY(-30px);
+  }
+
+  .hero-section-divider-bottom {
+    transform: translate(-890px, 35px);
+  }
+
+}
+
+
+/* =====================================================
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px) {
 
   .hero {
     min-height: 100vh;
@@ -536,7 +676,16 @@
 
     flex-direction: column;
 
-    padding: 45px 20px 40px;
+    padding:
+      45px
+      20px
+      50px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    overflow: visible;
   }
 
 
@@ -546,6 +695,8 @@
     width: 100%;
 
     order: 1;
+
+    box-sizing: border-box;
   }
 
   .hero-image {
@@ -554,6 +705,19 @@
     max-width: 360px;
 
     margin: 0 auto;
+
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.97);
+
+    animation:
+      mobileHeroImageReveal
+      1.1s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.15s
+      forwards;
   }
 
 
@@ -562,29 +726,119 @@
   .hero-right {
     width: 100%;
 
+    max-width: 100%;
+
+    box-sizing: border-box;
+
     order: 2;
 
-    padding: 10px 10px 0;
+    padding: 10px 0 0;
+
+    transform: translateY(30px);
+
+    overflow: visible;
   }
 
 
-  /* LOGO */
+  .hero.hero-visible .hero-right {
+    transform: translateY(0);
+  }
+
+
+  /* SMALL LOGO */
+
+  .hero-small-logo {
+    width: 50% !important;
+
+    max-width: 200px;
+
+    height: auto !important;
+
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.94);
+
+    animation:
+      mobileSmallLogoReveal
+      0.8s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.75s
+      forwards;
+  }
+
+
+  /* MAIN LOGO */
 
   .hero-logo {
     width: 200px !important;
 
     max-width: 200px !important;
+
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+
+    filter:
+      drop-shadow(
+        0 0 0
+        rgba(212, 175, 55, 0)
+      );
+
+    animation:
+      mobileMainLogoReveal
+      0.9s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.95s
+      forwards,
+      mobileLogoGlow
+      1.5s
+      ease
+      1.8s
+      forwards;
   }
 
 
   /* SUBTITLE */
 
   .hero-subtitle {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
     margin-top: 12px;
+
+    padding: 0 5px;
 
     font-size: 19px;
 
     letter-spacing: 3px;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    overflow-wrap: normal;
+
+    word-break: normal;
+
+    white-space: normal;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    animation:
+      mobileTextReveal
+      0.8s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      1.35s
+      forwards;
   }
 
 
@@ -593,26 +847,139 @@
   .gold-line {
     width: 240px;
 
-    max-width: 75%;
+    max-width: calc(100% - 30px);
 
     margin-top: 14px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity: 0;
+
+    transform: scaleX(0.2);
+
+    transform-origin: center;
+
+    animation:
+      mobileGoldLineReveal
+      0.9s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      1.55s
+      forwards,
+      mobileGoldLineGlow
+      3s
+      ease-in-out
+      2.5s
+      infinite;
+  }
+
+
+  /* DIAMOND */
+
+  .gold-line-diamond {
+    width: 9px;
+    height: 9px;
+
+    left: 50%;
+    top: 50%;
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg)
+      scale(0);
+
+    animation:
+      mobileDiamondReveal
+      0.7s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      2.1s
+      forwards,
+      mobileDiamondGlow
+      2.5s
+      ease-in-out
+      2.8s
+      infinite;
   }
 
 
   /* SERVICES */
 
   .hero-services {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
     gap: 12px;
 
     margin-top: 18px;
+
+    padding: 0 5px;
+
+    align-items: center;
+
+    overflow: visible;
   }
 
   .hero-services span {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 0 4px;
+
     font-size: 20px;
 
     letter-spacing: 3px;
 
-    line-height: 1.25;
+    line-height: 1.35;
+
+    text-align: center;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+
+    opacity: 0;
+
+    transform: translateY(12px);
+  }
+
+
+  .hero-services span:nth-child(1) {
+    animation:
+      mobileServiceReveal
+      0.7s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      2.25s
+      forwards;
+  }
+
+  .hero-services span:nth-child(2) {
+    animation:
+      mobileServiceReveal
+      0.7s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      2.4s
+      forwards;
+  }
+
+  .hero-services span:nth-child(3) {
+    animation:
+      mobileServiceReveal
+      0.7s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      2.55s
+      forwards;
   }
 
 
@@ -621,16 +988,25 @@
   .hero-buttons {
     width: 100%;
 
+    max-width: 100%;
+
+    box-sizing: border-box;
+
     margin-top: 28px;
 
     gap: 15px;
+
+    padding: 0;
   }
+
 
   .hero-book-btn,
   .hero-promo-btn {
     width: 88%;
 
     max-width: 400px;
+
+    box-sizing: border-box;
 
     padding: 14px 20px;
 
@@ -644,36 +1020,94 @@
   }
 
 
+  .hero-book-btn {
+    opacity: 0;
+
+    animation:
+      mobileButtonReveal
+      0.8s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      2.8s
+      forwards;
+  }
+
+
+  .hero-promo-btn {
+    opacity: 0;
+
+    animation:
+      mobileButtonReveal
+      0.8s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      3s
+      forwards;
+  }
+
+
+  /* MOBILE HOVER */
+
+  .hero-book-btn:hover,
+  .hero-promo-btn:hover {
+    transform:
+      translateY(-3px)
+      scale(1.01);
+  }
+
+
   /* HERO INTERNAL DIVIDER */
 
   .hero-section-divider {
     width: 260px;
 
+    max-width: calc(100% - 40px);
+
     margin: 24px auto 28px;
+
+    box-sizing: border-box;
   }
+
 
   .hero-section-divider-diamond {
     width: 8px;
 
     height: 8px;
+
+    left: 50%;
+    top: 50%;
   }
 
 
   /* HERO END DIVIDER */
 
   .hero-section-divider-bottom {
-    width: 260px;
+    width: 100% !important;
 
-    max-width: 80%;
+    max-width: 100% !important;
+
+    height: 1px !important;
 
     margin: 20px auto 0;
+
+    left: 0;
+
+    right: auto;
+
+    transform:
+      translateY(48px) !important;
+
+    box-sizing: border-box;
   }
+
 
   .hero-section-divider-bottom
   .hero-section-divider-diamond {
-    width: 8px;
+    width: 8px !important;
 
-    height: 8px;
+    height: 8px !important;
+
+    left: 50%;
+
+    top: 50%;
   }
 
 }
@@ -689,11 +1123,19 @@
     padding:
       50px
       15px
-      45px;
+      50px;
+
+    width: 100%;
+
+    box-sizing: border-box;
   }
 
 
-  /* LOGO */
+  .hero-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 
   .hero-logo {
     width: 190px !important;
@@ -702,52 +1144,83 @@
   }
 
 
-  /* SUBTITLE */
-
   .hero-subtitle {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding-left: 3px;
+    padding-right: 3px;
+
     font-size: 17px;
 
     letter-spacing: 3px;
+
+    line-height: 1.35;
   }
 
-
-  /* GOLD LINE */
 
   .gold-line {
     width: 230px;
 
-    max-width: 80%;
+    max-width: calc(100% - 25px);
 
     margin-top: 14px;
   }
 
 
-  /* SERVICES */
+  .gold-line-diamond {
+    width: 9px;
+    height: 9px;
+  }
+
 
   .hero-services {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+
     gap: 18px;
 
     margin-top: 25px;
   }
 
+
   .hero-services span {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding-left: 2px;
+    padding-right: 2px;
+
     font-size: 20px;
 
     letter-spacing: 3px;
+
+    line-height: 1.35;
   }
 
 
-  /* BUTTONS */
-
   .hero-buttons {
+    width: 100%;
+
+    max-width: 100%;
+
     margin-top: 45px;
 
     gap: 20px;
   }
 
+
   .hero-book-btn,
   .hero-promo-btn {
     width: 88%;
+
+    max-width: 400px;
 
     padding: 16px 20px;
 
@@ -757,775 +1230,31 @@
   }
 
 
-  /* HERO END DIVIDER */
-
-  .hero-section-divider-bottom {
+  .hero-section-divider {
     width: 230px;
 
-    max-width: 80%;
-
-    margin-top: 20px;
+    max-width: calc(100% - 40px);
   }
 
-  .hero-section-divider-bottom
-  .hero-section-divider-diamond {
-    width: 8px;
 
-    height: 8px;
-  }
-
-}
-
-/* =====================================================
-   ENLARGE HERO GOLD DIVIDER
-===================================================== */
-
-.hero-section-divider-bottom {
-  width: 1700px !important;
-  max-width: none !important;
-  height: 2px !important;
-}
-
-.hero-section-divider-bottom {
-  transform: translateX(-800px) !important;
-}
-
-/* =========================================
-   HERO DIVIDER - DESKTOP ONLY
-========================================= */
-
-@media (min-width: 769px) {
-  .hero-section-divider {
-    transform: translateY(-30px) !important;
-  }
-}
-
-/* =====================================================
-   HERO BOTTOM DIVIDER - DESKTOP POSITION
-===================================================== */
-
-@media (min-width: 769px) {
   .hero-section-divider-bottom {
-    transform: translate(-890px, 35px) !important;
-  }
-}
+    width: 100% !important;
 
-/* =========================================================
-   HERO - LUXURY SCROLL REVEAL
-   ADD ONLY
-   DOES NOT CHANGE EXISTING DESIGN
-========================================================= */
+    max-width: 100% !important;
 
-/* IMAGE INITIAL */
-
-.hero-image {
-  opacity: 0;
-
-  transform: translateX(-35px);
-
-  transition:
-    opacity 1s ease,
-    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-
-/* RIGHT CONTENT INITIAL */
-
-.hero-right {
-  opacity: 0;
-
-  transform: translateX(35px);
-
-  transition:
-    opacity 0.9s ease,
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-
-/* VISIBLE */
-
-.hero.hero-visible .hero-image {
-  opacity: 1;
-
-  transform: translateX(0);
-}
-
-
-.hero.hero-visible .hero-right {
-  opacity: 1;
-
-  transform: translateX(0);
-
-  transition-delay: 0.15s;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-  .hero-image {
-    transform: translateY(30px);
-  }
-
-  .hero-right {
-    transform: translateY(30px);
-  }
-
-  .hero.hero-visible .hero-image,
-  .hero.hero-visible .hero-right {
-    transform: translateY(0);
-  }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .hero-image,
-  .hero-right {
-    opacity: 1;
-    transform: none;
-    transition: none !important;
-  }
-
-}
-
-/* =====================================================
-   SMALL LOGO ABOVE MAIN LOGO
-===================================================== */
-
-.hero-small-logo {
-  display: block;
-
-  width: 200px;
-  max-width: 200x;
-
-  height: auto;
-
-  object-fit: contain;
-
-  margin: 0 auto -5px;
-
-  opacity: 1;
-}
-
-/* =====================================================
-   MOVE ALL HERO RIGHT CONTENT DOWN
-===================================================== */
-
-@media (min-width: 769px) {
-  .hero-right {
-    position: relative;
-    top: 60px;
-  }
-}
-
-/* =====================================================
-   HERO BUTTONS - LUXURY HOVER EFFECT
-   EFFECT ONLY - NO DESIGN CHANGES
-===================================================== */
-
-.hero-book-btn,
-.hero-promo-btn {
-  position: relative;
-
-  overflow: hidden;
-
-  transition:
-    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.4s ease,
-    border-color 0.4s ease,
-    color 0.4s ease,
-    background 0.4s ease;
-}
-
-
-/* =====================================================
-   GOLD LIGHT SWEEP
-===================================================== */
-
-.hero-book-btn::before,
-.hero-promo-btn::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: -120%;
-
-  width: 70%;
-  height: 100%;
-
-  background:
-    linear-gradient(
-      110deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.02) 30%,
-      rgba(248, 227, 140, 0.18) 50%,
-      rgba(255, 255, 255, 0.02) 70%,
-      transparent 100%
-    );
-
-  transform: skewX(-20deg);
-
-  transition:
-    left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-  pointer-events: none;
-
-  z-index: 1;
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.hero-book-btn:hover,
-.hero-promo-btn:hover {
-
-  transform:
-    translateY(-4px)
-    scale(1.015);
-
-  color: #f8e38c;
-
-  border-color: #f8e38c;
-
-  background:
-    linear-gradient(
-      145deg,
-      #090909,
-      #111111
-    );
-
-  box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.25),
-    0 0 30px rgba(212, 175, 55, 0.16),
-    inset 0 0 18px rgba(212, 175, 55, 0.04);
-}
-
-
-/* =====================================================
-   LIGHT SWEEP ACTIVE
-===================================================== */
-
-.hero-book-btn:hover::before,
-.hero-promo-btn:hover::before {
-  left: 140%;
-}
-
-
-/* =====================================================
-   TEXT ABOVE EFFECT
-===================================================== */
-
-.hero-book-btn,
-.hero-promo-btn {
-  isolation: isolate;
-}
-
-
-/* =====================================================
-   BOOK BUTTON - SLIGHTLY STRONGER GLOW
-===================================================== */
-
-.hero-book-btn:hover {
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.30),
-    0 0 38px rgba(212, 175, 55, 0.18),
-    inset 0 0 20px rgba(212, 175, 55, 0.05);
-}
-
-
-/* =====================================================
-   PROMO BUTTON - ELEGANT GLOW
-===================================================== */
-
-.hero-promo-btn:hover {
-  box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.24),
-    0 0 28px rgba(212, 175, 55, 0.14),
-    inset 0 0 18px rgba(212, 175, 55, 0.04);
-}
-
-
-/* =====================================================
-   CLICK EFFECT
-===================================================== */
-
-.hero-book-btn:active,
-.hero-promo-btn:active {
-  transform:
-    translateY(-1px)
-    scale(0.99);
-
-  box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.20);
-}
-
-
-/* =====================================================
-   MOBILE - KEEP EFFECT ELEGANT
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero-book-btn:hover,
-  .hero-promo-btn:hover {
     transform:
-      translateY(-3px)
-      scale(1.01);
+      translateY(48px) !important;
   }
 
-}
-/* =====================================================
-   MOBILE ONLY - SPACE AT END OF HERO
-   DESKTOP UNCHANGED
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding-bottom: 50px !important;
-  }
-
-}
-/* =====================================================
-   MOBILE ONLY - MOVE HERO BOTTOM DIVIDER
-   DESKTOP UNCHANGED
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero-section-divider-bottom {
-    transform: translateY(55px) !important;
-  }
-
-}
-
-/* =====================================================
-   MOBILE - HERO BOTTOM GOLD LINE + DIAMOND
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero-section-divider-bottom {
-    width: 400px !important;
-    height: 1px !important;
-
-    max-width: none !important;
-
-    transform: none !important;
-  }
 
   .hero-section-divider-bottom
   .hero-section-divider-diamond {
+    left: 50%;
+
+    top: 50%;
+
     width: 8px !important;
     height: 8px !important;
-    
-  }
-
-}
-
-/* =====================================================
-   MOBILE ONLY - MOVE HERO DIVIDER LEFT
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero-section-divider-bottom {
-    transform: translate(-45px, 48px) !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-    .hero-small-logo {
-        width: 50% !important;
-        height: auto !important;
-    }
-}
-
-/* =====================================================
-   MOBILE ONLY - LUXURY HERO EFFECTS
-===================================================== */
-
-@media (max-width: 768px) {
-
-  /* SMALL LOGO */
-  .hero-small-logo {
-    opacity: 0;
-    transform: translateY(20px) scale(0.96);
-
-    transition:
-      opacity 0.8s ease,
-      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .hero.hero-visible .hero-small-logo {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
-
-  /* MAIN LOGO */
-  .hero-logo {
-    filter:
-      drop-shadow(0 0 0 rgba(212, 175, 55, 0));
-
-    transition:
-      filter 1s ease,
-      transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .hero.hero-visible .hero-logo {
-    filter:
-      drop-shadow(0 0 8px rgba(212, 175, 55, 0.18));
-  }
-
-
-  /* SUBTITLE */
-  .hero-subtitle {
-    opacity: 0;
-    transform: translateY(15px);
-
-    transition:
-      opacity 0.8s ease,
-      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-    transition-delay: 0.25s;
-  }
-
-  .hero.hero-visible .hero-subtitle {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-
-  /* GOLD LINE */
-  .gold-line {
-    opacity: 0;
-    transform: scaleX(0.3);
-
-    transition:
-      opacity 0.7s ease,
-      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-
-    transition-delay: 0.4s;
-  }
-
-  .hero.hero-visible .gold-line {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-
-
-  /* DIAMOND */
-  .gold-line-diamond {
-    opacity: 0;
-
-    transform:
-      translate(-50%, -50%)
-      rotate(45deg)
-      scale(0.3);
-
-    transition:
-      opacity 0.5s ease,
-      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-    transition-delay: 0.7s;
-  }
-
-  .hero.hero-visible .gold-line-diamond {
-    opacity: 1;
-
-    transform:
-      translate(-50%, -50%)
-      rotate(45deg)
-      scale(1);
-  }
-
-
-  /* SERVICES */
-  .hero-services span {
-    opacity: 0;
-    transform: translateY(12px);
-
-    transition:
-      opacity 0.7s ease,
-      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .hero.hero-visible .hero-services span:nth-child(1) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.5s;
-  }
-
-  .hero.hero-visible .hero-services span:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.6s;
-  }
-
-  .hero.hero-visible .hero-services span:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.7s;
-  }
-
-
-  /* BUTTONS */
-  .hero-book-btn,
-  .hero-promo-btn {
-    transition:
-      opacity 0.8s ease,
-      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-      box-shadow 0.4s ease,
-      border-color 0.4s ease;
-  }
-
-  .hero.hero-visible .hero-book-btn {
-    animation:
-      mobileHeroButtonReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.8s both;
-  }
-
-  .hero.hero-visible .hero-promo-btn {
-    animation:
-      mobileHeroButtonReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.95s both;
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE BUTTON REVEAL
-===================================================== */
-
-@keyframes mobileHeroButtonReveal {
-
-  from {
-    opacity: 0;
-    transform:
-      translateY(20px)
-      scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform:
-      translateY(0)
-      scale(1);
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE GOLD LINE SOFT GLOW
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .hero.hero-visible .gold-line {
-    box-shadow:
-      0 0 8px rgba(212, 175, 55, 0.18),
-      0 0 18px rgba(212, 175, 55, 0.08);
-  }
-
-}
-
-/* =====================================================
-   MOBILE HERO - LUXURY ANIMATION
-   MOBILE ONLY
-===================================================== */
-
-@media (max-width: 768px) {
-
-  /* HERO IMAGE */
-
-  .hero-image {
-    opacity: 0;
-
-    transform: translateY(35px) scale(0.97);
-
-    animation:
-      mobileHeroImageReveal 1.1s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.15s
-      forwards;
-  }
-
-
-  /* SMALL LOGO */
-
-  .hero-small-logo {
-    opacity: 0;
-
-    transform: translateY(20px) scale(0.94);
-
-    animation:
-      mobileSmallLogoReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.75s
-      forwards;
-  }
-
-
-  /* MAIN LOGO */
-
-  .hero-logo {
-    opacity: 0;
-
-    transform: translateY(20px) scale(0.96);
-
-    animation:
-      mobileMainLogoReveal 0.9s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.95s
-      forwards;
-  }
-
-
-  /* GOLD GLOW ON MAIN LOGO */
-
-  .hero-logo {
-    filter:
-      drop-shadow(
-        0 0 0
-        rgba(212, 175, 55, 0)
-      );
-
-    animation:
-      mobileMainLogoReveal 0.9s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      0.95s
-      forwards,
-      mobileLogoGlow 1.5s ease
-      1.8s
-      forwards;
-  }
-
-
-  /* SUBTITLE */
-
-  .hero-subtitle {
-    opacity: 0;
-
-    transform: translateY(15px);
-
-    animation:
-      mobileTextReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      1.35s
-      forwards;
-  }
-
-
-  /* GOLD LINE */
-
-  .gold-line {
-    opacity: 0;
-
-    transform: scaleX(0.2);
-
-    transform-origin: center;
-
-    animation:
-      mobileGoldLineReveal 0.9s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      1.55s
-      forwards;
-  }
-
-
-  /* DIAMOND */
-
-  .gold-line-diamond {
-    opacity: 0;
-
-    transform:
-      translate(-50%, -50%)
-      rotate(45deg)
-      scale(0);
-
-    animation:
-      mobileDiamondReveal 0.7s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.1s
-      forwards;
-  }
-
-
-  /* SERVICES */
-
-  .hero-services span {
-    opacity: 0;
-
-    transform: translateY(12px);
-  }
-
-
-  .hero-services span:nth-child(1) {
-    animation:
-      mobileServiceReveal 0.7s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.25s
-      forwards;
-  }
-
-
-  .hero-services span:nth-child(2) {
-    animation:
-      mobileServiceReveal 0.7s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.4s
-      forwards;
-  }
-
-
-  .hero-services span:nth-child(3) {
-    animation:
-      mobileServiceReveal 0.7s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.55s
-      forwards;
-  }
-
-
-  /* BUTTONS */
-
-  .hero-book-btn {
-    opacity: 0;
-
-    animation:
-      mobileButtonReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.8s
-      forwards;
-  }
-
-
-  .hero-promo-btn {
-    opacity: 0;
-
-    animation:
-      mobileButtonReveal 0.8s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      3s
-      forwards;
   }
 
 }
@@ -1721,27 +1450,8 @@
 
 
 /* =====================================================
-   MOBILE - GOLD LINE BREATHING GLOW
+   MOBILE GOLD LINE BREATHING GLOW
 ===================================================== */
-
-@media (max-width: 768px) {
-
-  .gold-line {
-    animation:
-      mobileGoldLineReveal
-      0.9s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      1.55s
-      forwards,
-      mobileGoldLineGlow
-      3s
-      ease-in-out
-      2.5s
-      infinite;
-  }
-
-}
-
 
 @keyframes mobileGoldLineGlow {
 
@@ -1762,27 +1472,8 @@
 
 
 /* =====================================================
-   MOBILE - DIAMOND SOFT GLOW
+   MOBILE DIAMOND SOFT GLOW
 ===================================================== */
-
-@media (max-width: 768px) {
-
-  .gold-line-diamond {
-    animation:
-      mobileDiamondReveal
-      0.7s
-      cubic-bezier(0.22, 1, 0.36, 1)
-      2.1s
-      forwards,
-      mobileDiamondGlow
-      2.5s
-      ease-in-out
-      2.8s
-      infinite;
-  }
-
-}
-
 
 @keyframes mobileDiamondGlow {
 
@@ -1797,6 +1488,34 @@
     box-shadow:
       0 0 12px rgba(212, 175, 55, 0.75),
       0 0 25px rgba(212, 175, 55, 0.28);
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-image,
+  .hero-right,
+  .hero-small-logo,
+  .hero-logo,
+  .hero-subtitle,
+  .gold-line,
+  .gold-line-diamond,
+  .hero-services span,
+  .hero-book-btn,
+  .hero-promo-btn {
+    opacity: 1;
+
+    transform: none;
+
+    animation: none !important;
+
+    transition: none !important;
   }
 
 }

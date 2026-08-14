@@ -488,3 +488,130 @@
     }
 
 }
+
+/* =====================================================
+   WHY CHOOSE - MOBILE GOLD DIVIDERS
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 650px) {
+
+    /* ===============================
+       TOP TITLE GOLD LINE
+    =============================== */
+
+    .why-title-divider {
+        position: relative;
+
+        width: 260px;
+        height: 1px;
+
+        margin: 18px auto 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.12) 8%,
+                rgba(212, 175, 55, 0.35) 25%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.35) 75%,
+                rgba(212, 175, 55, 0.12) 92%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.18);
+    }
+
+
+    /* ===============================
+       TOP DIAMOND
+    =============================== */
+
+    .why-title-divider-diamond {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+
+        border: 1px solid rgba(255, 225, 120, 0.75);
+
+        box-shadow:
+            0 0 5px rgba(212, 175, 55, 0.55),
+            0 0 12px rgba(212, 175, 55, 0.22);
+
+        z-index: 5;
+    }
+
+
+    /* ===============================
+       BOTTOM GOLD LINE
+    =============================== */
+
+    .why-section-divider {
+        position: relative;
+
+        width: 400px !important;
+        max-width: none;
+
+        height: 1px;
+
+        margin-top: 60px;
+
+        transform: translateX(-20px) !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.10) 8%,
+                rgba(212, 175, 55, 0.32) 25%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.32) 75%,
+                rgba(212, 175, 55, 0.10) 92%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.16);
+    }
+
+
+    /* ===============================
+       BOTTOM DIAMOND
+    =============================== */
+
+    .why-section-divider-diamond {
+        position: absolute;
+
+        left: 47% !important;
+        top: 50%;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+
+        border: 1px solid rgba(255, 225, 120, 0.75);
+
+        box-shadow:
+            0 0 5px rgba(212, 175, 55, 0.55),
+            0 0 12px rgba(212, 175, 55, 0.22);
+
+        z-index: 999;
+    }
+}
