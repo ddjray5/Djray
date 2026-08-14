@@ -861,3 +861,61 @@
         clip-path: none !important;
     }
 }
+
+
+/* =========================================================
+   MUSIC - MOBILE BACKGROUND MATCH DESKTOP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .music-section {
+        background:
+            radial-gradient(
+                circle at 20% 20%,
+                rgba(212, 175, 55, 0.10),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 80% 30%,
+                rgba(212, 175, 55, 0.08),
+                transparent 40%
+            ),
+            radial-gradient(
+                circle at 50% 80%,
+                rgba(212, 175, 55, 0.06),
+                transparent 35%
+            ),
+            #050505 !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE - ALIGN ALL SECTION DIAMONDS
+   FINAL VERSION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section-divider-diamond,
+    .hero-section-divider-bottom-diamond,
+    .about-section-divider-diamond,
+    .about-section-divider-bottom-diamond,
+    .section-top-divider-diamond,
+    .music-section-divider-diamond,
+    .music-section-divider-bottom-diamond,
+    .services-section-divider-diamond,
+    .gallery-section-divider-diamond,
+    .why-section-divider-diamond,
+    .testimonials-section-divider-diamond,
+    .contact-section-divider-diamond {
+
+        left: 50% !important;
+
+        margin-left: 0 !important;
+
+        right: auto !important;
+    }
+
+}
