@@ -861,14 +861,3 @@
         clip-path: none !important;
     }
 }
-/* =========================================================
-   MOBILE - MUSIC BACKGROUND FIX
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .music-section {
-        background: #050505 !important;
-    }
-
-}
