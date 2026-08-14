@@ -919,3 +919,57 @@
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE DIAMOND ALIGNMENT
+   ALL SECTION DIAMONDS - SAME POSITION & SAME SIZE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section-divider-diamond,
+    .hero-section-divider-bottom-diamond,
+
+    .about-section-divider-diamond,
+    .about-section-divider-bottom-diamond,
+
+    .section-top-divider-diamond,
+
+    .music-section-divider-diamond,
+    .music-section-divider-bottom-diamond,
+
+    .services-section-divider-diamond,
+
+    .gallery-section-divider-diamond,
+
+    .why-title-divider-diamond,
+    .why-section-divider-diamond,
+
+    .testimonials-title-divider-diamond,
+    .testimonials-section-divider-diamond,
+
+    .contact-section-divider-diamond {
+
+        position: absolute !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        width: 8px !important;
+        height: 8px !important;
+
+        min-width: 8px !important;
+        min-height: 8px !important;
+
+        max-width: 8px !important;
+        max-height: 8px !important;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg) !important;
+    }
+
+}
