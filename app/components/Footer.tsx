@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import "../styles/footer.css";
 
 import {
@@ -10,8 +12,43 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+
+  const footerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+
+    const footer = footerRef.current;
+
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+
+          footer.classList.add("footer-visible");
+
+          observer.unobserve(footer);
+
+        }
+
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer
+      ref={footerRef}
+      className="footer"
+    >
 
       <div className="footer-logo">
 

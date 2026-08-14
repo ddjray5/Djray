@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "../styles/hero.css";
 
@@ -12,13 +12,43 @@ export default function Hero() {
   const [openPromo, setOpenPromo] = useState(false);
   const [openBooking, setOpenBooking] = useState(false);
 
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.add("hero-visible");
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       {/* =====================================================
           HERO SECTION
       ===================================================== */}
 
-      <section className="hero" id="top">
+      <section
+        ref={sectionRef}
+        className="hero"
+        id="top"
+      >
 
         {/* =====================================================
             LEFT — DJ IMAGE
@@ -43,10 +73,16 @@ export default function Hero() {
           ===================================================== */}
 
           <img
-            src="/logo.png"
-            alt="DJ RAY Logo"
-            className="hero-logo"
-          />
+  src="/logo2.png"
+  alt="DJ RAY"
+  className="hero-small-logo"
+/>
+
+<img
+  src="/logo.png"
+  alt="DJ RAY Logo"
+  className="hero-logo"
+/>
 
           {/* =====================================================
               SUBTITLE
@@ -60,9 +96,9 @@ export default function Hero() {
               GOLD LINE
           ===================================================== */}
 
-         <div className="gold-line">
-  <div className="gold-line-diamond"></div>
-</div>
+          <div className="gold-line">
+            <div className="gold-line-diamond"></div>
+          </div>
 
           {/* =====================================================
               SERVICES

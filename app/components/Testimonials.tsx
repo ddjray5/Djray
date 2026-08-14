@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { supabase } from "../components/utils/supabase";
 
@@ -22,6 +22,8 @@ export default function Testimonials() {
 
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   // =====================================================
   // REVIEW MODAL
@@ -66,6 +68,32 @@ export default function Testimonials() {
 
   useEffect(() => {
     fetchApprovedReviews();
+  }, []);
+
+  // =====================================================
+  // TESTIMONIALS SCROLL REVEAL
+  // =====================================================
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.add("testimonials-visible");
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
   }, []);
 
   // =====================================================
@@ -303,7 +331,10 @@ export default function Testimonials() {
   // =====================================================
 
   return (
-    <section className="testimonials-section">
+    <section
+      ref={sectionRef}
+      className="testimonials-section"
+    >
 
       {/* =================================================
           HEADER

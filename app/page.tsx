@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Music from "./components/Music";
@@ -11,6 +15,33 @@ import Testimonials from "./components/Testimonials";
 import WhyChoose from "./components/WhyChoose";
 
 export default function Home() {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".luxury-section-title");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       {/* PRELOADER */}

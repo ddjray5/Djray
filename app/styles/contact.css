@@ -1,3 +1,4 @@
+
 /* =====================================================
 CONTACT - DJ RAY
 Luxury Black & Gold
@@ -10,16 +11,16 @@ Luxury Black & Gold
     background:
         radial-gradient(
             circle at center,
-            rgba(176, 141, 44, 0.04),
-            transparent 60%
+            rgba(212, 175, 55, 0.10) 0%,
+            rgba(212, 175, 55, 0.05) 30%,
+            transparent 65%
         ),
         #050505;
 
     color: #ffffff;
-
     box-sizing: border-box;
 
-    padding: 20px 20px 100px;
+    padding: 0 20px 100px;
 
     scroll-margin-top: 130px;
 }
@@ -63,8 +64,6 @@ TITLE
 
     text-align: center;
 }
-
-
 
 
 /* =====================================================
@@ -114,6 +113,8 @@ GOLD BORDER BUTTONS
 
 .btn-gold,
 .btn-outline {
+    position: relative;
+
     display: flex;
 
     align-items: center;
@@ -153,6 +154,10 @@ GOLD BORDER BUTTONS
 
     cursor: pointer;
 
+    overflow: hidden;
+
+    isolation: isolate;
+
     transition:
         transform 0.3s ease,
         background 0.3s ease,
@@ -163,11 +168,55 @@ GOLD BORDER BUTTONS
 
 
 /* =====================================================
+SOFT LIGHT SWEEP
+===================================================== */
+
+.btn-gold::before,
+.btn-outline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -130%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.02) 20%,
+            rgba(212, 175, 55, 0.08) 45%,
+            rgba(255, 235, 160, 0.13) 50%,
+            rgba(212, 175, 55, 0.08) 55%,
+            rgba(212, 175, 55, 0.02) 80%,
+            transparent 100%
+        );
+
+    transform: skewX(-18deg);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: 0;
+
+    transition:
+        left 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.3s ease;
+}
+
+
+/* =====================================================
 ICONS
 ===================================================== */
 
 .btn-gold svg,
 .btn-outline svg {
+    position: relative;
+
     width: 28px;
     height: 28px;
 
@@ -176,30 +225,87 @@ ICONS
     color: #b08d2c;
 
     flex-shrink: 0;
+
+    transition:
+        color 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
 }
 
 
 /* =====================================================
-HOVER
+LUXURY HOVER
 ===================================================== */
 
 .btn-gold:hover,
 .btn-outline:hover {
-    background: rgba(176, 141, 44, 0.06);
 
-    color: #c9a83e;
+    background: #050505;
 
-    border-color: #c9a83e;
+    color: #d4af37;
 
-    transform: translateY(-2px);
+    border-color: #d4af37;
+
+    transform: translateY(-3px);
 
     box-shadow:
-        0 0 20px rgba(176, 141, 44, 0.20);
+        0 0 7px rgba(212, 175, 55, 0.12),
+        0 0 18px rgba(212, 175, 55, 0.08);
 }
+
+
+/* SOFT SWEEP */
+
+.btn-gold:hover::before,
+.btn-outline:hover::before {
+    left: 150%;
+
+    opacity: 1;
+}
+
+
+/* ICON */
 
 .btn-gold:hover svg,
 .btn-outline:hover svg {
-    color: #c9a83e;
+
+    color: #d4af37;
+
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(0 0 4px rgba(212, 175, 55, 0.16));
+}
+
+
+/* =====================================================
+ACTIVE / PRESS
+===================================================== */
+
+.btn-gold:active,
+.btn-outline:active {
+
+    background: #d4af37;
+
+    color: #050505;
+
+    border-color: #d4af37;
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.18);
+}
+
+
+.btn-gold:active svg,
+.btn-outline:active svg {
+
+    color: #050505;
+
+    transform: scale(0.97);
+
+    filter: none;
 }
 
 
@@ -261,6 +367,25 @@ MOBILE
         height: 26px;
 
         font-size: 26px;
+    }
+
+    .btn-gold::before,
+    .btn-outline::before {
+        display: none;
+    }
+
+    .btn-gold:active,
+    .btn-outline:active {
+        background: #d4af37;
+
+        color: #050505;
+
+        border-color: #d4af37;
+
+        transform: scale(0.985);
+
+        box-shadow:
+            0 0 14px rgba(212, 175, 55, 0.18);
     }
 }
 
@@ -372,8 +497,6 @@ CONTACT - REDUCE EMPTY SPACE
 }
 
 
-/* Keep contact content compact */
-
 .contact-content {
     height: auto !important;
     min-height: auto !important;
@@ -402,6 +525,7 @@ MOBILE COMPACT
         padding-bottom: 20px !important;
     }
 }
+
 
 /* =====================================================
 CONTACT TOP & BOTTOM DIVIDERS
@@ -506,6 +630,7 @@ MOBILE
 
 }
 
+
 /* =====================================================
 CONTACT BOTTOM DIVIDER - FINAL SIZE
 ===================================================== */
@@ -515,11 +640,9 @@ CONTACT BOTTOM DIVIDER - FINAL SIZE
     height: 1px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    transform: none !important;
 }
 
-.contact-section-divider-bottom {
-    transform: translateX(-25px);
-}
 
 /* =====================================================
 REMOVE SPACE AFTER CONTACT
@@ -537,6 +660,7 @@ REMOVE SPACE AFTER CONTACT
     margin-bottom: 0 !important;
 }
 
+
 /* =====================================================
 CONTACT BOTTOM DIAMOND - FINAL POSITION
 ===================================================== */
@@ -548,7 +672,7 @@ CONTACT BOTTOM DIAMOND - FINAL POSITION
 }
 
 
-    .contact-section-divider-bottom .contact-section-divider-diamond {
+.contact-section-divider-bottom .contact-section-divider-diamond {
     position: absolute !important;
 
     left: 50% !important;
@@ -567,3 +691,367 @@ CONTACT BOTTOM DIAMOND - FINAL POSITION
 
     z-index: 9999 !important;
 }
+
+
+/* =====================================================
+CONTACT - LUXURY SCROLL REVEAL
+ADD ONLY — DO NOT CHANGE EXISTING DESIGN
+===================================================== */
+
+.contact-title {
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.contact-section-divider-top {
+  opacity: 0;
+
+  transform: scaleX(0.3);
+
+  transition:
+    opacity 0.8s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.25s;
+}
+
+
+.contact-section-divider-top
+.contact-section-divider-diamond {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(0.3);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.6s;
+}
+
+
+.contact-subtitle {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.35s;
+}
+
+
+/* =====================================================
+BUTTON REVEAL
+===================================================== */
+
+.contact-buttons .btn-gold {
+  opacity: 0;
+
+  transform:
+    translateY(30px)
+    scale(0.97);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.contact-buttons .btn-gold:nth-child(1) {
+  transition-delay: 0.45s;
+}
+
+.contact-buttons .btn-gold:nth-child(2) {
+  transition-delay: 0.60s;
+}
+
+.contact-buttons .btn-gold:nth-child(3) {
+  transition-delay: 0.75s;
+}
+
+
+/* =====================================================
+BOTTOM DIVIDER
+===================================================== */
+
+.contact-section-divider-bottom {
+  opacity: 0;
+
+  transform: scaleX(0.3);
+
+  transition:
+    opacity 0.8s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.85s;
+}
+
+
+/* =====================================================
+BOTTOM DIAMOND
+===================================================== */
+
+.contact-section-divider-bottom
+.contact-section-divider-diamond {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(0.3);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 1.15s;
+}
+
+
+/* =====================================================
+VISIBLE STATE
+===================================================== */
+
+.contact.contact-visible .contact-title {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.contact.contact-visible .contact-section-divider-top {
+  opacity: 1;
+
+  transform: scaleX(1);
+}
+
+
+.contact.contact-visible
+.contact-section-divider-top
+.contact-section-divider-diamond {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(1);
+}
+
+
+.contact.contact-visible .contact-subtitle {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.contact.contact-visible
+.contact-buttons
+.btn-gold {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+.contact.contact-visible .contact-section-divider-bottom {
+  opacity: 1;
+
+  transform: scaleX(1);
+}
+
+
+.contact.contact-visible
+.contact-section-divider-bottom
+.contact-section-divider-diamond {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(1);
+}
+
+
+/* =====================================================
+REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-title,
+  .contact-section-divider,
+  .contact-section-divider-diamond,
+  .contact-subtitle,
+  .contact-buttons .btn-gold {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none !important;
+  }
+
+}
+
+
+/* =====================================================
+CONTACT BUTTONS - FINAL LUXURY SWEEP
+ONLY BUTTON EFFECT
+===================================================== */
+
+@media (min-width: 769px) {
+
+    .btn-gold,
+    .btn-outline {
+        overflow: hidden;
+        isolation: isolate;
+
+        transition:
+            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+            background 0.35s ease,
+            border-color 0.35s ease,
+            color 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    .btn-gold::after,
+    .btn-outline::after {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: -120%;
+
+        width: 70%;
+        height: 100%;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.02) 20%,
+                rgba(212, 175, 55, 0.07) 45%,
+                rgba(255, 235, 160, 0.12) 50%,
+                rgba(212, 175, 55, 0.07) 55%,
+                rgba(212, 175, 55, 0.02) 80%,
+                transparent 100%
+            );
+
+        transform: skewX(-18deg);
+
+        pointer-events: none;
+
+        z-index: 0;
+
+        opacity: 0;
+
+        transition:
+            left 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.25s ease;
+    }
+
+    .btn-gold:hover,
+    .btn-outline:hover {
+
+        background: #050505;
+
+        color: #d4af37;
+
+        border-color: #d4af37;
+
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 0 7px rgba(212, 175, 55, 0.12),
+            0 0 18px rgba(212, 175, 55, 0.08);
+    }
+
+    .btn-gold:hover::after,
+    .btn-outline:hover::after {
+        left: 150%;
+
+        opacity: 1;
+    }
+
+    .btn-gold:hover svg,
+    .btn-outline:hover svg {
+
+        color: #d4af37;
+
+        transform: scale(1.04);
+
+        filter:
+            drop-shadow(0 0 4px rgba(212, 175, 55, 0.16));
+    }
+
+    .btn-gold:active,
+    .btn-outline:active {
+
+        background: #d4af37;
+
+        color: #050505;
+
+        border-color: #d4af37;
+
+        transform: translateY(0);
+
+        box-shadow:
+            0 0 12px rgba(212, 175, 55, 0.18);
+    }
+
+    .btn-gold:active svg,
+    .btn-outline:active svg {
+
+        color: #050505;
+
+        transform: scale(0.97);
+
+        filter: none;
+    }
+}
+
+
+/* =====================================================
+MOBILE - SOFT PRESS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .btn-gold:active,
+    .btn-outline:active {
+
+        background: #d4af37;
+
+        color: #050505;
+
+        border-color: #d4af37;
+
+        transform: scale(0.985);
+
+        box-shadow:
+            0 0 14px rgba(212, 175, 55, 0.18);
+    }
+
+    .btn-gold:active svg,
+    .btn-outline:active svg {
+        color: #050505;
+
+        filter: none;
+    }
+}
+

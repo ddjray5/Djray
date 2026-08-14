@@ -153,3 +153,14 @@ select,
 label{
     cursor: url("/gold-cursor.png") 4 4, pointer;
 }
+
+section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212, 175, 55, 0.10) 0%,
+            rgba(212, 175, 55, 0.05) 30%,
+            transparent 65%
+        ),
+        #050505;
+}

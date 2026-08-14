@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BookingModal from "./BookingModal";
 import "../styles/services.css";
 
@@ -38,7 +38,7 @@ const services = [
     features: ["Professional Setup", "Elegant Music", "Event Coordination"],
   },
   {
-    image: "/private.webp",
+    image: "/private-events.webp",
     title: "PRIVATE EVENTS",
     bookingType: "Private Event",
     description:
@@ -75,6 +75,30 @@ export default function Services() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
 
+  const servicesSectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const section = servicesSectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.add("services-visible");
+          observer.unobserve(section);
+        }
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleBook = (service: string) => {
     console.log("BOOK clicked:", service);
 
@@ -84,45 +108,65 @@ export default function Services() {
 
   return (
     <>
-      <section className="services luxury-section">
+      <section
+        ref={servicesSectionRef}
+        className="services luxury-section"
+      >
 
         {/* =====================================================
             SERVICES TITLE
-            ===================================================== */}
+        ===================================================== */}
 
         <div className="services-title luxury-section-title">
+
           <h2>SERVICES</h2>
 
           <p>
             Luxury DJ Experiences For Every Occasion
           </p>
+
         </div>
+
 
         {/* =====================================================
             SERVICES GRID
-            ===================================================== */}
+        ===================================================== */}
 
         <div className="services-grid">
 
           {services.map((service, index) => (
-            <div className="service-card" key={index}>
+            <div
+              className="service-card"
+              key={index}
+              style={{
+                transitionDelay: `${0.35 + index * 0.12}s`,
+              }}
+            >
 
               {/* IMAGE */}
 
               <div className="service-image">
+
                 <img
                   src={service.image}
                   alt={service.title}
                 />
+
               </div>
+
 
               {/* CONTENT */}
 
               <div className="service-content">
 
-                <h3>{service.title}</h3>
+                <h3>
+                  {service.title}
+                </h3>
 
-                <p>{service.description}</p>
+                <p>
+                  {service.description}
+                </p>
+
 
                 {/* FEATURES */}
 
@@ -138,6 +182,7 @@ export default function Services() {
 
                 </ul>
 
+
                 {/* BOOK BUTTON */}
 
                 <button
@@ -151,6 +196,7 @@ export default function Services() {
                 </button>
 
               </div>
+
             </div>
           ))}
 
@@ -158,15 +204,27 @@ export default function Services() {
 
       </section>
 
+
+      {/* =====================================================
+          DESKTOP SPACE AFTER SERVICES
+      ===================================================== */}
+
+      <div
+        className="services-bottom-space"
+        aria-hidden="true"
+      />
+
+
       {/* =====================================================
           BOOKING MODAL
-          ===================================================== */}
+      ===================================================== */}
 
       <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
         selectedService={selectedService}
       />
+
     </>
   );
 }

@@ -8,7 +8,14 @@ TESTIMONIALS SECTION
 
   padding: 90px 30px 100px;
 
-  background: #080808;
+  background:
+    radial-gradient(
+        circle at center,
+        rgba(212, 175, 55, 0.10) 0%,
+        rgba(212, 175, 55, 0.05) 30%,
+        transparent 65%
+    ),
+    #050505;
 
   color: #ffffff;
 
@@ -37,7 +44,7 @@ TESTIMONIALS HEADER
 
   font-family: "Times New Roman", serif;
 
-  font-size: 22px;
+  font-size: 45px;
   font-weight: 400;
 
   letter-spacing: 8px;
@@ -48,7 +55,7 @@ TESTIMONIALS HEADER
 /* GOLD LINE DIRECTLY UNDER TESTIMONIALS */
 
 .testimonials-header .gold-line {
-  width: 260px;
+  width: 150px;
   height: 2px;
 
   margin: 18px auto 45px;
@@ -666,7 +673,7 @@ MOBILE
   }
 
   .testimonials-header .gold-line {
-    width: 230px;
+    width: 260px;
 
     margin: 16px auto 38px;
   }
@@ -1019,7 +1026,7 @@ TESTIMONIALS TITLE DIVIDER
 .testimonials-title-divider {
   position: relative;
 
-  width: 320px;
+  width: 450px;
   height: 1px;
 
   margin: 18px auto 45px;
@@ -1094,10 +1101,10 @@ TESTIMONIALS BOTTOM DIVIDER
 .testimonials-section-divider {
   position: relative;
 
-  width: 420px;
+  width: 1700px;
   height: 1px;
 
-  margin: 30px auto 0;
+  margin: 90px auto 0;
 
   background:
     linear-gradient(
@@ -1123,7 +1130,7 @@ BOTTOM CENTER DIAMOND
 .testimonials-section-divider-diamond {
   position: absolute;
 
-  left: 50%;
+  left: 49%;
   top: 50%;
 
   width: 10px;
@@ -1161,6 +1168,176 @@ MOBILE
   .testimonials-section-divider-diamond {
     width: 8px;
     height: 8px;
+  }
+
+}
+
+/* =====================================================
+   CENTER SINGLE TESTIMONIAL
+   DESKTOP
+===================================================== */
+
+@media (min-width: 901px) {
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid .testimonial-card:only-child {
+    grid-column: 2;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 901px) {
+
+  .testimonials-grid .testimonial-card {
+    grid-column: 2;
+  }
+
+}
+
+.testimonials-empty {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* =====================================================
+   TESTIMONIALS - LUXURY SCROLL REVEAL
+   ADD ONLY — DO NOT CHANGE EXISTING DESIGN
+===================================================== */
+
+/* TITLE */
+
+.testimonials-header .section-kicker,
+.testimonials-header h2,
+.testimonials-title-divider {
+  opacity: 0;
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* DIAMOND */
+
+.testimonials-title-divider-diamond {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(0.3);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.5s;
+}
+
+
+/* CARDS */
+
+.testimonial-card {
+  opacity: 0;
+
+  transform:
+    translateY(45px)
+    scale(0.97);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* VISIBLE STATE */
+
+.testimonials-section.testimonials-visible
+.testimonials-header .section-kicker,
+
+.testimonials-section.testimonials-visible
+.testimonials-header h2,
+
+.testimonials-section.testimonials-visible
+.testimonials-title-divider {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* DIAMOND VISIBLE */
+
+.testimonials-section.testimonials-visible
+.testimonials-title-divider-diamond {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(1);
+}
+
+
+/* CARDS VISIBLE */
+
+.testimonials-section.testimonials-visible
+.testimonial-card {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* CARD DELAY */
+
+.testimonials-section.testimonials-visible
+.testimonial-card:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.testimonials-section.testimonials-visible
+.testimonial-card:nth-child(2) {
+  transition-delay: 0.30s;
+}
+
+.testimonials-section.testimonials-visible
+.testimonial-card:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .testimonials-header .section-kicker,
+  .testimonials-header h2,
+  .testimonials-title-divider,
+  .testimonials-title-divider-diamond,
+  .testimonial-card {
+    opacity: 1;
+    transform: none;
+    transition: none !important;
   }
 
 }

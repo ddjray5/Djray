@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 import "../styles/contact.css";
 
 import {
@@ -9,8 +11,46 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+
+  }, []);
+
   return (
-    <section id="contact" className="contact">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className={`contact ${
+        isVisible ? "contact-visible" : ""
+      }`}
+    >
 
       <div className="contact-content">
 

@@ -5,9 +5,19 @@
 .why {
   position: relative;
     z-index: 10;
-    background: #050505;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(212, 175, 55, 0.15) 0%,
+        rgba(212, 175, 55, 0.05) 30%,
+        rgba(212, 175, 55, 0.050) 55%,
+        transparent 85%
+    ),
+    #050505;
     padding: 120px 5% 0px;
 }
+
+
 
 
 /* =====================================================
@@ -43,7 +53,7 @@
 .why-title-divider {
     position: relative;
 
-    width: 320px;
+    width: 450px;
     height: 1px;
 
     margin: 25px auto 0;
@@ -365,4 +375,87 @@
 .why-section-divider {
     width: 450px !important;
     transform: translateX(-50px);
+}
+
+@media (min-width: 769px) {
+    .why-section-divider {
+        width: 1700px !important;
+        transform: translate(-73px, 0px) !important;
+    }
+}
+
+/* =========================================================
+   WHY CHOOSE DJ RAY
+   REVEAL EFFECT ONLY
+   NO DESIGN CHANGES
+========================================================= */
+
+/* TITLE */
+
+.why-title {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.why-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* CARDS */
+
+.why-card {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.why-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CARD DELAYS
+========================================================= */
+
+.why-card:nth-child(1).is-visible {
+    transition-delay: 0.05s;
+}
+
+.why-card:nth-child(2).is-visible {
+    transition-delay: 0.15s;
+}
+
+.why-card:nth-child(3).is-visible {
+    transition-delay: 0.25s;
+}
+
+.why-card:nth-child(4).is-visible {
+    transition-delay: 0.35s;
+}
+
+.why-card:nth-child(5).is-visible {
+    transition-delay: 0.45s;
+}
+
+.why-card:nth-child(6).is-visible {
+    transition-delay: 0.55s;
+}
+
+.why-card:nth-child(7).is-visible {
+    transition-delay: 0.65s;
+}
+
+.why-card:nth-child(8).is-visible {
+    transition-delay: 0.75s;
 }

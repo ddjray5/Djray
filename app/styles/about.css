@@ -4,24 +4,26 @@ DJ RAY - LUXURY BLACK & GOLD
 ================================= */
 
 .about-section {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
-    padding: 110px 7% 120px;
+  padding: 110px 7% 6px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(212, 175, 55, 0.06),
-            transparent 45%
-        ),
-        #050505;
+  background:
+  radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.10) 0%,
+    rgba(212, 175, 55, 0.10) 30%,
+    rgba(212, 175, 55, 0.04) 55%,
+    transparent 75%
+  ),
+  #050505;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    text-align: center;
+  text-align: center;
 }
 
 
@@ -85,11 +87,11 @@ ABOUT DJ RAY
     text-shadow:
         0 0 10px rgba(212, 175, 55, 0.15);
 
-        opacity: 1;
-visibility: visible;
+    opacity: 1;
+    visibility: visible;
 
-position: relative;
-z-index: 20;
+    position: relative;
+    z-index: 20;
 }
 
 
@@ -125,7 +127,6 @@ GOLD LINE
     text-shadow:
         0 0 10px rgba(212, 175, 55, 0.15);
 
-    /* GOLD LINE */
     background:
         linear-gradient(
             90deg,
@@ -140,7 +141,7 @@ GOLD LINE
 
     background-repeat: no-repeat;
 
-    background-size: 220px 1px;
+    background-size: 325px 1px;
 
     background-position: center bottom;
 
@@ -161,8 +162,8 @@ DIAMOND - EXACTLY ON THE LINE
 
     bottom: 0px;
 
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 
     background: #d4af37;
 
@@ -471,7 +472,7 @@ TABLET
 
 @media (max-width: 900px) {
 
-     .about-section {
+    .about-section {
         padding:
             90px 6% 0;
     }
@@ -497,22 +498,15 @@ MOBILE
             60px 15px 70px;
     }
 
-
-    /* CONTAINER */
-
     .about-container {
         width: 100%;
         max-width: 100%;
     }
 
-
     .about-content {
         width: 100%;
         max-width: 100%;
     }
-
-
-    /* ABOUT DJ RAY */
 
     .about-subtitle {
         font-size: 25px !important;
@@ -526,26 +520,11 @@ MOBILE
         white-space: nowrap;
     }
 
-
-    /* GOLD LINE */
-
     .about-subtitle::after {
         width: 260px;
 
         margin-top: 15px;
     }
-
-
-    /*
-    IMPORTANT:
-    No separate ::before rule here.
-
-    The main diamond rule above
-    controls the diamond.
-    */
-
-
-    /* MAIN TITLE */
 
     .about-content h2 {
         font-size: 25px !important;
@@ -558,9 +537,6 @@ MOBILE
             48px 0 22px;
     }
 
-
-    /* PARAGRAPHS */
-
     .about-content > p {
         max-width: 100%;
 
@@ -572,9 +548,6 @@ MOBILE
 
         margin-bottom: 18px;
     }
-
-
-    /* ABOUT LIST */
 
     .about-list {
         width: 100%;
@@ -591,7 +564,6 @@ MOBILE
         margin-top: 30px;
     }
 
-
     .about-list span {
         width: 100%;
 
@@ -607,9 +579,6 @@ MOBILE
         text-align: center;
     }
 
-
-    /* STATS */
-
     .about-stats {
         width: 100%;
         max-width: 100%;
@@ -621,11 +590,9 @@ MOBILE
         margin-top: 60px;
     }
 
-
     .about-stats .stat {
         width: 100%;
     }
-
 
     .about-stats .stat h3 {
         min-height: auto;
@@ -637,7 +604,6 @@ MOBILE
         white-space: nowrap;
     }
 
-
     .about-stats .stat span {
         margin-top: 10px;
 
@@ -645,9 +611,6 @@ MOBILE
 
         letter-spacing: 4px;
     }
-
-
-    /* ABU DHABI */
 
     .about-stats .stat:nth-child(3) h3 {
         font-size: 42px !important;
@@ -668,13 +631,11 @@ SMALL MOBILE
             60px 15px 70px;
     }
 
-
     .about-subtitle {
         font-size: 22px !important;
 
         letter-spacing: 4px !important;
     }
-
 
     .about-subtitle::after {
         width: 220px;
@@ -682,20 +643,11 @@ SMALL MOBILE
         margin-top: 14px;
     }
 
-
-    /*
-    IMPORTANT:
-    No ::before rule here either.
-    The main diamond rule remains active.
-    */
-
-
     .about-content h2 {
         font-size: 23px !important;
 
         margin-top: 45px;
     }
-
 
     .about-content > p {
         font-size: 14px;
@@ -703,23 +655,21 @@ SMALL MOBILE
         line-height: 1.7;
     }
 
-
     .about-stats {
         gap: 30px;
 
         margin-top: 50px;
     }
 
-
     .about-stats .stat h3 {
         font-size: 42px !important;
     }
-
 
     .about-stats .stat:nth-child(3) h3 {
         font-size: 38px !important;
     }
 }
+
 
 /* =================================
 ABOUT BOTTOM DIVIDER
@@ -729,11 +679,12 @@ SAME GOLD LINE + DIAMOND
 .about-section-divider-bottom {
     position: relative;
 
-    width: 450px;
+    width: 1700px;
     height: 1px;
 
-    margin: 20px auto 0;
-transform: translateX(-35px);
+    margin: 100px auto 0;
+
+    transform: translateX(-110px);
 
     background:
         linear-gradient(
@@ -765,8 +716,8 @@ BOTTOM DIAMOND
     left: 50%;
     top: 50%;
 
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 
     background: #d4af37;
 
@@ -781,10 +732,218 @@ BOTTOM DIAMOND
     z-index: 5;
 }
 
-/* =================================
-FORCE ABOUT BACKGROUND
-================================= */
+
+/* =====================================================
+   DESKTOP SPACE BEFORE ABOUT
+   MOBILE UNCHANGED
+===================================================== */
+
+@media (min-width: 769px) {
+
+    .about-section {
+        margin-top: 0px !important;
+    }
+}
+
+
+/* =========================================================
+   ABOUT DJ RAY
+   SCROLL REVEAL EFFECT ONLY
+   NO DESIGN CHANGES
+========================================================= */
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
 
 .about-section {
-    background: #050505 !important;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CONTENT INITIAL STATE
+========================================================= */
+
+.about-content {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.about-subtitle {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    transition-delay: 0.1s;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.about-content h2 {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    transition-delay: 0.2s;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.about-content > p {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.about-content > p:nth-of-type(1) {
+    transition-delay: 0.3s;
+}
+
+.about-content > p:nth-of-type(2) {
+    transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   ABOUT LIST
+========================================================= */
+
+.about-list span {
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.about-list span:nth-child(1) {
+    transition-delay: 0.45s;
+}
+
+.about-list span:nth-child(2) {
+    transition-delay: 0.50s;
+}
+
+.about-list span:nth-child(3) {
+    transition-delay: 0.55s;
+}
+
+.about-list span:nth-child(4) {
+    transition-delay: 0.60s;
+}
+
+.about-list span:nth-child(5) {
+    transition-delay: 0.65s;
+}
+
+.about-list span:nth-child(6) {
+    transition-delay: 0.70s;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.about-stats .stat {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.about-stats .stat:nth-child(1) {
+    transition-delay: 0.75s;
+}
+
+.about-stats .stat:nth-child(2) {
+    transition-delay: 0.85s;
+}
+
+.about-stats .stat:nth-child(3) {
+    transition-delay: 0.95s;
+}
+
+
+/* =========================================================
+   VISIBLE STATE
+   TRIGGERED BY ABOUT.TSX
+========================================================= */
+
+.about-section.about-visible .about-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.about-visible .about-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.about-visible .about-content h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.about-visible .about-content > p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.about-visible .about-list span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.about-visible .about-stats .stat {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-content,
+    .about-subtitle,
+    .about-content h2,
+    .about-content > p,
+    .about-list span,
+    .about-stats .stat {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }

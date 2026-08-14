@@ -1,25 +1,63 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import "../styles/about.css";
 import Counter from "./Counter";
 
 export default function About() {
+  const aboutSectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = aboutSectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section className="about-section">
+    <section
+      ref={aboutSectionRef}
+      className={`about-section ${
+        isVisible ? "about-visible" : ""
+      }`}
+    >
 
       {/* ===== START DIVIDER ===== */}
+
       <div className="about-section-divider">
         <span className="about-section-divider-diamond"></span>
       </div>
+
 
       <div className="about-container">
 
         <div className="about-content">
 
           <h3 className="about-subtitle">
-    ABOUT DJ RAY
-</h3>
-          <h2>Luxury Open Format DJ</h2>
+            ABOUT DJ RAY
+          </h3>
+
+          <h2>
+            Luxury Open Format DJ
+          </h2>
 
           <p>
             Professional Open Format DJ based in Abu Dhabi with years of
@@ -35,36 +73,60 @@ export default function About() {
             International music.
           </p>
 
+
           <div className="about-list">
+
             <span>✓ Open Format DJ</span>
             <span>✓ Luxury Weddings</span>
             <span>✓ Clubs & Lounges</span>
             <span>✓ Beach & Pool Parties</span>
             <span>✓ Yacht Parties</span>
             <span>✓ Corporate Events</span>
+
           </div>
+
 
           <div className="about-stats">
 
             <div className="stat stat-events">
+
               <h3 className="gold-text">
-                <Counter end={200} suffix="+" />
+                <Counter
+                  end={200}
+                  suffix="+"
+                />
               </h3>
-              <span>Events</span>
+
+              <span>
+                Events
+              </span>
+
             </div>
 
+
             <div className="stat">
+
               <h3 className="gold-text">
                 2019
               </h3>
-              <span>DJ Since</span>
+
+              <span>
+                DJ Since
+              </span>
+
             </div>
 
+
             <div className="stat">
+
               <h3 className="gold-text">
                 Abu Dhabi
               </h3>
-              <span>Based</span>
+
+              <span>
+                Based
+              </span>
+
             </div>
 
           </div>
@@ -73,9 +135,13 @@ export default function About() {
 
       </div>
 
+
       {/* ===== END DIVIDER ===== */}
+
       <div className="about-section-divider about-section-divider-bottom">
+
         <span className="about-section-divider-diamond"></span>
+
       </div>
 
     </section>

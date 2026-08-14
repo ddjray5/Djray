@@ -1,98 +1,54 @@
 /* =========================================================
    MUSIC STYLE - DJ RAY
    Luxury Black & Gold
-   EXACT LUXURY FRAME DESIGN
+========================================================= */
+
+
+/* =========================================================
+   MUSIC SECTION
 ========================================================= */
 
 .music-section {
     width: 100%;
     min-height: auto;
 
-    padding: 0px 20px 0px;
+    padding: 100px 20px 0;
 
     box-sizing: border-box;
 
     position: relative;
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(212, 175, 55, 0.035),
-            transparent 42%
-        ),
-        linear-gradient(
-            180deg,
-            #050505 0%,
-            #030303 65%,
-            #000000 100%
-        );
+    background: transparent;
+
+    text-align: center;
 }
 
 
 /* =========================================================
-   LUXURY SIDE FRAME
+   MUSIC SECTION - SOFT GOLD GLOW
 ========================================================= */
-
-.music-section::before {
-    content: "";
-
-    position: absolute;
-
-    top: -120px;
-    left: 45px;
-
-    width: 1px;
-    height: calc(100% + 240px);
-
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        #d4af37 10%,
-        rgba(212, 175, 55, 0.65) 35%,
-        rgba(212, 175, 55, 0.18) 70%,
-        transparent 100%
-    );
-
-    transform: rotate(13deg);
-
-    transform-origin: center;
-
-    box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.18);
-
-    pointer-events: none;
-
-    z-index: 0;
-}
-
 
 .music-section::after {
     content: "";
 
     position: absolute;
 
-    top: -120px;
-    right: 45px;
+    left: 50%;
+    top: 0;
 
-    width: 1px;
-    height: calc(100% + 240px);
+    width: 100%;
+    height: 100%;
 
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        #d4af37 10%,
-        rgba(212, 175, 55, 0.65) 35%,
-        rgba(212, 175, 55, 0.18) 70%,
-        transparent 100%
-    );
+    transform: translateX(-50%);
 
-    transform: rotate(-13deg);
-
-    transform-origin: center;
-
-    box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.18);
+    background:
+        radial-gradient(
+            circle at center 45%,
+            rgba(212, 175, 55, 0.10) 0%,
+            rgba(212, 175, 55, 0.045) 30%,
+            transparent 65%
+        );
 
     pointer-events: none;
 
@@ -101,7 +57,7 @@
 
 
 /* =========================================================
-   KEEP CONTENT ABOVE FRAME
+   KEEP CONTENT ABOVE BACKGROUND
 ========================================================= */
 
 .music-section > * {
@@ -111,7 +67,65 @@
 
 
 /* =========================================================
-   TITLE
+   TOP DIVIDER
+========================================================= */
+
+.music-section .section-top-divider {
+    position: relative;
+
+    width: 100%;
+    height: 1px;
+
+    margin: 0 0 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.12) 10%,
+            rgba(212, 175, 55, 0.40) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.40) 70%,
+            rgba(212, 175, 55, 0.12) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =========================================================
+   TOP DIAMOND
+========================================================= */
+
+.music-section .section-top-divider-diamond {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    background: #d4af37;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.20);
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MUSIC TITLE
 ========================================================= */
 
 .music-title {
@@ -124,7 +138,7 @@
 
 
 /* =========================================================
-   MUSIC STYLE TITLE
+   TITLE
 ========================================================= */
 
 .music-title h2 {
@@ -154,31 +168,31 @@
 ========================================================= */
 
 .music-title h2::after {
-  content: "";
+    content: "";
 
-  display: block;
+    display: block;
 
-  width: 380px;
-  height: 1px;
+    width: 380px;
+    height: 1px;
 
-  margin: 24px auto 0;
+    margin: 24px auto 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(212, 175, 55, 0.25),
-      #d4af37,
-      #f8e38c,
-      #d4af37,
-      rgba(212, 175, 55, 0.25),
-      transparent
-    );
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212, 175, 55, 0.25),
+            #d4af37,
+            #f8e38c,
+            #d4af37,
+            rgba(212, 175, 55, 0.25),
+            transparent
+        );
 
-  box-shadow:
-    0 0 8px rgba(212, 175, 55, 0.18);
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.18);
 
-  position: relative;
+    position: relative;
 }
 
 
@@ -192,11 +206,10 @@
     position: absolute;
 
     left: 50%;
-
     top: 78px;
 
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 
     background: #d4af37;
 
@@ -238,24 +251,30 @@
 
 /* =========================================================
    MUSIC STYLE LIST
+   DESKTOP - 4 ITEMS PER ROW
 ========================================================= */
 
 .music-style-list {
     width: 100%;
+    max-width: 1200px;
 
-    display: flex;
+    display: grid;
 
-    flex-direction: column;
+    grid-template-columns: repeat(4, 240px);
 
-    align-items: center;
+    gap: 80px;
 
-    gap: 10px;
+    justify-content: center;
 
     margin: 0 auto;
 
     box-sizing: border-box;
 
     position: relative;
+
+    overflow: visible;
+
+    padding-bottom: 12px;
 }
 
 
@@ -264,15 +283,19 @@
 ========================================================= */
 
 .music-style-item {
-    width: 575px;
+    width: 270px;
+    height: 105px;
 
-    height: 56px;
+    aspect-ratio: auto;
+
+    min-width: 0;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
+
+    padding: 8px;
 
     box-sizing: border-box;
 
@@ -285,21 +308,25 @@
 
     border: 1px solid rgba(212, 175, 55, 0.72);
 
-    border-radius: 8px;
+    border-radius: 6px;
 
     color: #d4af37;
 
     font-family: var(--font-cormorant);
 
-    font-size: 21px;
+    font-size: 14px;
 
     font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
     text-transform: uppercase;
 
     text-align: center;
+
+    line-height: 1.2;
+
+    overflow: hidden;
 
     transition:
         border-color 0.35s ease,
@@ -311,7 +338,7 @@
 
 
 /* =========================================================
-   HOVER
+   MUSIC STYLE HOVER
 ========================================================= */
 
 .music-style-item:hover {
@@ -329,22 +356,26 @@
     box-shadow:
         0 0 16px rgba(212, 175, 55, 0.12);
 
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   BOTTOM GOLD SEPARATOR
+   BOTTOM GOLD LINE
 ========================================================= */
 
 .music-style-list::after {
     content: "";
 
+    position: absolute;
+
+    left: 50%;
+    bottom: -60px;
+
+    transform: translateX(-50%);
+
     width: 100vw;
-
     height: 1px;
-
-    margin-top: 20px;
 
     background:
         linear-gradient(
@@ -361,12 +392,14 @@
     box-shadow:
         0 0 8px rgba(212, 175, 55, 0.15);
 
-    position: relative;
+    pointer-events: none;
+
+    z-index: 20;
 }
 
 
 /* =========================================================
-   DIAMOND ON BOTTOM SEPARATOR
+   BOTTOM DIAMOND
 ========================================================= */
 
 .music-style-list::before {
@@ -375,10 +408,10 @@
     position: absolute;
 
     left: 50%;
-    bottom: 0px;
+    bottom: -65px;
 
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 
     background: #d4af37;
 
@@ -387,12 +420,29 @@
         rotate(45deg);
 
     box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.5);
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 14px rgba(212, 175, 55, 0.20);
 
-    z-index: 5;
+    z-index: 30;
 
     pointer-events: none;
-    bottom: -3px;
+}
+
+
+/* =========================================================
+   SPACE AFTER MUSIC SECTION
+   DESKTOP
+========================================================= */
+
+@media (min-width: 769px) {
+
+    .music-section {
+        padding-bottom: 12px;
+    }
+
+    .music-style-list {
+        margin-bottom: 55px;
+    }
 }
 
 
@@ -404,22 +454,6 @@
 
     .music-section {
         padding: 85px 20px 65px;
-    }
-
-
-    /* SIDE FRAME */
-
-    .music-section::before {
-        left: 12px;
-
-        transform: rotate(8deg);
-    }
-
-
-    .music-section::after {
-        right: 12px;
-
-        transform: rotate(-8deg);
     }
 
 
@@ -460,28 +494,45 @@
     }
 
 
-    /* LIST */
+    /* GRID */
 
     .music-style-list {
+        width: 100%;
+
+        max-width: 350px;
+
+        grid-template-columns: repeat(3, 105px);
+
         gap: 10px;
     }
 
 
-    /* ITEMS */
+    /* SQUARES */
 
     .music-style-item {
-        width: min(575px, 82vw);
+        width: 105px;
+        height: 105px;
 
-        height: 54px;
+        aspect-ratio: auto;
 
-        font-size: 20px;
+        font-size: 13px;
 
-        letter-spacing: 1.8px;
+        letter-spacing: 0.8px;
     }
 
 
+    /* BOTTOM LINE */
+
     .music-style-list::after {
-        margin-top: 18px;
+        bottom: -60px;
+    }
+
+
+    /* BOTTOM DIAMOND */
+
+    .music-style-list::before {
+        left: 50%;
+        bottom: -65px;
     }
 }
 
@@ -494,22 +545,6 @@
 
     .music-section {
         padding: 70px 15px 60px;
-    }
-
-
-    /* SIDE FRAME */
-
-    .music-section::before {
-        left: 3px;
-
-        transform: rotate(6deg);
-    }
-
-
-    .music-section::after {
-        right: 3px;
-
-        transform: rotate(-6deg);
     }
 
 
@@ -555,34 +590,39 @@
     }
 
 
-    /* LIST */
+    /* GRID */
 
     .music-style-list {
-        gap: 9px;
+        width: 100%;
+
+        max-width: 225px;
+
+        grid-template-columns: repeat(2, 105px);
+
+        gap: 10px;
     }
 
 
-    /* ITEMS */
+    /* SQUARES */
 
     .music-style-item {
-        width: calc(100vw - 70px);
+        width: 105px;
+        height: 105px;
 
-        max-width: 575px;
+        aspect-ratio: auto;
 
-        height: 50px;
+        border-radius: 6px;
 
-        border-radius: 8px;
+        font-size: 13px;
 
-        font-size: 18px;
-
-        letter-spacing: 1.5px;
+        letter-spacing: 0.7px;
     }
 
 
-    /* BOTTOM LINE */
+    /* BOTTOM DIAMOND */
 
-    .music-style-list::after {
-        margin-top: 17px;
+    .music-style-list::before {
+        left: 50%;
     }
 }
 
@@ -623,94 +663,286 @@
 
 
     .music-style-list {
+        max-width: 220px;
+
+        grid-template-columns: repeat(2, 100px);
+
         gap: 8px;
     }
 
 
     .music-style-item {
-        width: calc(100vw - 50px);
+        width: 100px;
+        height: 100px;
 
-        height: 48px;
+        font-size: 12px;
 
-        font-size: 16px;
-
-        letter-spacing: 1.2px;
+        letter-spacing: 0.5px;
     }
+}
+
+/* =========================================================
+   MUSIC REVEAL ANIMATION
+   Luxury Entrance
+========================================================= */
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
+
+.music-title h2 {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.music-title p {
+    opacity: 0;
+
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 0.25s;
 }
 
 
 /* =========================================================
-   REMOVE SIDE GOLD LINES - MUSIC SECTION
+   GOLD TITLE LINE
 ========================================================= */
 
-.music-section::before,
-.music-section::after {
-    display: none !important;
-    content: none !important;
-}
+.music-title h2::after {
+    clip-path: inset(0 50% 0 50%);
 
-.music-section {
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: none;
-}
-
-/* =====================================================
-   MUSIC TOP DIVIDER
-   LINE + CENTER DIAMOND
-===================================================== */
-
-.music-section .section-top-divider {
-  position: relative;
-
-  width: 100%;
-  height: 1px;
-
-  margin: 0 0 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(212, 175, 55, 0.12) 10%,
-      rgba(212, 175, 55, 0.40) 30%,
-      #d4af37 50%,
-      rgba(212, 175, 55, 0.40) 70%,
-      rgba(212, 175, 55, 0.12) 90%,
-      transparent 100%
-    );
-
-  box-shadow:
-    0 0 10px rgba(212, 175, 55, 0.18);
-
-  z-index: 20;
+    transition:
+        clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.8s ease;
 }
 
 
-/* =====================================================
-   MUSIC TOP DIAMOND
-===================================================== */
+/* =========================================================
+   TITLE DIAMOND
+========================================================= */
 
-.music-section .section-top-divider-diamond {
-  position: absolute;
+.music-title h2::before {
+    opacity: 0;
 
-  left: 50%;
-  top: 50%;
+    transform:
+        translateX(-50%)
+        rotate(45deg)
+        scale(0.3);
 
-  width: 10px;
-  height: 10px;
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 
-  background: #d4af37;
+    transition-delay: 0.75s;
+}
 
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg);
 
-  box-shadow:
-    0 0 8px rgba(212, 175, 55, 0.55),
-    0 0 18px rgba(212, 175, 55, 0.20);
+/* =========================================================
+   MUSIC CARDS
+========================================================= */
 
-  z-index: 30;
+.music-style-item {
+    opacity: 0;
 
-  pointer-events: none;
+    transform:
+        translateY(35px)
+        scale(0.96);
+
+    transition:
+        opacity 0.65s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        color 0.35s ease;
+}
+
+
+/* =========================================================
+   ACTIVE / VISIBLE STATE
+========================================================= */
+
+.music-section.music-visible .music-title h2 {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.music-section.music-visible .music-title h2::after {
+    clip-path: inset(0 0 0 0);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.18),
+        0 0 18px rgba(212, 175, 55, 0.08);
+}
+
+
+.music-section.music-visible .music-title h2::before {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg)
+        scale(1);
+}
+
+
+.music-section.music-visible .music-title p {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.music-section.music-visible .music-style-item {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   CARD HOVER
+   LUXURY GOLD EFFECT
+========================================================= */
+
+.music-section.music-visible .music-style-item {
+    position: relative;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.music-section.music-visible .music-style-item:hover {
+
+    transform:
+        translateY(-7px)
+        scale(1.025);
+
+    border-color: #f8e38c;
+
+    color: #fff4b0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 22, 22, 1),
+            rgba(5, 5, 5, 1)
+        );
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.45),
+        0 0 20px rgba(212, 175, 55, 0.30),
+        0 0 40px rgba(212, 175, 55, 0.12);
+
+}
+
+
+/* =========================================================
+   GOLD LIGHT SWEEP
+========================================================= */
+
+.music-section.music-visible .music-style-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(248, 227, 140, 0.18),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    pointer-events: none;
+
+    transition:
+        left 0.7s ease;
+
+}
+
+
+.music-section.music-visible .music-style-item:hover::before {
+
+    left: 140%;
+
+}
+
+
+/* =========================================================
+   TEXT GLOW
+========================================================= */
+
+.music-section.music-visible .music-style-item:hover {
+
+    text-shadow:
+        0 0 8px rgba(248, 227, 140, 0.45),
+        0 0 18px rgba(212, 175, 55, 0.25);
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .music-title h2,
+    .music-title p,
+    .music-title h2::after,
+    .music-title h2::before,
+    .music-style-item {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .music-title h2,
+    .music-title p,
+    .music-style-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    .music-title h2::after {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .music-title h2::before {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg)
+            scale(1);
+    }
 }

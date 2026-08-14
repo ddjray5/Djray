@@ -1,5 +1,7 @@
-import "../styles/whychoose.css";
+"use client";
 
+import { useEffect, useRef, useState } from "react";
+import "../styles/whychoose.css";
 
 const features = [
   {
@@ -44,33 +46,87 @@ const features = [
   },
 ];
 
-
 export default function WhyChoose() {
+
+  const whyRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    if (whyRef.current) {
+      observer.observe(whyRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+
+  }, []);
+
   return (
-    <section className="why">
+    <section
+      ref={whyRef}
+      className="why"
+    >
 
-
-      <div className="why-title">
+      <div
+        className={`why-title ${
+          isVisible ? "is-visible" : ""
+        }`}
+      >
         <h2>WHY CHOOSE DJ RAY</h2>
-
 
         <div className="why-title-divider">
           <span className="why-title-divider-diamond"></span>
         </div>
 
-
-        <p>More Than Music... An Unforgettable Experience.</p>
+        <p>
+          More Than Music... An Unforgettable Experience.
+        </p>
       </div>
 
 
       <div className="why-grid">
+
         {features.map((item, index) => (
-          <div className="why-card" key={index}>
-            <div className="why-icon">{item.icon}</div>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
+
+          <div
+            className={`why-card ${
+              isVisible ? "is-visible" : ""
+            }`}
+            key={index}
+          >
+
+            <div className="why-icon">
+              {item.icon}
+            </div>
+
+            <h3>
+              {item.title}
+            </h3>
+
+            <p>
+              {item.text}
+            </p>
+
           </div>
+
         ))}
+
       </div>
 
 
@@ -79,7 +135,6 @@ export default function WhyChoose() {
       <div className="why-section-divider why-section-divider-bottom">
         <span className="why-section-divider-diamond"></span>
       </div>
-
 
     </section>
   );
