@@ -286,9 +286,9 @@
     }
 
     .why-title-divider-diamond {
-        width: 8px;
+        width: 7px;
 
-        height: 8px;
+        height: 7px;
     }
 
     .why-title p {
@@ -367,9 +367,9 @@
     }
 
     .why-section-divider-diamond {
-        width: 8px;
+        width: 7px;
 
-        height: 8px;
+        height: 7px;
     }
 }
 .why-section-divider {
@@ -458,4 +458,33 @@
 
 .why-card:nth-child(8).is-visible {
     transition-delay: 0.75s;
+}
+
+/* =====================================================
+   WHY CHOOSE - MOBILE
+   REDUCE TOP SPACE ONLY
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .why {
+        padding-top: 35px;
+    }
+
+}
+
+/* =========================================
+   WHY BOTTOM DIAMOND - MOBILE ONLY
+========================================= */
+
+@media (max-width: 650px) {
+
+    .why-section-divider-diamond {
+        left: 47%;
+        top: 50%;
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+    }
+
 }

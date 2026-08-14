@@ -97,7 +97,7 @@
   position: absolute;
 
   left: 50%;
-  bottom: -5px;
+  bottom: -4px;
 
   width: 10px;
   height: 10px;
@@ -808,5 +808,312 @@
       brightness(0.9)
       saturate(1.08);
   }
+
+}
+
+/* =========================================
+   GALLERY DIAMOND - MOBILE ONLY
+========================================= */
+
+@media (max-width: 650px) {
+
+    .gallery-title h2::before {
+        bottom: -2px;
+        left: 50%;
+    }
+
+}
+
+/* =========================================
+   GALLERY BOTTOM DIVIDER - MOBILE ONLY
+========================================= */
+
+@media (max-width: 650px) {
+
+    .gallery-section {
+        overflow: visible !important;
+    }
+
+    .gallery-section-divider-bottom {
+        position: relative;
+
+        width: 260px;
+        height: 1px;
+
+        margin: 60px auto 0;
+
+        transform: none;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.18) 10%,
+                rgba(212, 175, 55, 0.55) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.55) 70%,
+                rgba(212, 175, 55, 0.18) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 10px rgba(212, 175, 55, 0.18);
+    }
+
+    .gallery-section-divider-diamond {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.55),
+            0 0 18px rgba(212, 175, 55, 0.18);
+
+        z-index: 10;
+    }
+
+}
+
+/* =====================================================
+   GALLERY - BOTTOM GOLD DIVIDER + DIAMOND
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    .gallery-section::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 20px;
+
+        width: 100vw;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.18) 10%,
+                rgba(212, 175, 55, 0.45) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.45) 70%,
+                rgba(212, 175, 55, 0.18) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.18);
+
+        pointer-events: none;
+
+        z-index: 20;
+    }
+
+    .gallery-section::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 15px;
+
+        width: 8px;
+        height: 8px;
+
+        background: #d4af37;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 7px rgba(212, 175, 55, 0.55),
+            0 0 14px rgba(212, 175, 55, 0.20);
+
+        pointer-events: none;
+
+        z-index: 30;
+    }
+}
+/* =====================================================
+   GALLERY BOTTOM GOLD DIVIDER
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .gallery {
+        position: relative;
+        overflow: visible;
+        padding-bottom: 75px;
+    }
+
+
+    /* =========================================
+       GOLD LINE
+    ========================================= */
+
+    .gallery::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 25px;
+
+        width: 100vw;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.18) 10%,
+                rgba(212, 175, 55, 0.45) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.45) 70%,
+                rgba(212, 175, 55, 0.18) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.18);
+
+        pointer-events: none;
+
+        z-index: 20;
+    }
+
+
+    /* =========================================
+       CENTER DIAMOND
+    ========================================= */
+
+    .gallery::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 20px;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.55),
+            0 0 18px rgba(212, 175, 55, 0.20);
+
+        pointer-events: none;
+
+        z-index: 30;
+    }
+
+}
+/* =====================================================
+   GALLERY BOTTOM GOLD LINE + DIAMOND
+   FINAL VERSION
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .gallery {
+        position: relative !important;
+        overflow: visible !important;
+
+        padding-bottom: 75px !important;
+    }
+
+    /* GOLD LINE */
+
+    .gallery::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 50px;
+
+        width: 100vw;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.18) 10%,
+                rgba(212, 175, 55, 0.55) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.55) 70%,
+                rgba(212, 175, 55, 0.18) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 10px rgba(212, 175, 55, 0.18);
+
+        pointer-events: none;
+
+        z-index: 999;
+    }
+
+
+    /* CENTER DIAMOND */
+
+    .gallery::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 47px;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.55),
+            0 0 18px rgba(212, 175, 55, 0.20);
+
+        pointer-events: none;
+
+        z-index: 1000;
+    }
 
 }

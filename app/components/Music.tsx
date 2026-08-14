@@ -30,21 +30,27 @@ export default function Music() {
 
     if (!section) return;
 
+    // تشغيل التأثير بمجرد ظهور القسم في الشاشة
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      (entries) => {
+        const entry = entries[0];
+
         if (entry.isIntersecting) {
-          section.classList.add("music-visible");
-          observer.unobserve(section);
-        }
+    section.classList.add("music-visible");
+    observer.disconnect();
+}
       },
       {
-        threshold: 0.2,
+        threshold: 0.05,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
     observer.observe(section);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -53,7 +59,7 @@ export default function Music() {
       className="music-section"
     >
 
-      {/* ===== MUSIC CONTENT ===== */}
+      {/* MUSIC TITLE */}
 
       <div className="music-title">
 
@@ -68,7 +74,7 @@ export default function Music() {
 
       </div>
 
-      {/* ===== MUSIC STYLES ===== */}
+      {/* MUSIC STYLES */}
 
       <div className="music-style-list">
 

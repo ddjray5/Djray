@@ -947,3 +947,280 @@ BOTTOM DIAMOND
         transition: none !important;
     }
 }
+
+/* =========================================================
+   ABOUT BOTTOM DIVIDER
+   FULL POSITION CONTROL
+   UP / DOWN / LEFT / RIGHT
+========================================================= */
+
+.about-section-divider-bottom {
+    position: relative;
+
+    width: 1700px;
+    height: 1px;
+
+    margin: 100px auto 0;
+
+    /*
+       ================================
+       CONTROL THE GOLD LINE
+       ================================
+
+       X:
+       positive = right
+       negative = left
+
+       Y:
+       positive = down
+       negative = up
+    */
+
+    transform:
+        translate(
+            -110px,
+            0px
+        );
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.55) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.55) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.18);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ABOUT BOTTOM DIAMOND
+   FULL POSITION CONTROL
+========================================================= */
+
+.about-section-divider-bottom
+.about-section-divider-diamond {
+
+    position: absolute;
+
+    /*
+       ================================
+       DIAMOND POSITION
+       ================================
+
+       left:
+       50% = center
+
+       Change this:
+       50% → 48% = left
+       50% → 52% = right
+    */
+
+    left: 50%;
+
+    /*
+       top:
+       50% = center of line
+
+       40% = UP
+       60% = DOWN
+    */
+
+    top: 50%;
+
+
+    /*
+       ================================
+       DIAMOND SIZE
+       ================================
+    */
+
+    width: 10px;
+    height: 10px;
+
+    background: #d4af37;
+
+
+    /*
+       ================================
+       DIAMOND TRANSFORM
+       ================================
+    */
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+
+    /*
+       ================================
+       GOLD GLOW
+       ================================
+    */
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   KEEP DESKTOP UNCHANGED
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-section-divider-bottom {
+
+        width: 100vw;
+
+        /*
+           MOBILE LINE POSITION
+
+           X:
+           0px = center
+           -20px = left
+           20px = right
+
+           Y:
+           -20px = up
+           20px = down
+        */
+
+        transform:
+            translate(
+                0px,
+                0px
+            );
+    }
+
+
+    .about-section-divider-bottom
+    .about-section-divider-diamond {
+
+        /*
+           MOBILE DIAMOND
+
+           50% = center
+           48% = left
+           52% = right
+        */
+
+        left: 50%;
+
+
+        /*
+           50% = on the line
+
+           40% = up
+           60% = down
+        */
+
+        top: 50%;
+
+
+        width: 8px;
+        height: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .about-section-divider-bottom {
+
+        width: 100vw;
+
+        transform:
+            translate(
+                -13px,
+                0px
+            );
+    }
+
+
+    .about-section-divider-bottom
+    .about-section-divider-diamond {
+
+        left: 50%;
+
+        top: 50%;
+
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* =========================================================
+   ABOUT - MOBILE
+   FIX BOTTOM DIAMOND
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding-bottom: 15px !important;
+        overflow: visible !important;
+    }
+
+    .about-section-divider-bottom {
+        margin-top: 35px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .about-section-divider-bottom
+    .about-section-divider-diamond {
+        width: 8px;
+        height: 8px;
+
+        top: 50%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .contact-section-divider-bottom
+    .contact-section-divider-diamond {
+
+        width: 8px !important;
+        height: 8px !important;
+
+        min-width: 8px !important;
+        min-height: 8px !important;
+
+        max-width: 8px !important;
+        max-height: 8px !important;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg)
+            scale(1) !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-subtitle::before {
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+}

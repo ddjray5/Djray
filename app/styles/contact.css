@@ -1,12 +1,11 @@
-
 /* =====================================================
-CONTACT - DJ RAY
-Luxury Black & Gold
+   CONTACT - DJ RAY
+   Luxury Black & Gold
 ===================================================== */
 
 .contact {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
 
     background:
         radial-gradient(
@@ -20,14 +19,14 @@ Luxury Black & Gold
     color: #ffffff;
     box-sizing: border-box;
 
-    padding: 0 20px 100px;
+    padding: 0 20px 0;
 
     scroll-margin-top: 130px;
 }
 
 
 /* =====================================================
-CONTACT CONTENT
+   CONTACT CONTENT
 ===================================================== */
 
 .contact-content {
@@ -43,11 +42,16 @@ CONTACT CONTENT
     text-align: center;
 
     box-sizing: border-box;
+
+    height: auto;
+    min-height: auto;
+
+    padding-bottom: 0;
 }
 
 
 /* =====================================================
-TITLE
+   TITLE
 ===================================================== */
 
 .contact-title {
@@ -63,11 +67,120 @@ TITLE
     letter-spacing: 6px;
 
     text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
 /* =====================================================
-SUBTITLE
+   TOP / BOTTOM DIVIDER
+===================================================== */
+
+.contact-section-divider {
+    position: relative;
+
+    width: 400px;
+    height: 1px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(212, 175, 55, 0.18) 10%,
+            rgba(212, 175, 55, 0.55) 30%,
+            #d4af37 50%,
+            rgba(212, 175, 55, 0.55) 70%,
+            rgba(212, 175, 55, 0.18) 90%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+   DIAMOND - GENERAL / TOP
+===================================================== */
+
+.contact-section-divider-diamond {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    background: #d4af37;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   TOP DIVIDER
+===================================================== */
+
+.contact-section-divider-top {
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    opacity: 0;
+
+    transform: scaleX(0.3);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 0.25s;
+}
+
+
+/* =====================================================
+   TOP DIAMOND ANIMATION
+===================================================== */
+
+.contact-section-divider-top
+.contact-section-divider-diamond {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg)
+        scale(0.3);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 0.6s;
+}
+
+
+/* =====================================================
+   SUBTITLE
 ===================================================== */
 
 .contact-subtitle {
@@ -86,11 +199,21 @@ SUBTITLE
     letter-spacing: 1px;
 
     text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 0.35s;
 }
 
 
 /* =====================================================
-CONTACT BUTTONS
+   CONTACT BUTTONS
 ===================================================== */
 
 .contact-buttons {
@@ -108,7 +231,7 @@ CONTACT BUTTONS
 
 
 /* =====================================================
-GOLD BORDER BUTTONS
+   BUTTONS
 ===================================================== */
 
 .btn-gold,
@@ -159,16 +282,16 @@ GOLD BORDER BUTTONS
     isolation: isolate;
 
     transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease,
-        color 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 
 /* =====================================================
-SOFT LIGHT SWEEP
+   BUTTON LIGHT SWEEP
 ===================================================== */
 
 .btn-gold::before,
@@ -210,723 +333,10 @@ SOFT LIGHT SWEEP
 
 
 /* =====================================================
-ICONS
-===================================================== */
-
-.btn-gold svg,
-.btn-outline svg {
-    position: relative;
-
-    width: 28px;
-    height: 28px;
-
-    font-size: 28px;
-
-    color: #b08d2c;
-
-    flex-shrink: 0;
-
-    transition:
-        color 0.3s ease,
-        filter 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-/* =====================================================
-LUXURY HOVER
-===================================================== */
-
-.btn-gold:hover,
-.btn-outline:hover {
-
-    background: #050505;
-
-    color: #d4af37;
-
-    border-color: #d4af37;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 7px rgba(212, 175, 55, 0.12),
-        0 0 18px rgba(212, 175, 55, 0.08);
-}
-
-
-/* SOFT SWEEP */
-
-.btn-gold:hover::before,
-.btn-outline:hover::before {
-    left: 150%;
-
-    opacity: 1;
-}
-
-
-/* ICON */
-
-.btn-gold:hover svg,
-.btn-outline:hover svg {
-
-    color: #d4af37;
-
-    transform: scale(1.04);
-
-    filter:
-        drop-shadow(0 0 4px rgba(212, 175, 55, 0.16));
-}
-
-
-/* =====================================================
-ACTIVE / PRESS
-===================================================== */
-
-.btn-gold:active,
-.btn-outline:active {
-
-    background: #d4af37;
-
-    color: #050505;
-
-    border-color: #d4af37;
-
-    transform: translateY(0);
-
-    box-shadow:
-        0 0 12px rgba(212, 175, 55, 0.18);
-}
-
-
-.btn-gold:active svg,
-.btn-outline:active svg {
-
-    color: #050505;
-
-    transform: scale(0.97);
-
-    filter: none;
-}
-
-
-/* =====================================================
-MOBILE
-===================================================== */
-
-@media (max-width: 768px) {
-
-    .contact {
-        padding: 70px 18px 80px;
-    }
-
-    .contact-title {
-        font-size: 42px;
-
-        letter-spacing: 4px;
-    }
-
-    .contact-title::after {
-        width: 110px;
-
-        margin-top: 20px;
-    }
-
-    .contact-subtitle {
-        margin: 25px auto 50px;
-
-        font-size: 25px;
-
-        line-height: 1.55;
-    }
-
-    .contact-buttons {
-        gap: 20px;
-    }
-
-    .btn-gold,
-    .btn-outline {
-        width: 85%;
-
-        max-width: 500px;
-
-        height: 78px;
-        min-height: 78px;
-
-        padding: 10px 20px;
-
-        gap: 15px;
-
-        border-radius: 42px;
-
-        font-size: 20px;
-    }
-
-    .btn-gold svg,
-    .btn-outline svg {
-        width: 26px;
-        height: 26px;
-
-        font-size: 26px;
-    }
-
-    .btn-gold::before,
-    .btn-outline::before {
-        display: none;
-    }
-
-    .btn-gold:active,
-    .btn-outline:active {
-        background: #d4af37;
-
-        color: #050505;
-
-        border-color: #d4af37;
-
-        transform: scale(0.985);
-
-        box-shadow:
-            0 0 14px rgba(212, 175, 55, 0.18);
-    }
-}
-
-
-/* =====================================================
-SMALL MOBILE
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .contact {
-        padding: 55px 14px 70px;
-    }
-
-    .contact-title {
-        font-size: 34px;
-
-        letter-spacing: 3px;
-    }
-
-    .contact-subtitle {
-        margin: 22px auto 45px;
-
-        font-size: 22px;
-    }
-
-    .contact-buttons {
-        gap: 18px;
-    }
-
-    .btn-gold,
-    .btn-outline {
-        width: 88%;
-
-        height: 72px;
-        min-height: 72px;
-
-        padding: 9px 18px;
-
-        border-radius: 40px;
-
-        font-size: 18px;
-    }
-
-    .btn-gold svg,
-    .btn-outline svg {
-        width: 24px;
-        height: 24px;
-
-        font-size: 24px;
-    }
-}
-
-
-/* =====================================================
-VERY SMALL MOBILE
-===================================================== */
-
-@media (max-width: 360px) {
-
-    .contact {
-        padding: 50px 12px 60px;
-    }
-
-    .contact-title {
-        font-size: 30px;
-
-        letter-spacing: 2px;
-    }
-
-    .contact-subtitle {
-        font-size: 20px;
-
-        margin-bottom: 40px;
-    }
-
-    .btn-gold,
-    .btn-outline {
-        width: 88%;
-
-        height: 68px;
-        min-height: 68px;
-
-        border-radius: 38px;
-
-        font-size: 17px;
-    }
-
-    .btn-gold svg,
-    .btn-outline svg {
-        width: 23px;
-        height: 23px;
-
-        font-size: 23px;
-    }
-}
-
-
-/* =====================================================
-CONTACT - REDUCE EMPTY SPACE
-===================================================== */
-
-.contact {
-    height: auto !important;
-    min-height: auto !important;
-
-    padding-top: 0 !important;
-    padding-bottom: 60px !important;
-}
-
-
-.contact-content {
-    height: auto !important;
-    min-height: auto !important;
-
-    padding-bottom: 40px !important;
-}
-
-
-/* =====================================================
-MOBILE COMPACT
-===================================================== */
-
-@media (max-width: 768px) {
-
-    .contact {
-        min-height: auto !important;
-        height: auto !important;
-
-        padding-top: 0 !important;
-        padding-bottom: 40px !important;
-    }
-
-    .contact-content {
-        min-height: auto !important;
-
-        padding-bottom: 20px !important;
-    }
-}
-
-
-/* =====================================================
-CONTACT TOP & BOTTOM DIVIDERS
-===================================================== */
-
-.contact-section-divider {
-    position: relative;
-
-    width: 400px;
-    height: 1px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(212, 175, 55, 0.18) 10%,
-            rgba(212, 175, 55, 0.55) 30%,
-            #d4af37 50%,
-            rgba(212, 175, 55, 0.55) 70%,
-            rgba(212, 175, 55, 0.18) 90%,
-            transparent 100%
-        );
-
-    box-shadow:
-        0 0 10px rgba(212, 175, 55, 0.18);
-}
-
-
-/* =====================================================
-CENTER DIAMOND
-===================================================== */
-
-.contact-section-divider-diamond {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 10px;
-    height: 10px;
-
-    background: #d4af37;
-
-    transform:
-        translate(-50%, -50%)
-        rotate(45deg);
-
-    box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.55),
-        0 0 18px rgba(212, 175, 55, 0.18);
-
-    z-index: 5;
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-TOP DIVIDER
-===================================================== */
-
-.contact-section-divider-top {
-    margin-top: 0;
-    margin-bottom: 35px;
-}
-
-
-/* =====================================================
-BOTTOM DIVIDER
-===================================================== */
-
-.contact-section-divider-bottom {
-    margin-top: 80px;
-}
-
-
-/* =====================================================
-MOBILE
-===================================================== */
-
-@media (max-width: 650px) {
-
-    .contact-section-divider {
-        width: 260px;
-    }
-
-    .contact-section-divider-diamond {
-        width: 8px;
-        height: 8px;
-    }
-
-    .contact-section-divider-top {
-        margin-bottom: 30px;
-    }
-
-    .contact-section-divider-bottom {
-        margin-top: 60px;
-    }
-
-}
-
-
-/* =====================================================
-CONTACT BOTTOM DIVIDER - FINAL SIZE
-===================================================== */
-
-.contact-section-divider-bottom {
-    width: 440px !important;
-    height: 1px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    transform: none !important;
-}
-
-
-/* =====================================================
-REMOVE SPACE AFTER CONTACT
-===================================================== */
-
-.contact {
-    padding-bottom: 0 !important;
-}
-
-.contact-content {
-    padding-bottom: 0 !important;
-}
-
-.contact-section-divider-bottom {
-    margin-bottom: 0 !important;
-}
-
-
-/* =====================================================
-CONTACT BOTTOM DIAMOND - FINAL POSITION
-===================================================== */
-
-.contact-section-divider-bottom {
-    position: relative !important;
-    height: 1px !important;
-    z-index: 100 !important;
-}
-
-
-.contact-section-divider-bottom .contact-section-divider-diamond {
-    position: absolute !important;
-
-    left: 50% !important;
-    top: -6px !important;
-
-    width: 10px !important;
-    height: 10px !important;
-
-    background: #d4af37 !important;
-
-    transform: translateX(-50%) rotate(45deg) !important;
-
-    box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.55),
-        0 0 18px rgba(212, 175, 55, 0.18) !important;
-
-    z-index: 9999 !important;
-}
-
-
-/* =====================================================
-CONTACT - LUXURY SCROLL REVEAL
-ADD ONLY — DO NOT CHANGE EXISTING DESIGN
-===================================================== */
-
-.contact-title {
-  opacity: 0;
-
-  transform: translateY(25px);
-
-  transition:
-    opacity 0.9s ease,
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-
-.contact-section-divider-top {
-  opacity: 0;
-
-  transform: scaleX(0.3);
-
-  transition:
-    opacity 0.8s ease,
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-
-  transition-delay: 0.25s;
-}
-
-
-.contact-section-divider-top
-.contact-section-divider-diamond {
-  opacity: 0;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg)
-    scale(0.3);
-
-  transition:
-    opacity 0.5s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-  transition-delay: 0.6s;
-}
-
-
-.contact-subtitle {
-  opacity: 0;
-
-  transform: translateY(20px);
-
-  transition:
-    opacity 0.8s ease,
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-
-  transition-delay: 0.35s;
-}
-
-
-/* =====================================================
-BUTTON REVEAL
-===================================================== */
-
-.contact-buttons .btn-gold {
-  opacity: 0;
-
-  transform:
-    translateY(30px)
-    scale(0.97);
-
-  transition:
-    opacity 0.7s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-
-.contact-buttons .btn-gold:nth-child(1) {
-  transition-delay: 0.45s;
-}
-
-.contact-buttons .btn-gold:nth-child(2) {
-  transition-delay: 0.60s;
-}
-
-.contact-buttons .btn-gold:nth-child(3) {
-  transition-delay: 0.75s;
-}
-
-
-/* =====================================================
-BOTTOM DIVIDER
-===================================================== */
-
-.contact-section-divider-bottom {
-  opacity: 0;
-
-  transform: scaleX(0.3);
-
-  transition:
-    opacity 0.8s ease,
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-
-  transition-delay: 0.85s;
-}
-
-
-/* =====================================================
-BOTTOM DIAMOND
-===================================================== */
-
-.contact-section-divider-bottom
-.contact-section-divider-diamond {
-  opacity: 0;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg)
-    scale(0.3);
-
-  transition:
-    opacity 0.5s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-  transition-delay: 1.15s;
-}
-
-
-/* =====================================================
-VISIBLE STATE
-===================================================== */
-
-.contact.contact-visible .contact-title {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-
-.contact.contact-visible .contact-section-divider-top {
-  opacity: 1;
-
-  transform: scaleX(1);
-}
-
-
-.contact.contact-visible
-.contact-section-divider-top
-.contact-section-divider-diamond {
-  opacity: 1;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg)
-    scale(1);
-}
-
-
-.contact.contact-visible .contact-subtitle {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-
-.contact.contact-visible
-.contact-buttons
-.btn-gold {
-  opacity: 1;
-
-  transform:
-    translateY(0)
-    scale(1);
-}
-
-
-.contact.contact-visible .contact-section-divider-bottom {
-  opacity: 1;
-
-  transform: scaleX(1);
-}
-
-
-.contact.contact-visible
-.contact-section-divider-bottom
-.contact-section-divider-diamond {
-  opacity: 1;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg)
-    scale(1);
-}
-
-
-/* =====================================================
-REDUCED MOTION
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .contact-title,
-  .contact-section-divider,
-  .contact-section-divider-diamond,
-  .contact-subtitle,
-  .contact-buttons .btn-gold {
-    opacity: 1;
-
-    transform: none;
-
-    transition: none !important;
-  }
-
-}
-
-
-/* =====================================================
-CONTACT BUTTONS - FINAL LUXURY SWEEP
-ONLY BUTTON EFFECT
+   BUTTON FINAL SWEEP
 ===================================================== */
 
 @media (min-width: 769px) {
-
-    .btn-gold,
-    .btn-outline {
-        overflow: hidden;
-        isolation: isolate;
-
-        transition:
-            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-            background 0.35s ease,
-            border-color 0.35s ease,
-            color 0.35s ease,
-            box-shadow 0.35s ease;
-    }
 
     .btn-gold::after,
     .btn-outline::after {
@@ -964,22 +374,63 @@ ONLY BUTTON EFFECT
             left 0.9s cubic-bezier(0.22, 1, 0.36, 1),
             opacity 0.25s ease;
     }
+}
 
-    .btn-gold:hover,
-    .btn-outline:hover {
 
-        background: #050505;
+/* =====================================================
+   BUTTON ICONS
+===================================================== */
 
-        color: #d4af37;
+.btn-gold svg,
+.btn-outline svg {
+    position: relative;
 
-        border-color: #d4af37;
+    width: 28px;
+    height: 28px;
 
-        transform: translateY(-3px);
+    font-size: 28px;
 
-        box-shadow:
-            0 0 7px rgba(212, 175, 55, 0.12),
-            0 0 18px rgba(212, 175, 55, 0.08);
-    }
+    color: #b08d2c;
+
+    flex-shrink: 0;
+
+    transition:
+        color 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   BUTTON HOVER
+===================================================== */
+
+.btn-gold:hover,
+.btn-outline:hover {
+
+    background: #050505;
+
+    color: #d4af37;
+
+    border-color: #d4af37;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 7px rgba(212, 175, 55, 0.12),
+        0 0 18px rgba(212, 175, 55, 0.08);
+}
+
+
+.btn-gold:hover::before,
+.btn-outline:hover::before {
+    left: 150%;
+
+    opacity: 1;
+}
+
+
+@media (min-width: 769px) {
 
     .btn-gold:hover::after,
     .btn-outline:hover::after {
@@ -987,50 +438,326 @@ ONLY BUTTON EFFECT
 
         opacity: 1;
     }
-
-    .btn-gold:hover svg,
-    .btn-outline:hover svg {
-
-        color: #d4af37;
-
-        transform: scale(1.04);
-
-        filter:
-            drop-shadow(0 0 4px rgba(212, 175, 55, 0.16));
-    }
-
-    .btn-gold:active,
-    .btn-outline:active {
-
-        background: #d4af37;
-
-        color: #050505;
-
-        border-color: #d4af37;
-
-        transform: translateY(0);
-
-        box-shadow:
-            0 0 12px rgba(212, 175, 55, 0.18);
-    }
-
-    .btn-gold:active svg,
-    .btn-outline:active svg {
-
-        color: #050505;
-
-        transform: scale(0.97);
-
-        filter: none;
-    }
 }
 
 
 /* =====================================================
-MOBILE - SOFT PRESS
+   BUTTON ICON HOVER
+===================================================== */
+
+.btn-gold:hover svg,
+.btn-outline:hover svg {
+
+    color: #d4af37;
+
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(0 0 4px rgba(212, 175, 55, 0.16));
+}
+
+
+/* =====================================================
+   BUTTON ACTIVE
+===================================================== */
+
+.btn-gold:active,
+.btn-outline:active {
+
+    background: #d4af37;
+
+    color: #050505;
+
+    border-color: #d4af37;
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.18);
+}
+
+
+.btn-gold:active svg,
+.btn-outline:active svg {
+
+    color: #050505;
+
+    transform: scale(0.97);
+
+    filter: none;
+}
+
+
+/* =====================================================
+   BUTTON REVEAL
+===================================================== */
+
+.contact-buttons .btn-gold {
+    opacity: 0;
+
+    transform:
+        translateY(30px)
+        scale(0.97);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.contact-buttons .btn-gold:nth-child(1) {
+    transition-delay: 0.45s;
+}
+
+
+.contact-buttons .btn-gold:nth-child(2) {
+    transition-delay: 0.60s;
+}
+
+
+.contact-buttons .btn-gold:nth-child(3) {
+    transition-delay: 0.75s;
+}
+
+
+/* =====================================================
+   BOTTOM DIVIDER
+===================================================== */
+
+.contact-section-divider-bottom {
+
+    /*
+     ====================================================
+     التحكم بالماسة السفلية من هنا فقط
+     ====================================================
+
+     --diamond-x:
+       50%  = منتصف الخط
+       40%  = إلى اليسار
+       30%  = أكثر إلى اليسار
+       60%  = إلى اليمين
+
+     --diamond-y:
+       -6px = الوضع الحالي على سطح الخط تقريباً
+
+     --diamond-size:
+       10px = الحجم الحالي
+       8px  = أصغر
+       6px  = أصغر أكثر
+       12px = أكبر
+    */
+
+    --diamond-x: 50%;
+    --diamond-y: -6px;
+    --diamond-size: 8px;
+
+    position: relative;
+
+    width: 440px;
+    height: 1px;
+
+    margin-top: 80px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 0;
+
+    z-index: 100;
+
+    opacity: 0;
+
+    transform: scaleX(0.3);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 0.85s;
+}
+
+
+/* =====================================================
+   BOTTOM DIAMOND
+   SINGLE CONTROL RULE
+===================================================== */
+
+.contact-section-divider-bottom
+.contact-section-divider-diamond {
+
+    position: absolute !important;
+
+    left: var(--diamond-x) !important;
+    top: var(--diamond-y) !important;
+
+    width: 8px !important;
+height: 8px !important;
+
+    background: #d4af37 !important;
+
+    margin: 0 !important;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg)
+        scale(0.3);
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.55),
+        0 0 18px rgba(212, 175, 55, 0.18);
+
+    z-index: 99999 !important;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: 1.15s;
+}
+
+
+/* =====================================================
+   VISIBLE STATE
+===================================================== */
+
+.contact.contact-visible .contact-title {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.contact.contact-visible .contact-section-divider-top {
+    opacity: 1;
+
+    transform: scaleX(1);
+}
+
+
+.contact.contact-visible
+.contact-section-divider-top
+.contact-section-divider-diamond {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg)
+        scale(1);
+}
+
+
+.contact.contact-visible .contact-subtitle {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.contact.contact-visible
+.contact-buttons
+.btn-gold {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.contact.contact-visible .contact-section-divider-bottom {
+
+    opacity: 1;
+
+    transform: scaleX(1);
+}
+
+
+.contact.contact-visible
+.contact-section-divider-bottom
+.contact-section-divider-diamond {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg)
+        scale(1);
+}
+
+
+/* =====================================================
+   MOBILE
 ===================================================== */
 
 @media (max-width: 768px) {
+
+    .contact {
+        padding: 0 18px 0;
+    }
+
+    .contact-title {
+        font-size: 42px;
+
+        letter-spacing: 4px;
+    }
+
+    .contact-title::after {
+        width: 110px;
+
+        margin-top: 20px;
+    }
+
+    .contact-subtitle {
+        margin: 25px auto 50px;
+
+        font-size: 25px;
+
+        line-height: 1.55;
+    }
+
+    .contact-buttons {
+        gap: 20px;
+    }
+
+    .btn-gold,
+    .btn-outline {
+
+        width: 85%;
+
+        max-width: 500px;
+
+        height: 78px;
+        min-height: 78px;
+
+        padding: 10px 20px;
+
+        gap: 15px;
+
+        border-radius: 42px;
+
+        font-size: 20px;
+    }
+
+    .btn-gold svg,
+    .btn-outline svg {
+
+        width: 26px;
+        height: 26px;
+
+        font-size: 26px;
+    }
+
+    .btn-gold::before,
+    .btn-outline::before {
+
+        display: none;
+    }
 
     .btn-gold:active,
     .btn-outline:active {
@@ -1049,9 +776,190 @@ MOBILE - SOFT PRESS
 
     .btn-gold:active svg,
     .btn-outline:active svg {
+
         color: #050505;
 
         filter: none;
     }
+
+    .contact-section-divider-bottom {
+        margin-top: 60px;
+    }
 }
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .contact {
+        padding: 0 14px 0;
+    }
+
+    .contact-title {
+        font-size: 34px;
+
+        letter-spacing: 3px;
+    }
+
+    .contact-subtitle {
+        margin: 22px auto 45px;
+
+        font-size: 22px;
+    }
+
+    .contact-buttons {
+        gap: 18px;
+    }
+
+    .btn-gold,
+    .btn-outline {
+
+        width: 88%;
+
+        height: 72px;
+
+        min-height: 72px;
+
+        padding: 9px 18px;
+
+        border-radius: 40px;
+
+        font-size: 18px;
+    }
+
+    .btn-gold svg,
+    .btn-outline svg {
+
+        width: 24px;
+        height: 24px;
+
+        font-size: 24px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .contact {
+        padding: 0 12px 0;
+    }
+
+    .contact-title {
+        font-size: 30px;
+
+        letter-spacing: 2px;
+    }
+
+    .contact-subtitle {
+        font-size: 20px;
+
+        margin-bottom: 40px;
+    }
+
+    .btn-gold,
+    .btn-outline {
+
+        width: 88%;
+
+        height: 68px;
+
+        min-height: 68px;
+
+        border-radius: 38px;
+
+        font-size: 17px;
+    }
+
+    .btn-gold svg,
+    .btn-outline svg {
+
+        width: 23px;
+        height: 23px;
+
+        font-size: 23px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE BOTTOM DIAMOND
+   SAME SINGLE CONTROL SYSTEM
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contact-section-divider {
+        width: 260px;
+    }
+
+    .contact-section-divider-diamond {
+        width: 8px;
+        height: 8px;
+    }
+
+    .contact-section-divider-top {
+        margin-bottom: 30px;
+    }
+
+    /*
+       فقط نغيّر القيم المتجاوبة هنا.
+       التحكم الأساسي بالماسة ما زال في
+       --diamond-x / --diamond-y / --diamond-size
+       داخل .contact-section-divider-bottom
+    */
+
+    .contact-section-divider-bottom {
+
+        --diamond-x: 0%;
+        --diamond-y: -4px;
+        --diamond-size: 8px;
+    }
+}
+.contact-section-divider-bottom
+.contact-section-divider-diamond {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-title,
+    .contact-section-divider,
+    .contact-section-divider-diamond,
+    .contact-subtitle,
+    .contact-buttons .btn-gold {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none !important;
+    }
+
+    .contact-section-divider-bottom
+    .contact-section-divider-diamond {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg)
+            scale(1);
+
+        transition: none !important;
+    }
+}
+
 

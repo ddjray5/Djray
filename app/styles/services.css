@@ -1001,3 +1001,86 @@ DESKTOP ONLY
         transform: none;
     }
 }
+
+/* =========================================================
+   MOBILE - SERVICES BOTTOM GOLD DIVIDER
+   DO NOT CHANGE DESKTOP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .services {
+        padding-bottom: 75px !important;
+        overflow: visible !important;
+    }
+
+    .services-grid {
+        position: relative;
+        padding-bottom: 35px;
+        overflow: visible !important;
+    }
+
+    /* GOLD LINE */
+
+    .services-grid::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: -10px;
+
+        transform: translateX(-50%);
+
+        width: 100vw;
+        height: 1px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.12) 10%,
+                rgba(212, 175, 55, 0.40) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.40) 70%,
+                rgba(212, 175, 55, 0.12) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 10px rgba(212, 175, 55, 0.18);
+
+        pointer-events: none;
+
+        z-index: 9998;
+    }
+
+    /* DIAMOND */
+
+    .services-grid::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: -13px;
+
+        width: 7px;
+        height: 7px;
+
+        background: #d4af37;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 7px rgba(212, 175, 55, 0.55),
+            0 0 14px rgba(212, 175, 55, 0.20);
+
+        z-index: 9999;
+
+        pointer-events: none;
+    }
+
+}
