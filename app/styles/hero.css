@@ -1900,7 +1900,7 @@
     position: absolute !important;
 
     left: 50% !important;
-    top: calc(50% + 3px) !important;
+    top: calc(50% + 0) !important;
 
     width: 8px !important;
     height: 8px !important;
