@@ -1871,18 +1871,28 @@
   }
 
 }
+
 @media (max-width: 768px) {
 
   .hero-section-divider-bottom {
     position: relative !important;
 
-    left: 50% !important;
+    width: 400px !important;
+    max-width: 100% !important;
+
+    height: 1px !important;
+
+    left: auto !important;
     right: auto !important;
 
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 20px auto 0 !important;
 
-    transform: translate(-50%, 48px) !important;
+    /* تحريك الفاصل للأسفل فقط */
+    transform: translateY(48px) !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box;
   }
 
   .hero-section-divider-bottom
@@ -1890,16 +1900,18 @@
     position: absolute !important;
 
     left: 50% !important;
-    right: auto !important;
-
     top: calc(50% + 3px) !important;
 
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    width: 8px !important;
+    height: 8px !important;
+
+    margin: 0 !important;
 
     transform:
       translate(-50%, -50%)
       rotate(45deg) !important;
+
+    z-index: 10000 !important;
   }
 
 }
