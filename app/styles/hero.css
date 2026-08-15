@@ -983,6 +983,25 @@
   }
 
 
+  .hero-services span:nth-child(4) {
+  animation:
+    mobileServiceReveal
+    0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    2.70s
+    forwards;
+}
+
+.hero-services span:nth-child(5) {
+  animation:
+    mobileServiceReveal
+    0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    2.85s
+    forwards;
+}
+
+
   /* BUTTONS */
 
   .hero-buttons {
