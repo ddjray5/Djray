@@ -1010,9 +1010,9 @@ DESKTOP ONLY
 @media (max-width: 768px) {
 
     .services {
-    padding-bottom: 0 !important;
-    overflow: visible !important;
-}
+        padding-bottom: 35px !important;
+        overflow: visible !important;
+    }
 
     .services-grid {
         position: relative;
