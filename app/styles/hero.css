@@ -1785,3 +1785,27 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+  .hero-section-divider-bottom {
+    transform: translate(-50%, 0) !important;
+    overflow: visible !important;
+  }
+
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 8px !important;
+    height: 8px !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+
+    z-index: 10000 !important;
+  }
+
+}
