@@ -1789,7 +1789,14 @@
 @media (max-width: 768px) {
 
   .hero-section-divider-bottom {
-    transform: translate(-50%, 0) !important;
+    width: 400px !important;
+    height: 1px !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    transform: translate(-50%, 48px) !important;
+
     overflow: visible !important;
   }
 
