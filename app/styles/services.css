@@ -1089,12 +1089,11 @@ DESKTOP ONLY
 }
 
 .services-grid {
+    position: relative;
+    padding-bottom: 43px !important;
     overflow: visible !important;
-    padding-bottom: 50px !important;
 }
 
 .services {
     overflow: visible !important;
-    position: relative;
-    z-index: 10;
 }
