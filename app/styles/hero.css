@@ -1756,3 +1756,32 @@
   }
 
 }
+
+@media (max-width: 480px) {
+
+    .gold-line {
+        position: relative;
+        height: 1px;
+        margin: 18px auto 0;
+        overflow: visible !important;
+    }
+
+    .gold-line-diamond {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        width: 9px;
+        height: 9px;
+
+        opacity: 1 !important;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg)
+            scale(1) !important;
+
+        z-index: 100 !important;
+    }
+
+}
