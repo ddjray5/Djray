@@ -1665,3 +1665,75 @@
   }
 
 }
+
+/* =====================================================
+   MOBILE ONLY
+   HERO BOTTOM DIVIDER — ALIGNMENT ONLY
+   DO NOT CHANGE SIZE OR POSITION
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .hero-section-divider-bottom {
+    /* نحافظ على نفس الخط الحالي */
+    width: 400px !important;
+    height: 1px !important;
+
+    /* توسيط الخط فقط */
+    left: 50% !important;
+    right: auto !important;
+
+    transform:
+      translate(-50%, 48px) !important;
+  }
+
+  /* Diamond */
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 8px !important;
+    height: 8px !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   KEEP SAME DESIGN
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .hero-section-divider-bottom {
+    width: 400px !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    transform:
+      translate(-50%, 48px) !important;
+  }
+
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 8px !important;
+    height: 8px !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+  }
+
+}
