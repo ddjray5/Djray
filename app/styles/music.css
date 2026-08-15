@@ -884,3 +884,103 @@
       #050505 !important;
   }
 }
+/* =========================================================
+   MUSIC BOTTOM DIAMOND — FINAL SIZE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .music-style-list::before {
+        width: 6px !important;
+        height: 6px !important;
+
+        min-width: 6px !important;
+        min-height: 6px !important;
+
+        max-width: 6px !important;
+        max-height: 6px !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+/* =========================================================
+   MUSIC BOTTOM LINE + DIAMOND
+   RESTORE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .music-section {
+        overflow: visible !important;
+        padding-bottom: 75px !important;
+    }
+
+    .music-style-list {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    /* LINE */
+
+    .music-style-list::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: -20px;
+
+        width: 100vw;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(212, 175, 55, 0.18) 10%,
+                rgba(212, 175, 55, 0.45) 30%,
+                #d4af37 50%,
+                rgba(212, 175, 55, 0.45) 70%,
+                rgba(212, 175, 55, 0.18) 90%,
+                transparent 100%
+            );
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.15);
+
+        z-index: 100;
+    }
+
+    /* DIAMOND */
+
+    .music-style-list::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: -23px;
+
+        width: 10px;
+        height: 10px;
+
+        background: #d4af37;
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        box-shadow:
+            0 0 8px rgba(212, 175, 55, 0.55),
+            0 0 14px rgba(212, 175, 55, 0.20);
+
+        z-index: 101;
+
+        pointer-events: none;
+    }
+
+}
