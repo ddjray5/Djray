@@ -1834,3 +1834,40 @@
   }
 
 }
+@media (max-width: 768px) {
+
+  /* جعل نهاية الـHero تتداخل قليلًا مع بداية Music */
+  .hero {
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-section-divider-bottom {
+    position: relative;
+    z-index: 100;
+    transform: translate(-50%, 48px) !important;
+  }
+
+  /* إنزال الماسة قليلًا */
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+    left: 50% !important;
+    top: calc(50% + 3px) !important;
+
+    width: 8px !important;
+    height: 8px !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+
+    z-index: 10000 !important;
+  }
+
+  /* إبقاء Music خلف نهاية الـHero */
+  .music-section {
+    position: relative;
+    z-index: 1;
+  }
+
+}
