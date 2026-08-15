@@ -690,7 +690,7 @@
     .music-style-list::after {
         bottom: -20px !important;
     }
-
+} 
 
     
 
@@ -864,25 +864,23 @@
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    .music-section {
-        background:
-            radial-gradient(
-                circle at 20% 20%,
-                rgba(212, 175, 55, 0.10),
-                transparent 35%
-            ),
-            radial-gradient(
-                circle at 80% 30%,
-                rgba(212, 175, 55, 0.08),
-                transparent 40%
-            ),
-            radial-gradient(
-                circle at 50% 80%,
-                rgba(212, 175, 55, 0.06),
-                transparent 35%
-            ),
-            #050505 !important;
-    }
-
+  .music-section {
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(212, 175, 55, 0.10),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at 80% 30%,
+        rgba(212, 175, 55, 0.08),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        rgba(212, 175, 55, 0.06),
+        transparent 35%
+      ),
+      #050505 !important;
+  }
 }
