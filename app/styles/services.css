@@ -1072,6 +1072,7 @@ DESKTOP ONLY
 
     transform:
         translate(-50%, 50%)
+        translateY(0)
         rotate(45deg);
 
     box-shadow:
@@ -1085,12 +1086,10 @@ DESKTOP ONLY
 }
 
 .services-grid::before {
-    outline: 1px solid red;
-}
 
 .services-grid {
     position: relative;
-    padding-bottom: 43px !important;
+    padding-bottom: 50px !important;
     overflow: visible !important;
 }
 
