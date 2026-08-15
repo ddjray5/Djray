@@ -17,8 +17,7 @@
     box-sizing: border-box;
 
     position: relative;
-    overflow: hidden;
-
+    overflow: visible;
     background: transparent;
 
     text-align: center;
