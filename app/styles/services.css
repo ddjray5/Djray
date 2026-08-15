@@ -1063,7 +1063,7 @@ DESKTOP ONLY
         position: absolute;
 
         left: 50%;
-        bottom: 0;
+        bottom: -3px;
 
         width: 7px;
         height: 7px;
