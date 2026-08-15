@@ -1224,3 +1224,9 @@ BOTTOM DIAMOND
     }
 
 }
+
+@media (max-width: 768px) {
+    .about-section {
+        overflow: visible !important;
+    }
+}
