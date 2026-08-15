@@ -1908,8 +1908,8 @@
     margin: 0 !important;
 
     transform:
-      translate(-50%, -50%)
-      rotate(45deg) !important;
+    translate(-50%, calc(-50% -5px))
+    rotate(45deg) !important;
 
     z-index: 10000 !important;
   }
