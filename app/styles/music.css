@@ -711,9 +711,15 @@
 @media (max-width: 480px) {
 
     .music-section {
-        padding: 35px 15px 60px;
-        padding-bottom: 27px !important;
+        padding: 35px 15px 0 !important;
+        margin-bottom: 0 !important;
     }
+
+    .music-style-list {
+        margin-bottom: 0 !important;
+    }
+
+}
 
 
     .music-title {
