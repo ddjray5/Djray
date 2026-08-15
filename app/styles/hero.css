@@ -1871,3 +1871,35 @@
   }
 
 }
+@media (max-width: 768px) {
+
+  .hero-section-divider-bottom {
+    position: relative !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    transform: translate(-50%, 48px) !important;
+  }
+
+  .hero-section-divider-bottom
+  .hero-section-divider-diamond {
+    position: absolute !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    top: calc(50% + 3px) !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+  }
+
+}
