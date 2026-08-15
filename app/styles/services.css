@@ -1058,30 +1058,27 @@ DESKTOP ONLY
     /* DIAMOND */
 
     .services-grid::before {
-        content: "";
+    content: "";
 
-        position: absolute;
+    position: absolute;
 
-        left: 50%;
-        bottom: 0;
+    left: 50%;
+    bottom: 0;
 
-        width: 7px;
-        height: 7px;
+    width: 8px;
+    height: 8px;
 
-        background: #d4af37;
+    background: #d4af37;
 
-        transform:
-    translateX(-50%)
-    translateY(1px)
-    rotate(45deg);
+    transform:
+        translate(-50%, 50%)
+        rotate(45deg);
 
-        box-shadow:
-            0 0 7px rgba(212, 175, 55, 0.55),
-            0 0 14px rgba(212, 175, 55, 0.20);
+    box-shadow:
+        0 0 7px rgba(212, 175, 55, 0.55),
+        0 0 14px rgba(212, 175, 55, 0.20);
 
-        z-index: 9999;
+    z-index: 99999;
 
-        pointer-events: none;
-    }
-
+    pointer-events: none;
 }
