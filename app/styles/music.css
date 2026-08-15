@@ -692,15 +692,7 @@
     }
 
 
-    /* BOTTOM DIAMOND */
-
-    .music-style-list::before {
-        width: 10px;
-        height: 10px;
-
-        bottom: -23px !important;
-    }
-}
+    
 
 
 /* =========================================================
@@ -895,17 +887,3 @@
 
 }
 
-@media (max-width: 768px) {
-
-  .music-style-list::before {
-    width: 10px !important;
-    height: 10px !important;
-
-    bottom: -23px !important;
-
-    transform:
-      translateX(-50%)
-      rotate(45deg) !important;
-  }
-
-}
