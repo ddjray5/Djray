@@ -1063,7 +1063,7 @@ DESKTOP ONLY
         position: absolute;
 
         left: 50%;
-        bottom: -2xp;
+        bottom: 0;
 
         width: 7px;
         height: 7px;
@@ -1072,6 +1072,7 @@ DESKTOP ONLY
 
         transform:
     translateX(-50%)
+    translateY(1px)
     rotate(45deg);
 
         box-shadow:
