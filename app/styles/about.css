@@ -1224,31 +1224,3 @@ BOTTOM DIAMOND
     }
 
 }
-
-/* =========================================================
-   ABOUT BOTTOM DIVIDER
-   MOBILE CENTER ONLY
-   SIZE UNCHANGED
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .about-section-divider-bottom {
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        transform: translateY(0px) !important;
-    }
-
-}
-
-@media (max-width: 420px) {
-
-    .about-section-divider-bottom {
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        transform: translateY(0px) !important;
-    }
-
-}
