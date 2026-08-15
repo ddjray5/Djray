@@ -1012,6 +1012,8 @@ DESKTOP ONLY
     .services {
         padding-bottom: 0 !important;
         overflow: visible !important;
+        position: relative;
+        z-index: 20;
     }
 
     .services-grid {
@@ -1079,7 +1081,7 @@ DESKTOP ONLY
         0 0 7px rgba(212, 175, 55, 0.55),
         0 0 14px rgba(212, 175, 55, 0.20);
 
-    z-index: 99999;
+    z-index: 999999;
 
     pointer-events: none;
 }
