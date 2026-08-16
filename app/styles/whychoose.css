@@ -594,7 +594,7 @@
     .why-section-divider-diamond {
         position: absolute;
 
-        left: 47% !important;
+        left: 50% !important;
         top: 50%;
 
         width: 7px;
@@ -614,4 +614,32 @@
 
         z-index: 999;
     }
+}
+
+/* =====================================================
+   FIX - TESTIMONIALS BOTTOM LINE & DIAMOND
+   CENTERED
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .testimonials-section-divider {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    transform: none !important;
+  }
+
+  .testimonials-section-divider-diamond {
+    left: 50% !important;
+    top: 50% !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+  }
+
 }
