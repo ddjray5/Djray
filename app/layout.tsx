@@ -64,6 +64,22 @@ export const metadata: Metadata = {
   },
 };
 
+const djRayPersonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://djray.vercel.app/#dj-ray",
+  "name": "DJ RAY",
+  "jobTitle": "DJ",
+  "description": "Professional DJ in Abu Dhabi specializing in parties, weddings, private events, corporate events, yacht parties, beach clubs and luxury celebrations.",
+  "url": "https://djray.vercel.app/",
+  "image": "https://djray.vercel.app/gallery1.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Abu Dhabi",
+    "addressCountry": "AE"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -75,6 +91,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+      <script
+        id="dj-ray-person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(djRayPersonSchema) }}
+      />
         {children}
       </body>
     </html>
