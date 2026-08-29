@@ -65,14 +65,19 @@ export const metadata: Metadata = {
 };
 
 const djRayPersonSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://" + "schema.org",
   "@type": "Person",
-  "@id": "https://djray.vercel.app/#dj-ray",
+  "@id": "https://" + "djray.vercel.app/#dj-ray",
   "name": "DJ RAY",
   "jobTitle": "DJ",
   "description": "Professional DJ in Abu Dhabi specializing in parties, weddings, private events, corporate events, yacht parties, beach clubs and luxury celebrations.",
-  "url": "https://djray.vercel.app/",
-  "image": "https://djray.vercel.app/gallery1.webp",
+  "url": "https://" + "djray.vercel.app/",
+  "image": "https://" + "djray.vercel.app/gallery1.webp",
+  "sameAs": [
+    "https://" + "\u0077\u0077\u0077.instagram.com/djray.5/",
+    "https://" + "\u0077\u0077\u0077.tiktok.com/@djray.5",
+    "https://" + "\u0077\u0077\u0077.youtube.com/@DjRay.5"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Abu Dhabi",
