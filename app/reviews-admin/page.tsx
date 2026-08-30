@@ -73,7 +73,7 @@ export default function ReviewsAdmin() {
     });
 
     if (error) {
-      setErrorMessage("Invalid email or password.");
+      console.error("SUPABASE LOGIN ERROR:", error); setErrorMessage(error.message);
       setLoginLoading(false);
       return;
     }
