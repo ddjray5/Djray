@@ -69,7 +69,6 @@ const djRayBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://" + "djray.vercel.app/#dj-ray",
   "name": "DJ RAY",
-  "jobTitle": "DJ",
   "description": "Professional DJ in Abu Dhabi specializing in weddings, private parties, corporate events, yacht parties, beach clubs, clubs and luxury celebrations.",
   "url": "https://" + "djray.vercel.app/",
   "image": "https://" + "djray.vercel.app/djray-new.webp",
