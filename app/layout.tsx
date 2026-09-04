@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
 };
 
-const djRayPersonSchema = {
+const djRayBusinessSchema = {
   "@context": "https://" + "schema.org",
-  "@type": "Person",
+  "@type": "LocalBusiness",
   "@id": "https://" + "djray.vercel.app/#dj-ray",
   "name": "DJ RAY",
   "jobTitle": "DJ",
@@ -108,9 +108,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
       <script
-        id="dj-ray-person-schema"
+        id="dj-ray-business-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(djRayPersonSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(djRayBusinessSchema) }}
       />
         {children}
       </body>
