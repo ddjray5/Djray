@@ -70,9 +70,20 @@ const djRayPersonSchema = {
   "@id": "https://" + "djray.vercel.app/#dj-ray",
   "name": "DJ RAY",
   "jobTitle": "DJ",
-  "description": "Professional DJ in Abu Dhabi specializing in parties, weddings, private events, corporate events, yacht parties, beach clubs and luxury celebrations.",
+  "description": "Professional DJ in Abu Dhabi specializing in weddings, private parties, corporate events, yacht parties, beach clubs, clubs and luxury celebrations.",
   "url": "https://" + "djray.vercel.app/",
-  "image": "https://" + "djray.vercel.app/gallery1.webp",
+  "image": "https://" + "djray.vercel.app/djray-new.webp",
+  "telephone": "+971554057288",
+  "knowsAbout": [
+    "DJ",
+    "Wedding DJ",
+    "Private Party DJ",
+    "Corporate Event DJ",
+    "Yacht Party DJ",
+    "Club DJ",
+    "Luxury Event DJ",
+    "Open Format DJ"
+  ],
   "sameAs": [
     "https://" + "\u0077\u0077\u0077.instagram.com/djray.5/",
     "https://" + "\u0077\u0077\u0077.tiktok.com/@djray.5",
