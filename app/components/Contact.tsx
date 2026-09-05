@@ -106,7 +106,7 @@ export default function Contact() {
           {/* EMAIL */}
 
           <a
-            href="mailto:YOUR@email.com"
+            href="mailto:ddjray5@gmail.com"
             className="btn-gold"
           >
             <FaEnvelope />
