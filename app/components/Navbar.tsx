@@ -153,7 +153,7 @@ export default function Navbar() {
 
           {/* DJ COURSE */}
           <a
-            href="https://djray-training-14fwsy4xj-dj-ray.vercel.app"
+            href="https://djray-training-1jcotc9mk-dj-ray.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -249,7 +249,7 @@ export default function Navbar() {
 
           {/* DJ COURSE */}
           <a
-            href="https://djray-training-14fwsy4xj-dj-ray.vercel.app"
+            href="https://djray-training-1jcotc9mk-dj-ray.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
