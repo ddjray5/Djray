@@ -115,8 +115,8 @@
 .hero-logo {
   display: block;
 
-  width: 280px !important;
-  max-width: 280px !important;
+  width: 150px !important;
+  max-width: 150px !important;
 
   height: auto !important;
 
@@ -133,8 +133,8 @@
 .hero-small-logo {
   display: block;
 
-  width: 200px;
-  max-width: 200px;
+  width: 120px;
+  max-width: 120px;
 
   height: auto;
 
@@ -514,7 +514,7 @@
 ===================================================== */
 
 .hero-section-divider-bottom {
-  position: relative;
+  position: absolute;
 
   width: 1700px;
 
@@ -522,12 +522,12 @@
 
   height: 2px;
 
-  margin: 20px auto 0;
+  margin: 0;
 
-  left: auto;
+  left: 50%;
   right: auto;
   top: auto;
-  bottom: auto;
+  bottom: 0;
 
   display: block;
 
@@ -550,7 +550,7 @@
 
   overflow: visible;
 
-  transform: translate(-890px, 35px);
+  transform: translateY(40px);
 }
 
 
@@ -599,7 +599,7 @@
   }
 
   .hero-section-divider-bottom {
-    transform: translate(-890px, 35px);
+    transform: translate(calc(-50% - 420px), 60px);
   }
 
 }
@@ -626,8 +626,8 @@
   }
 
   .hero-logo {
-    width: 250px !important;
-    max-width: 250px !important;
+    width: 150px !important;
+    max-width: 150px !important;
   }
 
   .hero-subtitle {
@@ -772,9 +772,9 @@
   /* MAIN LOGO */
 
   .hero-logo {
-    width: 200px !important;
+    width: 150px !important;
 
-    max-width: 200px !important;
+    max-width: 150px !important;
 
     opacity: 0;
 
@@ -1157,9 +1157,9 @@
 
 
   .hero-logo {
-    width: 190px !important;
+    width: 150px !important;
 
-    max-width: 190px !important;
+    max-width: 150px !important;
   }
 
 
@@ -1830,7 +1830,7 @@
   .hero-section-divider-bottom {
     position: relative;
     z-index: 100;
-    transform: translate(-50%, 48px) !important;
+    transform: translate(-50%, 0px) !important;
   }
 
   
@@ -1858,8 +1858,7 @@
 
     margin: 20px auto 0 !important;
 
-    /* تحريك الفاصل للأسفل فقط */
-    transform: translateY(48px) !important;
+    transform: translateY(0) !important;
 
     overflow: visible !important;
 
@@ -1883,7 +1882,7 @@
 
     margin: 20px auto 0 !important;
 
-    transform: translateY(48px) !important;
+    transform: translateY(0px) !important;
 
     overflow: visible !important;
 

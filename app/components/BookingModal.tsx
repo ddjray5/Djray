@@ -20,6 +20,7 @@ export default function BookingModal({
   const [eventType, setEventType] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     if (selectedService) {
@@ -37,30 +38,7 @@ export default function BookingModal({
       return;
     }
 
-    const text = `
-DJ RAY BOOKING REQUEST
-
-Name:
-${name}
-
-Phone Number:
-${phone}
-
-Event Type:
-${eventType}
-
-Event Date:
-${eventDate}
-
-Message:
-${message || "No additional message."}
-`;
-
-    const whatsappUrl = `https://wa.me/971554057288?text=${encodeURIComponent(
-      text
-    )}`;
-
-   window.location.href = whatsappUrl;
+    setSuccess(true);
   };
 
   return createPortal(
@@ -84,138 +62,106 @@ ${message || "No additional message."}
         </button>
 
         {/* TITLE */}
-        <h2>BOOK NOW</h2>
+        <h2 className={success ? "booking-success-title" : ""}>
+          {success ? "BOOKING SENT" : "BOOK NOW"}
+        </h2>
 
-        {/* NAME */}
-        <div className="booking-field">
-          <label htmlFor="booking-name">
-            Name
-          </label>
+        {!success ? (
+          <>
+            {/* NAME */}
+            <div className="booking-field booking-form-content">
+              <label htmlFor="booking-name">Name</label>
+              <input
+                id="booking-name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder=""
+              />
+            </div>
 
-          <input
-            id="booking-name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder=""
-          />
-        </div>
+            {/* PHONE */}
+            <div className="booking-field booking-form-content">
+              <label htmlFor="booking-phone">Phone Number</label>
+              <input
+                id="booking-phone"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder=""
+              />
+            </div>
 
-        {/* PHONE */}
-        <div className="booking-field">
-          <label htmlFor="booking-phone">
-            Phone Number
-          </label>
+            {/* EVENT TYPE */}
+            <div className="booking-field booking-form-content">
+              <label htmlFor="booking-event">Event Type</label>
+              <select
+                id="booking-event"
+                value={eventType}
+                onChange={(e) => setEventType(e.target.value)}
+              >
+                <option value="">Select Event</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Private Event">Private Event</option>
+                <option value="Corporate Event">Corporate Event</option>
+                <option value="Club & Lounge">Club & Lounge</option>
+                <option value="Yacht Party">Yacht Party</option>
+                <option value="VIP Event">VIP Event</option>
+                <option value="Festival">Festival</option>
+                <option value="Birthday Party">Birthday Party</option>
+              </select>
+            </div>
 
-          <input
-            id="booking-phone"
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder=""
-          />
-        </div>
+            {/* EVENT DATE */}
+            <div className="booking-field booking-form-content">
+              <label htmlFor="booking-date">Event Date</label>
+              <input
+                id="booking-date"
+                type="date"
+                value={eventDate}
+                onChange={(e) => setEventDate(e.target.value)}
+              />
+            </div>
 
-        {/* EVENT TYPE */}
-        <div className="booking-field">
-          <label htmlFor="booking-event">
-            Event Type
-          </label>
+            {/* MESSAGE */}
+            <div className="booking-field booking-form-content">
+              <label htmlFor="booking-message">Message</label>
+              <textarea
+                id="booking-message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={4}
+                placeholder=""
+              />
+            </div>
 
-          <select
-            id="booking-event"
-            value={eventType}
-            onChange={(e) => setEventType(e.target.value)}
-          >
-            <option value="">
-              Select Event
-            </option>
+            {/* BUTTONS */}
+            <div className="booking-buttons booking-form-content">
+              <button
+                type="button"
+                className="booking-send"
+                onClick={handleSubmit}
+              >
+                SEND
+              </button>
 
-            <option value="Wedding">
-              Wedding
-            </option>
-
-            <option value="Private Event">
-              Private Event
-            </option>
-
-            <option value="Corporate Event">
-              Corporate Event
-            </option>
-
-            <option value="Club & Lounge">
-              Club & Lounge
-            </option>
-
-            <option value="Yacht Party">
-              Yacht Party
-            </option>
-
-            <option value="VIP Event">
-              VIP Event
-            </option>
-
-            <option value="Festival">
-              Festival
-            </option>
-
-            <option value="Birthday Party">
-              Birthday Party
-            </option>
-          </select>
-        </div>
-
-        {/* EVENT DATE */}
-        <div className="booking-field">
-          <label htmlFor="booking-date">
-            Event Date
-          </label>
-
-          <input
-            id="booking-date"
-            type="date"
-            value={eventDate}
-            onChange={(e) => setEventDate(e.target.value)}
-          />
-        </div>
-
-        {/* MESSAGE */}
-        <div className="booking-field">
-          <label htmlFor="booking-message">
-            Message
-          </label>
-
-          <textarea
-            id="booking-message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows={4}
-            placeholder=""
-          />
-        </div>
-
-        {/* BUTTONS */}
-        <div className="booking-buttons">
-
-          {/* SEND */}
-          <button
-            type="button"
-            className="booking-send"
-            onClick={handleSubmit}
-          >
-            SEND
-          </button>
-
-          {/* CLOSE */}
-          <button
-            type="button"
-            className="booking-close"
-            onClick={onClose}
-          >
-            CLOSE
-          </button>
-
-        </div>
+              <button
+                type="button"
+                className="booking-close"
+                onClick={onClose}
+              >
+                CLOSE
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="booking-success">
+            <div className="success-icon" aria-hidden="true">
+              <span>✓</span>
+            </div>
+            <p>Thank you! Your booking request has been sent successfully</p>
+          </div>
+        )}
 
       </div>
     </div>,

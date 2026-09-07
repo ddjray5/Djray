@@ -89,7 +89,7 @@ export default function Hero() {
           ===================================================== */}
 
           <p className="hero-subtitle">
-            LUXURY OPEN FORMAT DJ
+            LUXURY OPEN FORMAT DJ IN ABU DHABI
           </p>
 
           {/* =====================================================

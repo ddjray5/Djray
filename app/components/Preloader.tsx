@@ -21,8 +21,15 @@ export default function Preloader() {
       <div className="preloader-logo">
 
         <img
+          src="/logo2.png"
+          alt="DJ RAY"
+          className="preloader-small-logo"
+        />
+
+        <img
           src="/logo.png"
           alt="DJ RAY"
+          className="preloader-main-logo"
         />
 
         <p className="preloader-text">

@@ -18,7 +18,7 @@ const services = [
     title: "WEDDINGS",
     bookingType: "Wedding",
     description:
-      "Elegant music experiences for luxury weddings from the ceremony to the final dance.",
+      "Professional Wedding DJ in Abu Dhabi for luxury weddings, from the ceremony and reception to the final dance.",
     features: ["Ceremony Music", "Reception", "First Dance"],
   },
   {
@@ -26,7 +26,7 @@ const services = [
     title: "YACHT PARTIES",
     bookingType: "Yacht Party",
     description:
-      "Premium Open Format DJ entertainment for luxury yachts and sunset cruises.",
+      "Professional Yacht DJ in Abu Dhabi for luxury yacht parties, sunset cruises and exclusive events.",
     features: ["Sunset Sessions", "VIP Experience", "Luxury Vibes"],
   },
   {
@@ -34,7 +34,7 @@ const services = [
     title: "CORPORATE EVENTS",
     bookingType: "Corporate Event",
     description:
-      "Professional DJ entertainment for corporate events, gala dinners, exhibitions and special occasions.",
+      "Professional Corporate DJ in Abu Dhabi for corporate events, gala dinners, exhibitions and special occasions.",
     features: ["Professional Setup", "Elegant Music", "Event Coordination"],
   },
   {
@@ -62,7 +62,7 @@ const services = [
     features: ["High Energy", "Live Performance", "Crowd Experience"],
   },
   {
-    image: "/Birthday.webp",
+    image: "/birthday.webp",
     title: "BIRTHDAY PARTIES",
     bookingType: "Birthday Party",
     description:

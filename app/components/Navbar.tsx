@@ -151,6 +151,15 @@ export default function Navbar() {
             Contact
           </a>
 
+          {/* DJ COURSE */}
+          <a
+            href="https://djray-training-14fwsy4xj-dj-ray.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DJ Course
+          </a>
+
         </nav>
 
         {/* ==============================
@@ -236,6 +245,15 @@ export default function Navbar() {
             }
           >
             Contact
+          </a>
+
+          {/* DJ COURSE */}
+          <a
+            href="https://djray-training-14fwsy4xj-dj-ray.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DJ Course
           </a>
 
         </nav>

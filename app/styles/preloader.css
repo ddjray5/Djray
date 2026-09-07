@@ -164,3 +164,14 @@
         logoGlow 2s ease infinite;
 
 }
+
+/* Match the DJ Training welcome-screen logo sizes */
+.preloader-small-logo{
+  height: 6rem !important;
+  width: auto !important;
+}
+
+.preloader-main-logo{
+  height: 7rem !important;
+  width: auto !important;
+}
