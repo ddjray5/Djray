@@ -1,0 +1,395 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart } from "react-icons/fa";
+import "./market.css";
+
+const flx4Images = [
+  "/market/ddjflx4/s-l1600.webp",
+  "/market/ddjflx4/s-l1600 (3).webp",
+  "/market/ddjflx4/s-l1600 (4).webp",
+  "/market/ddjflx4/s-l1600 (5).webp",
+  "/market/ddjflx4/s-l1600 (6).webp",
+  "/market/ddjflx4/s-l1600 (12).webp",
+];
+
+const ddjsxImages = [
+  "/market/ddjsx/J00916000001000-00-500x500.webp",
+  "/market/ddjsx/J00916000001000-01-500x500.webp",
+  "/market/ddjsx/J00916000001000-02-500x500.webp",
+  "/market/ddjsx/J00916000001000-03-500x500.webp",
+  "/market/ddjsx/J00916000001000-04-500x500.webp",
+  "/market/ddjsx/J00916000001000-05-500x500.webp",
+];
+
+const ddj800Images = [
+  "/market/ddj800/DDJ-800-3.jpg",
+  "/market/ddj800/DDJ-800-4.jpg",
+  "/market/ddj800/DDJ-800_2.jpg",
+  "/market/ddj800/IMG_4898.JPG",
+  "/market/ddj800/ddj-800-2ch-dj-controller-with-fx-for-rekordbox-dj-software.jpg",
+];
+
+const herculesImages = [
+  "/market/hercules/Inpulse500.jpg",
+  "/market/hercules/15196993_800.jpg",
+  "/market/hercules/filters_quality(90).webp",
+  "/market/hercules/15197028_800.jpg",
+  "/market/hercules/HCL-DJCTRL-INPULSE-500-4.jpg",
+  "/market/hercules/djcontrolinpulse500_main3Square__73179.webp",
+  "/market/hercules/ProductPageContent-DJCI500PurpleEdition-1_2000x2000_f7582d6a-071f-40eb-9a2e-7980f9d5736e.webp",
+  "/market/hercules/filters_quality(90) (1).webp",
+];
+
+const djBagImages = [
+  "/market/djbag/51aRQ7HIjdL.jpg",
+  "/market/djbag/61U70MUsLfL.jpg",
+  "/market/djbag/61oZrjkTLLL.jpg",
+  "/market/djbag/71KVhu51KGL.jpg",
+  "/market/djbag/71LQYW0GTbL.jpg",
+  "/market/djbag/71bAkx8KwsL.jpg",
+]
+
+const ddj400Images = [
+  "/market/ddj400/IMG_4703.jpg",
+  "/market/ddj400/IMG_4704.jpg",
+  "/market/ddj400/IMG_4706.jpg",
+  "/market/ddj400/IMG_4707.jpg",
+  "/market/ddj400/IMG_4708.jpg",
+  "/market/ddj400/pioneer_ddj_400_1_3.jpg",
+  "/market/ddj400/s-l1600.webp",
+];
+
+const products = [
+
+  {
+    id: "ddj-400",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-400",
+    condition: "Used Only 4 Times\\nExcellent Condition",
+    price: "AED 1,000",
+    status: "AVAILABLE",
+    description: "Pioneer DJ DDJ-400 in excellent condition. A compact and professional 2-channel DJ controller, ideal for learning, practice, home setups, and live DJ performance.",
+    image: "/market/ddj400/pioneer_ddj_400_1_3.jpg",
+  },
+
+  {
+    id: "ddj-flx4",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-FLX4",
+    condition: "Used Once\nExcellent Condition",
+    price: "AED 1,100",
+    status: "AVAILABLE",
+    image: "/market/ddjflx4/s-l1600 (3).webp",
+  },
+  {
+    id: "ddj-sx",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-SX",
+    condition: "Excellent Condition",
+    price: "AED 3,800",
+    status: "AVAILABLE",
+    description: "Excellent condition Pioneer DJ DDJ-SX. Fully functional and ready to use. A powerful professional DJ controller, ideal for DJs looking for reliable performance and a solid setup.",
+    image: "/market/ddjsx/J00916000001000-00-500x500.webp",
+  },
+  {
+    id: "ddj-800",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-800",
+    condition: "Used Only 3 Times\nExcellent Condition",
+    price: "AED 3,400",
+    status: "AVAILABLE",
+    image: "/market/ddj800/DDJ-800-4.jpg",
+  },
+  {
+    id: "bowers-wilkins-p3",
+    category: "HEADPHONES",
+    brand: "Bowers & Wilkins",
+    name: "Bowers Wilkins P3 first generation",
+    condition: "USED Very good Japan",
+    price: "AED 800",
+    status: "AVAILABLE",
+    description: "Bowers Wilkins P3 first generation in very good used condition.",
+    image: "/market/bowerswilkins/tw-11134207-7r98o-lqog08lacb8891.jpeg",
+  },
+
+  {
+    id: "dj-bag",
+    category: "DJ BAGS & CASES",
+    brand: "DJ RAY",
+    name: "DJ Bag",
+    condition: "Excellent Condition",
+    price: "AED 200",
+    status: "AVAILABLE",
+    description: "DJ Bag suitable for Pioneer DJ DDJ-400, DDJ-FLX4, Hercules DJControl Inpulse 500, SB3, and SB2.",
+    image: "/market/djbag/51aRQ7HIjdL.jpg",
+  },
+
+  {
+    id: "hercules-inpulse-500",
+    category: "DJ EQUIPMENT",
+    brand: "Hercules",
+    name: "DJControl Inpulse 500",
+    condition: "Like New",
+    price: "AED 1,000",
+    status: "AVAILABLE",
+    image: "/market/hercules/Inpulse500.jpg",
+  },
+];
+
+export default function MarketPage() {
+  const router = useRouter();
+  const [flx4Image, setFlx4Image] = useState(3);
+const [djBagImage, setDjBagImage] = useState(5);
+
+  const [ddjsxImage, setDdjsxImage] = useState(2);
+  const [ddj400Image, setDdj400Image] = useState(5);
+  const [ddj800Image, setDdj800Image] = useState(0);
+  const [herculesImage, setHerculesImage] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("DJ EQUIPMENT");
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState<(typeof products)[number][]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const filteredProducts = products.filter((product) => {
+    const normalize = (value: string) =>
+      value
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+    const query = normalize(searchQuery);
+
+    if (!query) return true;
+
+    return normalize(
+      [
+        product.name,
+        product.brand,
+        product.category,
+        product.condition,
+        product.id,
+      ].join(" ")
+    ).includes(query);
+  });
+  const [cartBounce, setCartBounce] = useState(false);
+  const [flyingCart, setFlyingCart] = useState<{
+    image: string;
+    startX: number;
+    startY: number;
+    endX: number;
+    endY: number;
+  } | null>(null);
+  const cartButtonRef = useRef<HTMLButtonElement>(null);
+
+  const addToCart = (
+    product: (typeof products)[number],
+    buttonElement: HTMLButtonElement
+  ) => {
+    try {
+      const saved = localStorage.getItem("djray-market-cart");
+      const cart = saved ? JSON.parse(saved) : [];
+
+      const updatedCart = Array.isArray(cart)
+        ? [...cart.filter((item) => item?.id !== product.id), product]
+        : [product];
+
+      localStorage.setItem(
+        "djray-market-cart",
+        JSON.stringify(updatedCart)
+      );
+
+      setCartCount(updatedCart.length);
+      setCartBounce(true);
+
+      const buttonRect = buttonElement.getBoundingClientRect();
+      const cartRect = cartButtonRef.current?.getBoundingClientRect();
+
+      if (cartRect) {
+        setFlyingCart({
+          image: product.image,
+          startX: buttonRect.left + buttonRect.width / 2,
+          startY: buttonRect.top + buttonRect.height / 2,
+          endX: cartRect.left + cartRect.width / 2,
+          endY: cartRect.top + cartRect.height / 2,
+        });
+      }
+
+      window.setTimeout(() => setFlyingCart(null), 700);
+      window.setTimeout(() => setCartBounce(false), 700);
+      window.setTimeout(() => openCart(), 700);
+    } catch (error) {
+      console.error("ADD TO CART ERROR:", error);
+    }
+  };
+
+  const openCart = () => {
+    const saved = localStorage.getItem("djray-market-cart");
+    const cart = saved ? JSON.parse(saved) : [];
+
+    setCartItems(Array.isArray(cart) ? cart : []);
+    setCartOpen(true);
+  };
+
+  return (
+    <main className="market-page">
+
+
+
+      <nav className="market-new-navbar" aria-label="Market Categories">
+        <div className="market-new-categories">
+          {[
+            "DJ EQUIPMENT",
+            "HEADPHONES",
+            "MACBOOKS",
+            "DJ BAGS & CASES",
+            "DJ ACCESSORIES",
+            "SPEAKERS & AUDIO",
+            "MICROPHONES",
+          ].map((category) => (
+            <button
+              key={category}
+              type="button"
+              className={`market-new-category ${activeCategory === category ? "active" : ""}`}
+              onClick={() => {
+                setActiveCategory(category);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <div className="market-new-actions">
+          <button
+            type="button"
+            className="market-new-action"
+            aria-label="Search"
+            title="Search"
+            onClick={() => setSearchOpen((open) => !open)}
+          >
+            <span style={{ fontSize: "32px", lineHeight: 1 }}>⌕</span>
+          </button>
+
+          <button
+            type="button"
+            className="market-new-action"
+            aria-label="Favorites"
+            title="Favorites"
+            onClick={() => router.push("/market/favorites")}
+          >
+            <FaHeart aria-hidden="true" />
+          </button>
+
+          <button
+            ref={cartButtonRef}
+            type="button"
+            className={`market-new-action ${cartBounce ? "cart-bounce" : ""}`}
+            aria-label="Shopping Cart"
+            title="Shopping Cart"
+            onClick={(event) => {
+              event.stopPropagation();
+              openCart();
+            }}
+          >
+            🛒
+            {cartCount > 0 && (
+              <span className="market-cart-count">{cartCount}</span>
+            )}
+          </button>
+        </div>
+      </nav>
+
+      {searchOpen && (
+        <div className="market-search-panel">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder="SEARCH PRODUCTS..."
+            autoFocus
+          />
+          <button
+            type="button"
+            onClick={() => {
+              setSearchQuery("");
+              setSearchOpen(false);
+            }}
+          >
+            CLOSE
+          </button>
+        </div>
+      )}
+
+      <section className="market-hero">
+        <div className="market-hero-content">
+          <span className="market-eyebrow">DJ RAY MARKET</span>
+          <h1>{activeCategory}</h1>
+          <p>
+            Carefully selected DJ equipment available from DJ RAY.
+          </p>
+        </div>
+      </section>
+
+      {flyingCart && (
+        <img
+          src={flyingCart.image}
+          alt=""
+          className="market-flying-cart"
+          style={{
+            left: flyingCart.startX,
+            top: flyingCart.startY,
+            ["--cart-end-x" as string]: `${flyingCart.endX}px`,
+            ["--cart-end-y" as string]: `${flyingCart.endY}px`,
+          }}
+          onAnimationEnd={() => setFlyingCart(null)}
+        />
+      )}
+
+      <div className="market-brand">
+        <img
+          src="/logo2.png"
+          alt="DJ RAY"
+          className="market-logo-small"
+        />
+        <img
+          src="/logo.png"
+          alt="DJ RAY MARKET"
+          className="market-logo-large"
+        />
+      </div>
+
+      <section className="market-contact">
+        <div className="market-contact-content">
+          <span>LOOKING FOR SOMETHING?</span>
+          <h2>CONTACT DJ RAY</h2>
+          <p>
+            If you are looking for specific DJ equipment, contact us and
+            we&apos;ll let you know what is currently available.
+          </p>
+
+          <div className="market-contact-links">
+            <a href="https://wa.me/971554057288" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <FaWhatsapp />
+            </a>
+            <a href="tel:+971554057288" aria-label="Phone">
+              <FaPhoneAlt />
+            </a>
+            <a href="mailto:ddjray5@gmail.com" aria-label="Email">
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+

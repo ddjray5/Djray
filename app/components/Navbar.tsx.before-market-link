@@ -1,16 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { FaSearch, FaHeart, FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
 import "../styles/navbar.css";
 
 export default function Navbar() {
   const router = useRouter();
-  const pathname = usePathname();
-  const isMarketPage = pathname === "/market" || pathname.startsWith("/market/");
   const [menuOpen, setMenuOpen] = useState(false);
 
   // ==============================
@@ -154,13 +151,6 @@ export default function Navbar() {
             Contact
           </a>
 
-          {/* MARKET */}
-          <a
-            href="/market"
-          >
-            Market
-          </a>
-
           {/* DJ COURSE */}
           <a
             href="https://djray-training-1jcotc9mk-dj-ray.vercel.app"
@@ -171,36 +161,6 @@ export default function Navbar() {
           </a>
 
         </nav>
-
-        {isMarketPage && (
-          <div className="market-navbar-actions">
-            <button
-              type="button"
-              className="market-navbar-action"
-              aria-label="Search"
-            >
-              <FaSearch />
-            </button>
-
-            <button
-              type="button"
-              className="market-navbar-action"
-              aria-label="Favorites"
-            >
-              <FaHeart />
-              <span className="market-navbar-badge">0</span>
-            </button>
-
-            <button
-              type="button"
-              className="market-navbar-action"
-              aria-label="Shopping Bag"
-            >
-              <FaShoppingBag />
-              <span className="market-navbar-badge">0</span>
-            </button>
-          </div>
-        )}
 
         {/* ==============================
             MOBILE MENU BUTTON
