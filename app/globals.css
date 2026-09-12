@@ -164,3 +164,10 @@ section {
         ),
         #050505;
 }
+/* CONTACT DUBAI — GREEN */
+.market-page .contact-dubai,
+.market-page [class*="contact-dubai"],
+.market-page [class*="dubai"] {
+  color: #4CAF50 !important;
+}
+

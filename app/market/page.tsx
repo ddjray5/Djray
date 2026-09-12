@@ -70,7 +70,7 @@ const products = [
     category: "DJ EQUIPMENT",
     brand: "Pioneer DJ",
     name: "DDJ-400",
-    condition: "Used Only 4 Times\\nExcellent Condition",
+    condition: "Used Only 4 Times\nExcellent Condition",
     price: "AED 1,000",
     status: "AVAILABLE",
     description: "Pioneer DJ DDJ-400 in excellent condition. A compact and professional 2-channel DJ controller, ideal for learning, practice, home setups, and live DJ performance.",
@@ -99,6 +99,18 @@ const products = [
     image: "/market/ddjsx/J00916000001000-00-500x500.webp",
   },
   {
+    id: "ddj-sb3",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-SB3",
+    condition: "Like New",
+    price: "AED 900",
+    status: "SOLD",
+    description: "Pioneer DJ DDJ-SB3 in like-new condition. A compact and reliable 2-channel DJ controller, ideal for beginners, home setups, practice, and live DJ performance.",
+    image: "/market/ddjsb3/PioneerDJControllersDDJ-SB32 (1).webp",
+  },
+
+  {
     id: "ddj-800",
     category: "DJ EQUIPMENT",
     brand: "Pioneer DJ",
@@ -109,6 +121,30 @@ const products = [
     image: "/market/ddj800/816dbPS8UVL.jpg",
   },
   {
+    id: "flx6-gt",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "FLX6 GT",
+    condition: "Excellent Condition",
+    price: "AED 2,800",
+    status: "SOLD",
+    description: "Pioneer DJ DDJ-FLX6-GT in excellent condition. A professional 4-channel DJ controller with a sleek design and powerful features, ideal for DJs, live performances, events, and home setups. Fully functional and ready to use.",
+    image: "/market/flx6gt/DDJ-FLX6-GT_1.jpg",
+  },
+
+  {
+    id: "flx10",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "FLX10",
+    condition: "Excellent Condition\nWith Flight Cace",
+    price: "AED 6,000",
+    status: "SOLD",
+    description: "Pioneer DJ DDJ-FLX10 in excellent condition, including Fly Case. A professional 4-channel DJ controller designed for powerful performance, events, live setups, and professional DJs.",
+    image: "/market/flx10/ddj-flx10_3.png",
+  },
+
+  {
     id: "bowers-wilkins-p3",
     category: "HEADPHONES",
     brand: "Bowers & Wilkins",
@@ -117,7 +153,7 @@ const products = [
     price: "AED 800",
     status: "AVAILABLE",
     description: "Bowers Wilkins P3 first generation in very good used condition.",
-    image: "/market/bowerswilkins/tw-11134207-7r98o-lqog08lacb8891.jpeg",
+    image: "/market/bowerswilkins/bowers_wilkins_p3_blue_p3_mobile_portable_1466508060_1260238.jpg",
   },
 
   {
@@ -147,7 +183,7 @@ const products = [
 export default function MarketPage() {
   const router = useRouter();
   const [flx4Image, setFlx4Image] = useState(1);
-const [djBagImage, setDjBagImage] = useState(5);
+const [djBagImage, setDjBagImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(5);
@@ -203,6 +239,8 @@ const [djBagImage, setDjBagImage] = useState(5);
         product.category,
         product.condition,
         product.id,
+        product.id.replace(/-/g, " "),
+        `ddj ${product.id}`,
       ].join(" ")
     ).includes(query);
   });
@@ -271,6 +309,7 @@ const [djBagImage, setDjBagImage] = useState(5);
 
 
       <nav className="market-new-navbar" aria-label="Market Categories">
+        <img src="/logo2.png" alt="DJ RAY" style={{ height: "38px", width: "auto", flexShrink: 0, marginLeft: "8px", transform: "scale(1.25)" }} />
         <div className="market-new-categories">
           {[
             "DJ EQUIPMENT",
@@ -296,7 +335,7 @@ const [djBagImage, setDjBagImage] = useState(5);
         </div>
 
         <div className="market-new-actions">
-          <button
+          <button className="search-close"
             type="button"
             className="market-new-action"
             aria-label="Search"
@@ -306,7 +345,7 @@ const [djBagImage, setDjBagImage] = useState(5);
             <span style={{ fontSize: "32px", lineHeight: 1 }}>⌕</span>
           </button>
 
-          <button
+          <button className="search-close"
             type="button"
             className="market-new-action"
             aria-label="Favorites"
@@ -316,7 +355,7 @@ const [djBagImage, setDjBagImage] = useState(5);
             <FaHeart aria-hidden="true" />
           </button>
 
-          <button
+          <button className="search-close"
             ref={cartButtonRef}
             type="button"
             className={`market-new-action ${cartBounce ? "cart-bounce" : ""}`}
@@ -344,7 +383,7 @@ const [djBagImage, setDjBagImage] = useState(5);
             placeholder="SEARCH PRODUCTS..."
             autoFocus
           />
-          <button
+          <button className="search-close"
             type="button"
             onClick={() => {
               setSearchQuery("");
@@ -361,8 +400,30 @@ const [djBagImage, setDjBagImage] = useState(5);
           <span className="market-eyebrow">DJ RAY MARKET</span>
           <h1>{activeCategory}</h1>
           <p>
-            Carefully selected DJ equipment available from DJ RAY.
+            {activeCategory === "DJ EQUIPMENT"
+              ? "Carefully selected DJ equipment available from DJ RAY."
+              : activeCategory === "HEADPHONES"
+              ? "Professional DJ headphones selected for performance, comfort, and sound quality."
+              : activeCategory === "MACBOOKS"
+              ? "Reliable MacBooks carefully selected for DJs, music production, and creative work."
+              : activeCategory === "DJ BAGS & CASES"
+              ? "Protective DJ bags and cases designed to keep your equipment safe on the move."
+              : activeCategory === "DJ ACCESSORIES"
+              ? "Essential DJ accessories selected to complete and enhance your setup."
+              : activeCategory === "SPEAKERS & AUDIO"
+              ? "Quality speakers and audio equipment selected for powerful, clear sound."
+              : "Professional microphones selected for DJs, events, performances, and live use."}
           </p>
+
+          <div className="market-trade-in">
+            <h2>Turn Your Old Gear Into Your Next Upgrade</h2>
+            <p>We buy used DJ equipment and offer easy trade-ins,<br />so you can upgrade your setup with the gear you need.</p>
+
+<div className="market-service-features">
+  <span>🚚 Delivery Available Across All UAE</span>
+  <span>🛡️ 3-Day Trial Warranty</span>
+</div>
+          </div>
         </div>
       </section>
 
@@ -375,17 +436,8 @@ const [djBagImage, setDjBagImage] = useState(5);
             <article
               className="product-card"
               key={product.id}
-              onClick={() => router.push(`/market/${product.id}`)}
-              role="link"
-              tabIndex={0}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  router.push(`/market/${product.id}`);
-                }
-              }}
-            >
-              <div className="product-image">
+                          >
+              <div className="product-image" onClick={() => router.push(`/market/${product.id}`)}>
                 {product.image ? (
                   <>
                                   <button
@@ -418,11 +470,11 @@ const [djBagImage, setDjBagImage] = useState(5);
                                 : product.image
                   }
                     alt={product.name}
-                    className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""}`}
+                    className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
                   {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag") && (
                     <>
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -439,7 +491,7 @@ const [djBagImage, setDjBagImage] = useState(5);
                         <span>‹</span>
                       </button>
 
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -460,7 +512,7 @@ const [djBagImage, setDjBagImage] = useState(5);
 
                   {product.id === "ddj-800" && (
                     <>
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -472,7 +524,7 @@ const [djBagImage, setDjBagImage] = useState(5);
                       >
                         <span>‹</span>
                       </button>
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -489,7 +541,7 @@ const [djBagImage, setDjBagImage] = useState(5);
 
                   {product.id === "ddj-flx4" && (
                     <>
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -501,7 +553,7 @@ const [djBagImage, setDjBagImage] = useState(5);
                       >
                         <span>‹</span>
                       </button>
-                      <button
+                      <button className="search-close"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -525,14 +577,18 @@ const [djBagImage, setDjBagImage] = useState(5);
                   </div>
                 )}
 
-                <span
-                  className={`product-status ${
-                    product.status === "SOLD" ? "sold" : ""
-                  }`}
-                >
-                  {product.status}
-                </span>
               </div>
+
+              {product.status === "SOLD" &&
+                product.id !== "ddj-flx4" &&
+                product.id !== "ddj-sx" && (
+                <span
+                  className="product-status sold"
+                  style={{ display: "block", width: "max-content", margin: "-42px 0 0 12px" }}
+                >
+                  SOLD
+                </span>
+              )}
 
               <div className="product-info">
                 <span className="product-brand">{product.brand}</span>
@@ -545,13 +601,15 @@ const [djBagImage, setDjBagImage] = useState(5);
 
                 <div className="product-bottom">
                   <strong>{product.price}</strong>
+                  <span className={`product-availability ${product.status === "SOLD" ? "sold" : ""}`}>{product.status}</span>
 
-                  <Link href={`/market/${product.id}`}>
-                    VIEW DETAILS
-                  </Link>
+
+
+
+
                 </div>
               </div>
-              <button
+              <button className="search-close"
                 type="button"
                 className="market-add-to-cart"
                 onClick={(event) => {
@@ -576,8 +634,10 @@ const [djBagImage, setDjBagImage] = useState(5);
             onClick={(event) => event.stopPropagation()}
           >
             <div className="market-cart-header">
-              <h2>YOUR CART</h2>
-
+              <div className="market-cart-title">
+                <img src="/logo2.png" alt="DJ RAY" />
+                <h2>YOUR CART</h2>
+              </div>
             </div>
 
             <div className="market-cart-items">
@@ -586,12 +646,15 @@ const [djBagImage, setDjBagImage] = useState(5);
               ) : (
                 cartItems.map((item) => (
                   <div className="market-cart-item" key={item.id}>
-                    <img src={item.image} alt={item.name} onClick={() => router.push(`/market/${item.id}`)} style={{cursor:"pointer"}} />
+                    <img src={item.image} alt={item.name} onClick={() => router.push(`/market/${item.id}`)} style={{cursor:"pointer", ...(item.id === "flx10" ? {transform:"scale(0.88)", transformOrigin:"center center"} : {})}} />
                     <div>
                       <strong>{item.name}</strong>
                       <span>{item.price}</span>
+                      <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
+                        {item.status}
+                      </span>
                     </div>
-                    <button
+                    <button className="search-close"
                       type="button"
                       onClick={() => {
                         const updated = cartItems.filter(
@@ -636,6 +699,40 @@ const [djBagImage, setDjBagImage] = useState(5);
                   0
                 ).toLocaleString()}
               </strong>
+            </div>
+
+            <div className="market-cart-actions">
+              <button
+                type="button"
+                className="market-cart-order"
+                onClick={() => {
+                  const total = cartItems.reduce(
+                    (sum, item) =>
+                      sum + Number(item.price.replace(/[^0-9.]/g, "")),
+                    0
+                  );
+
+                  const items = cartItems
+                    .map((item) => `• ${item.name} — ${item.price}`)
+                    .join("\n");
+
+                  const message = `Hello DJ RAY, I would like to order:\n\n${items}\n\nTOTAL: AED ${total.toLocaleString()}`;
+                  window.open(
+                    `https://wa.me/971554057288?text=${encodeURIComponent(message)}`,
+                    "_blank"
+                  );
+                }}
+              >
+                ORDER NOW
+              </button>
+
+              <button
+                type="button"
+                className="market-cart-continue"
+                onClick={() => setCartOpen(false)}
+              >
+                CONTINUE SHOPPING
+              </button>
             </div>
           </div>
         </div>

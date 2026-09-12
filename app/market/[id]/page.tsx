@@ -4,6 +4,21 @@ import { use, useState } from "react";
 import Link from "next/link";
 
 const products = {
+  "ddj-sb3": {
+    name: "DDJ-SB3",
+    brand: "PIONEER DJ",
+    condition: "Like New",
+    price: "AED 900",
+    description:
+      "Pioneer DJ DDJ-SB3 in like-new condition. A compact and reliable 2-channel DJ controller, ideal for beginners, home setups, practice, and live DJ performance.",
+    images: [
+      "/market/ddjsb3/PioneerDJControllersDDJ-SB32 (1).webp",
+      "/market/ddjsb3/images.jpeg",
+      "/market/ddjsb3/images (1).jpeg",
+      "/market/ddjsb3/ddj-sb3_3.png",
+      "/market/ddjsb3/SB3-HDJ-CUE1.png",
+    ],
+  },
   "ddj-flx4": {
     name: "DDJ-FLX4",
     brand: "PIONEER DJ",
@@ -83,6 +98,37 @@ const products = {
       "/market/hercules/filters_quality(90) (1).webp",
     ],
   },
+  "flx6-gt": {
+    name: "FLX6 GT",
+    brand: "PIONEER DJ",
+    condition: "Excellent Condition",
+    price: "AED 2,800",
+    description:
+      "Pioneer DJ DDJ-FLX6-GT in excellent condition. A professional 4-channel DJ controller with a sleek design and powerful features, ideal for DJs, live performances, events, and home setups. Fully functional and ready to use.",
+    images: [
+      "/market/flx6gt/DDJ-FLX6-GT_1.jpg",
+      "/market/flx6gt/pc-cgi_frontangle-2.png",
+      "/market/flx6gt/ddj-flx6-gt_5.png",
+      "/market/flx6gt/471660cb-687f-477d-9533-6e108b5a2422.jpg",
+      "/market/flx6gt/88525D62-7E17-4E48-9703-2B39B02A0751.png",
+    ],
+  },
+  "flx10": {
+    name: "FLX10",
+    brand: "PIONEER DJ",
+    condition: "Excellent Condition\\nWith Fly Case",
+    price: "AED 6,000",
+    description:
+      "Pioneer DJ DDJ-FLX10 in excellent condition, including Fly Case. A professional 4-channel DJ controller designed for powerful performance, events, live setups, and professional DJs.",
+    images: [
+      "/market/flx10/ddj-flx10_3.png",
+      "/market/flx10/71A9wK0ZYoL._AC_UF1000,1000_QL80_.jpg",
+      "/market/flx10/Pioneer-DJ-DDJ-FLX10-DJ-Controller-2.jpg",
+      "/market/flx10/810gsflx10m_01.webp",
+      "/market/flx10/pioneer-ddj-flx10-dj-controller-1-_861009-84bd5325b1fd98bd88ff865000f702db.jpg",
+      "/market/flx10/ddj-flx10_5.png",
+    ],
+  },
   "bowers-wilkins-p3": {
     name: "Bowers Wilkins P3 first generation",
     brand: "BOWERS & WILKINS",
@@ -109,8 +155,8 @@ const products = {
     description:
       "Labymos Multifunction Gig- Bag DJ Controller Carrying Case with Shoulder Strap for Pioneer DDJ-400 DJ Controller, DDJ-FLX4, Hercules DJControl Inpulse 500, SB3, and SB2. Protective Bag Polyester",
     images: [
-      "/market/djbag/71KVhu51KGL.jpg",
-      "/market/djbag/61U70MUsLfL.jpg",
+      
+      "/market/djbag/51aRQ7HIjdL.jpg",
           "/market/djbag/61oZrjkTLLL.jpg",
       "/market/djbag/71KVhu51KGL.jpg",
       "/market/djbag/71LQYW0GTbL.jpg",
@@ -137,7 +183,7 @@ export default function ProductPage({
             <h2>PRODUCT NOT FOUND</h2>
           </div>
           <Link href="/market" className="market-contact-button">
-            BACK TO MARKET
+            BACK
           </Link>
         </section>
       </main>
@@ -149,7 +195,7 @@ export default function ProductPage({
     <main className="market-page">
       <section className="product-detail">
         <Link href="/market" className="product-back">
-          Back TO MARKET
+          BACK
         </Link>
 
         <div className="product-detail-gallery">
@@ -229,6 +275,7 @@ export default function ProductPage({
             <img
               src={images[currentImage]}
               alt={product.name}
+              className={id === "ddj-sb3" ? "ddjsb3-detail-image" : ""}
               style={{ pointerEvents: "none" }}
             />
           </div>
@@ -236,7 +283,7 @@ export default function ProductPage({
           <div className="product-thumbnails">
             {images.map((image, index) => (
               <div
-                className={`product-thumbnail ${
+                className={`product-thumbnail ${id === "ddj-sb3" ? "ddjsb3-thumbnail" : ""} ${
                   currentImage === index ? "active" : ""
                 }`}
                 key={image}
@@ -267,15 +314,15 @@ export default function ProductPage({
             )}`}
             className="product-buy-button"
             style={{
-              background: "#facc15",
-              borderColor: "#facc15",
+              background: "#22c55e",
+              borderColor: "#22c55e",
               color: "#000",
               transition: "transform 0.2s ease, box-shadow 0.2s ease",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
               e.currentTarget.style.boxShadow =
-                "0 8px 20px rgba(250, 204, 21, 0.35)";
+                "0 8px 20px rgba(34, 197, 94, 0.35)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
