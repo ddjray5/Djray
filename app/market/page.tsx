@@ -474,7 +474,7 @@ const [djBagImage, setDjBagImage] = useState(0);
                   />
                   {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag") && (
                     <>
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -491,7 +491,7 @@ const [djBagImage, setDjBagImage] = useState(0);
                         <span>‹</span>
                       </button>
 
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -512,7 +512,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
                   {product.id === "ddj-800" && (
                     <>
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -524,7 +524,7 @@ const [djBagImage, setDjBagImage] = useState(0);
                       >
                         <span>‹</span>
                       </button>
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -541,7 +541,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
                   {product.id === "ddj-flx4" && (
                     <>
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-left"
                         aria-label="Previous image"
@@ -553,7 +553,7 @@ const [djBagImage, setDjBagImage] = useState(0);
                       >
                         <span>‹</span>
                       </button>
-                      <button className="search-close"
+                      <button data-search-close="true"
                         type="button"
                         className="market-gallery-arrow market-gallery-arrow-right"
                         aria-label="Next image"
@@ -609,7 +609,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
                 </div>
               </div>
-              <button className="search-close"
+              <button data-search-close="true"
                 type="button"
                 className="market-add-to-cart"
                 onClick={(event) => {
