@@ -5752,3 +5752,8 @@ body:has(.market-page .product-detail) {
     transform: none !important;
   }
 }
+
+
+@media (max-width: 767px) {
+  .market-page .products-grid .product-card .product-bottom strong { color: #000 !important; }
+}
