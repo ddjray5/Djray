@@ -5652,3 +5652,21 @@ body:has(.market-page .product-detail) {
 .market-page .market-new-action[aria-label="Shopping Cart"] {
   background: #d9d9d9 !important;
 }
+/* MOBILE-ONLY MARKET LAYOUT */
+@media (max-width: 767px) {
+  .market-page { padding-top: 88px !important; }
+  .market-page .market-new-navbar { width: 100% !important; overflow-x: auto !important; overflow-y: hidden !important; -webkit-overflow-scrolling: touch; }
+  .market-page .market-new-category { flex: 0 0 auto !important; font-size: 10px !important; white-space: nowrap !important; }
+  .market-page .market-hero { min-height: 0 !important; padding: 28px 16px 42px !important; }
+  .market-page .market-brand { transform: none !important; margin-top: 0 !important; }
+  .market-page .market-products { margin: 0 auto !important; padding: 28px 12px 56px !important; }
+  .market-page .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; padding: 0 !important; }
+  .market-page .products-grid .product-card { transform: none !important; min-width: 0 !important; }
+  .market-page .products-grid .product-card .product-image { min-height: 0 !important; }
+  .market-page .product-info { display: block !important; min-height: 0 !important; padding: 12px 8px 14px !important; }
+  .market-page .product-info h3 { font-size: 15px !important; }
+  .market-page .product-condition, .market-page .product-brand { font-size: 10px !important; }
+  .market-page .products-grid .product-card .product-bottom { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 8px !important; margin-top: 12px !important; padding-top: 10px !important; }
+  .market-page .product-bottom strong, .market-page .products-grid .product-card .market-add-to-cart { position: static !important; transform: none !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; }
+  .market-page .market-contact { padding: 44px 16px 70px !important; }
+}
