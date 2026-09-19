@@ -5909,3 +5909,76 @@ body:has(.market-page .product-detail) {
     line-height: 1.35 !important;
   }
 }
+
+
+
+/* MOBILE TRADE-IN TITLE ON ONE LINE */
+@media (max-width: 767px) {
+  .market-page .market-trade-in h2 {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.4px !important;
+  }
+}
+
+
+
+/* MOBILE CARD DETAILS AND PROMINENT CART */
+@media (max-width: 767px) {
+  .market-page .market-card-favorite {
+    top: 16px !important;
+  }
+
+  .market-page .products-grid .product-card .product-bottom strong {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #111 !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 2px 0 6px !important;
+    transform: none !important;
+  }
+
+  .market-page .market-new-action:last-child {
+    background: #d1d5db !important;
+    color: #111 !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32) !important;
+  }
+}
+
+
+
+/* MOBILE NAV LOGO SIZE */
+@media (max-width: 767px) {
+  .market-page .market-new-navbar > img {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+}
+
+
+
+/* MOBILE CARD ACTION INSIDE GOLD FRAME */
+@media (max-width: 767px) {
+  .market-page .products-grid .product-card {
+    overflow: hidden !important;
+    padding-top: 0 !important;
+  }
+
+  .market-page .products-grid .product-card .product-image {
+    margin-top: -6px !important;
+  }
+
+  .market-page .products-grid .product-card .market-add-to-cart {
+    position: relative !important;
+    z-index: 2 !important;
+    width: calc(100% - 20px) !important;
+    margin: -12px 10px 10px !important;
+  }
+}
