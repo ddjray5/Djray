@@ -5670,3 +5670,85 @@ body:has(.market-page .product-detail) {
   .market-page .product-bottom strong, .market-page .products-grid .product-card .market-add-to-cart { position: static !important; transform: none !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; }
   .market-page .market-contact { padding: 44px 16px 70px !important; }
 }
+
+
+/* MOBILE NAVIGATION — COMPACT DESKTOP-STYLE BAR */
+@media (max-width: 767px) {
+  .market-page { padding-top: 58px !important; }
+
+  .market-page .market-new-navbar {
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 0 8px !important;
+    gap: 6px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .market-page .market-new-navbar > img {
+    height: 28px !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .market-page .market-new-categories {
+    display: flex !important;
+    width: auto !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+  }
+
+  .market-page .market-new-category {
+    flex: 0 0 auto !important;
+    padding: 7px 6px !important;
+    font-size: 8px !important;
+  }
+
+  .market-page .market-new-actions {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 2px !important;
+  }
+
+  .market-page .market-new-action,
+  .market-page .market-new-action:last-child {
+    position: static !important;
+    width: 34px !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .market-page .market-new-action span { font-size: 22px !important; }
+  .market-page .market-new-action svg { width: 18px !important; height: 18px !important; }
+}
+
+
+@media (max-width: 767px) {
+  .market-page .products-grid .product-card .product-bottom strong {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
