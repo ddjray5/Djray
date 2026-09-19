@@ -335,7 +335,7 @@ const [djBagImage, setDjBagImage] = useState(0);
         </div>
 
         <div className="market-new-actions">
-          <button className="search-close"
+          <button 
             type="button"
             className="market-new-action"
             aria-label="Search"
@@ -345,7 +345,7 @@ const [djBagImage, setDjBagImage] = useState(0);
             <span style={{ fontSize: "32px", lineHeight: 1 }}>⌕</span>
           </button>
 
-          <button className="search-close"
+          <button 
             type="button"
             className="market-new-action"
             aria-label="Favorites"
@@ -355,7 +355,7 @@ const [djBagImage, setDjBagImage] = useState(0);
             <FaHeart aria-hidden="true" />
           </button>
 
-          <button className="search-close"
+          <button 
             ref={cartButtonRef}
             type="button"
             className={`market-new-action ${cartBounce ? "cart-bounce" : ""}`}
