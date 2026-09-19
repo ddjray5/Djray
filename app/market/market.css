@@ -5982,3 +5982,142 @@ body:has(.market-page .product-detail) {
     margin: -12px 10px 10px !important;
   }
 }
+
+  
+
+/* MOBILE NAVBAR: SEARCH, FAVORITE, AND MENU */
+@media (max-width: 767px) {
+  .market-page .market-new-navbar {
+    grid-template-columns: 34px minmax(0, 1fr) 34px !important;
+    gap: 6px !important;
+  }
+
+  .market-page .market-new-navbar > img {
+    grid-column: 1 !important;
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  .market-page .market-new-actions {
+    grid-column: 2 !important;
+    justify-self: end !important;
+    width: auto !important;
+    margin-left: auto !important;
+    gap: 2px !important;
+  }
+
+  .market-page .market-new-categories {
+    grid-column: 3 !important;
+    position: relative !important;
+    flex: 0 0 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+    overflow: visible !important;
+  }
+
+  .market-page .market-new-categories::before {
+    content: "☰" !important;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    font-size: 23px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .market-page .market-new-category { display: none !important; }
+
+  .market-page .market-new-category:first-child {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+  }
+
+  .market-page .market-new-categories:focus-within { z-index: 110 !important; }
+
+  .market-page .market-new-categories:focus-within .market-new-category {
+    display: block !important;
+    position: absolute !important;
+    top: auto !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 190px !important;
+    height: 34px !important;
+    padding: 0 12px !important;
+    color: #fff !important;
+    background: #111 !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    border-radius: 0 !important;
+    text-align: left !important;
+    font-size: 10px !important;
+    opacity: 1 !important;
+  }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(1) { top: 38px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(2) { top: 72px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(3) { top: 106px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(4) { top: 140px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(5) { top: 174px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(6) { top: 208px !important; }
+  .market-page .market-new-categories:focus-within .market-new-category:nth-child(7) { top: 242px !important; }
+}
+
+
+
+/* MOBILE FLOATING CART LIGHT GRAY FRAME */
+@media (max-width: 767px) {
+  .market-page .market-new-action:last-child {
+    background: #d1d5db !important;
+    color: #111 !important;
+    border: 2px solid #9ca3af !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32) !important;
+  }
+}
+
+
+/* MOBILE CART — PROMINENT GRAY */
+@media (max-width: 767px) {
+  .market-page .market-new-action:last-child {
+    background: #b6b6b6 !important;
+    color: #111 !important;
+    border: 3px solid #737373 !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .market-page .market-new-action:last-child svg {
+    color: #111 !important;
+  }
+}
+
+
+/* MOBILE PRODUCT PRICE AND STATUS */
+@media (max-width: 767px) {
+  .market-page .product-bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    margin-top: -5px !important;
+  }
+
+  .market-page .product-bottom strong,
+  .market-page .product-availability {
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .market-page .product-availability {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 22px !important;
+  }
+}
