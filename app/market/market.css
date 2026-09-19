@@ -3059,7 +3059,8 @@ main.market-page {
   transition: none !important;
   box-shadow: none !important;
   animation: none !important;
-}
+}cart
+
 
 .market-page .product-card::before,
 .market-page .product-card::after {
@@ -6119,5 +6120,134 @@ body:has(.market-page .product-detail) {
     align-items: center !important;
     justify-content: center !important;
     min-height: 22px !important;
+  }
+}
+
+
+/* MOBILE LAYOUT REPAIR — NAVIGATION, CARDS AND CART */
+@media (max-width: 767px) {
+  .market-page .market-new-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 120 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    background: #111 !important;
+  }
+
+  .market-page .market-new-navbar > img {
+    position: static !important;
+    width: 34px !important;
+    height: 34px !important;
+    flex: 0 0 34px !important;
+    object-fit: contain !important;
+  }
+
+  .market-page .market-new-actions {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    height: 58px !important;
+    margin: 0 6px 0 auto !important;
+  }
+
+  .market-page .market-new-action {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .market-page .market-new-categories {
+    position: relative !important;
+    flex: 0 0 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+    margin: 0 !important;
+  }
+
+  .market-page .market-new-action:last-child {
+    position: fixed !important;
+    right: 14px !important;
+    bottom: 18px !important;
+    z-index: 130 !important;
+    display: flex !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 50% !important;
+    background: #a9a9a9 !important;
+    color: #111 !important;
+    border: 3px solid #666 !important;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .42) !important;
+  }
+
+  .market-page .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+  }
+
+  .market-page .product-info {
+    flex: 0 0 auto !important;
+  }
+
+  .market-page .product-bottom {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    height: 24px !important;
+    min-height: 24px !important;
+    margin: 10px 0 6px !important;
+  }
+
+  .market-page .product-bottom strong {
+    position: static !important;
+    display: block !important;
+    color: #111 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .market-page .product-availability {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 22px !important;
+    margin: 0 !important;
+    transform: none !important;
+    white-space: nowrap !important;
+  }
+
+  .market-page .market-add-to-cart {
+    position: static !important;
+    display: block !important;
+    width: 90% !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    margin: 0 auto 12px !important;
+    padding: 0 8px !important;
   }
 }
