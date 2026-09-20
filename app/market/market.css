@@ -5875,11 +5875,11 @@ body:has(.market-page .product-detail) {
   .mobile-clean-hero p { max-width: 250px; margin: 0 0 18px; color: #5d564d; font-size: 13px; line-height: 1.45; }
   .mobile-clean-hero button { padding: 11px 16px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
   .mobile-clean-benefits { display: flex; justify-content: center; gap: 60px; padding: 16px 5vw; background: #fff; border-bottom: 1px solid #e8dfcf; color: #735c2e; text-align: center; font-size: 9px; font-weight: 700; }
-  .mobile-clean-products { max-width: 1560px; margin: 0 auto; padding: 42px 3vw 80px; }
+  .mobile-clean-products { max-width: 1700px; margin: 0 auto; padding: 42px 2vw 80px; background: #f8f6f0 !important; }
   .mobile-clean-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
   .mobile-clean-heading span { font-size: 13px; font-weight: 800; letter-spacing: .08em; }
   .mobile-clean-heading button { border: 0; background: transparent; color: #8a6a22; font-size: 10px; font-weight: 800; }
-  .mobile-clean-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+  .mobile-clean-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
   .mobile-clean-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
   .mobile-clean-card:hover { transform: translateY(-4px); box-shadow: 0 9px 22px rgba(60,42,10,.12); }
   .mobile-clean-card > button { position: absolute; z-index: 1; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 7px rgba(0,0,0,.14); color: #a37b24; font-size: 22px; }
@@ -6268,11 +6268,11 @@ body:has(.market-page .product-detail) {
   .mobile-clean-hero p { max-width: 250px; margin: 0 0 18px; color: #5d564d; font-size: 13px; line-height: 1.45; }
   .mobile-clean-hero button { padding: 11px 16px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
   .mobile-clean-benefits { display: flex; justify-content: center; gap: 60px; padding: 16px 5vw; background: #fff; border-bottom: 1px solid #e8dfcf; color: #735c2e; text-align: center; font-size: 9px; font-weight: 700; }
-  .mobile-clean-products { max-width: 1560px; margin: 0 auto; padding: 42px 3vw 80px; }
+  .mobile-clean-products { max-width: 1700px; margin: 0 auto; padding: 42px 2vw 80px; background: #f8f6f0 !important; }
   .mobile-clean-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
   .mobile-clean-heading span { font-size: 13px; font-weight: 800; letter-spacing: .08em; }
   .mobile-clean-heading button { border: 0; background: transparent; color: #8a6a22; font-size: 10px; font-weight: 800; }
-  .mobile-clean-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+  .mobile-clean-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
   .mobile-clean-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
   .mobile-clean-card:hover { transform: translateY(-4px); box-shadow: 0 9px 22px rgba(60,42,10,.12); }
   .mobile-clean-card > button { position: absolute; z-index: 1; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 7px rgba(0,0,0,.14); color: #a37b24; font-size: 22px; }
