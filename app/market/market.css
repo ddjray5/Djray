@@ -6148,3 +6148,18 @@ body:has(.market-page .product-detail) {
   .market-brand { display: none; }
   .market-cart-panel { width: min(92vw, 380px); }
 }
+
+/* Final mobile overrides: legacy rules use !important, so these must win. */
+@media (max-width: 767px) {
+  .market-page .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .market-page .products-grid .product-card { min-height: 278px !important; height: auto !important; overflow: hidden !important; border: 1px solid #e5ded0 !important; background: #fff !important; }
+  .market-page .products-grid .product-image { height: 118px !important; min-height: 0 !important; aspect-ratio: auto !important; padding: 12px 10px 2px !important; background: #fff !important; }
+  .market-page .products-grid .product-info { align-items: stretch !important; padding: 10px 10px 7px !important; text-align: left !important; }
+  .market-page .product-brand { font-size: 8px !important; }
+  .market-page .product-info h3 { font-size: 13px !important; margin: 0 !important; }
+  .market-page .product-condition { min-height: 29px !important; font-size: 9px !important; line-height: 1.38 !important; }
+  .market-page .products-grid .product-card .product-bottom { position: static !important; display: flex !important; flex-direction: row !important; align-items: center !important; width: 100% !important; height: auto !important; margin: auto 0 0 !important; padding: 0 !important; }
+  .market-page .products-grid .product-card .product-bottom strong { margin: 0 !important; font-size: 11px !important; }
+  .market-page .products-grid .product-card .product-bottom .product-availability { width: auto !important; height: auto !important; margin: 0 !important; font-size: 7px !important; }
+  .market-page .products-grid .product-card .market-add-to-cart { position: static !important; display: block !important; width: calc(100% - 20px) !important; height: 27px !important; min-height: 27px !important; margin: 0 10px 10px !important; font-size: 9px !important; }
+}
