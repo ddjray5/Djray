@@ -6246,3 +6246,42 @@ body:has(.market-page .product-detail) {
   .mobile-clean-card span { display: inline-block; margin-top: 7px; padding: 3px 6px; background: #e6bf54; color: #392a0a; font-size: 7px; font-weight: 800; }
   .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
 }
+
+/* Desktop rules must be last: they replace the legacy layout completely. */
+@media (min-width: 768px) {
+  .market-page { padding-top: 0 !important; background: #f8f6f0 !important; color: #191713 !important; }
+  .market-page > :not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
+  .market-mobile-clean { display: block !important; min-height: 100vh; background: #f8f6f0; color: #191713; font-family: Arial, sans-serif; }
+  .mobile-clean-nav { height: 78px; display: flex; align-items: center; gap: 18px; padding: 0 5.5vw; background: #fff; border-bottom: 1px solid #ded4bf; }
+  .mobile-clean-nav > img { width: 48px; height: auto; }
+  .mobile-clean-nav > span { flex: 1; color: #967022; font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+  .mobile-clean-nav > div { display: flex; gap: 10px; }
+  .mobile-clean-nav button { position: relative; width: 42px; height: 42px; border: 1px solid #ddd1ba; background: #fff; color: #aa7f22; font-size: 22px; }
+  .mobile-clean-nav b { position: absolute; top: -5px; right: -5px; display: grid; width: 17px; height: 17px; place-items: center; border-radius: 50%; background: #b98622; color: #fff; font-size: 9px; }
+  .mobile-clean-categories { display: flex; justify-content: center; gap: 38px; padding: 15px 5vw 12px; background: #fff; border-bottom: 1px solid #e8dfcf; }
+  .mobile-clean-categories button { padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4d473d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+  .mobile-clean-categories button.active { border-color: #c69a32; color: #9a711b; }
+  .mobile-clean-hero { min-height: 390px; padding: 75px max(8vw,60px); background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.92) 43%,rgba(251,250,246,.12)),url('/market/ddj800/DDJ-800-3.jpg') center right/62% auto no-repeat; }
+  .mobile-clean-hero > div { width: 36%; min-width: 280px; }
+  .mobile-clean-hero small { color: #726854; font-size: 10px; letter-spacing: .13em; }
+  .mobile-clean-hero h1 { margin: 11px 0 12px; font-family: Georgia,serif; font-size: clamp(38px,4vw,62px); line-height: .9; letter-spacing: -.06em; }
+  .mobile-clean-hero p { max-width: 250px; margin: 0 0 18px; color: #5d564d; font-size: 13px; line-height: 1.45; }
+  .mobile-clean-hero button { padding: 11px 16px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+  .mobile-clean-benefits { display: flex; justify-content: center; gap: 60px; padding: 16px 5vw; background: #fff; border-bottom: 1px solid #e8dfcf; color: #735c2e; text-align: center; font-size: 9px; font-weight: 700; }
+  .mobile-clean-products { max-width: 1440px; margin: 0 auto; padding: 42px 5vw 80px; }
+  .mobile-clean-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+  .mobile-clean-heading span { font-size: 13px; font-weight: 800; letter-spacing: .08em; }
+  .mobile-clean-heading button { border: 0; background: transparent; color: #8a6a22; font-size: 10px; font-weight: 800; }
+  .mobile-clean-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+  .mobile-clean-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+  .mobile-clean-card:hover { transform: translateY(-4px); box-shadow: 0 9px 22px rgba(60,42,10,.12); }
+  .mobile-clean-card > button { position: absolute; z-index: 1; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 7px rgba(0,0,0,.14); color: #a37b24; font-size: 22px; }
+  .mobile-clean-card > button.liked { color: #b30018; }
+  .mobile-clean-card > img { display: block; width: 100%; height: 210px; padding: 28px 20px 9px; object-fit: contain; }
+  .mobile-clean-card > div { min-height: 135px; padding: 12px 16px 16px; }
+  .mobile-clean-card small { display: block; overflow: hidden; color: #817a70; font-size: 9px; letter-spacing: .06em; text-overflow: ellipsis; white-space: nowrap; }
+  .mobile-clean-card h2 { overflow: hidden; margin: 6px 0 12px; color: #1e1b16; font-size: 17px; text-overflow: ellipsis; white-space: nowrap; }
+  .mobile-clean-card strong { display: block; color: #211e18; font-size: 14px; }
+  .mobile-clean-card span { display: inline-block; margin-top: 9px; padding: 4px 8px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
+  .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
+}
