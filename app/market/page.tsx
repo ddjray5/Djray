@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart } from "react-icons/fa";
 import "./market.css";
+import "./market-clean.css";
 
 const flx4Images = [
   "/market/ddjflx4/s-l1600.webp",
