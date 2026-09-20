@@ -5950,3 +5950,31 @@ body:has(.market-page .product-detail) {
   .market-page .products-grid .product-card .product-bottom .product-availability { position:static !important; display:inline-flex !important; inset:auto !important; width:78% !important; height:24px !important; margin:0 !important; transform:none !important; }
   .market-page .products-grid .product-card .market-add-to-cart { position:static !important; display:flex !important; align-items:center !important; justify-content:center !important; width:78% !important; height:30px !important; min-height:30px !important; margin:10px auto 14px !important; transform:none !important; }
 }
+
+
+/* MOBILE — CLEAN WHITE GALLERY REFERENCE LAYOUT */
+@media (max-width: 767px) {
+  .market-page { padding-top:46px !important; background:#fff !important; }
+  .market-page .market-new-navbar { height:46px !important; min-height:46px !important; padding:0 10px !important; display:flex !important; align-items:center !important; background:#fff !important; border-bottom:1px solid #e6dfd1 !important; box-shadow:0 2px 8px rgba(0,0,0,.08) !important; }
+  .market-page .market-new-navbar > img { width:42px !important; height:28px !important; transform:none !important; margin:0 12px 0 0 !important; }
+  .market-page .market-new-categories { position:static !important; display:flex !important; flex:1 !important; align-items:center !important; justify-content:space-between !important; gap:2px !important; width:auto !important; height:auto !important; margin:0 !important; transform:none !important; }
+  .market-page .market-new-categories::before { display:none !important; }
+  .market-page .market-new-category, .market-page .market-new-category:first-child { position:static !important; display:block !important; opacity:1 !important; width:auto !important; height:auto !important; padding:0 !important; color:#171717 !important; background:transparent !important; border:0 !important; font-size:5px !important; font-weight:700 !important; letter-spacing:.2px !important; white-space:nowrap !important; }
+  .market-page .market-new-category.active { color:#a67d1f !important; border-bottom:1px solid #c7a54a !important; }
+  .market-page .market-new-actions { position:static !important; display:flex !important; height:auto !important; gap:3px !important; margin-left:8px !important; transform:none !important; }
+  .market-page .market-new-action { position:static !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; width:18px !important; height:18px !important; min-width:18px !important; padding:0 !important; background:transparent !important; border:0 !important; color:#b8942f !important; font-size:11px !important; }
+  .market-page .market-new-action:last-child { position:static !important; width:18px !important; height:18px !important; min-width:18px !important; min-height:18px !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; background:transparent !important; }
+  .market-page .market-hero { position:relative !important; min-height:176px !important; padding:24px 18px !important; display:flex !important; align-items:center !important; justify-content:flex-start !important; overflow:hidden !important; text-align:left !important; background:#f9f7f1 !important; }
+  .market-page .market-hero::after { content:"" !important; position:absolute !important; top:0 !important; right:0 !important; width:56% !important; height:100% !important; background:url('/market/ddjflx4/s-l1600%20(3).webp') center/cover no-repeat !important; opacity:.9 !important; }
+  .market-page .market-hero-content { position:relative !important; z-index:2 !important; width:52% !important; margin:0 !important; }
+  .market-page .market-eyebrow { font-size:6px !important; letter-spacing:1px !important; color:#66552d !important; opacity:1 !important; }
+  .market-page .market-hero h1 { font-family:Georgia,serif !important; font-size:22px !important; line-height:.92 !important; letter-spacing:-.5px !important; color:#171717 !important; text-shadow:none !important; }
+  .market-page .market-hero p { font-size:7px !important; line-height:1.35 !important; margin:7px 0 0 !important; color:#222 !important; opacity:1 !important; }
+  .market-page .market-trade-in { display:none !important; }
+  .market-page .market-products { padding:14px 10px 60px !important; }
+  .market-page .products-grid { grid-template-columns:repeat(4,minmax(0,1fr)) !important; gap:7px !important; }
+  .market-page .products-grid .product-card { min-height:180px !important; border:1px solid #e3dccb !important; background:#fff !important; }
+  .market-page .products-grid .product-image { aspect-ratio:1/1 !important; }
+  .market-page .products-grid .product-info { padding:6px 4px !important; }
+  .market-page .product-brand { font-size:5px !important; }.market-page .product-info h3 {font-size:8px !important;margin:3px 0 !important;}.market-page .product-condition{font-size:6px !important;}.market-page .products-grid .product-card .product-bottom strong{font-size:7px !important;}.market-page .products-grid .product-card .product-bottom .product-availability{height:14px !important;font-size:5px !important;}.market-page .products-grid .product-card .market-add-to-cart{height:16px !important;min-height:16px !important;font-size:5px !important;margin:4px auto 6px !important;}
+}
