@@ -5978,3 +5978,173 @@ body:has(.market-page .product-detail) {
   .market-page .products-grid .product-info { padding:6px 4px !important; }
   .market-page .product-brand { font-size:5px !important; }.market-page .product-info h3 {font-size:8px !important;margin:3px 0 !important;}.market-page .product-condition{font-size:6px !important;}.market-page .products-grid .product-card .product-bottom strong{font-size:7px !important;}.market-page .products-grid .product-card .product-bottom .product-availability{height:14px !important;font-size:5px !important;}.market-page .products-grid .product-card .market-add-to-cart{height:16px !important;min-height:16px !important;font-size:5px !important;margin:4px auto 6px !important;}
 }
+/* Mobile-only clean white gallery. Desktop styles above remain untouched. */
+@media (max-width: 767px) {
+  .market-page {
+    background: #f8f7f3;
+    color: #191714;
+    overflow-x: hidden;
+  }
+
+  .market-new-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    padding: 0 14px;
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid #e6e0d2;
+    box-shadow: 0 5px 14px rgba(41,32,16,.08);
+  }
+
+  .market-new-navbar > img {
+    height: 30px !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .market-new-categories {
+    display: flex;
+    gap: 17px;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+  .market-new-categories::-webkit-scrollbar { display: none; }
+
+  .market-new-category {
+    flex: 0 0 auto;
+    padding: 21px 0 18px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #38342d;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+  .market-new-category.active { color: #a87c1e; border-bottom-color: #c99b32; }
+
+  .market-new-actions { display: flex; align-items: center; gap: 5px; }
+  .market-new-action {
+    position: relative;
+    display: grid;
+    width: 29px;
+    height: 29px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #b68a25;
+    font-size: 16px;
+  }
+  .market-new-action span { font-size: 24px !important; }
+  .market-new-action svg { font-size: 14px; }
+  .market-cart-count { top: -4px; right: -3px; }
+
+  .market-search-panel {
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    display: flex;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #fff;
+    border-bottom: 1px solid #e6e0d2;
+  }
+  .market-search-panel input { min-width: 0; flex: 1; height: 38px; font-size: 11px; }
+
+  .market-hero {
+    min-height: 320px;
+    padding: 35px 22px 28px;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.85) 52%, rgba(255,255,255,.32)),
+      url('/market/ddj800/DDJ-800-3.jpg') center right / 76% auto no-repeat;
+    border-bottom: 1px solid #e8e1d2;
+  }
+  .market-hero-content { max-width: 250px; text-align: left; }
+  .market-eyebrow { font-size: 9px; letter-spacing: .16em; color: #a77b20; }
+  .market-hero h1 {
+    margin: 9px 0 11px;
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 9vw, 38px);
+    line-height: .94;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+    text-shadow: none;
+  }
+  .market-hero > .market-hero-content > p {
+    max-width: 175px;
+    margin: 0;
+    color: #565049;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .market-trade-in { display: none; }
+
+  .market-products { padding: 22px 12px 42px; background: #f8f7f3; }
+  .market-section-heading { display: block; margin: 0 0 13px; }
+  .market-section-heading::before {
+    content: 'DJ CONTROLLERS  ·  ALL PRODUCTS';
+    display: block;
+    color: #403b34;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+  .products-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .products-grid .product-card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 278px;
+    flex-direction: column;
+    border: 1px solid #e5ded0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .product-image { height: 118px; padding: 12px 10px 2px; background: #fff; }
+  .product-real-image { object-fit: contain; }
+  .market-card-favorite {
+    top: auto;
+    right: 9px;
+    bottom: 4px;
+    width: 23px;
+    height: 23px;
+    border: 0;
+    background: #fff;
+    color: #b58a2a;
+    box-shadow: 0 2px 8px rgba(0,0,0,.16);
+  }
+  .market-gallery-arrow { display: none; }
+  .product-info { display: flex; flex: 1; flex-direction: column; padding: 10px 10px 7px; text-align: left; }
+  .product-brand { margin: 0 0 4px; color: #9a9388; font-size: 8px; letter-spacing: .07em; }
+  .product-info h3 { margin: 0; color: #1d1a16; font-size: 13px; line-height: 1.15; font-weight: 700; }
+  .product-condition { min-height: 29px; margin: 7px 0 9px; color: #777066; font-size: 9px; line-height: 1.38; white-space: pre-line; }
+  .product-bottom { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 5px; }
+  .product-bottom strong { color: #1b1916; font-size: 11px; white-space: nowrap; }
+  .product-availability, .product-status { padding: 3px 6px; border-radius: 0; font-size: 7px; letter-spacing: .04em; }
+  .market-add-to-cart {
+    width: calc(100% - 20px);
+    height: 27px;
+    margin: 0 10px 10px;
+    border: 1px solid #b98c26;
+    border-radius: 0;
+    background: #c99b32;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+  .market-contact { padding: 42px 20px; background: #211b12; }
+  .market-contact h2 { font-size: 25px; }
+  .market-brand { display: none; }
+  .market-cart-panel { width: min(92vw, 380px); }
+}
