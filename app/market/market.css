@@ -5652,3 +5652,204 @@ body:has(.market-page .product-detail) {
 .market-page .market-new-action[aria-label="Shopping Cart"] {
   background: #d9d9d9 !important;
 }
+
+  
+/* MOBILE — COMPACT DESKTOP MARKET LAYOUT */
+@media (max-width: 767px) {
+  .market-page {
+    padding-top: 64px !important;
+  }
+
+  .market-page .market-new-navbar {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    background: #eeeeee !important;
+    border-bottom: 1px solid #d2d2d2 !important;
+  }
+
+  .market-page .market-new-navbar > img {
+    width: 34px !important;
+    height: 34px !important;
+    margin: 0 !important;
+    transform: none !important;
+    object-fit: contain !important;
+    flex: 0 0 34px !important;
+  }
+
+  .market-page .market-new-actions {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: 64px !important;
+    margin-left: auto !important;
+  }
+
+  .market-page .market-new-action:not(:last-child) {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #222 !important;
+    color: #d4af37 !important;
+  }
+
+  .market-page .market-new-categories {
+    order: 3 !important;
+    position: relative !important;
+    display: block !important;
+    width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+    margin-left: 6px !important;
+  }
+
+  .market-page .market-new-categories::before {
+    content: "☰" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #222 !important;
+    font-size: 23px !important;
+    pointer-events: none !important;
+  }
+
+  .market-page .market-new-category { display: none !important; }
+  .market-page .market-new-category:first-child {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 3 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+  }
+
+  .market-page .market-new-action:last-child {
+    position: fixed !important;
+    right: 14px !important;
+    bottom: 18px !important;
+    z-index: 1100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 0 !important;
+    border: 2px solid #777 !important;
+    border-radius: 50% !important;
+    background: #b8b8b8 !important;
+    color: #111 !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,.3) !important;
+  }
+
+  .market-page .market-products {
+    padding: 32px 14px 80px !important;
+  }
+
+  .market-page .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .market-page .products-grid .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    min-height: 440px !important;
+    transform: none !important;
+  }
+
+  .market-page .products-grid .product-image {
+    width: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .market-page .products-grid .product-info {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    min-height: 0 !important;
+    padding: 12px 8px 8px !important;
+    text-align: center !important;
+  }
+
+  .market-page .product-brand { font-size: 10px !important; }
+  .market-page .product-info h3 { font-size: 17px !important; margin: 7px 0 !important; }
+  .market-page .product-condition { font-size: 12px !important; line-height: 1.35 !important; }
+
+  .market-page .products-grid .product-card .product-bottom {
+    position: static !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: auto 0 0 !important;
+    padding: 10px 0 0 !important;
+    transform: none !important;
+  }
+
+  .market-page .products-grid .product-card .product-bottom strong {
+    position: static !important;
+    display: block !important;
+    order: 1 !important;
+    margin: 0 0 7px !important;
+    color: #111 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    transform: none !important;
+  }
+
+  .market-page .products-grid .product-card .product-bottom .product-availability {
+    position: static !important;
+    inset: auto !important;
+    display: inline-flex !important;
+    order: 2 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 78% !important;
+    min-width: 0 !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 6px !important;
+    transform: none !important;
+  }
+
+  .market-page .products-grid .product-card .market-add-to-cart {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: 78% !important;
+    min-width: 0 !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    margin: 10px auto 14px !important;
+    padding: 0 5px !important;
+    transform: none !important;
+  }
+}
