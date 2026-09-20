@@ -305,6 +305,47 @@ const [djBagImage, setDjBagImage] = useState(0);
 
   return (
     <main className="market-page">
+      <section className="market-mobile-clean" aria-label="DJ RAY Market mobile">
+        <header className="mobile-clean-nav">
+          <img src="/logo2.png" alt="DJ RAY" />
+          <span>DJ RAY MARKET</span>
+          <div>
+            <button type="button" aria-label="Search" onClick={() => setSearchOpen((open) => !open)}>⌕</button>
+            <button type="button" aria-label="Favorites" onClick={() => router.push("/market/favorites")}>♡</button>
+            <button type="button" aria-label="Cart" onClick={openCart}>🛒{cartCount > 0 && <b>{cartCount}</b>}</button>
+          </div>
+        </header>
+
+        <div className="mobile-clean-categories">
+          {["DJ EQUIPMENT", "HEADPHONES", "MACBOOKS", "DJ BAGS & CASES", "DJ ACCESSORIES"].map((category) => (
+            <button key={category} type="button" className={activeCategory === category ? "active" : ""} onClick={() => setActiveCategory(category)}>{category}</button>
+          ))}
+        </div>
+
+        <section className="mobile-clean-hero">
+          <div>
+            <small>YOUR SETUP, A MUSIC STANDARD</small>
+            <h1>DISCOVER<br />DJ EQUIPMENT<br />THAT INSPIRES</h1>
+            <p>Carefully selected DJ gear, ready for your next set.</p>
+            <button type="button" onClick={() => document.getElementById("mobile-products")?.scrollIntoView({ behavior: "smooth" })}>SHOP COLLECTION →</button>
+          </div>
+        </section>
+
+        <div className="mobile-clean-benefits"><span>◇ 100% AUTHENTIC PRODUCTS</span><span>▣ SECURE PAYMENT</span><span>♧ SUPPORT IN ARABIC & ENGLISH</span></div>
+
+        <section className="mobile-clean-products" id="mobile-products">
+          <div className="mobile-clean-heading"><span>DJ CONTROLLERS</span><button type="button" onClick={() => setSearchQuery("")}>VIEW ALL →</button></div>
+          <div className="mobile-clean-grid">
+            {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
+              <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
+                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>♡</button>
+                <img src={product.image} alt={product.name} />
+                <div><small>{product.brand}</small><h2>{product.name}</h2><strong>{product.price}</strong><span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span></div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </section>
 
 
 
@@ -791,4 +832,3 @@ const [djBagImage, setDjBagImage] = useState(0);
     </main>
   );
 }
-
