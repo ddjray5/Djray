@@ -208,7 +208,7 @@ export default function FavoritesPage() {
   };
 
   return (
-    <main className="market-page">
+    <main className="market-favorites-page">
       <section className="market-hero">
         <div className="market-hero-content">
           <span className="market-eyebrow">DJ RAY MARKET</span>

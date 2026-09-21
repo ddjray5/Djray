@@ -54,3 +54,41 @@
   .mobile-clean-products { padding: 19px 12px 40px; }.mobile-clean-heading { margin-bottom: 12px; }.mobile-clean-heading span { font-size: 10px; }.mobile-clean-heading button { font-size: 8px; }.mobile-clean-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .mobile-clean-card > button { top: 7px; right: 7px; width: 25px; height: 25px; font-size: 17px; }.mobile-clean-card > img { height: 115px; padding: 16px 10px 5px; }.mobile-clean-card > div { min-height: 103px; padding: 8px 9px 10px; }.mobile-clean-card small { font-size: 7px; }.mobile-clean-card h2 { margin: 4px 0 9px; font-size: 12px; }.mobile-clean-card strong { font-size: 11px; }.mobile-clean-card span { margin-top: 7px; font-size: 7px; }
 }
+
+/* Favorites is a separate route, so it must not inherit the home-page hiding rules. */
+.market-favorites-page { min-height: 100vh; padding: 0; background: #f8f6f0 !important; color: #1b1813; font-family: Arial, sans-serif; }
+.market-favorites-page .market-hero { min-height: 220px; padding: 120px clamp(22px,8vw,130px) 38px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.92) 55%,rgba(251,250,246,.25)),url('/market/xdj-az-hero-v2.webp') center right/62% auto no-repeat; }
+.market-favorites-page .market-hero-content { max-width: 620px; }
+.market-favorites-page .market-eyebrow { color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
+.market-favorites-page .market-hero h1 { margin: 12px 0 8px; color: #1b1813; font-family: Georgia,serif; font-size: 46px; line-height: .95; }
+.market-favorites-page .market-hero p { margin: 0; color: #5d564d; }
+.market-favorites-page .market-products { max-width: 1500px; margin: 0 auto; padding: 42px 4vw 80px !important; background: #f8f6f0 !important; }
+.market-favorites-page .products-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
+.market-favorites-page .product-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; }
+.market-favorites-page .product-image { position: relative; min-height: 220px; background: #fff; cursor: pointer; }
+.market-favorites-page .product-real-image { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; }
+.market-favorites-page .product-info { padding: 12px 14px 8px; }
+.market-favorites-page .product-brand { color: #817a70; font-size: 10px; letter-spacing: .06em; }
+.market-favorites-page .product-info h3 { margin: 6px 0; color: #1e1b16; font-size: 17px; }
+.market-favorites-page .product-condition { min-height: 28px; margin: 0; color: #6f675b; font-size: 11px; }
+.market-favorites-page .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.market-favorites-page .product-bottom strong { font-size: 14px; }
+.market-favorites-page .product-availability { padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
+.market-favorites-page .product-availability.sold { background: #d7d2ca; color: #4d4942; }
+.market-favorites-page .market-product-favorite { position: absolute; z-index: 1; top: 10px; right: 10px; display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 7px rgba(0,0,0,.14); color: #b30018; }
+.market-favorites-page .market-add-to-cart { width: calc(100% - 28px); margin: 0 14px 14px; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
+.market-favorites-page .market-products > div:last-child { position: static !important; margin-top: 28px; }
+.market-favorites-page .market-products > div:last-child button { transform: none !important; }
+@media (max-width: 767px) {
+  .market-favorites-page .market-hero { min-height: 190px; padding: 92px 18px 28px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.92) 60%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/90% auto no-repeat; }
+  .market-favorites-page .market-hero h1 { font-size: 31px !important; }
+  .market-favorites-page .market-products { padding: 24px 12px 50px !important; }
+  .market-favorites-page .products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .market-favorites-page .product-image, .market-favorites-page .product-real-image { min-height: 130px; height: 130px; }
+  .market-favorites-page .product-real-image { padding: 12px 8px; }
+  .market-favorites-page .product-info { padding: 8px 9px 6px; }
+  .market-favorites-page .product-info h3 { margin: 4px 0 7px; font-size: 12px; }
+  .market-favorites-page .product-condition { min-height: 24px; font-size: 8px; }
+  .market-favorites-page .product-bottom strong { font-size: 11px; }
+  .market-favorites-page .market-add-to-cart { width: calc(100% - 18px); margin: 0 9px 9px; padding: 8px 4px; font-size: 8px; }
+}
