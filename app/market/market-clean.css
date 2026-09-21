@@ -2,7 +2,7 @@
 .market-mobile-clean { display: block !important; min-height: 100vh; padding-top: 114px; background: #f8f6f0 !important; color: #1b1813 !important; font-family: Arial, sans-serif; }
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
-.market-page > .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed; top: 114px; right: clamp(16px,5vw,84px); left: clamp(16px,5vw,84px); z-index: 600; display: flex !important; gap: 10px; padding: 12px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
+.market-page > .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed; top: 104px; right: clamp(28px,7vw,100px); left: clamp(28px,7vw,100px); z-index: 600; display: flex !important; gap: 10px; padding: 10px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
 .market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 600 16px Arial, sans-serif; letter-spacing: .08em; }
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 14px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
@@ -43,7 +43,7 @@
   .market-mobile-clean { padding-top: 94px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
   .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
-  .market-page > .market-search-panel { top: 88px; right: 18px; left: 18px; padding: 7px; }
+  .market-page > .market-search-panel { top: 82px; right: 24px; left: 24px; padding: 6px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
   .market-search-panel input { padding: 9px 10px; font-size: 16px; }
   .market-search-panel .search-close { padding: 0 10px; font-size: 8px; }
