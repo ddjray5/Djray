@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart, FaSearch } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart } from "react-icons/fa";
 import "./market-clean.css";
 
 const flx4Images = [
@@ -310,7 +310,7 @@ const [djBagImage, setDjBagImage] = useState(0);
           <img src="/logo2.png" alt="DJ RAY" />
           <span>DJ RAY MARKET</span>
           <div>
-            <button type="button" aria-label="Search" onClick={() => setSearchOpen((open) => !open)}><FaSearch aria-hidden="true" /></button>
+            <button type="button" aria-label="Search" onClick={() => setSearchOpen((open) => !open)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.5" /><path d="m16 16 5 5" /></svg></button>
             <button type="button" aria-label="Favorites" onClick={() => router.push("/market/favorites")}>♡</button>
             <button type="button" aria-label="Cart" onClick={openCart}>🛒{cartCount > 0 && <b>{cartCount}</b>}</button>
           </div>
