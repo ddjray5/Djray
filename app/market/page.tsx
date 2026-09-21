@@ -322,6 +322,27 @@ const [djBagImage, setDjBagImage] = useState(0);
           ))}
         </div>
 
+        {searchOpen && (
+          <div className="market-search-panel">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="SEARCH PRODUCTS..."
+              autoFocus
+            />
+            <button className="search-close"
+              type="button"
+              onClick={() => {
+                setSearchQuery("");
+                setSearchOpen(false);
+              }}
+            >
+              CLOSE
+            </button>
+          </div>
+        )}
+
         <section className="mobile-clean-hero">
           <div>
             <small>YOUR SETUP, A MUSIC STANDARD</small>
@@ -414,27 +435,6 @@ const [djBagImage, setDjBagImage] = useState(0);
           </button>
         </div>
       </nav>
-
-      {searchOpen && (
-        <div className="market-search-panel">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(event) => setSearchQuery(event.target.value)}
-            placeholder="SEARCH PRODUCTS..."
-            autoFocus
-          />
-          <button className="search-close"
-            type="button"
-            onClick={() => {
-              setSearchQuery("");
-              setSearchOpen(false);
-            }}
-          >
-            CLOSE
-          </button>
-        </div>
-      )}
 
       <section className="market-hero">
         <div className="market-hero-content">
