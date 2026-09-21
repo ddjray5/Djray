@@ -305,7 +305,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
   return (
     <main className="market-page">
-      <section className="market-mobile-clean" aria-label="DJ RAY Market mobile">
+      <div className="market-controls-root" aria-label="DJ RAY Market controls">
         <header className="mobile-clean-nav">
           <img src="/logo2.png" alt="DJ RAY" />
           <span>DJ RAY MARKET</span>
@@ -342,6 +342,10 @@ const [djBagImage, setDjBagImage] = useState(0);
             </button>
           </div>
         )}
+
+      </div>
+
+      <section className="market-mobile-clean" aria-label="DJ RAY Market mobile">
 
         <section className="mobile-clean-hero">
           <div>
