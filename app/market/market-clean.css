@@ -3,7 +3,7 @@
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
 .market-page > .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed; top: 114px; right: clamp(16px,5vw,84px); left: clamp(16px,5vw,84px); z-index: 600; display: flex !important; gap: 10px; padding: 12px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
-.market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 600 12px Arial, sans-serif; letter-spacing: .08em; }
+.market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 600 16px Arial, sans-serif; letter-spacing: .08em; }
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 14px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
 .mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 500; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
@@ -44,7 +44,8 @@
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
   .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .market-page > .market-search-panel { top: 94px; right: 12px; left: 12px; padding: 9px; }
-  .market-search-panel input { padding: 9px 10px; font-size: 10px; }
+  /* iOS Safari zooms focused fields whose text is smaller than 16px. */
+  .market-search-panel input { padding: 9px 10px; font-size: 16px; }
   .market-search-panel .search-close { padding: 0 10px; font-size: 8px; }
   .mobile-clean-categories { top: 55px; justify-content: flex-start; gap: 14px; padding: 10px 14px; }.mobile-clean-categories button { font-size: 8px; }
   .mobile-clean-hero { min-height: 258px; padding: 28px 18px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.9) 48%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/87% auto no-repeat; }.mobile-clean-hero > div { width: 52%; min-width: 170px; }.mobile-clean-hero small { font-size: 7px; }.mobile-clean-hero h1 { font-size: 27px; }.mobile-clean-hero p { font-size: 9px; }.mobile-clean-hero button { padding: 8px 10px; font-size: 8px; }
