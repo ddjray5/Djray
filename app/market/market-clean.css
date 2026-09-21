@@ -1,8 +1,8 @@
 /* Standalone clean market UI. This file intentionally overrides the legacy stylesheet. */
-.market-mobile-clean { display: block !important; min-height: 100vh; background: #f8f6f0 !important; color: #1b1813 !important; font-family: Arial, sans-serif; }
+.market-mobile-clean { display: block !important; min-height: 100vh; padding-top: 72px; background: #f8f6f0 !important; color: #1b1813 !important; font-family: Arial, sans-serif; }
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
-.mobile-clean-nav { position: sticky; top: 0; z-index: 500; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
+.mobile-clean-nav { position: fixed; top: 0; right: 0; left: 0; z-index: 500; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
 .mobile-clean-nav > img { width: 49px; height: auto; }
 .mobile-clean-nav > span { flex: 1; color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .mobile-clean-nav > div { display: flex; gap: 9px; }
@@ -35,6 +35,7 @@
 .mobile-clean-card span { display: inline-block; margin-top: 9px; padding: 4px 8px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
 @media (max-width: 767px) {
+  .market-mobile-clean { padding-top: 55px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
   .mobile-clean-nav > img { width: 34px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }
   .mobile-clean-categories { justify-content: flex-start; gap: 14px; padding: 10px 14px; }.mobile-clean-categories button { font-size: 8px; }
