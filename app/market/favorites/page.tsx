@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
-import "../market.css";
 
 const flx4Images = [
   "/market/ddjflx4/s-l1600.webp",

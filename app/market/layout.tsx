@@ -1,4 +1,4 @@
-import "./market.css";
+import "./market-clean.css";
 
 export default function MarketLayout({
   children,
