@@ -3,10 +3,11 @@
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
 .mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 500; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
-.mobile-clean-nav > img { width: 49px; height: auto; }
+.mobile-clean-nav > img { width: 56px; height: auto; }
 .mobile-clean-nav > span { flex: 1; color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .mobile-clean-nav > div { display: flex; gap: 9px; }
 .mobile-clean-nav button { position: relative; display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #dfd2ba; background: #fff; color: #aa7f22; font-size: 20px; }
+.mobile-clean-nav button[aria-label="Search"] { font-size: 25px; }
 .mobile-clean-nav b { position: absolute; top: -5px; right: -5px; display: grid; width: 16px; height: 16px; place-items: center; border-radius: 50%; background: #b98622; color: #fff; font-size: 8px; }
 .mobile-clean-categories { position: fixed; top: 72px; right: 0; left: 0; z-index: 499; display: flex; justify-content: center; gap: clamp(14px,3vw,38px); overflow-x: auto; padding: 14px 20px 11px; white-space: nowrap; background: #fff; border-bottom: 1px solid #e8dfcf; scrollbar-width: none; }
 .mobile-clean-categories button { flex: 0 0 auto; padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4d473d; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
@@ -37,7 +38,7 @@
 @media (max-width: 767px) {
   .market-mobile-clean { padding-top: 94px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
-  .mobile-clean-nav > img { width: 34px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }
+  .mobile-clean-nav > img { width: 39px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Search"] { font-size: 21px; }
   .mobile-clean-categories { top: 55px; justify-content: flex-start; gap: 14px; padding: 10px 14px; }.mobile-clean-categories button { font-size: 8px; }
   .mobile-clean-hero { min-height: 258px; padding: 28px 18px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.9) 48%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/87% auto no-repeat; }.mobile-clean-hero > div { width: 52%; min-width: 170px; }.mobile-clean-hero small { font-size: 7px; }.mobile-clean-hero h1 { font-size: 27px; }.mobile-clean-hero p { font-size: 9px; }.mobile-clean-hero button { padding: 8px 10px; font-size: 8px; }
   .mobile-clean-benefits { gap: 7px; padding: 10px; font-size: 6px; }.mobile-clean-benefits span { flex: 1; }
