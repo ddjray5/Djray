@@ -177,7 +177,7 @@ export default function ProductPage({
 
   if (!product) {
     return (
-      <main className="market-page">
+      <main className="market-page market-product-detail-page">
         <section className="market-contact">
           <div>
             <h2>PRODUCT NOT FOUND</h2>
@@ -192,7 +192,7 @@ export default function ProductPage({
 
   const images = product.images;
   return (
-    <main className="market-page">
+    <main className="market-page market-product-detail-page">
       <section className="product-detail">
         <Link href="/market" className="product-back">
           BACK
