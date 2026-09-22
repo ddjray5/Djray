@@ -152,7 +152,7 @@ const products = [
     brand: "Apple",
     name: "MacBook Pro M1 16-inch 2021",
     condition: "Good Condition",
-    price: "AED 650",
+    price: "AED 4,000",
     status: "AVAILABLE",
     image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   },

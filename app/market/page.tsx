@@ -198,7 +198,7 @@ const products = [
     brand: "Apple",
     name: "MacBook Pro M1 16-inch 2021",
     condition: "Good Condition",
-    price: "AED 650",
+    price: "AED 4,000",
     status: "AVAILABLE",
     description: "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM, 512GB SSD, and original charger included.",
     image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
