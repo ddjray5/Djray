@@ -369,7 +369,22 @@ const [djBagImage, setDjBagImage] = useState(0);
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
                 <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>{favorites.includes(product.id) ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}</button>
                 <img src={product.image} alt={product.name} />
-                <div><small>{product.brand}</small><h2>{product.name}</h2><strong>{product.price}</strong><span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span></div>
+                <div>
+                  <small>{product.brand}</small>
+                  <h2>{product.name}</h2>
+                  <strong>{product.price}</strong>
+                  <span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span>
+                  <button
+                    type="button"
+                    className="mobile-clean-add-to-cart"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      addToCart(product, event.currentTarget);
+                    }}
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
               </article>
             ))}
           </div>
