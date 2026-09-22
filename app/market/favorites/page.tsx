@@ -63,6 +63,14 @@ const macbookM1Images = [
   "/market/macbook-pro/macbook-pro-m1-2021-5.png",
 ];
 
+const xdjRxImages = [
+  "/market/xdj-rx/xdj-rx-main.jpg",
+  "/market/xdj-rx/xdj-rx-2.webp",
+  "/market/xdj-rx/xdj-rx-3.jpg",
+  "/market/xdj-rx/xdj-rx-4.jpg",
+  "/market/xdj-rx/xdj-rx-5.jpg",
+];
+
 const products = [
   {
     id: "ddj-400",
@@ -174,6 +182,15 @@ const products = [
     image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   },
   {
+    id: "xdj-rx",
+    brand: "Pioneer DJ",
+    name: "XDJ RX",
+    condition: "Excellent Condition",
+    price: "AED 3,500",
+    status: "SOLD",
+    image: "/market/xdj-rx/xdj-rx-main.jpg",
+  },
+  {
     id: "hercules-inpulse-500",
     brand: "Hercules",
     name: "DJControl Inpulse 500",
@@ -194,6 +211,7 @@ export default function FavoritesPage() {
   const [ddj800Image, setDdj800Image] = useState(0);
   const [herculesImage, setHerculesImage] = useState(1);
   const [macbookM1Image, setMacbookM1Image] = useState(0);
+  const [xdjRxImage, setXdjRxImage] = useState(0);
 
   const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -333,6 +351,8 @@ export default function FavoritesPage() {
                                         ? djBagImages[djBagImage]
                                       : product.id === "macbook-pro-m1-2021"
                                         ? macbookM1Images[macbookM1Image]
+                                      : product.id === "xdj-rx"
+                                        ? xdjRxImages[xdjRxImage]
                                         : product.image
                           }
                           alt={product.name}
@@ -367,7 +387,7 @@ export default function FavoritesPage() {
                           }`}
                         />
 
-                        {product.id === "macbook-pro-m1-2021" && (
+                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx") && (
                           <>
                             <button
                               type="button"
@@ -375,7 +395,11 @@ export default function FavoritesPage() {
                               aria-label="Previous image"
                               onClick={(event) => {
                                 event.stopPropagation();
-                                setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
+                                if (product.id === "xdj-rx") {
+                                  setXdjRxImage((current) => (current - 1 + xdjRxImages.length) % xdjRxImages.length);
+                                } else {
+                                  setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
+                                }
                               }}
                             >
                               <span>‹</span>
@@ -386,7 +410,11 @@ export default function FavoritesPage() {
                               aria-label="Next image"
                               onClick={(event) => {
                                 event.stopPropagation();
-                                setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
+                                if (product.id === "xdj-rx") {
+                                  setXdjRxImage((current) => (current + 1) % xdjRxImages.length);
+                                } else {
+                                  setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
+                                }
                               }}
                             >
                               <span>›</span>

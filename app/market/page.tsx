@@ -74,6 +74,14 @@ const macbookM1Images = [
   "/market/macbook-pro/macbook-pro-m1-2021-5.png",
 ];
 
+const xdjRxImages = [
+  "/market/xdj-rx/xdj-rx-main.jpg",
+  "/market/xdj-rx/xdj-rx-2.webp",
+  "/market/xdj-rx/xdj-rx-3.jpg",
+  "/market/xdj-rx/xdj-rx-4.jpg",
+  "/market/xdj-rx/xdj-rx-5.jpg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -116,6 +124,17 @@ const products = [
     status: "AVAILABLE",
     description: "Excellent condition Pioneer DJ DDJ-SX. Fully functional and ready to use. A powerful professional DJ controller, ideal for DJs looking for reliable performance and a solid setup.",
     image: "/market/ddjsx/J00916000001000-00-500x500.webp",
+  },
+  {
+    id: "xdj-rx",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "XDJ RX",
+    condition: "Excellent Condition",
+    price: "AED 3,500",
+    status: "SOLD",
+    description: "Pioneer DJ XDJ RX in excellent condition. A professional all-in-one DJ system with standalone playback and mixer controls.",
+    image: "/market/xdj-rx/xdj-rx-main.jpg",
   },
   {
     id: "ddj-sb3",
@@ -242,6 +261,7 @@ export default function MarketPage() {
   const [standImage, setStandImage] = useState(0);
   const [macbookImage, setMacbookImage] = useState(0);
   const [macbookM1Image, setMacbookM1Image] = useState(0);
+  const [xdjRxImage, setXdjRxImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -653,12 +673,14 @@ export default function MarketPage() {
                                   ? macbookImages[macbookImage]
                                 : product.id === "macbook-pro-m1-2021"
                                   ? macbookM1Images[macbookM1Image]
+                                : product.id === "xdj-rx"
+                                  ? xdjRxImages[xdjRxImage]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -675,6 +697,8 @@ export default function MarketPage() {
                                 ? setMacbookImage((current) => (current - 1 + macbookImages.length) % macbookImages.length)
                               : product.id === "macbook-pro-m1-2021"
                                 ? setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length)
+                              : product.id === "xdj-rx"
+                                ? setXdjRxImage((current) => (current - 1 + xdjRxImages.length) % xdjRxImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -698,6 +722,8 @@ export default function MarketPage() {
                                 ? setMacbookImage((current) => (current + 1) % macbookImages.length)
                               : product.id === "macbook-pro-m1-2021"
                                 ? setMacbookM1Image((current) => (current + 1) % macbookM1Images.length)
+                              : product.id === "xdj-rx"
+                                ? setXdjRxImage((current) => (current + 1) % xdjRxImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)

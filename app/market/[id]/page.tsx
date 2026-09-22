@@ -216,6 +216,22 @@ const products = {
       "/market/macbook-pro/macbook-pro-m1-2021-5.png",
     ],
   },
+  "xdj-rx": {
+    name: "XDJ RX",
+    brand: "PIONEER DJ",
+    condition: "Excellent Condition",
+    price: "AED 3,500",
+    status: "SOLD",
+    description:
+      "Pioneer DJ XDJ RX in excellent condition. A professional all-in-one DJ system with standalone playback and mixer controls.",
+    images: [
+      "/market/xdj-rx/xdj-rx-main.jpg",
+      "/market/xdj-rx/xdj-rx-2.webp",
+      "/market/xdj-rx/xdj-rx-3.jpg",
+      "/market/xdj-rx/xdj-rx-4.jpg",
+      "/market/xdj-rx/xdj-rx-5.jpg",
+    ],
+  },
 };
 
 export default function ProductPage({
