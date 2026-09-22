@@ -287,6 +287,14 @@ export default function Navbar() {
             Contact
           </a>
 
+          {/* MARKET */}
+          <Link
+            href="/market"
+            onClick={closeMenu}
+          >
+            Market
+          </Link>
+
           {/* DJ COURSE */}
           <a
             href="https://djray-training-1jcotc9mk-dj-ray.vercel.app"
