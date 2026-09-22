@@ -12,7 +12,6 @@ const flx4Images = [
   "/market/ddjflx4/s-l1600 (4).webp",
   "/market/ddjflx4/s-l1600 (5).webp",
   "/market/ddjflx4/s-l1600 (6).webp",
-  "/market/ddjflx4/s-l1600 (12).webp",
 ];
 
 const ddjsxImages = [
