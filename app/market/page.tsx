@@ -185,6 +185,7 @@ const [djBagImage, setDjBagImage] = useState(0);
   const [ddj800Image, setDdj800Image] = useState(0);
   const [herculesImage, setHerculesImage] = useState(0);
   const [activeCategory, setActiveCategory] = useState("DJ EQUIPMENT");
+  const [showAllProducts, setShowAllProducts] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [cartCount, setCartCount] = useState(0);
@@ -239,6 +240,9 @@ const [djBagImage, setDjBagImage] = useState(0);
       ].join(" ")
     ).includes(query);
   }).sort((a, b) => Number(a.status === "SOLD") - Number(b.status === "SOLD"));
+  const displayedProducts = showAllProducts || searchQuery.trim()
+    ? filteredProducts
+    : filteredProducts.filter((product) => product.category === activeCategory);
   const [cartBounce, setCartBounce] = useState(false);
   const [flyingCart, setFlyingCart] = useState<{
     image: string;
@@ -324,7 +328,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
         <div className="mobile-clean-categories">
           {["DJ EQUIPMENT", "HEADPHONES", "MACBOOKS", "DJ BAGS & CASES", "DJ ACCESSORIES"].map((category) => (
-            <button key={category} type="button" className={activeCategory === category ? "active" : ""} onClick={() => setActiveCategory(category)}>{category}</button>
+            <button key={category} type="button" className={activeCategory === category ? "active" : ""} onClick={() => { setActiveCategory(category); setShowAllProducts(false); setSearchQuery(""); }}>{category}</button>
           ))}
         </div>
 
@@ -365,9 +369,21 @@ const [djBagImage, setDjBagImage] = useState(0);
         <div className="mobile-clean-benefits"><span>◇ 100% AUTHENTIC PRODUCTS</span><span>▣ SECURE PAYMENT</span><span>♧ SUPPORT IN ARABIC & ENGLISH</span></div>
 
         <section className="mobile-clean-products" id="mobile-products">
-          <div className="mobile-clean-heading"><span>{activeCategory}</span><button type="button" onClick={() => setSearchQuery("")}>VIEW ALL →</button></div>
+          <div className="mobile-clean-heading">
+            <span>{showAllProducts ? "ALL PRODUCTS" : activeCategory}</span>
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery("");
+                setShowAllProducts(true);
+                document.getElementById("mobile-products")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              VIEW ALL →
+            </button>
+          </div>
           <div className="mobile-clean-grid">
-            {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
+            {displayedProducts.map((product) => (
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
                 <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>
                   <svg className="card-heart-icon" viewBox="0 0 24 24" fill={favorites.includes(product.id) ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -420,6 +436,8 @@ const [djBagImage, setDjBagImage] = useState(0);
               className={`market-new-category ${activeCategory === category ? "active" : ""}`}
               onClick={() => {
                 setActiveCategory(category);
+                setShowAllProducts(false);
+                setSearchQuery("");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
@@ -504,7 +522,7 @@ const [djBagImage, setDjBagImage] = useState(0);
         </div>
 
         <div className="products-grid">
-          {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
+          {displayedProducts.map((product) => (
             <article
               className="product-card"
               key={product.id}
