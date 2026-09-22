@@ -209,6 +209,14 @@ export default function FavoritesPage() {
 
   return (
     <main className="market-favorites-page">
+      <button
+        type="button"
+        className="favorites-back-button"
+        onClick={() => router.push("/market")}
+      >
+        BACK
+      </button>
+
       <section className="market-hero">
         <div className="market-hero-content">
           <span className="market-eyebrow">DJ RAY MARKET</span>
@@ -373,42 +381,6 @@ export default function FavoritesPage() {
               ))}
             </div>
 
-            <div style={{ position: "absolute", top: "20px", left: "40px" }}>
-              <button
-                type="button"
-                onClick={() => router.push("/market")}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#d4af37";
-                  e.currentTarget.style.color = "#000";
-                  e.currentTarget.style.transform = "translateY(-152px)";
-                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,0.35)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#111";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-150px)";
-                  e.currentTarget.style.boxShadow = "0 5px 12px rgba(0,0,0,0.30), 0 2px 4px rgba(0,0,0,0.18)";
-                }}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#111",
-                  color: "#fff",
-                  border: "2px solid #d4af37",
-                  padding: "10px 18px",
-                  borderRadius: "7px",
-                  fontSize: "12px",
-                  fontWeight: 800,
-                  letterSpacing: "1.2px",
-                  cursor: "pointer",
-                  boxShadow: "0 5px 12px rgba(0,0,0,0.30), 0 2px 4px rgba(0,0,0,0.18)",
-                  transform: "translateY(-150px)",
-                }}
-              >
-                BACK
-              </button>
-            </div>
           </>
         )}
       </section>
