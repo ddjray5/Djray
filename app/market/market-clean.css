@@ -49,7 +49,7 @@
 .mobile-clean-card span.sold, .market-page .product-availability.sold, .market-favorites-page .product-availability.sold { background: #c94a4a; color: #fff; }
 .market-cart-overlay { position: fixed !important; inset: 0; z-index: 1400 !important; display: flex !important; align-items: flex-start; justify-content: center; padding: 92px 18px 24px; overflow-y: auto; background: rgba(20,17,12,.48); }
 .market-cart-panel { width: min(620px, 100%); max-height: calc(100vh - 116px); overflow-y: auto; padding: 24px; background: #fff; border: 1px solid #d8c59e; box-shadow: 0 18px 50px rgba(0,0,0,.28); color: #1b1813; }
-.market-cart-header { display: flex; align-items: center; justify-content: center; padding: 18px; border: 2px solid #c69a32; background: #fffdf8; box-shadow: 0 5px 16px rgba(60,42,10,.16); }
+.market-cart-header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 18px; border: 1px solid #d8c59e; background: #fffdf8; box-shadow: 0 2px 8px rgba(60,42,10,.10); }
 .market-cart-title { display: flex; align-items: center; justify-content: center; gap: 20px; }
 .market-cart-title img { width: 70px; height: auto; }
 .market-cart-title h2 { margin: 0; color: #9e7621; font-size: 30px; letter-spacing: .12em; }
