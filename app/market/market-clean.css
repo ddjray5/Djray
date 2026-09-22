@@ -23,7 +23,7 @@
 .mobile-clean-hero > div { width: 36%; min-width: 280px; }
 .mobile-clean-hero small { color: #726854; font-size: 10px; letter-spacing: .13em; }
 .mobile-clean-hero h1 { margin: 11px 0 12px; font-family: Georgia,serif; font-size: clamp(38px,4vw,62px); line-height: .9; letter-spacing: -.06em; }
-.mobile-clean-hero p { max-width: 250px; margin: 0 0 18px; color: #5d564d; font-size: 13px; line-height: 1.45; }
+.mobile-clean-hero p { width: max-content; max-width: none; margin: 0 0 18px; color: #5d564d; font-size: 13px; line-height: 1.45; white-space: nowrap; }
 .mobile-clean-hero button { padding: 11px 16px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
 .mobile-clean-benefits { display: flex; justify-content: center; gap: clamp(15px,5vw,60px); padding: 16px 5vw; background: #fff; border-bottom: 1px solid #e8dfcf; color: #735c2e; text-align: center; font-size: 9px; font-weight: 700; }
 .mobile-clean-products { max-width: 1700px; margin: 0 auto; padding: 42px 2vw 80px; background: #f8f6f0 !important; }
