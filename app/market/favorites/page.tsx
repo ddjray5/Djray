@@ -148,6 +148,15 @@ const products = [
     image: "/market/stand/18063212_800.jpg",
   },
   {
+    id: "macbook-pro-2012",
+    brand: "Apple",
+    name: "MacBook Pro 13-inch 2012",
+    condition: "Good Condition",
+    price: "AED 650",
+    status: "AVAILABLE",
+    image: "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+  },
+  {
     id: "hercules-inpulse-500",
     brand: "Hercules",
     name: "DJControl Inpulse 500",

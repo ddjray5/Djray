@@ -58,6 +58,14 @@ const standImages = [
   "/market/stand/18063262_800.jpg",
 ];
 
+const macbookImages = [
+  "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+  "/market/macbook-pro/macbook-pro-2012-front.webp",
+  "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
+  "/market/macbook-pro/macbook-pro-2012-side.avif",
+  "/market/macbook-pro/macbook-pro-2012-laptop.jpg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -184,6 +192,18 @@ const products = [
   },
 
   {
+    id: "macbook-pro-2012",
+    category: "MACBOOKS",
+    brand: "Apple",
+    name: "MacBook Pro 13-inch 2012",
+    condition: "Good Condition",
+    price: "AED 650",
+    status: "AVAILABLE",
+    description: "Apple MacBook Pro 13-inch (2012) with 8GB RAM, 128GB SSD, and original charger included.",
+    image: "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+  },
+
+  {
     id: "hercules-inpulse-500",
     category: "DJ EQUIPMENT",
     brand: "Hercules",
@@ -198,8 +218,9 @@ const products = [
 export default function MarketPage() {
   const router = useRouter();
   const [flx4Image, setFlx4Image] = useState(1);
-const [djBagImage, setDjBagImage] = useState(0);
+  const [djBagImage, setDjBagImage] = useState(0);
   const [standImage, setStandImage] = useState(0);
+  const [macbookImage, setMacbookImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -592,14 +613,16 @@ const [djBagImage, setDjBagImage] = useState(0);
                               ? herculesImages[herculesImage]
                               : product.id === "dj-bag"
                                 ? djBagImages[djBagImage]
-                                : product.id === "dj-stand"
+                              : product.id === "dj-stand"
                                   ? standImages[standImage]
+                                : product.id === "macbook-pro-2012"
+                                  ? macbookImages[macbookImage]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -612,6 +635,8 @@ const [djBagImage, setDjBagImage] = useState(0);
                               ? setDjBagImage((current) => (current - 1 + djBagImages.length) % djBagImages.length)
                               : product.id === "dj-stand"
                                 ? setStandImage((current) => (current - 1 + standImages.length) % standImages.length)
+                              : product.id === "macbook-pro-2012"
+                                ? setMacbookImage((current) => (current - 1 + macbookImages.length) % macbookImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -631,6 +656,8 @@ const [djBagImage, setDjBagImage] = useState(0);
                               ? setDjBagImage((current) => (current + 1) % djBagImages.length)
                               : product.id === "dj-stand"
                                 ? setStandImage((current) => (current + 1) % standImages.length)
+                              : product.id === "macbook-pro-2012"
+                                ? setMacbookImage((current) => (current + 1) % macbookImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)

@@ -184,6 +184,22 @@ const products = {
       "/market/stand/18063262_800.jpg",
     ],
   },
+  "macbook-pro-2012": {
+    name: "MacBook Pro 13-inch 2012",
+    brand: "APPLE",
+    condition: "Good Condition",
+    price: "AED 650",
+    status: "AVAILABLE",
+    description:
+      "Apple MacBook Pro 13-inch (2012) with 8GB RAM and 128GB SSD. Original charger included.",
+    images: [
+      "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+      "/market/macbook-pro/macbook-pro-2012-front.webp",
+      "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
+      "/market/macbook-pro/macbook-pro-2012-side.avif",
+      "/market/macbook-pro/macbook-pro-2012-laptop.jpg",
+    ],
+  },
 };
 
 export default function ProductPage({
