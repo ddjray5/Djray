@@ -16,8 +16,8 @@
 .mobile-clean-nav button[aria-label="Favorites"] svg { width: 21px; height: 21px; }
 .mobile-clean-nav button[aria-label="Search"] svg { width: 20px; height: 20px; }
 .mobile-clean-nav b { position: absolute; top: -5px; right: -5px; display: grid; width: 16px; height: 16px; place-items: center; border-radius: 50%; background: #b98622; color: #fff; font-size: 8px; }
-.mobile-clean-categories { position: fixed !important; top: 72px; right: 0; left: 0; z-index: 1199 !important; display: flex; justify-content: center; gap: clamp(14px,3vw,38px); overflow-x: auto; padding: 14px 20px 11px; white-space: nowrap; background: #fff; border-bottom: 1px solid #e8dfcf; scrollbar-width: none; }
-.mobile-clean-categories button { flex: 0 0 auto; padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4d473d; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.mobile-clean-categories { position: fixed !important; top: 72px; right: 0; left: 0; z-index: 1199 !important; display: flex; justify-content: center; gap: clamp(20px,4vw,48px); overflow-x: auto; padding: 14px 20px 11px; white-space: nowrap; background: #fff; border-bottom: 1px solid #e8dfcf; scrollbar-width: none; }
+.mobile-clean-categories button { flex: 0 0 auto; padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4d473d; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
 .mobile-clean-categories button.active { border-color: #c69a32; color: #9a711b; }
 .mobile-clean-hero { min-height: 390px; padding: 70px clamp(22px,8vw,130px); background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.92) 43%,rgba(251,250,246,.13)),url('/market/xdj-az-hero-v2.webp') center right/62% auto no-repeat; }
 .mobile-clean-hero > div { width: 36%; min-width: 280px; }
@@ -51,7 +51,7 @@
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
   .market-search-panel input { padding: 9px 10px; font-size: 16px; }
   .market-search-panel .search-close { padding: 0 8px; font-size: 8px; }
-  .mobile-clean-categories { top: 55px; justify-content: flex-start; gap: 14px; padding: 10px 14px; }.mobile-clean-categories button { font-size: 8px; }
+  .mobile-clean-categories { top: 55px; justify-content: flex-start; gap: 16px; padding: 10px 14px; }.mobile-clean-categories button { font-size: 9px; }
   .mobile-clean-hero { min-height: 258px; padding: 28px 18px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.9) 48%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/87% auto no-repeat; }.mobile-clean-hero > div { width: 52%; min-width: 170px; }.mobile-clean-hero small { font-size: 7px; }.mobile-clean-hero h1 { font-size: 27px; }.mobile-clean-hero p { font-size: 9px; }.mobile-clean-hero button { padding: 8px 10px; font-size: 8px; }
   .mobile-clean-benefits { gap: 7px; padding: 10px; font-size: 6px; }.mobile-clean-benefits span { flex: 1; }
   .mobile-clean-products { padding: 19px 12px 40px; }.mobile-clean-heading { margin-bottom: 12px; }.mobile-clean-heading span { font-size: 10px; }.mobile-clean-heading button { font-size: 8px; }.mobile-clean-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
