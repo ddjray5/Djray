@@ -31,7 +31,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 400 16px Arial, sans-serif; letter-spacing: .08em; }
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 8px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
-.mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1200 !important; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
+.mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1200 !important; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 7px 20px rgba(48,34,9,.16), 0 1px 0 rgba(198,154,50,.35); }
 .mobile-clean-nav > img { width: 86px; height: auto; filter: brightness(1.22) saturate(1.08); }
 .mobile-clean-nav > span { flex: 1; color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .mobile-clean-nav > div { display: flex; gap: 9px; }
@@ -42,7 +42,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-nav button[aria-label="Cart"].cart-bounce { animation: mobile-cart-bounce .7s ease; }
 @keyframes mobile-cart-bounce { 0%,100% { transform: scale(1); } 35% { transform: scale(1.22); background: #fff4d6; } 65% { transform: scale(.92); } }
 .mobile-clean-nav b { position: absolute; top: -5px; right: -5px; display: grid; width: 16px; height: 16px; place-items: center; border-radius: 50%; background: #b98622; color: #fff; font-size: 8px; }
-.mobile-clean-categories { position: fixed !important; top: 72px; right: 0; left: 0; z-index: 1199 !important; display: flex; justify-content: center; gap: clamp(20px,4vw,48px); overflow-x: auto; padding: 14px 20px 11px; white-space: nowrap; background: #fff; border-bottom: 1px solid #e8dfcf; scrollbar-width: none; }
+.mobile-clean-categories { position: fixed !important; top: 72px; right: 0; left: 0; z-index: 1199 !important; display: flex; justify-content: center; gap: clamp(20px,4vw,48px); overflow-x: auto; padding: 14px 20px 11px; white-space: nowrap; background: #fff; border-bottom: 1px solid #e8dfcf; box-shadow: 0 5px 16px rgba(48,34,9,.12); scrollbar-width: none; }
 .mobile-clean-categories button { flex: 0 0 auto; padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4d473d; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
 .mobile-clean-categories button.active { border-color: #c69a32; color: #9a711b; }
 .mobile-clean-hero { min-height: 390px; padding: 70px clamp(22px,8vw,130px); background: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 28%,rgba(255,255,255,.08) 52%,rgba(255,255,255,.02) 100%),url('/market/xdj-az-hero-v2.webp') center right/62% auto no-repeat; background-color: #fff; background-blend-mode: normal; }
