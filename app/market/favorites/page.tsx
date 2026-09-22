@@ -418,6 +418,10 @@ export default function FavoritesPage() {
                                 ? "flx10-favorites-image"
                                 : ""
                           } ${
+                            product.id === "xdj-rr"
+                              ? "xdj-rr-favorites-image"
+                              : ""
+                          } ${
                             product.id === "dj-bag" &&
                             djBagImages[djBagImage].includes("61oZrjkTLLL.jpg")
                               ? "djbag-full-frame-image"
