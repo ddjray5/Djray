@@ -18,7 +18,6 @@ const ddjsxImages = [
   "/market/ddjsx/J00916000001000-00-500x500.webp",
   "/market/ddjsx/J00916000001000-01-500x500.webp",
   "/market/ddjsx/J00916000001000-02-500x500.webp",
-  "/market/ddjsx/J00916000001000-03-500x500.webp",
   "/market/ddjsx/J00916000001000-04-500x500.webp",
   "/market/ddjsx/J00916000001000-05-500x500.webp",
 ];
