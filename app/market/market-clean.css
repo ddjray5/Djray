@@ -49,10 +49,10 @@
 .mobile-clean-card span.sold, .market-page .product-availability.sold, .market-favorites-page .product-availability.sold { background: #c94a4a; color: #fff; }
 .market-cart-overlay { position: fixed !important; inset: 0; z-index: 1400 !important; display: flex !important; align-items: flex-start; justify-content: center; padding: 92px 18px 24px; overflow-y: auto; background: rgba(20,17,12,.48); }
 .market-cart-panel { width: min(620px, 100%); max-height: calc(100vh - 116px); overflow-y: auto; padding: 24px; background: #fff; border: 1px solid #d8c59e; box-shadow: 0 18px 50px rgba(0,0,0,.28); color: #1b1813; }
-.market-cart-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid #e8dfcf; }
-.market-cart-title { display: flex; align-items: center; gap: 14px; }
-.market-cart-title img { width: 58px; height: auto; }
-.market-cart-title h2 { margin: 0; color: #9e7621; font-size: 20px; letter-spacing: .12em; }
+.market-cart-header { display: flex; align-items: center; justify-content: center; padding: 18px; border: 2px solid #c69a32; background: #fffdf8; box-shadow: 0 5px 16px rgba(60,42,10,.16); }
+.market-cart-title { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.market-cart-title img { width: 70px; height: auto; }
+.market-cart-title h2 { margin: 0; color: #9e7621; font-size: 30px; letter-spacing: .12em; }
 .market-cart-items { display: grid; gap: 12px; padding: 18px 0; }
 .market-cart-empty { margin: 14px 0; color: #70685d; font-size: 14px; letter-spacing: .08em; text-align: center; }
 .market-cart-item { display: grid; grid-template-columns: 82px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 10px; border: 1px solid #e0d5bf; }
@@ -87,7 +87,7 @@
   .mobile-clean-card > button { top: 7px; right: 7px; width: 32px; height: 32px; font-size: 17px; }.mobile-clean-card > img { height: 150px; padding: 16px 10px 5px; }.mobile-clean-card > div { min-height: 160px; padding: 8px 9px 6px; }.mobile-clean-card small { font-size: 7px; }.mobile-clean-card h2 { margin: 4px 0 7px; font-size: 12px; }.mobile-clean-condition { min-height: 24px; font-size: 8px; }.mobile-clean-card strong { font-size: 11px; }.mobile-clean-card span { margin-top: 0; padding: 4px 7px; font-size: 8px; }.mobile-clean-add-to-cart { margin-top: auto; padding: 8px 4px; font-size: 8px; }
   .market-cart-overlay { padding: 70px 10px 16px; }
   .market-cart-panel { max-height: calc(100vh - 86px); padding: 16px; }
-  .market-cart-title img { width: 46px; }.market-cart-title h2 { font-size: 15px; }
+  .market-cart-header { padding: 13px 10px; }.market-cart-title { gap: 10px; }.market-cart-title img { width: 46px; }.market-cart-title h2 { font-size: 19px; }
   .market-cart-item { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }.market-cart-actions { flex-direction: column; }
 }
 
