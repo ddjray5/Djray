@@ -59,6 +59,7 @@ const standImages = [
 ];
 
 const macbookImages = [
+  "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   "/market/macbook-pro/macbook-pro-2012-front.webp",
   "/market/macbook-pro/macbook-pro-2012-top.jpeg",
   "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
@@ -195,12 +196,12 @@ const products = [
     id: "macbook-pro-2012",
     category: "MACBOOKS",
     brand: "Apple",
-    name: "MacBook Pro 13-inch 2012",
+    name: "MacBook Pro M1 16-inch 2021",
     condition: "Good Condition",
     price: "AED 650",
     status: "AVAILABLE",
-    description: "Apple MacBook Pro 13-inch (2012) with 8GB RAM, 128GB SSD, and original charger included.",
-    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
+    description: "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM, 512GB SSD, and original charger included.",
+    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   },
 
   {
@@ -351,11 +352,17 @@ export default function MarketPage() {
     try {
       const saved = localStorage.getItem("djray-market-cart");
       const cart = saved ? JSON.parse(saved) : [];
-      const items = (Array.isArray(cart) ? cart : []).sort(
+      const items = (Array.isArray(cart) ? cart : [])
+        .map((item) => {
+          const currentProduct = products.find((product) => product.id === item?.id);
+          return currentProduct ? { ...item, ...currentProduct } : item;
+        })
+        .sort(
         (a, b) => Number(a.status === "SOLD") - Number(b.status === "SOLD")
-      );
+        );
       setCartItems(items);
       setCartCount(items.length);
+      localStorage.setItem("djray-market-cart", JSON.stringify(items));
     } catch (error) {
       console.error("OPEN CART ERROR:", error);
       setCartItems([]);

@@ -150,11 +150,11 @@ const products = [
   {
     id: "macbook-pro-2012",
     brand: "Apple",
-    name: "MacBook Pro 13-inch 2012",
+    name: "MacBook Pro M1 16-inch 2021",
     condition: "Good Condition",
     price: "AED 650",
     status: "AVAILABLE",
-    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
+    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   },
   {
     id: "hercules-inpulse-500",
