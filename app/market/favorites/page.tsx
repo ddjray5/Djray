@@ -71,7 +71,7 @@ const products = [
     name: "DDJ-FLX4",
     condition: "Used Once Excellent Condition",
     price: "AED 1,100",
-    status: "AVAILABLE",
+    status: "SOLD",
     image: "/market/ddjflx4/s-l1600 (3).webp",
   },
   {

@@ -25,7 +25,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Used Only 3 Times — Excellent Condition",
     price: "AED 1,100",
-    status: "AVAILABLE",
+    status: "SOLD",
     description:
       "Pioneer DJ DDJ-FLX4 in excellent, near-new condition. Used only once and carefully maintained. A compact and professional 2-channel DJ controller, ideal for home practice, events, and live performances.",
     images: [
