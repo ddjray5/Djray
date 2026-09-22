@@ -98,7 +98,7 @@ const products = [
     name: "DDJ-800",
     condition: "Used Only 3 Times Excellent Condition",
     price: "AED 3,400",
-    status: "AVAILABLE",
+    status: "SOLD",
     image: "/market/ddj800/DDJ-800-4.jpg",
   },
   {
@@ -107,7 +107,7 @@ const products = [
     name: "FLX6 GT",
     condition: "Excellent Condition",
     price: "AED 2,800",
-    status: "SOLD",
+    status: "AVAILABLE",
     image: "/market/flx6gt/DDJ-FLX6-GT_1.jpg",
   },
   {
@@ -173,9 +173,9 @@ export default function FavoritesPage() {
     } catch {}
   }, []);
 
-  const favoriteProducts = products.filter((product) =>
-    favorites.includes(product.id)
-  );
+  const favoriteProducts = products
+    .filter((product) => favorites.includes(product.id))
+    .sort((a, b) => Number(a.status === "SOLD") - Number(b.status === "SOLD"));
 
   const removeFavorite = (productId: string) => {
     setFavorites((current) => {

@@ -112,7 +112,7 @@ const products = [
     name: "DDJ-800",
     condition: "Used Only 3 Times\nExcellent Condition",
     price: "AED 3,400",
-    status: "AVAILABLE",
+    status: "SOLD",
     image: "/market/ddj800/816dbPS8UVL.jpg",
   },
   {
@@ -122,7 +122,7 @@ const products = [
     name: "FLX6 GT",
     condition: "Excellent Condition",
     price: "AED 2,800",
-    status: "SOLD",
+    status: "AVAILABLE",
     description: "Pioneer DJ DDJ-FLX6-GT in excellent condition. A professional 4-channel DJ controller with a sleek design and powerful features, ideal for DJs, live performances, events, and home setups. Fully functional and ready to use.",
     image: "/market/flx6gt/DDJ-FLX6-GT_1.jpg",
   },
@@ -238,7 +238,7 @@ const [djBagImage, setDjBagImage] = useState(0);
         `ddj ${product.id}`,
       ].join(" ")
     ).includes(query);
-  });
+  }).sort((a, b) => Number(a.status === "SOLD") - Number(b.status === "SOLD"));
   const [cartBounce, setCartBounce] = useState(false);
   const [flyingCart, setFlyingCart] = useState<{
     image: string;
