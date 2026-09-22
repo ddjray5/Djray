@@ -4,7 +4,7 @@
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-controls-root):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
 .market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed !important; top: 130px; right: clamp(30px,6vw,96px); left: clamp(30px,6vw,96px); z-index: 1100; display: flex !important; gap: 4px; padding: 4px 6px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
-.market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 600 16px Arial, sans-serif; letter-spacing: .08em; }
+.market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 400 16px Arial, sans-serif; letter-spacing: .08em; }
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 8px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
 .mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1200 !important; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 3px 12px rgba(48,34,9,.08); }
