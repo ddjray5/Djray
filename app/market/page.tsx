@@ -358,11 +358,11 @@ const [djBagImage, setDjBagImage] = useState(0);
 
       <section className="market-mobile-clean" aria-label="DJ RAY Market mobile">
 
-        <section className="mobile-clean-hero">
+        <section className={`mobile-clean-hero ${activeCategory === "HEADPHONES" ? "headphones-hero" : ""}`}>
           <div>
             <small>YOUR SETUP, A MUSIC STANDARD</small>
-            <h1>DISCOVER<br />DJ EQUIPMENT<br />THAT INSPIRES</h1>
-            <p>Carefully selected DJ gear, ready for your next set.</p>
+            <h1>{activeCategory === "DJ EQUIPMENT" ? <>DISCOVER<br />DJ EQUIPMENT<br />THAT INSPIRES</> : activeCategory}</h1>
+            <p>{activeCategory === "HEADPHONES" ? "Professional headphones selected for performance, comfort, and sound." : "Carefully selected DJ gear, ready for your next set."}</p>
             <button type="button" onClick={() => document.getElementById("mobile-products")?.scrollIntoView({ behavior: "smooth" })}>SHOP COLLECTION →</button>
           </div>
         </section>
@@ -370,7 +370,7 @@ const [djBagImage, setDjBagImage] = useState(0);
         <div className="mobile-clean-benefits"><span>◇ 100% AUTHENTIC PRODUCTS</span><span>▣ SECURE PAYMENT</span><span>♧ SUPPORT IN ARABIC & ENGLISH</span></div>
 
         <section className="mobile-clean-products" id="mobile-products">
-          <div className="mobile-clean-heading"><span>DJ CONTROLLERS</span><button type="button" onClick={() => setSearchQuery("")}>VIEW ALL →</button></div>
+          <div className="mobile-clean-heading"><span>{activeCategory}</span><button type="button" onClick={() => setSearchQuery("")}>VIEW ALL →</button></div>
           <div className="mobile-clean-grid">
             {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
