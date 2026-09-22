@@ -95,6 +95,14 @@ const hdjX5Images = [
   "/market/hdj-x5/hdj-x5-box.jpeg",
 ];
 
+const jblLive770Images = [
+  "/market/jbl-live-770/jbl-live-770-main.avif",
+  "/market/jbl-live-770/jbl-live-770-2.webp",
+  "/market/jbl-live-770/jbl-live-770-3.webp",
+  "/market/jbl-live-770/jbl-live-770-4.webp",
+  "/market/jbl-live-770/jbl-live-770-box.jpg",
+];
+
 const products = [
   {
     id: "ddj-400",
@@ -177,6 +185,15 @@ const products = [
     price: "AED 350",
     status: "SOLD",
     image: "/market/hdj-x5/hdj-x5-main.jpg",
+  },
+  {
+    id: "jbl-live-770",
+    brand: "JBL",
+    name: "Live 770NC Headphones",
+    condition: "Like New · With Box",
+    price: "AED 350",
+    status: "SOLD",
+    image: "/market/jbl-live-770/jbl-live-770-main.avif",
   },
   {
     id: "dj-bag",
@@ -266,6 +283,7 @@ export default function FavoritesPage() {
   const [xdjRrImage, setXdjRrImage] = useState(0);
   const [ddjSx2Image, setDdjSx2Image] = useState(0);
   const [hdjX5Image, setHdjX5Image] = useState(0);
+  const [jblLive770Image, setJblLive770Image] = useState(0);
 
   const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -413,6 +431,8 @@ export default function FavoritesPage() {
                                         ? ddjSx2Images[ddjSx2Image]
                                       : product.id === "hdj-x5"
                                         ? hdjX5Images[hdjX5Image]
+                                      : product.id === "jbl-live-770"
+                                        ? jblLive770Images[jblLive770Image]
                                         : product.image
                           }
                           alt={product.name}
@@ -455,7 +475,7 @@ export default function FavoritesPage() {
                           }`}
                         />
 
-                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5") && (
+                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5" || product.id === "jbl-live-770") && (
                           <>
                             <button
                               type="button"
@@ -471,6 +491,8 @@ export default function FavoritesPage() {
                                   setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length);
                                 } else if (product.id === "hdj-x5") {
                                   setHdjX5Image((current) => (current - 1 + hdjX5Images.length) % hdjX5Images.length);
+                                } else if (product.id === "jbl-live-770") {
+                                  setJblLive770Image((current) => (current - 1 + jblLive770Images.length) % jblLive770Images.length);
                                 } else {
                                   setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
                                 }
@@ -492,6 +514,8 @@ export default function FavoritesPage() {
                                   setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length);
                                 } else if (product.id === "hdj-x5") {
                                   setHdjX5Image((current) => (current + 1) % hdjX5Images.length);
+                                } else if (product.id === "jbl-live-770") {
+                                  setJblLive770Image((current) => (current + 1) % jblLive770Images.length);
                                 } else {
                                   setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
                                 }

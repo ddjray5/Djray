@@ -106,6 +106,14 @@ const hdjX5Images = [
   "/market/hdj-x5/hdj-x5-box.jpeg",
 ];
 
+const jblLive770Images = [
+  "/market/jbl-live-770/jbl-live-770-main.avif",
+  "/market/jbl-live-770/jbl-live-770-2.webp",
+  "/market/jbl-live-770/jbl-live-770-3.webp",
+  "/market/jbl-live-770/jbl-live-770-4.webp",
+  "/market/jbl-live-770/jbl-live-770-box.jpg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -253,6 +261,18 @@ const products = [
   },
 
   {
+    id: "jbl-live-770",
+    category: "HEADPHONES",
+    brand: "JBL",
+    name: "Live 770NC Headphones",
+    condition: "Like New · With Box",
+    price: "AED 350",
+    status: "SOLD",
+    description: "JBL Live 770NC headphones in like-new condition, with the original box included.",
+    image: "/market/jbl-live-770/jbl-live-770-main.avif",
+  },
+
+  {
     id: "dj-bag",
     category: "DJ BAGS & CASES",
     brand: "DJ RAY",
@@ -323,6 +343,7 @@ export default function MarketPage() {
   const [xdjRrImage, setXdjRrImage] = useState(0);
   const [ddjSx2Image, setDdjSx2Image] = useState(0);
   const [hdjX5Image, setHdjX5Image] = useState(0);
+  const [jblLive770Image, setJblLive770Image] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -742,12 +763,14 @@ export default function MarketPage() {
                                   ? ddjSx2Images[ddjSx2Image]
                                 : product.id === "hdj-x5"
                                   ? hdjX5Images[hdjX5Image]
+                                : product.id === "jbl-live-770"
+                                  ? jblLive770Images[jblLive770Image]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "xdj-rr" ? "xdj-rr-market-image" : ""} ${product.id === "ddj-sx2" ? "ddj-sx2-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5" || product.id === "jbl-live-770") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -772,6 +795,8 @@ export default function MarketPage() {
                                 ? setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length)
                               : product.id === "hdj-x5"
                                 ? setHdjX5Image((current) => (current - 1 + hdjX5Images.length) % hdjX5Images.length)
+                              : product.id === "jbl-live-770"
+                                ? setJblLive770Image((current) => (current - 1 + jblLive770Images.length) % jblLive770Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -803,6 +828,8 @@ export default function MarketPage() {
                                 ? setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length)
                               : product.id === "hdj-x5"
                                 ? setHdjX5Image((current) => (current + 1) % hdjX5Images.length)
+                              : product.id === "jbl-live-770"
+                                ? setJblLive770Image((current) => (current + 1) % jblLive770Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)
