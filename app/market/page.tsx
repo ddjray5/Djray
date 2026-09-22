@@ -39,7 +39,6 @@ const herculesImages = [
   "/market/hercules/HCL-DJCTRL-INPULSE-500-4.jpg",
   "/market/hercules/djcontrolinpulse500_main3Square__73179.webp",
   "/market/hercules/ProductPageContent-DJCI500PurpleEdition-1_2000x2000_f7582d6a-071f-40eb-9a2e-7980f9d5736e.webp",
-  "/market/hercules/filters_quality(90) (1).webp",
 ];
 
 const djBagImages = [
