@@ -80,9 +80,9 @@
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
   .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 8px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 0; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .mobile-clean-nav button[aria-label="Favorites"] svg { width: 18px; height: 18px; }
-  .market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { top: 78px; right: 18px; left: 18px; padding: 4px 5px; }
+  .market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { top: 90px; right: 18px; left: 18px; padding: 4px 5px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
-  .market-search-panel input { padding: 9px 10px; font-size: 16px; }
+  .market-search-panel input { padding: 9px 10px; font: 400 16px Arial, sans-serif; }
   .market-search-panel .search-close { padding: 0 8px; font-size: 8px; }
   .mobile-clean-categories { top: 55px; justify-content: center; gap: 10px; padding: 10px 6px; }.mobile-clean-categories button { font-size: 8px; letter-spacing: .05em; }
   .mobile-clean-hero { min-height: 258px; padding: 28px 18px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.9) 48%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/87% auto no-repeat; }.mobile-clean-hero > div { width: 52%; min-width: 170px; }.mobile-clean-hero small { font-size: 7px; }.mobile-clean-hero h1 { font-size: 27px; }.mobile-clean-hero p { font-size: 9px; }.mobile-clean-hero button { padding: 8px 10px; font-size: 8px; }
