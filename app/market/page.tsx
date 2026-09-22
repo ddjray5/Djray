@@ -59,8 +59,8 @@ const standImages = [
 ];
 
 const macbookImages = [
-  "/market/macbook-pro/macbook-pro-2012-top.jpeg",
   "/market/macbook-pro/macbook-pro-2012-front.webp",
+  "/market/macbook-pro/macbook-pro-2012-top.jpeg",
   "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
   "/market/macbook-pro/macbook-pro-2012-side.avif",
   "/market/macbook-pro/macbook-pro-2012-laptop.jpg",
@@ -200,7 +200,7 @@ const products = [
     price: "AED 650",
     status: "AVAILABLE",
     description: "Apple MacBook Pro 13-inch (2012) with 8GB RAM, 128GB SSD, and original charger included.",
-    image: "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
   },
 
   {

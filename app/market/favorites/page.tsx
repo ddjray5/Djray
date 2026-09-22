@@ -154,7 +154,7 @@ const products = [
     condition: "Good Condition",
     price: "AED 650",
     status: "AVAILABLE",
-    image: "/market/macbook-pro/macbook-pro-2012-top.jpeg",
+    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
   },
   {
     id: "hercules-inpulse-500",

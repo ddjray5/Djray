@@ -193,8 +193,8 @@ const products = {
     description:
       "Apple MacBook Pro 13-inch (2012) with 8GB RAM and 128GB SSD. Original charger included.",
     images: [
-      "/market/macbook-pro/macbook-pro-2012-top.jpeg",
       "/market/macbook-pro/macbook-pro-2012-front.webp",
+      "/market/macbook-pro/macbook-pro-2012-top.jpeg",
       "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
       "/market/macbook-pro/macbook-pro-2012-side.avif",
       "/market/macbook-pro/macbook-pro-2012-laptop.jpg",
