@@ -69,6 +69,7 @@
 .market-favorites-page .product-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; }
 .market-favorites-page .product-image { position: relative; min-height: 220px; background: #fff; cursor: pointer; }
 .market-favorites-page .product-real-image { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; }
+.market-favorites-page .bowers-p3-favorites-image { transform: scale(.68); transform-origin: center center; }
 .market-favorites-page .product-info { padding: 12px 14px 8px; }
 .market-favorites-page .product-brand { color: #817a70; font-size: 10px; letter-spacing: .06em; }
 .market-favorites-page .product-info h3 { margin: 6px 0; color: #1e1b16; font-size: 17px; }
@@ -89,6 +90,7 @@
   .market-favorites-page .products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .market-favorites-page .product-image, .market-favorites-page .product-real-image { min-height: 130px; height: 130px; }
   .market-favorites-page .product-real-image { padding: 12px 8px; }
+  .market-favorites-page .bowers-p3-favorites-image { transform: scale(.68); }
   .market-favorites-page .product-info { padding: 8px 9px 6px; }
   .market-favorites-page .product-info h3 { margin: 4px 0 7px; font-size: 12px; }
   .market-favorites-page .product-condition { min-height: 24px; font-size: 8px; }
