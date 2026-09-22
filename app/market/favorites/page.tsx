@@ -464,7 +464,11 @@ export default function FavoritesPage() {
                           } ${
                             product.id === "ddj-sx2"
                               ? "ddj-sx2-favorites-image"
-                              : ""
+                              : product.id === "hdj-x5"
+                                ? "hdj-x5-favorites-image"
+                                : product.id === "jbl-live-770"
+                                  ? "jbl-live-770-favorites-image"
+                                  : ""
                           } ${
                             product.id === "dj-bag" &&
                             djBagImages[djBagImage].includes("61oZrjkTLLL.jpg")
