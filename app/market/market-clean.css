@@ -79,7 +79,7 @@
 .market-favorites-page .product-bottom strong { font-size: 14px; }
 .market-favorites-page .product-availability { padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .market-favorites-page .product-availability.sold { background: #d7d2ca; color: #4d4942; }
-.market-favorites-page .market-product-favorite { position: absolute; z-index: 1; top: 10px; right: 10px; display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 7px rgba(0,0,0,.14); color: #b30018; }
+.market-favorites-page .market-product-favorite { position: absolute; z-index: 1; top: 12px; right: 12px; display: grid; width: 46px; height: 46px; place-items: center; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 4px 13px rgba(0,0,0,.18); color: #b30018; font-size: 21px; }
 .market-favorites-page .market-add-to-cart { width: calc(100% - 28px); margin: 0 14px 14px; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .market-favorites-page .market-products > div:last-child { position: static !important; margin-top: 28px; }
 .market-favorites-page .market-products > div:last-child button { transform: none !important; }
@@ -96,5 +96,6 @@
   .market-favorites-page .product-info h3 { margin: 4px 0 7px; font-size: 12px; }
   .market-favorites-page .product-condition { min-height: 24px; font-size: 8px; }
   .market-favorites-page .product-bottom strong { font-size: 11px; }
+  .market-favorites-page .market-product-favorite { top: 7px; right: 7px; width: 32px; height: 32px; font-size: 16px; }
   .market-favorites-page .market-add-to-cart { width: calc(100% - 18px); margin: 0 9px 9px; padding: 8px 4px; font-size: 8px; }
 }
