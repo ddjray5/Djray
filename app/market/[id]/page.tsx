@@ -121,7 +121,6 @@ const products = {
       "/market/flx10/ddj-flx10_3.png",
       "/market/flx10/71A9wK0ZYoL._AC_UF1000,1000_QL80_.jpg",
       "/market/flx10/Pioneer-DJ-DDJ-FLX10-DJ-Controller-2.jpg",
-      "/market/flx10/810gsflx10m_01.webp",
       "/market/flx10/pioneer-ddj-flx10-dj-controller-1-_861009-84bd5325b1fd98bd88ff865000f702db.jpg",
       "/market/flx10/ddj-flx10_5.png",
     ],
