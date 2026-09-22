@@ -358,7 +358,7 @@ const [djBagImage, setDjBagImage] = useState(0);
 
       <section className="market-mobile-clean" aria-label="DJ RAY Market mobile">
 
-        <section className={`mobile-clean-hero ${activeCategory === "HEADPHONES" ? "headphones-hero" : activeCategory === "MACBOOKS" ? "macbooks-hero" : activeCategory === "DJ BAGS & CASES" ? "bags-hero" : ""}`}>
+        <section className={`mobile-clean-hero ${activeCategory === "HEADPHONES" ? "headphones-hero" : activeCategory === "MACBOOKS" ? "macbooks-hero" : activeCategory === "DJ BAGS & CASES" ? "bags-hero" : activeCategory === "DJ ACCESSORIES" ? "accessories-hero" : ""}`}>
           <div>
             <small>YOUR SETUP, A MUSIC STANDARD</small>
             <h1>{activeCategory === "DJ EQUIPMENT" ? <>DISCOVER<br />DJ EQUIPMENT<br />THAT INSPIRES</> : activeCategory}</h1>
