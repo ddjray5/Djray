@@ -87,6 +87,14 @@ const ddjSx2Images = [
   "/market/ddjsx2/ddj-sx2-5.jpeg",
 ];
 
+const hdjX5Images = [
+  "/market/hdj-x5/hdj-x5-main.jpg",
+  "/market/hdj-x5/hdj-x5-2.webp",
+  "/market/hdj-x5/hdj-x5-3.jpg",
+  "/market/hdj-x5/hdj-x5-4.webp",
+  "/market/hdj-x5/hdj-x5-box.jpeg",
+];
+
 const products = [
   {
     id: "ddj-400",
@@ -160,6 +168,15 @@ const products = [
     price: "AED 800",
     status: "AVAILABLE",
     image: "/market/bowerswilkins/bowers_wilkins_p3_blue_p3_mobile_portable_1466508060_1260238.jpg",
+  },
+  {
+    id: "hdj-x5",
+    brand: "Pioneer DJ",
+    name: "HDJ-X5",
+    condition: "Excellent Condition · With Box",
+    price: "AED 350",
+    status: "SOLD",
+    image: "/market/hdj-x5/hdj-x5-main.jpg",
   },
   {
     id: "dj-bag",
@@ -248,6 +265,7 @@ export default function FavoritesPage() {
   const [xdjRxImage, setXdjRxImage] = useState(0);
   const [xdjRrImage, setXdjRrImage] = useState(0);
   const [ddjSx2Image, setDdjSx2Image] = useState(0);
+  const [hdjX5Image, setHdjX5Image] = useState(0);
 
   const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -393,6 +411,8 @@ export default function FavoritesPage() {
                                         ? xdjRrImages[xdjRrImage]
                                       : product.id === "ddj-sx2"
                                         ? ddjSx2Images[ddjSx2Image]
+                                      : product.id === "hdj-x5"
+                                        ? hdjX5Images[hdjX5Image]
                                         : product.image
                           }
                           alt={product.name}
@@ -435,7 +455,7 @@ export default function FavoritesPage() {
                           }`}
                         />
 
-                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2") && (
+                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5") && (
                           <>
                             <button
                               type="button"
@@ -449,6 +469,8 @@ export default function FavoritesPage() {
                                   setXdjRrImage((current) => (current - 1 + xdjRrImages.length) % xdjRrImages.length);
                                 } else if (product.id === "ddj-sx2") {
                                   setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length);
+                                } else if (product.id === "hdj-x5") {
+                                  setHdjX5Image((current) => (current - 1 + hdjX5Images.length) % hdjX5Images.length);
                                 } else {
                                   setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
                                 }
@@ -468,6 +490,8 @@ export default function FavoritesPage() {
                                   setXdjRrImage((current) => (current + 1) % xdjRrImages.length);
                                 } else if (product.id === "ddj-sx2") {
                                   setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length);
+                                } else if (product.id === "hdj-x5") {
+                                  setHdjX5Image((current) => (current + 1) % hdjX5Images.length);
                                 } else {
                                   setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
                                 }

@@ -150,6 +150,22 @@ const products = {
       "/market/bowerswilkins/9a8cf85a.webp",
     ],
   },
+  "hdj-x5": {
+    name: "HDJ-X5",
+    brand: "PIONEER DJ",
+    condition: "Excellent Condition · With Box",
+    price: "AED 350",
+    status: "SOLD",
+    description:
+      "Pioneer DJ HDJ-X5 headphones in excellent condition, with the original box included.",
+    images: [
+      "/market/hdj-x5/hdj-x5-main.jpg",
+      "/market/hdj-x5/hdj-x5-2.webp",
+      "/market/hdj-x5/hdj-x5-3.jpg",
+      "/market/hdj-x5/hdj-x5-4.webp",
+      "/market/hdj-x5/hdj-x5-box.jpeg",
+    ],
+  },
 
   "dj-bag": {
     name: "DJ Bag",

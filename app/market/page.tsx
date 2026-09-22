@@ -98,6 +98,14 @@ const ddjSx2Images = [
   "/market/ddjsx2/ddj-sx2-5.jpeg",
 ];
 
+const hdjX5Images = [
+  "/market/hdj-x5/hdj-x5-main.jpg",
+  "/market/hdj-x5/hdj-x5-2.webp",
+  "/market/hdj-x5/hdj-x5-3.jpg",
+  "/market/hdj-x5/hdj-x5-4.webp",
+  "/market/hdj-x5/hdj-x5-box.jpeg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -233,6 +241,18 @@ const products = [
   },
 
   {
+    id: "hdj-x5",
+    category: "HEADPHONES",
+    brand: "Pioneer DJ",
+    name: "HDJ-X5",
+    condition: "Excellent Condition · With Box",
+    price: "AED 350",
+    status: "SOLD",
+    description: "Pioneer DJ HDJ-X5 headphones in excellent condition, with the original box included.",
+    image: "/market/hdj-x5/hdj-x5-main.jpg",
+  },
+
+  {
     id: "dj-bag",
     category: "DJ BAGS & CASES",
     brand: "DJ RAY",
@@ -302,6 +322,7 @@ export default function MarketPage() {
   const [xdjRxImage, setXdjRxImage] = useState(0);
   const [xdjRrImage, setXdjRrImage] = useState(0);
   const [ddjSx2Image, setDdjSx2Image] = useState(0);
+  const [hdjX5Image, setHdjX5Image] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -717,14 +738,16 @@ export default function MarketPage() {
                                   ? xdjRxImages[xdjRxImage]
                                 : product.id === "xdj-rr"
                                   ? xdjRrImages[xdjRrImage]
-                                : product.id === "ddj-sx2"
+                              : product.id === "ddj-sx2"
                                   ? ddjSx2Images[ddjSx2Image]
+                                : product.id === "hdj-x5"
+                                  ? hdjX5Images[hdjX5Image]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "xdj-rr" ? "xdj-rr-market-image" : ""} ${product.id === "ddj-sx2" ? "ddj-sx2-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -747,6 +770,8 @@ export default function MarketPage() {
                                 ? setXdjRrImage((current) => (current - 1 + xdjRrImages.length) % xdjRrImages.length)
                               : product.id === "ddj-sx2"
                                 ? setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length)
+                              : product.id === "hdj-x5"
+                                ? setHdjX5Image((current) => (current - 1 + hdjX5Images.length) % hdjX5Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -776,6 +801,8 @@ export default function MarketPage() {
                                 ? setXdjRrImage((current) => (current + 1) % xdjRrImages.length)
                               : product.id === "ddj-sx2"
                                 ? setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length)
+                              : product.id === "hdj-x5"
+                                ? setHdjX5Image((current) => (current + 1) % hdjX5Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)
