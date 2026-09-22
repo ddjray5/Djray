@@ -74,8 +74,7 @@ const products = {
       "Pioneer DJ DDJ-400 in excellent condition. A compact and professional 2-channel DJ controller, ideal for learning, practice, home setups, and live DJ performance.",
     images: [
       "/market/ddj400/pioneer_ddj_400_1_3.jpg",
-      "/market/ddj400/IMG_4703.jpg",
-            "/market/ddj400/IMG_4706.jpg",
+      "/market/ddj400/IMG_4706.jpg",
       "/market/ddj400/IMG_4707.jpg",
       "/market/ddj400/IMG_4708.jpg",
       "/market/ddj400/s-l1600.webp",

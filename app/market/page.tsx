@@ -54,8 +54,6 @@ const djBagImages = [
 ]
 
 const ddj400Images = [
-  "/market/ddj400/IMG_4703.jpg",
-  "/market/ddj400/IMG_4704.jpg",
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
   "/market/ddj400/IMG_4708.jpg",
@@ -186,7 +184,7 @@ export default function MarketPage() {
 const [djBagImage, setDjBagImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
-  const [ddj400Image, setDdj400Image] = useState(5);
+  const [ddj400Image, setDdj400Image] = useState(3);
   const [ddj800Image, setDdj800Image] = useState(0);
   const [herculesImage, setHerculesImage] = useState(0);
   const [activeCategory, setActiveCategory] = useState("DJ EQUIPMENT");
