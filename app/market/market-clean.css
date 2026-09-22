@@ -12,7 +12,7 @@
 .mobile-clean-nav > span { flex: 1; color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .mobile-clean-nav > div { display: flex; gap: 9px; }
 .mobile-clean-nav button { position: relative; display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #dfd2ba; background: #fff; color: #aa7f22; font-size: 20px; }
-.mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #b58a2d; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 18px; }
+.mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #dfd2ba; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 18px; }
 .mobile-clean-nav button[aria-label="Favorites"] svg { width: 21px; height: 21px; }
 .mobile-clean-nav button[aria-label="Search"] svg { width: 20px; height: 20px; }
 .mobile-clean-nav b { position: absolute; top: -5px; right: -5px; display: grid; width: 16px; height: 16px; place-items: center; border-radius: 50%; background: #b98622; color: #fff; font-size: 8px; }
@@ -45,7 +45,7 @@
 @media (max-width: 767px) {
   .market-mobile-clean { padding-top: 94px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
-  .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #b58a2d; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
+  .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #dfd2ba; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .mobile-clean-nav button[aria-label="Favorites"] svg { width: 18px; height: 18px; }
   .market-page .market-search-panel { top: 78px; right: 18px; left: 18px; padding: 4px 5px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
