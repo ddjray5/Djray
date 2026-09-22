@@ -82,6 +82,14 @@ const xdjRxImages = [
   "/market/xdj-rx/xdj-rx-5.jpg",
 ];
 
+const xdjRrImages = [
+  "/market/xdj-rr/xdj-rr-main.webp",
+  "/market/xdj-rr/xdj-rr-2.webp",
+  "/market/xdj-rr/xdj-rr-3.webp",
+  "/market/xdj-rr/xdj-rr-4.jpeg",
+  "/market/xdj-rr/xdj-rr-5.jpeg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -135,6 +143,17 @@ const products = [
     status: "SOLD",
     description: "Pioneer DJ XDJ RX in excellent condition. A professional all-in-one DJ system with standalone playback and mixer controls.",
     image: "/market/xdj-rx/xdj-rx-main.jpg",
+  },
+  {
+    id: "xdj-rr",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "XDJ RR",
+    condition: "Excellent Condition · Like New",
+    price: "AED 4,000",
+    status: "SOLD",
+    description: "Pioneer DJ XDJ RR in excellent, like-new condition. A compact all-in-one DJ system with standalone playback and mixer controls.",
+    image: "/market/xdj-rr/xdj-rr-main.webp",
   },
   {
     id: "ddj-sb3",
@@ -262,6 +281,7 @@ export default function MarketPage() {
   const [macbookImage, setMacbookImage] = useState(0);
   const [macbookM1Image, setMacbookM1Image] = useState(0);
   const [xdjRxImage, setXdjRxImage] = useState(0);
+  const [xdjRrImage, setXdjRrImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -675,12 +695,14 @@ export default function MarketPage() {
                                   ? macbookM1Images[macbookM1Image]
                                 : product.id === "xdj-rx"
                                   ? xdjRxImages[xdjRxImage]
+                                : product.id === "xdj-rr"
+                                  ? xdjRrImages[xdjRrImage]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -699,6 +721,8 @@ export default function MarketPage() {
                                 ? setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length)
                               : product.id === "xdj-rx"
                                 ? setXdjRxImage((current) => (current - 1 + xdjRxImages.length) % xdjRxImages.length)
+                              : product.id === "xdj-rr"
+                                ? setXdjRrImage((current) => (current - 1 + xdjRrImages.length) % xdjRrImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -724,6 +748,8 @@ export default function MarketPage() {
                                 ? setMacbookM1Image((current) => (current + 1) % macbookM1Images.length)
                               : product.id === "xdj-rx"
                                 ? setXdjRxImage((current) => (current + 1) % xdjRxImages.length)
+                              : product.id === "xdj-rr"
+                                ? setXdjRrImage((current) => (current + 1) % xdjRrImages.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)

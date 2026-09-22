@@ -232,6 +232,22 @@ const products = {
       "/market/xdj-rx/xdj-rx-5.jpg",
     ],
   },
+  "xdj-rr": {
+    name: "XDJ RR",
+    brand: "PIONEER DJ",
+    condition: "Excellent Condition · Like New",
+    price: "AED 4,000",
+    status: "SOLD",
+    description:
+      "Pioneer DJ XDJ RR in excellent, like-new condition. A compact all-in-one DJ system with standalone playback and mixer controls.",
+    images: [
+      "/market/xdj-rr/xdj-rr-main.webp",
+      "/market/xdj-rr/xdj-rr-2.webp",
+      "/market/xdj-rr/xdj-rr-3.webp",
+      "/market/xdj-rr/xdj-rr-4.jpeg",
+      "/market/xdj-rr/xdj-rr-5.jpeg",
+    ],
+  },
 };
 
 export default function ProductPage({
