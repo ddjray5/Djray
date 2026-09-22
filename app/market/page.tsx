@@ -90,6 +90,14 @@ const xdjRrImages = [
   "/market/xdj-rr/xdj-rr-5.jpeg",
 ];
 
+const ddjSx2Images = [
+  "/market/ddjsx2/ddj-sx2-main.png",
+  "/market/ddjsx2/ddj-sx2-2.jpg",
+  "/market/ddjsx2/ddj-sx2-3.jpeg",
+  "/market/ddjsx2/ddj-sx2-4.jpeg",
+  "/market/ddjsx2/ddj-sx2-5.jpeg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -132,6 +140,17 @@ const products = [
     status: "AVAILABLE",
     description: "Excellent condition Pioneer DJ DDJ-SX. Fully functional and ready to use. A powerful professional DJ controller, ideal for DJs looking for reliable performance and a solid setup.",
     image: "/market/ddjsx/J00916000001000-00-500x500.webp",
+  },
+  {
+    id: "ddj-sx2",
+    category: "DJ EQUIPMENT",
+    brand: "Pioneer DJ",
+    name: "DDJ-SX2",
+    condition: "Good Condition",
+    price: "AED 2,600",
+    status: "SOLD",
+    description: "Pioneer DJ DDJ-SX2 in good condition. A professional 4-channel DJ controller with Serato integration and performance pads.",
+    image: "/market/ddjsx2/ddj-sx2-main.png",
   },
   {
     id: "xdj-rx",
@@ -282,6 +301,7 @@ export default function MarketPage() {
   const [macbookM1Image, setMacbookM1Image] = useState(0);
   const [xdjRxImage, setXdjRxImage] = useState(0);
   const [xdjRrImage, setXdjRrImage] = useState(0);
+  const [ddjSx2Image, setDdjSx2Image] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -697,12 +717,14 @@ export default function MarketPage() {
                                   ? xdjRxImages[xdjRxImage]
                                 : product.id === "xdj-rr"
                                   ? xdjRrImages[xdjRrImage]
+                                : product.id === "ddj-sx2"
+                                  ? ddjSx2Images[ddjSx2Image]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -723,6 +745,8 @@ export default function MarketPage() {
                                 ? setXdjRxImage((current) => (current - 1 + xdjRxImages.length) % xdjRxImages.length)
                               : product.id === "xdj-rr"
                                 ? setXdjRrImage((current) => (current - 1 + xdjRrImages.length) % xdjRrImages.length)
+                              : product.id === "ddj-sx2"
+                                ? setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -750,6 +774,8 @@ export default function MarketPage() {
                                 ? setXdjRxImage((current) => (current + 1) % xdjRxImages.length)
                               : product.id === "xdj-rr"
                                 ? setXdjRrImage((current) => (current + 1) % xdjRrImages.length)
+                              : product.id === "ddj-sx2"
+                                ? setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)

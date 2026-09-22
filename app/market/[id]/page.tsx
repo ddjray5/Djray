@@ -248,6 +248,22 @@ const products = {
       "/market/xdj-rr/xdj-rr-5.jpeg",
     ],
   },
+  "ddj-sx2": {
+    name: "DDJ-SX2",
+    brand: "PIONEER DJ",
+    condition: "Good Condition",
+    price: "AED 2,600",
+    status: "SOLD",
+    description:
+      "Pioneer DJ DDJ-SX2 in good condition. A professional 4-channel DJ controller with Serato integration and performance pads.",
+    images: [
+      "/market/ddjsx2/ddj-sx2-main.png",
+      "/market/ddjsx2/ddj-sx2-2.jpg",
+      "/market/ddjsx2/ddj-sx2-3.jpeg",
+      "/market/ddjsx2/ddj-sx2-4.jpeg",
+      "/market/ddjsx2/ddj-sx2-5.jpeg",
+    ],
+  },
 };
 
 export default function ProductPage({
