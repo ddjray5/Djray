@@ -65,6 +65,7 @@
 .market-cart-item > div > span { color: #6f675b; font-size: 12px; }
 .market-cart-item .product-availability { width: max-content; padding: 4px 7px; background: #3f9b5f; color: #fff; font-size: 9px; font-weight: 800; }
 .market-cart-item .product-availability.sold { background: #c94a4a; }
+.mobile-clean-card .mobile-clean-bottom > span, .market-page .product-availability, .market-favorites-page .product-availability, .market-cart-item .product-availability { width: 88px; min-width: 88px; box-sizing: border-box; text-align: center; }
 .market-cart-total { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-top: 1px solid #e8dfcf; font-size: 14px; letter-spacing: .08em; }
 .market-cart-total strong { font-size: 18px; letter-spacing: 0; }
 .market-cart-actions { display: flex; gap: 10px; }
@@ -91,6 +92,7 @@
   .market-cart-panel { max-height: calc(100vh - 86px); padding: 0 16px 16px; }
   .market-cart-header { padding: 8px 10px; }.market-cart-title { gap: 10px; }.market-cart-title img { width: 40px; }.market-cart-title h2 { font-size: 18px; }
   .market-cart-item { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }.market-cart-actions { flex-direction: column; }
+  .mobile-clean-card .mobile-clean-bottom > span, .market-page .product-availability, .market-favorites-page .product-availability, .market-cart-item .product-availability { width: 64px; min-width: 64px; }
 }
 
 /* Favorites is a separate route, so it must not inherit the home-page hiding rules. */
