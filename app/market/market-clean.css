@@ -4,11 +4,13 @@
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page:not(.market-product-detail-page) > :not(.market-mobile-clean):not(.market-controls-root):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
 main.market-page.market-product-detail-page { min-height: 100vh; padding: 34px 5vw 72px !important; background: #f8f6f0 !important; color: #1b1813; font-family: Arial, sans-serif; }
-main.market-page.market-product-detail-page > .product-detail { position: relative; display: grid !important; grid-template-columns: minmax(0,1.15fr) minmax(300px,.85fr); gap: 34px; width: min(1200px,100%); margin: 0 auto; padding: 54px; background: #fff; border: 1px solid #e0d5bf; box-shadow: 0 12px 30px rgba(48,34,9,.10); }
+main.market-page.market-product-detail-page > .product-detail { position: relative; display: grid !important; grid-template-columns: minmax(0,1fr); gap: 22px; width: min(1200px,100%); margin: 0 auto; padding: 54px clamp(28px,6vw,74px) 44px; background: #fff; border: 1px solid #e0d5bf; box-shadow: 0 12px 30px rgba(48,34,9,.10); }
 .market-product-detail-page .product-back { position: absolute; top: 18px; left: 22px; display: inline-flex; align-items: center; padding: 8px 14px; border: 1px solid #d8c59e; background: #fffdf8; color: #9e7621; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
 .market-product-detail-page .product-detail-gallery { min-width: 0; }
-.market-product-detail-page .product-main-photo { position: relative; display: flex; min-height: 440px; align-items: center; justify-content: center; overflow: hidden; background: #fff; border: 1px solid #e0d5bf; }
-.market-product-detail-page .product-main-photo > img { display: block; width: 100%; height: 440px; padding: 28px; object-fit: contain; }
+.market-product-detail-page .product-main-photo { position: relative; display: flex; min-height: 520px; align-items: center; justify-content: center; overflow: visible; background: #fff; border: 1px solid #e0d5bf; }
+.market-product-detail-page .product-main-photo > img { display: block; width: 100%; height: 520px; padding: 28px; object-fit: contain; }
+.market-product-detail-page .product-gallery-arrow-left { left: -24px !important; right: auto !important; }
+.market-product-detail-page .product-gallery-arrow-right { right: -24px !important; left: auto !important; }
 .market-product-detail-page .product-thumbnails { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; margin-top: 10px; }
 .market-product-detail-page .product-thumbnail { display: flex; min-width: 0; height: 76px; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; }
 .market-product-detail-page .product-thumbnail.active { border-color: #b58a2d; box-shadow: inset 0 0 0 1px #b58a2d; }
@@ -102,7 +104,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   main.market-page.market-product-detail-page { padding: 18px 12px 42px !important; }
   main.market-page.market-product-detail-page > .product-detail { display: flex !important; flex-direction: column; gap: 18px; padding: 52px 14px 22px; }
   .market-product-detail-page .product-back { top: 14px; left: 14px; font-size: 9px; }
-  .market-product-detail-page .product-main-photo { min-height: 280px; }.market-product-detail-page .product-main-photo > img { height: 280px; padding: 16px; }
+  .market-product-detail-page .product-main-photo { min-height: 280px; overflow: visible; }.market-product-detail-page .product-main-photo > img { height: 280px; padding: 16px; }.market-product-detail-page .product-gallery-arrow-left { left: 7px !important; }.market-product-detail-page .product-gallery-arrow-right { right: 7px !important; }
   .market-product-detail-page .product-thumbnails { grid-template-columns: repeat(5,minmax(0,1fr)); }.market-product-detail-page .product-thumbnail { height: 54px; }
   .market-product-detail-page .product-detail-info { padding: 4px 2px; }.market-product-detail-page .product-detail-brand { font-size: 9px; }.market-product-detail-page .product-detail-info h1 { margin: 8px 0; font-size: 31px; }.market-product-detail-page .product-detail-condition { margin-bottom: 12px; font-size: 12px; }.market-product-detail-page .product-detail-description { font-size: 12px; line-height: 1.5; }.market-product-detail-page .product-detail-price { margin-top: 18px; font-size: 22px; }.market-product-detail-page .product-buy-button { margin-top: 18px; padding: 11px 14px; font-size: 10px; }
   .market-mobile-clean { padding-top: 94px; }
