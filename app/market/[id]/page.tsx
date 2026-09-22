@@ -168,6 +168,22 @@ const products = {
       "/market/djbag/71bAkx8KwsL.jpg",
     ],
   },
+  "dj-stand": {
+    name: "DJ Stand",
+    brand: "HERCULES",
+    condition: "Excellent Condition",
+    price: "AED 200",
+    status: "AVAILABLE",
+    description:
+      "Adjustable Hercules DJ stand for controllers and laptops, suitable for home setups, practice, and live performances.",
+    images: [
+      "/market/stand/17760973_800.jpg",
+      "/market/stand/18063212_800.jpg",
+      "/market/stand/18063217_800.jpg",
+      "/market/stand/18063232_800.jpg",
+      "/market/stand/18063262_800.jpg",
+    ],
+  },
 };
 
 export default function ProductPage({

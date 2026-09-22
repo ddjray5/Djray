@@ -139,6 +139,15 @@ const products = [
     image: "/market/djbag/51aRQ7HIjdL.jpg",
   },
   {
+    id: "dj-stand",
+    brand: "Hercules",
+    name: "DJ Stand",
+    condition: "Excellent Condition",
+    price: "AED 200",
+    status: "AVAILABLE",
+    image: "/market/stand/17760973_800.jpg",
+  },
+  {
     id: "hercules-inpulse-500",
     brand: "Hercules",
     name: "DJControl Inpulse 500",

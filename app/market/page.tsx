@@ -50,6 +50,14 @@ const djBagImages = [
   "/market/djbag/71bAkx8KwsL.jpg",
 ]
 
+const standImages = [
+  "/market/stand/17760973_800.jpg",
+  "/market/stand/18063212_800.jpg",
+  "/market/stand/18063217_800.jpg",
+  "/market/stand/18063232_800.jpg",
+  "/market/stand/18063262_800.jpg",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -164,6 +172,18 @@ const products = [
   },
 
   {
+    id: "dj-stand",
+    category: "DJ ACCESSORIES",
+    brand: "Hercules",
+    name: "DJ Stand",
+    condition: "Excellent Condition",
+    price: "AED 200",
+    status: "AVAILABLE",
+    description: "Adjustable Hercules DJ stand for controllers and laptops, suitable for home setups, practice, and live performances.",
+    image: "/market/stand/17760973_800.jpg",
+  },
+
+  {
     id: "hercules-inpulse-500",
     category: "DJ EQUIPMENT",
     brand: "Hercules",
@@ -179,6 +199,7 @@ export default function MarketPage() {
   const router = useRouter();
   const [flx4Image, setFlx4Image] = useState(1);
 const [djBagImage, setDjBagImage] = useState(0);
+  const [standImage, setStandImage] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -571,12 +592,14 @@ const [djBagImage, setDjBagImage] = useState(0);
                               ? herculesImages[herculesImage]
                               : product.id === "dj-bag"
                                 ? djBagImages[djBagImage]
+                                : product.id === "dj-stand"
+                                  ? standImages[standImage]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -586,8 +609,10 @@ const [djBagImage, setDjBagImage] = useState(0);
                           product.id === "hercules-inpulse-500"
                               ? setHerculesImage((current) => (current - 1 + herculesImages.length) % herculesImages.length)
                               : product.id === "dj-bag"
-                                ? setDjBagImage((current) => (current - 1 + djBagImages.length) % djBagImages.length)
-                                : product.id === "ddj-400"
+                              ? setDjBagImage((current) => (current - 1 + djBagImages.length) % djBagImages.length)
+                              : product.id === "dj-stand"
+                                ? setStandImage((current) => (current - 1 + standImages.length) % standImages.length)
+                              : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
                         }
@@ -603,8 +628,10 @@ const [djBagImage, setDjBagImage] = useState(0);
                           product.id === "hercules-inpulse-500"
                               ? setHerculesImage((current) => (current + 1) % herculesImages.length)
                               : product.id === "dj-bag"
-                                ? setDjBagImage((current) => (current + 1) % djBagImages.length)
-                                : product.id === "ddj-400"
+                              ? setDjBagImage((current) => (current + 1) % djBagImages.length)
+                              : product.id === "dj-stand"
+                                ? setStandImage((current) => (current + 1) % standImages.length)
+                              : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)
                         }
