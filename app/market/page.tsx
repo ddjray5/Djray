@@ -66,6 +66,14 @@ const macbookImages = [
   "/market/macbook-pro/macbook-pro-2012-laptop.jpg",
 ];
 
+const macbookM1Images = [
+  "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-2.webp",
+  "/market/macbook-pro/macbook-pro-m1-2021-3.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-4.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-5.png",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -233,6 +241,7 @@ export default function MarketPage() {
   const [djBagImage, setDjBagImage] = useState(0);
   const [standImage, setStandImage] = useState(0);
   const [macbookImage, setMacbookImage] = useState(0);
+  const [macbookM1Image, setMacbookM1Image] = useState(0);
 
   const [ddjsxImage, setDdjsxImage] = useState(0);
   const [ddj400Image, setDdj400Image] = useState(3);
@@ -642,12 +651,14 @@ export default function MarketPage() {
                                   ? standImages[standImage]
                                 : product.id === "macbook-pro-2012"
                                   ? macbookImages[macbookImage]
+                                : product.id === "macbook-pro-m1-2021"
+                                  ? macbookM1Images[macbookM1Image]
                                 : product.image
                   }
                     alt={product.name}
                     className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
-                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012") && (
+                  {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021") && (
                     <>
                       <button data-search-close="true"
                         type="button"
@@ -662,6 +673,8 @@ export default function MarketPage() {
                                 ? setStandImage((current) => (current - 1 + standImages.length) % standImages.length)
                               : product.id === "macbook-pro-2012"
                                 ? setMacbookImage((current) => (current - 1 + macbookImages.length) % macbookImages.length)
+                              : product.id === "macbook-pro-m1-2021"
+                                ? setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current - 1 + ddj400Images.length) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current - 1 + ddjsxImages.length) % ddjsxImages.length)
@@ -683,6 +696,8 @@ export default function MarketPage() {
                                 ? setStandImage((current) => (current + 1) % standImages.length)
                               : product.id === "macbook-pro-2012"
                                 ? setMacbookImage((current) => (current + 1) % macbookImages.length)
+                              : product.id === "macbook-pro-m1-2021"
+                                ? setMacbookM1Image((current) => (current + 1) % macbookM1Images.length)
                               : product.id === "ddj-400"
                                 ? setDdj400Image((current) => (current + 1) % ddj400Images.length)
                                 : setDdjsxImage((current) => (current + 1) % ddjsxImages.length)

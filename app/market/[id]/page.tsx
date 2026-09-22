@@ -208,7 +208,13 @@ const products = {
     status: "AVAILABLE",
     description:
       "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM and 512GB SSD. Original charger included.",
-    images: ["/market/macbook-pro/macbook-pro-m1-2021.jpg"],
+    images: [
+      "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+      "/market/macbook-pro/macbook-pro-m1-2021-2.webp",
+      "/market/macbook-pro/macbook-pro-m1-2021-3.jpg",
+      "/market/macbook-pro/macbook-pro-m1-2021-4.jpg",
+      "/market/macbook-pro/macbook-pro-m1-2021-5.png",
+    ],
   },
 };
 

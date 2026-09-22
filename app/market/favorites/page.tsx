@@ -55,6 +55,14 @@ const herculesImages = [
   "/market/hercules/filters_quality(90) (1).webp",
 ];
 
+const macbookM1Images = [
+  "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-2.webp",
+  "/market/macbook-pro/macbook-pro-m1-2021-3.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-4.jpg",
+  "/market/macbook-pro/macbook-pro-m1-2021-5.png",
+];
+
 const products = [
   {
     id: "ddj-400",
@@ -185,6 +193,7 @@ export default function FavoritesPage() {
   const [ddj400Image, setDdj400Image] = useState(6);
   const [ddj800Image, setDdj800Image] = useState(0);
   const [herculesImage, setHerculesImage] = useState(1);
+  const [macbookM1Image, setMacbookM1Image] = useState(0);
 
   const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -322,6 +331,8 @@ export default function FavoritesPage() {
                                       ? herculesImages[herculesImage]
                                       : product.id === "dj-bag"
                                         ? djBagImages[djBagImage]
+                                      : product.id === "macbook-pro-m1-2021"
+                                        ? macbookM1Images[macbookM1Image]
                                         : product.image
                           }
                           alt={product.name}
@@ -355,6 +366,33 @@ export default function FavoritesPage() {
                                 : ""
                           }`}
                         />
+
+                        {product.id === "macbook-pro-m1-2021" && (
+                          <>
+                            <button
+                              type="button"
+                              className="market-gallery-arrow market-gallery-arrow-left"
+                              aria-label="Previous image"
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
+                              }}
+                            >
+                              <span>‹</span>
+                            </button>
+                            <button
+                              type="button"
+                              className="market-gallery-arrow market-gallery-arrow-right"
+                              aria-label="Next image"
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
+                              }}
+                            >
+                              <span>›</span>
+                            </button>
+                          </>
+                        )}
 
                       </>
                     ) : (
