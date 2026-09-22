@@ -45,7 +45,7 @@
 @media (max-width: 767px) {
   .market-mobile-clean { padding-top: 94px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
-  .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 2px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #dfd2ba; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
+  .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 8px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 0; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .mobile-clean-nav button[aria-label="Favorites"] svg { width: 18px; height: 18px; }
   .market-page .market-search-panel { top: 78px; right: 18px; left: 18px; padding: 4px 5px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
