@@ -44,7 +44,7 @@
 .mobile-clean-card strong { display: block; color: #211e18; font-size: 14px; }
 .mobile-clean-card span { display: inline-block; margin-top: 0; padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
-.mobile-clean-add-to-cart { width: 100%; margin-top: auto; padding: 13px 6px; border: 0; background: #9e7621; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
+.mobile-clean-add-to-cart { width: 100%; margin-top: auto; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .mobile-clean-card span:not(.sold), .market-page .product-availability:not(.sold), .market-favorites-page .product-availability:not(.sold) { background: #3f9b5f; color: #fff; }
 .mobile-clean-card span.sold, .market-page .product-availability.sold, .market-favorites-page .product-availability.sold { background: #c94a4a; color: #fff; }
 .market-cart-overlay { position: fixed !important; inset: 0; z-index: 1400 !important; display: flex !important; align-items: flex-start; justify-content: center; padding: 92px 18px 24px; overflow-y: auto; background: rgba(20,17,12,.48); }
