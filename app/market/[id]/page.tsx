@@ -175,8 +175,8 @@ const products = {
     description:
       "JBL Live 770NC headphones in like-new condition, with the original box included.",
     images: [
-      "/market/jbl-live-770/jbl-live-770-main.avif",
       "/market/jbl-live-770/jbl-live-770-2.webp",
+      "/market/jbl-live-770/jbl-live-770-main.avif",
       "/market/jbl-live-770/jbl-live-770-3.webp",
       "/market/jbl-live-770/jbl-live-770-4.webp",
       "/market/jbl-live-770/jbl-live-770-box.jpg",

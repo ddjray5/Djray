@@ -107,8 +107,8 @@ const hdjX5Images = [
 ];
 
 const jblLive770Images = [
-  "/market/jbl-live-770/jbl-live-770-main.avif",
   "/market/jbl-live-770/jbl-live-770-2.webp",
+  "/market/jbl-live-770/jbl-live-770-main.avif",
   "/market/jbl-live-770/jbl-live-770-3.webp",
   "/market/jbl-live-770/jbl-live-770-4.webp",
   "/market/jbl-live-770/jbl-live-770-box.jpg",
@@ -269,7 +269,7 @@ const products = [
     price: "AED 350",
     status: "SOLD",
     description: "JBL Live 770NC headphones in like-new condition, with the original box included.",
-    image: "/market/jbl-live-770/jbl-live-770-main.avif",
+    image: "/market/jbl-live-770/jbl-live-770-2.webp",
   },
 
   {
