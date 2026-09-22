@@ -204,6 +204,18 @@ const products = [
   },
 
   {
+    id: "macbook-pro-m1-2021",
+    category: "MACBOOKS",
+    brand: "Apple",
+    name: "MacBook Pro M1 16-inch 2021",
+    condition: "Good Condition",
+    price: "AED 4,000",
+    status: "AVAILABLE",
+    description: "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM, 512GB SSD, and original charger included.",
+    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+  },
+
+  {
     id: "hercules-inpulse-500",
     category: "DJ EQUIPMENT",
     brand: "Hercules",
@@ -239,7 +251,7 @@ export default function MarketPage() {
       const saved = localStorage.getItem("djray-market-favorites");
       const parsed = saved ? JSON.parse(saved) : [];
       if (Array.isArray(parsed)) {
-        const normalized = [...new Set(parsed.map((id) => id === "macbook-pro-m1-2021" ? "macbook-pro-2012" : id))];
+        const normalized = [...new Set(parsed)];
         setFavorites(normalized);
         localStorage.setItem("djray-market-favorites", JSON.stringify(normalized));
       }
@@ -357,8 +369,8 @@ export default function MarketPage() {
       const cart = saved ? JSON.parse(saved) : [];
       const items = (Array.isArray(cart) ? cart : [])
         .map((item) => {
-          const productId = item?.id === "macbook-pro-m1-2021" || (item?.id === "macbook-pro-2012" && item?.name === "MacBook Pro M1 16-inch 2021")
-            ? "macbook-pro-2012"
+          const productId = item?.id === "macbook-pro-2012" && item?.name === "MacBook Pro M1 16-inch 2021"
+            ? "macbook-pro-m1-2021"
             : item?.id;
           const currentProduct = products.find((product) => product.id === productId);
           return currentProduct ? { ...item, ...currentProduct } : item;

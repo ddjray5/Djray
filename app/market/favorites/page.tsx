@@ -157,6 +157,15 @@ const products = [
     image: "/market/macbook-pro/macbook-pro-2012-front.webp",
   },
   {
+    id: "macbook-pro-m1-2021",
+    brand: "Apple",
+    name: "MacBook Pro M1 16-inch 2021",
+    condition: "Good Condition",
+    price: "AED 4,000",
+    status: "AVAILABLE",
+    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+  },
+  {
     id: "hercules-inpulse-500",
     brand: "Hercules",
     name: "DJControl Inpulse 500",
@@ -185,7 +194,7 @@ export default function FavoritesPage() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
-          const normalized = [...new Set(parsed.map((id) => id === "macbook-pro-m1-2021" ? "macbook-pro-2012" : id))];
+          const normalized = [...new Set(parsed)];
           setFavorites(normalized);
           localStorage.setItem("djray-market-favorites", JSON.stringify(normalized));
         }
