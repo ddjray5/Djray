@@ -150,11 +150,11 @@ const products = [
   {
     id: "macbook-pro-2012",
     brand: "Apple",
-    name: "MacBook Pro M1 16-inch 2021",
+    name: "MacBook Pro 13-inch 2012",
     condition: "Good Condition",
-    price: "AED 4,000",
+    price: "AED 650",
     status: "AVAILABLE",
-    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
   },
   {
     id: "hercules-inpulse-500",
@@ -185,7 +185,9 @@ export default function FavoritesPage() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
-          setFavorites(parsed);
+          const normalized = [...new Set(parsed.map((id) => id === "macbook-pro-m1-2021" ? "macbook-pro-2012" : id))];
+          setFavorites(normalized);
+          localStorage.setItem("djray-market-favorites", JSON.stringify(normalized));
         }
       }
     } catch {}

@@ -59,7 +59,6 @@ const standImages = [
 ];
 
 const macbookImages = [
-  "/market/macbook-pro/macbook-pro-m1-2021.jpg",
   "/market/macbook-pro/macbook-pro-2012-front.webp",
   "/market/macbook-pro/macbook-pro-2012-top.jpeg",
   "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
@@ -196,12 +195,12 @@ const products = [
     id: "macbook-pro-2012",
     category: "MACBOOKS",
     brand: "Apple",
-    name: "MacBook Pro M1 16-inch 2021",
+    name: "MacBook Pro 13-inch 2012",
     condition: "Good Condition",
-    price: "AED 4,000",
+    price: "AED 650",
     status: "AVAILABLE",
-    description: "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM, 512GB SSD, and original charger included.",
-    image: "/market/macbook-pro/macbook-pro-m1-2021.jpg",
+    description: "Apple MacBook Pro 13-inch (2012) with 8GB RAM, 128GB SSD, and original charger included.",
+    image: "/market/macbook-pro/macbook-pro-2012-front.webp",
   },
 
   {
@@ -239,7 +238,11 @@ export default function MarketPage() {
     try {
       const saved = localStorage.getItem("djray-market-favorites");
       const parsed = saved ? JSON.parse(saved) : [];
-      if (Array.isArray(parsed)) setFavorites(parsed);
+      if (Array.isArray(parsed)) {
+        const normalized = [...new Set(parsed.map((id) => id === "macbook-pro-m1-2021" ? "macbook-pro-2012" : id))];
+        setFavorites(normalized);
+        localStorage.setItem("djray-market-favorites", JSON.stringify(normalized));
+      }
     } catch (error) {
       console.error("LOAD FAVORITES ERROR:", error);
     }
@@ -354,7 +357,10 @@ export default function MarketPage() {
       const cart = saved ? JSON.parse(saved) : [];
       const items = (Array.isArray(cart) ? cart : [])
         .map((item) => {
-          const currentProduct = products.find((product) => product.id === item?.id);
+          const productId = item?.id === "macbook-pro-m1-2021" || (item?.id === "macbook-pro-2012" && item?.name === "MacBook Pro M1 16-inch 2021")
+            ? "macbook-pro-2012"
+            : item?.id;
+          const currentProduct = products.find((product) => product.id === productId);
           return currentProduct ? { ...item, ...currentProduct } : item;
         })
         .sort(

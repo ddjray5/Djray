@@ -185,15 +185,14 @@ const products = {
     ],
   },
   "macbook-pro-2012": {
-    name: "MacBook Pro M1 16-inch 2021",
+    name: "MacBook Pro 13-inch 2012",
     brand: "APPLE",
     condition: "Good Condition",
-    price: "AED 4,000",
+    price: "AED 650",
     status: "AVAILABLE",
     description:
-      "Apple MacBook Pro M1 16-inch (2021) with 16GB RAM and 512GB SSD. Original charger included.",
+      "Apple MacBook Pro 13-inch (2012) with 8GB RAM and 128GB SSD. Original charger included.",
     images: [
-      "/market/macbook-pro/macbook-pro-m1-2021.jpg",
       "/market/macbook-pro/macbook-pro-2012-front.webp",
       "/market/macbook-pro/macbook-pro-2012-top.jpeg",
       "/market/macbook-pro/macbook-pro-2012-angle.jpeg",
