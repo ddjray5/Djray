@@ -376,7 +376,7 @@ export default function ProductPage({
             <img
               src={images[currentImage]}
               alt={product.name}
-              className={id === "ddj-sb3" ? "ddjsb3-detail-image" : id === "xdj-rr" ? "xdj-rr-detail-image" : ""}
+              className={id === "ddj-sb3" ? "ddjsb3-detail-image" : id === "xdj-rr" ? "xdj-rr-detail-image" : id === "ddj-sx2" ? "ddj-sx2-detail-image" : ""}
               style={{ pointerEvents: "none" }}
             />
           </div>

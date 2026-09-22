@@ -422,6 +422,10 @@ export default function FavoritesPage() {
                               ? "xdj-rr-favorites-image"
                               : ""
                           } ${
+                            product.id === "ddj-sx2"
+                              ? "ddj-sx2-favorites-image"
+                              : ""
+                          } ${
                             product.id === "dj-bag" &&
                             djBagImages[djBagImage].includes("61oZrjkTLLL.jpg")
                               ? "djbag-full-frame-image"
