@@ -5,7 +5,7 @@
 .market-page:not(.market-product-detail-page) > :not(.market-mobile-clean):not(.market-controls-root):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
 main.market-page.market-product-detail-page { min-height: 100vh; padding: 34px 5vw 72px !important; background: #f8f6f0 !important; color: #1b1813; font-family: Arial, sans-serif; }
 main.market-page.market-product-detail-page > .product-detail { position: relative; display: grid !important; grid-template-columns: minmax(0,1fr); gap: 22px; width: min(1200px,100%); margin: 0 auto; padding: 54px clamp(28px,6vw,74px) 44px; background: #fff; border: 1px solid #e0d5bf; box-shadow: 0 12px 30px rgba(48,34,9,.10); }
-.market-product-detail-page .product-back { position: absolute; top: 18px; left: 22px; display: inline-flex; align-items: center; padding: 8px 14px; border: 1px solid #d8c59e; background: #fffdf8; color: #9e7621; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
+.market-product-detail-page .product-back { position: absolute; top: 12px; left: clamp(28px,6vw,74px); display: inline-flex; align-items: center; padding: 8px 14px; border: 1px solid #d8c59e; background: #fffdf8; color: #9e7621; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
 .market-product-detail-page .product-detail-gallery { min-width: 0; }
 .market-product-detail-page .product-main-photo { position: relative; display: flex; min-height: 520px; align-items: center; justify-content: center; overflow: visible; background: #fff; border: 1px solid #e0d5bf; }
 .market-product-detail-page .product-main-photo > img { display: block; width: 100%; height: 520px; padding: 28px; object-fit: contain; }
