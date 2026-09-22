@@ -202,6 +202,17 @@ const [djBagImage, setDjBagImage] = useState(0);
     }
   }, []);
 
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("djray-market-cart");
+      const parsed = saved ? JSON.parse(saved) : [];
+      setCartCount(Array.isArray(parsed) ? parsed.length : 0);
+    } catch (error) {
+      console.error("LOAD CART COUNT ERROR:", error);
+      setCartCount(0);
+    }
+  }, []);
+
   const toggleFavorite = (productId: string) => {
     setFavorites((current) => {
       const updated = current.includes(productId)
