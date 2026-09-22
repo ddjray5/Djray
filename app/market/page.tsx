@@ -363,7 +363,7 @@ const [djBagImage, setDjBagImage] = useState(0);
           <div className="mobile-clean-grid">
             {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
-                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}><FaRegHeart aria-hidden="true" /></button>
+                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>{favorites.includes(product.id) ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}</button>
                 <img src={product.image} alt={product.name} />
                 <div><small>{product.brand}</small><h2>{product.name}</h2><strong>{product.price}</strong><span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span></div>
               </article>
