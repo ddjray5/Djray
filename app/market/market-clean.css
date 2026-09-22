@@ -66,15 +66,15 @@
 .market-favorites-page .market-hero p { margin: 0; color: #5d564d; }
 .market-favorites-page .market-products { max-width: 1500px; margin: 0 auto; padding: 42px 4vw 80px !important; background: #f8f6f0 !important; }
 .market-favorites-page .products-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
-.market-favorites-page .product-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; }
+.market-favorites-page .product-card { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid #e0d5bf; background: #fff; }
 .market-favorites-page .product-image { position: relative; min-height: 220px; background: #fff; cursor: pointer; }
 .market-favorites-page .product-real-image { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; }
 .market-favorites-page .bowers-p3-favorites-image { transform: scale(.68); transform-origin: center center; }
-.market-favorites-page .product-info { padding: 12px 14px 8px; }
+.market-favorites-page .product-info { display: flex; flex: 1; flex-direction: column; padding: 12px 14px 8px; }
 .market-favorites-page .product-brand { color: #817a70; font-size: 10px; letter-spacing: .06em; }
 .market-favorites-page .product-info h3 { margin: 6px 0; color: #1e1b16; font-size: 17px; }
 .market-favorites-page .product-condition { min-height: 28px; margin: 0; color: #6f675b; font-size: 11px; }
-.market-favorites-page .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.market-favorites-page .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 10px; }
 .market-favorites-page .product-bottom strong { font-size: 14px; }
 .market-favorites-page .product-availability { padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .market-favorites-page .product-availability.sold { background: #d7d2ca; color: #4d4942; }
