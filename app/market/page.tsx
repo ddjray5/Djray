@@ -372,6 +372,7 @@ const [djBagImage, setDjBagImage] = useState(0);
                 <div>
                   <small>{product.brand}</small>
                   <h2>{product.name}</h2>
+                  <p className="mobile-clean-condition">{product.condition.replace(/\n/g, " ")}</p>
                   <strong>{product.price}</strong>
                   <span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span>
                   <button
