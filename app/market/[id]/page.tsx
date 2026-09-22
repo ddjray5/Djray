@@ -9,6 +9,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Like New",
     price: "AED 900",
+    status: "SOLD",
     description:
       "Pioneer DJ DDJ-SB3 in like-new condition. A compact and reliable 2-channel DJ controller, ideal for beginners, home setups, practice, and live DJ performance.",
     images: [
@@ -24,6 +25,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Used Only 3 Times — Excellent Condition",
     price: "AED 1,100",
+    status: "AVAILABLE",
     description:
       "Pioneer DJ DDJ-FLX4 in excellent, near-new condition. Used only once and carefully maintained. A compact and professional 2-channel DJ controller, ideal for home practice, events, and live performances.",
     images: [
@@ -39,6 +41,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Used Only 3 Times — Excellent Condition",
     price: "AED 3,800",
+    status: "AVAILABLE",
     description:
       "Excellent condition Pioneer DJ DDJ-SX. Fully functional and ready to use. A powerful professional DJ controller, ideal for DJs looking for reliable performance and a solid setup.",
     images: [
@@ -54,6 +57,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Used Only 3 Times — Excellent Condition",
     price: "AED 3,400",
+    status: "SOLD",
     description:
       "Pioneer DJ DDJ-800 in excellent condition. A professional 2-channel DJ controller designed for powerful performance, flexible control, and reliable use for DJs and live events.",
     images: [
@@ -68,6 +72,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Used Only 3 Times — Excellent Condition",
     price: "AED 1,000",
+    status: "AVAILABLE",
     description:
       "Pioneer DJ DDJ-400 in excellent condition. A compact and professional 2-channel DJ controller, ideal for learning, practice, home setups, and live DJ performance.",
     images: [
@@ -84,6 +89,7 @@ const products = {
     brand: "HERCULES",
     condition: "Like New",
     price: "AED 1,000",
+    status: "AVAILABLE",
     description:
       "Hercules DJControl Inpulse 500 in like-new condition. A professional DJ controller with a solid build and powerful features, ideal for learning, practice, home setups, and live DJ performance.",
     images: [
@@ -99,6 +105,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Excellent Condition",
     price: "AED 2,800",
+    status: "AVAILABLE",
     description:
       "Pioneer DJ DDJ-FLX6-GT in excellent condition. A professional 4-channel DJ controller with a sleek design and powerful features, ideal for DJs, live performances, events, and home setups. Fully functional and ready to use.",
     images: [
@@ -114,6 +121,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Excellent Condition\\nWith Fly Case",
     price: "AED 6,000",
+    status: "SOLD",
     description:
       "Pioneer DJ DDJ-FLX10 in excellent condition, including Fly Case. A professional 4-channel DJ controller designed for powerful performance, events, live setups, and professional DJs.",
     images: [
@@ -129,6 +137,7 @@ const products = {
     brand: "BOWERS & WILKINS",
     condition: "USED Very good Japan",
     price: "AED 800",
+    status: "AVAILABLE",
     description:
       "Bowers & Wilkins P3 first generation with excellent sound quality and a compact foldable design.\nPremium portable on-ear headphones with comfortable memory-foam earpads and removable cables.\nUsed in very good condition in Japan.",
 
@@ -147,6 +156,7 @@ const products = {
     brand: "DJ RAY",
     condition: "Excellent Condition",
     price: "AED 200",
+    status: "AVAILABLE",
     description:
       "Labymos Multifunction Gig- Bag DJ Controller Carrying Case with Shoulder Strap for Pioneer DDJ-400 DJ Controller, DDJ-FLX4, Hercules DJControl Inpulse 500, SB3, and SB2. Protective Bag Polyester",
     images: [
@@ -301,7 +311,12 @@ export default function ProductPage({
             {product.description}
           </p>
 
-          <div className="product-detail-price">{product.price}</div>
+          <div className="product-detail-price-row">
+            <div className="product-detail-price">{product.price}</div>
+            <span className={`product-detail-availability ${product.status === "SOLD" ? "sold" : ""}`}>
+              {product.status}
+            </span>
+          </div>
 
           <a
             href={`https://wa.me/971554057288?text=${encodeURIComponent(
