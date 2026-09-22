@@ -3,7 +3,7 @@
 .market-controls-root { position: static !important; }
 .market-page { padding-top: 0 !important; background: #f8f6f0 !important; }
 .market-page > :not(.market-mobile-clean):not(.market-controls-root):not(.market-cart-overlay):not(.market-flying-cart) { display: none !important; }
-.market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed !important; top: 100px; right: clamp(30px,6vw,96px); left: clamp(30px,6vw,96px); z-index: 1100; display: flex !important; gap: 4px; padding: 4px 6px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
+.market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { position: fixed !important; top: 130px; right: clamp(30px,6vw,96px); left: clamp(30px,6vw,96px); z-index: 1100; display: flex !important; gap: 4px; padding: 4px 6px; background: #fff; border: 1px solid #ded4bf; box-shadow: 0 8px 24px rgba(48,34,9,.14); }
 .market-search-panel input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #dfd2ba; outline: 0; color: #1b1813; font: 600 16px Arial, sans-serif; letter-spacing: .08em; }
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 8px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
@@ -79,7 +79,7 @@
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
   .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 8px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 0; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .mobile-clean-nav button[aria-label="Favorites"] svg { width: 18px; height: 18px; }
-  .market-page .market-search-panel { top: 78px; right: 18px; left: 18px; padding: 4px 5px; }
+  .market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { top: 78px; right: 18px; left: 18px; padding: 4px 5px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
   .market-search-panel input { padding: 9px 10px; font-size: 16px; }
   .market-search-panel .search-close { padding: 0 8px; font-size: 8px; }
