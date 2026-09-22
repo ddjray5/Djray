@@ -145,7 +145,7 @@ const products = [
     condition: "Excellent Condition",
     price: "AED 200",
     status: "AVAILABLE",
-    image: "/market/stand/17760973_800.jpg",
+    image: "/market/stand/18063212_800.jpg",
   },
   {
     id: "hercules-inpulse-500",

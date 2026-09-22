@@ -177,8 +177,8 @@ const products = {
     description:
       "Adjustable Hercules DJ stand for controllers and laptops, suitable for home setups, practice, and live performances.",
     images: [
-      "/market/stand/17760973_800.jpg",
       "/market/stand/18063212_800.jpg",
+      "/market/stand/17760973_800.jpg",
       "/market/stand/18063217_800.jpg",
       "/market/stand/18063232_800.jpg",
       "/market/stand/18063262_800.jpg",
