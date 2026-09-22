@@ -56,6 +56,7 @@
 .market-cart-items { display: grid; gap: 12px; padding: 18px 0; }
 .market-cart-empty { margin: 14px 0; color: #70685d; font-size: 14px; letter-spacing: .08em; text-align: center; }
 .market-cart-item { display: grid; grid-template-columns: 82px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 10px; border: 1px solid #e0d5bf; }
+.market-cart-item > button { align-self: center; justify-self: end; }
 .market-cart-item > img { width: 82px; height: 68px; object-fit: contain; }
 .market-cart-item > div { display: grid; gap: 4px; min-width: 0; }
 .market-cart-item > div strong { overflow: hidden; font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
@@ -87,7 +88,7 @@
   .market-cart-overlay { padding: 70px 10px 16px; }
   .market-cart-panel { max-height: calc(100vh - 86px); padding: 16px; }
   .market-cart-title img { width: 46px; }.market-cart-title h2 { font-size: 15px; }
-  .market-cart-item { grid-template-columns: 58px minmax(0, 1fr); gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > button { grid-column: 2; justify-self: start; }.market-cart-actions { flex-direction: column; }
+  .market-cart-item { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }.market-cart-actions { flex-direction: column; }
 }
 
 /* Favorites is a separate route, so it must not inherit the home-page hiding rules. */
