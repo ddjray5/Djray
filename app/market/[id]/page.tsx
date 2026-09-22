@@ -324,15 +324,15 @@ export default function ProductPage({
             )}`}
             className="product-buy-button"
             style={{
-              background: "#22c55e",
-              borderColor: "#22c55e",
-              color: "#000",
+              background: "#9e7621",
+              borderColor: "#9e7621",
+              color: "#fff",
               transition: "transform 0.2s ease, box-shadow 0.2s ease",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
               e.currentTarget.style.boxShadow =
-                "0 8px 20px rgba(34, 197, 94, 0.35)";
+                "0 8px 20px rgba(158, 118, 33, 0.35)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
