@@ -51,7 +51,7 @@
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */
   .market-search-panel input { padding: 9px 10px; font-size: 16px; }
   .market-search-panel .search-close { padding: 0 8px; font-size: 8px; }
-  .mobile-clean-categories { top: 55px; justify-content: center; gap: 4px; padding: 10px 6px; }.mobile-clean-categories button { font-size: 8px; letter-spacing: .05em; }
+  .mobile-clean-categories { top: 55px; justify-content: center; gap: 10px; padding: 10px 6px; }.mobile-clean-categories button { font-size: 8px; letter-spacing: .05em; }
   .mobile-clean-hero { min-height: 258px; padding: 28px 18px; background: linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.9) 48%,rgba(251,250,246,.18)),url('/market/xdj-az-hero-v2.webp') center right/87% auto no-repeat; }.mobile-clean-hero > div { width: 52%; min-width: 170px; }.mobile-clean-hero small { font-size: 7px; }.mobile-clean-hero h1 { font-size: 27px; }.mobile-clean-hero p { font-size: 9px; }.mobile-clean-hero button { padding: 8px 10px; font-size: 8px; }
   .mobile-clean-benefits { gap: 7px; padding: 10px; font-size: 6px; }.mobile-clean-benefits span { flex: 1; }
   .mobile-clean-products { padding: 19px 12px 40px; }.mobile-clean-heading { margin-bottom: 12px; }.mobile-clean-heading span { font-size: 10px; }.mobile-clean-heading button { font-size: 8px; }.mobile-clean-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
