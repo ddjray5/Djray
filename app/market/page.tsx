@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaShoppingCart, FaHeart, FaRegHeart } from "react-icons/fa";
 import "./market-clean.css";
 
 const flx4Images = [
@@ -311,7 +311,7 @@ const [djBagImage, setDjBagImage] = useState(0);
           <span>DJ RAY MARKET</span>
           <div>
             <button type="button" aria-label="Search" onClick={() => setSearchOpen((open) => !open)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.5" /><path d="m16 16 5 5" /></svg></button>
-            <button type="button" aria-label="Favorites" onClick={() => router.push("/market/favorites")}>♡</button>
+            <button type="button" aria-label="Favorites" onClick={() => router.push("/market/favorites")}><FaRegHeart aria-hidden="true" /></button>
             <button type="button" aria-label="Cart" onClick={openCart}>🛒{cartCount > 0 && <b>{cartCount}</b>}</button>
           </div>
         </header>
@@ -363,7 +363,7 @@ const [djBagImage, setDjBagImage] = useState(0);
           <div className="mobile-clean-grid">
             {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
-                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>♡</button>
+                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}><FaRegHeart aria-hidden="true" /></button>
                 <img src={product.image} alt={product.name} />
                 <div><small>{product.brand}</small><h2>{product.name}</h2><strong>{product.price}</strong><span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span></div>
               </article>
@@ -418,7 +418,7 @@ const [djBagImage, setDjBagImage] = useState(0);
             title="Favorites"
             onClick={() => router.push("/market/favorites")}
           >
-            <FaHeart aria-hidden="true" />
+            <FaRegHeart aria-hidden="true" />
           </button>
 
           <button 
