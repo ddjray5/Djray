@@ -374,7 +374,11 @@ const [djBagImage, setDjBagImage] = useState(0);
           <div className="mobile-clean-grid">
             {(searchQuery.trim() ? filteredProducts : filteredProducts.filter((product) => product.category === activeCategory)).map((product) => (
               <article key={product.id} className="mobile-clean-card" onClick={() => router.push(`/market/${product.id}`)}>
-                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>{favorites.includes(product.id) ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}</button>
+                <button type="button" className={favorites.includes(product.id) ? "liked" : ""} aria-label="Favorite" onClick={(event) => { event.stopPropagation(); toggleFavorite(product.id); }}>
+                  <svg className="card-heart-icon" viewBox="0 0 24 24" fill={favorites.includes(product.id) ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+                  </svg>
+                </button>
                 <img src={product.image} alt={product.name} />
                 <div>
                   <small>{product.brand}</small>
