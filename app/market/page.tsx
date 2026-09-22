@@ -298,7 +298,9 @@ const [djBagImage, setDjBagImage] = useState(0);
     try {
       const saved = localStorage.getItem("djray-market-cart");
       const cart = saved ? JSON.parse(saved) : [];
-      const items = Array.isArray(cart) ? cart : [];
+      const items = (Array.isArray(cart) ? cart : []).sort(
+        (a, b) => Number(a.status === "SOLD") - Number(b.status === "SOLD")
+      );
       setCartItems(items);
       setCartCount(items.length);
     } catch (error) {
