@@ -35,7 +35,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-search-panel .search-close { padding: 0 8px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
 .mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1200 !important; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 7px 20px rgba(48,34,9,.16), 0 1px 0 rgba(198,154,50,.35); }
 .mobile-clean-nav > .market-navbar-logo { flex: 0 0 auto; width: clamp(150px,24vw,230px); height: auto; max-height: 58px; object-fit: contain; filter: none; }
-.mobile-clean-nav > div { display: flex; gap: 9px; }
+.mobile-clean-nav > div { display: flex; gap: 9px; margin-left: auto; }
 .mobile-clean-nav button { position: relative; display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #dfd2ba; background: #fff; color: #aa7f22; font-size: 20px; }
 .mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #dfd2ba; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 18px; }
 .mobile-clean-nav button[aria-label="Favorites"] svg { width: 21px; height: 21px; }
