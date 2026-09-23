@@ -158,17 +158,22 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
 .market-cart-page-heading h2 { margin: 0; color: #1e1b16; font-size: 20px; letter-spacing: .08em; }
 .market-cart-page-heading button, .market-cart-page-empty button { padding: 10px 16px; border: 1px solid #b58a2d; background: transparent; color: #6f5519; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
-.market-cart-page-list { display: grid; gap: 10px; }
-.market-cart-page-item { display: grid; grid-template-columns: 112px minmax(0,1fr) auto; align-items: center; gap: 18px; padding: 12px; border: 1px solid #e0d5bf; background: #fff; }
-.market-cart-page-item > img { width: 112px; height: 92px; object-fit: contain; cursor: pointer; }
-.market-cart-page-item-info { display: grid; min-width: 0; gap: 4px; }
+.market-cart-page-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; }
+.market-cart-page-item { position: relative; display: flex; min-width: 0; flex-direction: column; gap: 0; overflow: hidden; padding: 0; border: 1px solid #e0d5bf; background: #fff; }
+.market-cart-page-item > img { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; cursor: pointer; border-bottom: 1px solid #eee6d7; }
+.market-cart-page-item > img.bowers-wilkins-p3-cart-page-image { transform: scale(.68); }
+.market-cart-page-item > img.xdj-rr-cart-page-image { transform: scale(1.25); }
+.market-cart-page-item > img.ddj-sx2-cart-page-image { transform: scale(1.35); }
+.market-cart-page-item > img.hdj-x5-cart-page-image { transform: scale(1); }
+.market-cart-page-item > img.jbl-live-770-cart-page-image { transform: scale(.84); }
+.market-cart-page-item-info { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; padding: 12px 14px 10px; }
 .market-cart-page-item-info small { color: #817a70; font-size: 10px; letter-spacing: .06em; }
 .market-cart-page-item-info h3 { overflow: hidden; margin: 0; color: #1e1b16; font-size: 17px; text-overflow: ellipsis; white-space: nowrap; }
 .market-cart-page-item-info p { margin: 0; color: #6f675b; font-size: 12px; white-space: pre-line; }
 .market-cart-page-item-info strong { font-size: 15px; }
 .market-cart-page-item-info .product-availability { width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid #22c55e; background: #22c55e; color: #fff; font-size: 8px; font-weight: 800; text-align: center; }
 .market-cart-page-item-info .product-availability.sold { border-color: #c94a4a; background: #c94a4a; }
-.market-cart-page-item > button { padding: 7px 11px; border: 1px solid red; border-radius: 3px; background: transparent; color: red; font-size: 9px; font-weight: 700; cursor: pointer; }
+.market-cart-page-item > button { position: absolute; top: 12px; right: 12px; padding: 7px 11px; border: 1px solid red; border-radius: 3px; background: rgba(255,255,255,.94); color: red; font-size: 9px; font-weight: 700; cursor: pointer; }
 .market-cart-page-empty { padding: 44px 20px; border: 1px solid #e0d5bf; background: #fff; text-align: center; }
 .market-cart-page-empty p { margin: 0 0 22px; color: #6f675b; font-size: 13px; letter-spacing: .08em; }
 .market-cart-page-summary { display: flex; align-items: center; justify-content: space-between; margin: 22px 0 14px; padding: 14px 22px; border: 1px solid #d8a72c; border-radius: 18px; background: #f1f1f1; box-shadow: 0 8px 20px rgba(0,0,0,.12); font-size: 18px; font-weight: 800; letter-spacing: .08em; }
@@ -188,16 +193,16 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 12px; }
   .market-cart-page-heading h2 { font-size: 14px; }
   .market-cart-page-heading button { padding: 8px 11px; font-size: 8px; }
-  .market-cart-page-list { gap: 7px; }
-  .market-cart-page-item { grid-template-columns: 58px minmax(0,1fr) auto; gap: 9px; padding: 7px; }
-  .market-cart-page-item > img { width: 58px; height: 52px; }
-  .market-cart-page-item-info { gap: 2px; }
+  .market-cart-page-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .market-cart-page-item > img { height: 130px; padding: 12px 8px; }
+  .market-cart-page-item > img.bowers-wilkins-p3-cart-page-image { transform: scale(.68); }.market-cart-page-item > img.xdj-rr-cart-page-image { transform: scale(1.15); }.market-cart-page-item > img.ddj-sx2-cart-page-image { transform: scale(1.25); }.market-cart-page-item > img.hdj-x5-cart-page-image { transform: scale(1); }.market-cart-page-item > img.jbl-live-770-cart-page-image { transform: scale(.84); }
+  .market-cart-page-item-info { gap: 2px; padding: 8px 9px 6px; }
   .market-cart-page-item-info small { font-size: 7px; }
   .market-cart-page-item-info h3 { font-size: 12px; }
   .market-cart-page-item-info p { font-size: 9px; }
   .market-cart-page-item-info strong { font-size: 11px; }
   .market-cart-page-item-info .product-availability { width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
-  .market-cart-page-item > button { padding: 5px 7px; font-size: 8px; }
+  .market-cart-page-item > button { top: 6px; right: 6px; padding: 5px 7px; font-size: 8px; }
   .market-cart-page-summary { margin: 14px 0 10px; padding: 10px 12px; border-radius: 16px; font-size: 14px; }
   .market-cart-page-summary strong { font-size: 20px; }
   .market-cart-page-actions { gap: 8px; }

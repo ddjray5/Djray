@@ -84,6 +84,7 @@ export default function CartPage() {
               {items.map((item) => (
                 <article className="market-cart-page-item" key={item.id}>
                   <img
+                    className={`market-cart-page-image ${item.id}-cart-page-image`}
                     src={item.image}
                     alt={item.name}
                     onClick={() => router.push(`/market/${item.id}`)}
