@@ -74,7 +74,6 @@ export default function CartPage() {
 
       <section className="market-cart-page-content">
         <div className="market-cart-page-heading">
-          <h2>CART ITEMS</h2>
           <button type="button" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
         </div>
 

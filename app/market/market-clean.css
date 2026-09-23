@@ -157,8 +157,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia, serif; font-size: 38px; line-height: .95; }
 .market-cart-page-hero p { margin: 0; color: #5d564d; }
 .market-cart-page-content { max-width: 1180px; margin: 0 auto; padding: 34px 4vw 70px; background: #f8f6f0 !important; }
-.market-cart-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-.market-cart-page-heading h2 { margin: 0; color: #1e1b16; font-size: 20px; letter-spacing: .08em; }
+.market-cart-page-heading { display: flex; align-items: center; justify-content: flex-end; gap: 16px; margin-bottom: 16px; }
 .market-cart-page-heading button, .market-cart-page-empty button { padding: 10px 16px; border: 1px solid #b58a2d; background: transparent; color: #6f5519; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .market-cart-page-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; }
 .market-cart-page-item { position: relative; display: flex; min-width: 0; flex-direction: column; gap: 0; overflow: hidden; padding: 0; border: 1px solid #e0d5bf; background: #fff; }
@@ -193,8 +192,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-hero h1 { margin: 7px 0 5px; font-size: 25px; }
   .market-cart-page-hero p { font-size: 10px; }
   .market-cart-page-content { padding: 20px 12px 46px; }
-  .market-cart-page-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 12px; }
-  .market-cart-page-heading h2 { font-size: 14px; }
+  .market-cart-page-heading { align-items: flex-end; flex-direction: column; gap: 10px; margin-bottom: 12px; }
   .market-cart-page-heading button { padding: 8px 11px; font-size: 8px; }
   .market-cart-page-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .market-cart-page-item > img { height: 130px; padding: 12px 8px; }
