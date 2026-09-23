@@ -88,7 +88,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-card span:not(.sold), .market-page .product-availability:not(.sold), .market-favorites-page .product-availability:not(.sold) { border: 1px solid #22c55e; background: #22c55e; color: #fff; }
 .mobile-clean-card span.sold, .market-page .product-availability.sold, .market-favorites-page .product-availability.sold { border: 1px solid #c94a4a; background: #c94a4a; color: #fff; }
 .market-cart-overlay { position: fixed !important; inset: 0; z-index: 1400 !important; display: flex !important; align-items: stretch; justify-content: flex-end; padding: 0; overflow: hidden; background: rgba(20,17,12,.48); }
-.market-cart-panel { display: flex; width: min(680px, 74vw); height: 100%; max-height: 100%; flex-direction: column; overflow: hidden; padding: 0 0 18px; background: #fff; border: 0; border-radius: 0 0 24px 24px; box-shadow: -14px 0 36px rgba(0,0,0,.24); color: #1b1813; }
+.market-cart-panel { display: flex; width: min(640px, 72vw); height: 100%; max-height: 100%; flex-direction: column; overflow: hidden; padding: 0 0 18px; background: #fff; border: 0; border-radius: 0 0 24px 24px; box-shadow: -14px 0 36px rgba(0,0,0,.24); color: #1b1813; }
 .market-cart-header { position: sticky; top: 0; z-index: 2; display: flex; flex: 0 0 auto; align-items: center; justify-content: center; min-height: 76px; margin: 0; padding: 12px 20px; border: 0; border-bottom: 1px solid #d8a72c; border-radius: 0; background: #f1f1f1; box-shadow: 0 8px 18px rgba(60,42,10,.16); }
 .market-cart-title { display: flex; align-items: center; justify-content: center; gap: 26px; }
 .market-cart-title img { width: 52px; height: auto; }
@@ -138,7 +138,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .mobile-clean-card > img.hdj-x5-market-image { transform: scale(1); }
   .mobile-clean-card > img.jbl-live-770-market-image { transform: scale(.84); }
   .market-cart-overlay { align-items: stretch; justify-content: flex-end; padding: 0; }
-  .market-cart-panel { width: 92vw; height: 100%; max-height: 100%; padding: 0 0 12px; border-radius: 0 0 18px 18px; }
+  .market-cart-panel { width: 72vw; height: 100%; max-height: 100%; padding: 0 0 12px; border-radius: 0 0 18px 18px; }
   .market-cart-header { min-height: 90px; margin: 0; padding: 12px 16px; border-radius: 0; }.market-cart-title { gap: 20px; }.market-cart-title img { width: 58px; }.market-cart-title h2 { font-size: 22px; }
   .market-cart-item { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > img.xdj-rr-cart-image { transform: scale(1.2); }.market-cart-item > img.ddj-sx2-cart-image { transform: scale(1.2); }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }
   .market-cart-total { margin: 8px 10px 10px; padding: 10px 12px; border-radius: 16px; font-size: 14px; }.market-cart-total strong { font-size: 20px; }.market-cart-actions { gap: 8px; padding: 0 10px; }.market-cart-actions button { min-height: 42px; padding: 8px 6px; border-radius: 24px; font-size: 12px; }
