@@ -85,7 +85,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-card span { display: inline-block; margin-top: 0; padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
 .mobile-clean-add-to-cart { width: 100%; margin-top: auto; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
-.mobile-clean-buy-now, .market-buy-now, .market-cart-page-item-buy { width: 100%; padding: 10px; border: 0; background: #20d463; color: #050505; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
+.mobile-clean-buy-now, .market-buy-now, .market-cart-page-item-buy { width: 100%; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .mobile-clean-buy-now { margin-top: 6px; }
 .market-buy-now { width: calc(100% - 28px); margin: 6px 14px 14px; }
 .market-cart-page-item-buy { width: calc(100% - 28px); margin: 0 14px 14px; }
@@ -185,7 +185,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-summary strong { font-size: 26px; letter-spacing: 0; }
 .market-cart-page-actions { display: flex; gap: 14px; }
 .market-cart-page-actions button { flex: 1; min-height: 50px; padding: 10px 14px; border: 2px solid #101010; border-radius: 28px; cursor: pointer; font-size: 15px; font-weight: 800; letter-spacing: .04em; box-shadow: 0 4px 8px rgba(0,0,0,.18); }
-.market-cart-page-buy { background: #20d463; color: #050505; }
+.market-cart-page-buy { background: #9e7621; color: #fff; }
 .market-cart-page-continue { background: #dfb72c; color: #191919; }
 @media (max-width: 767px) {
   .cart-page-back-button { top: 14px; left: 14px; padding: 8px 12px; font-size: 9px; }
