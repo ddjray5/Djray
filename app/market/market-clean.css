@@ -34,8 +34,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-search-panel input:focus { border-color: #b58a2d; }
 .market-search-panel .search-close { padding: 0 8px; border: 0; background: #9e7621; color: #fff; font: 800 10px Arial, sans-serif; letter-spacing: .08em; }
 .mobile-clean-nav { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1200 !important; height: 72px; display: flex; align-items: center; gap: 16px; padding: 0 clamp(16px,5vw,84px); background: #fff; border-bottom: 1px solid #ded4bf; box-shadow: 0 7px 20px rgba(48,34,9,.16), 0 1px 0 rgba(198,154,50,.35); }
-.mobile-clean-nav > img { width: 86px; height: auto; filter: brightness(1.22) saturate(1.08); }
-.mobile-clean-nav > span { flex: 1; color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
+.mobile-clean-nav > .market-navbar-logo { flex: 0 0 auto; width: clamp(150px,24vw,230px); height: auto; max-height: 58px; object-fit: contain; filter: none; }
 .mobile-clean-nav > div { display: flex; gap: 9px; }
 .mobile-clean-nav button { position: relative; display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #dfd2ba; background: #fff; color: #aa7f22; font-size: 20px; }
 .mobile-clean-nav button[aria-label="Favorites"] { border: 1px solid #dfd2ba; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 18px; }
@@ -125,7 +124,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-product-detail-page .product-detail-info { padding: 4px 2px; }.market-product-detail-page .product-detail-brand { font-size: 9px; }.market-product-detail-page .product-detail-info h1 { margin: 8px 0; font-size: 22px; }.market-product-detail-page .product-detail-condition { margin-bottom: 12px; font-size: 12px; }.market-product-detail-page .product-detail-description { font-size: 12px; line-height: 1.5; }.market-product-detail-page .product-detail-price-row { margin-top: 18px; }.market-product-detail-page .product-detail-price { font-size: 22px; }.market-product-detail-page .product-detail-availability { width: 64px; min-width: 64px; padding: 5px 6px; font-size: 8px; }.market-product-detail-page .product-buy-button { margin-top: 14px; padding: 8px 14px; font-size: 10px; }
   .market-mobile-clean { padding-top: 94px; }
   .mobile-clean-nav { height: 55px; padding: 0 14px; gap: 9px; }
-  .mobile-clean-nav > img { width: 58px; }.mobile-clean-nav > span { font-size: 9px; }.mobile-clean-nav > div { gap: 8px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 0; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
+  .mobile-clean-nav > .market-navbar-logo { width: 150px; max-height: 47px; }.mobile-clean-nav > div { gap: 8px; }.mobile-clean-nav button { width: 30px; height: 30px; border: 0; font-size: 18px; }.mobile-clean-nav button[aria-label="Favorites"] { border: 0; border-radius: 0; box-shadow: none; color: #aa7f22; font-size: 16px; }.mobile-clean-nav button[aria-label="Search"] svg { width: 18px; height: 18px; }
   .mobile-clean-nav button[aria-label="Favorites"] svg { width: 18px; height: 18px; }
   .market-page .market-search-panel:not(.market-mobile-clean):not(.market-cart-overlay):not(.market-flying-cart) { top: 102px; right: 18px; left: 18px; padding: 4px 5px; }
   /* iOS Safari zooms focused fields whose text is smaller than 16px. */

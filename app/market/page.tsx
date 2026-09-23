@@ -504,8 +504,11 @@ export default function MarketPage() {
     <main className="market-page">
       <div className="market-controls-root" aria-label="DJ RAY Market controls">
         <header className="mobile-clean-nav">
-          <img src="/logo2.png" alt="DJ RAY" />
-          <span>DJ RAY MARKET</span>
+          <img
+            className="market-navbar-logo"
+            src="/dj-ray-market-text-logo.png"
+            alt="DJ RAY MARKET"
+          />
           <div>
             <button type="button" aria-label="Search" onClick={() => setSearchOpen((open) => !open)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.5" /><path d="m16 16 5 5" /></svg></button>
             <button type="button" aria-label="Favorites" onClick={() => router.push("/market/favorites")}>
@@ -611,7 +614,11 @@ export default function MarketPage() {
 
 
       <nav className="market-new-navbar" aria-label="Market Categories">
-        <img src="/logo2.png" alt="DJ RAY" style={{ height: "38px", width: "auto", flexShrink: 0, marginLeft: "8px", transform: "scale(1.25)" }} />
+        <img
+          className="market-navbar-logo"
+          src="/dj-ray-market-text-logo.png"
+          alt="DJ RAY MARKET"
+        />
         <div className="market-new-categories">
           {[
             "DJ EQUIPMENT",
