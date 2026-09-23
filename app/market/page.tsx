@@ -474,6 +474,11 @@ export default function MarketPage() {
     }
   };
 
+  const buyProductNow = (product: (typeof products)[number]) => {
+    const message = `Hello DJ RAY, I would like to buy:\n\n${product.name}\nPrice: ${product.price}`;
+    window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
   const openCart = () => {
     try {
       const saved = localStorage.getItem("djray-market-cart");
@@ -600,6 +605,16 @@ export default function MarketPage() {
                     }}
                   >
                     ADD TO CART
+                  </button>
+                  <button
+                    type="button"
+                    className="mobile-clean-buy-now"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      buyProductNow(product);
+                    }}
+                  >
+                    BUY NOW
                   </button>
                 </div>
               </article>
@@ -948,6 +963,16 @@ export default function MarketPage() {
                 }}
               >
                 ADD TO CART
+              </button>
+              <button
+                type="button"
+                className="market-buy-now"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  buyProductNow(product);
+                }}
+              >
+                BUY NOW
               </button>
             </article>
           ))}

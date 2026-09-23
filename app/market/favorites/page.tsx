@@ -334,6 +334,11 @@ export default function FavoritesPage() {
     }
   };
 
+  const buyProductNow = (product: (typeof products)[number]) => {
+    const message = `Hello DJ RAY, I would like to buy:\n\n${product.name}\nPrice: ${product.price}`;
+    window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
   return (
     <main className="market-favorites-page">
       <button
@@ -580,6 +585,16 @@ export default function FavoritesPage() {
                     }}
                   >
                     ADD TO CART
+                  </button>
+                  <button
+                    type="button"
+                    className="market-buy-now"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      buyProductNow(product);
+                    }}
+                  >
+                    BUY NOW
                   </button>
                 </article>
               ))}

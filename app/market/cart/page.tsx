@@ -52,9 +52,8 @@ export default function CartPage() {
     window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
   };
 
-  const contactToBuy = () => {
-    const lines = items.map((item) => `• ${item.name} — ${item.price}`).join("\n");
-    const message = `Hello DJ RAY, I would like to contact you to buy:\n\n${lines}\n\nTOTAL: AED ${total.toLocaleString()}`;
+  const buyProductNow = (product: CartProduct) => {
+    const message = `Hello DJ RAY, I would like to buy:\n\n${product.name}\nPrice: ${product.price}`;
     window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -107,6 +106,13 @@ export default function CartPage() {
                       <button type="button" onClick={() => removeItem(item.id)}>REMOVE</button>
                     </div>
                   </div>
+                  <button
+                    type="button"
+                    className="market-cart-page-item-buy"
+                    onClick={() => buyProductNow(item)}
+                  >
+                    BUY NOW
+                  </button>
                 </article>
               ))}
             </div>
@@ -117,7 +123,6 @@ export default function CartPage() {
             </div>
             <div className="market-cart-page-actions">
               <button type="button" className="market-cart-page-buy" onClick={buyNow}>BUY NOW</button>
-              <button type="button" className="market-cart-page-contact" onClick={contactToBuy}>CONTACT TO BUY</button>
               <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
             </div>
           </>
