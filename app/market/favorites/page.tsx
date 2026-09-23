@@ -576,26 +576,28 @@ export default function FavoritesPage() {
                     </div>
                   </div>
 
-                  <button
-                    type="button"
-                    className="market-add-to-cart"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      addToCart(product);
-                    }}
-                  >
-                    ADD TO CART
-                  </button>
-                  <button
-                    type="button"
-                    className="market-buy-now"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      buyProductNow(product);
-                    }}
-                  >
-                    BUY NOW
-                  </button>
+                  <div className="market-card-actions">
+                    <button
+                      type="button"
+                      className="market-add-to-cart"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        addToCart(product);
+                      }}
+                    >
+                      ADD TO CART
+                    </button>
+                    <button
+                      type="button"
+                      className="market-buy-now"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        buyProductNow(product);
+                      }}
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
                 </article>
               ))}
             </div>

@@ -596,26 +596,28 @@ export default function MarketPage() {
                     <strong>{product.price}</strong>
                     <span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span>
                   </div>
-                  <button
-                    type="button"
-                    className="mobile-clean-add-to-cart"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      addToCart(product, event.currentTarget);
-                    }}
-                  >
-                    ADD TO CART
-                  </button>
-                  <button
-                    type="button"
-                    className="mobile-clean-buy-now"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      buyProductNow(product);
-                    }}
-                  >
-                    BUY NOW
-                  </button>
+                  <div className="mobile-clean-card-actions">
+                    <button
+                      type="button"
+                      className="mobile-clean-add-to-cart"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        addToCart(product, event.currentTarget);
+                      }}
+                    >
+                      ADD TO CART
+                    </button>
+                    <button
+                      type="button"
+                      className="mobile-clean-buy-now"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        buyProductNow(product);
+                      }}
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
                 </div>
               </article>
             ))}
@@ -954,26 +956,28 @@ export default function MarketPage() {
 
                 </div>
               </div>
-              <button data-search-close="true"
-                type="button"
-                className="market-add-to-cart"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  addToCart(product, event.currentTarget);
-                }}
-              >
-                ADD TO CART
-              </button>
-              <button
-                type="button"
-                className="market-buy-now"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  buyProductNow(product);
-                }}
-              >
-                BUY NOW
-              </button>
+              <div className="market-card-actions">
+                <button data-search-close="true"
+                  type="button"
+                  className="market-add-to-cart"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    addToCart(product, event.currentTarget);
+                  }}
+                >
+                  ADD TO CART
+                </button>
+                <button
+                  type="button"
+                  className="market-buy-now"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    buyProductNow(product);
+                  }}
+                >
+                  BUY NOW
+                </button>
+              </div>
             </article>
           ))}
         </div>
