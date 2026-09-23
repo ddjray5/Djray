@@ -122,7 +122,7 @@ const ddj400Images = [
   "/market/ddj400/s-l1600.webp",
 ];
 
-const products = [
+export const products = [
 
   {
     id: "ddj-400",
@@ -497,7 +497,7 @@ export default function MarketPage() {
       setCartItems([]);
       setCartCount(0);
     }
-    setCartOpen(true);
+    router.push("/market/cart");
   };
 
   return (
@@ -1005,9 +1005,9 @@ export default function MarketPage() {
                         border: "1px solid red",
                         color: "red",
                         background: "transparent",
-                        padding: "5px 9px",
+                        padding: "4px 7px",
                         borderRadius: "3px",
-                        fontSize: "10px",
+                        fontSize: "8px",
                         lineHeight: "1",
                         fontWeight: 600
                       }}

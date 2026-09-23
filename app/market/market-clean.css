@@ -93,18 +93,18 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-title { display: flex; align-items: center; justify-content: center; gap: 26px; }
 .market-cart-title img { width: 52px; height: auto; }
 .market-cart-title h2 { margin: 0; color: #080808; font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 700; letter-spacing: .12em; }
-.market-cart-items { display: grid; flex: 1 1 auto; min-height: 0; gap: 12px; overflow-y: auto; padding: 18px 0; }
+.market-cart-items { display: grid; flex: 1 1 auto; min-height: 0; gap: 6px; overflow-y: auto; padding: 10px 0; }
 .market-cart-empty { margin: 14px 0; color: #70685d; font-size: 14px; letter-spacing: .08em; text-align: center; }
-.market-cart-item { display: grid; grid-template-columns: 82px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 10px; border: 1px solid #e0d5bf; }
+.market-cart-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 6px; border: 1px solid #e0d5bf; }
 .market-cart-item > button { align-self: center; justify-self: end; }
-.market-cart-item > img { width: 82px; height: 68px; object-fit: contain; }
+.market-cart-item > img { width: 64px; height: 54px; object-fit: contain; }
 .market-cart-item > img.xdj-rr-cart-image { transform: scale(1.1); }
 .market-cart-item > img.ddj-sx2-cart-image { transform: scale(1.35); }
 .market-cart-item > img.hdj-x5-cart-image, .market-cart-item > img.jbl-live-770-cart-image { transform: scale(.9); }
-.market-cart-item > div { display: grid; gap: 4px; min-width: 0; }
-.market-cart-item > div strong { overflow: hidden; font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
-.market-cart-item > div > span { color: #6f675b; font-size: 12px; }
-.market-cart-item .product-availability { width: max-content; padding: 4px 7px; border: 1px solid #22c55e; background: #22c55e; color: #fff; font-size: 9px; font-weight: 800; }
+.market-cart-item > div { display: grid; gap: 2px; min-width: 0; }
+.market-cart-item > div strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.market-cart-item > div > span { color: #6f675b; font-size: 10px; }
+.market-cart-item .product-availability { width: max-content; padding: 3px 5px; border: 1px solid #22c55e; background: #22c55e; color: #fff; font-size: 8px; font-weight: 800; }
 .market-cart-item .product-availability.sold { border: 1px solid #c94a4a; background: #c94a4a; }
 .mobile-clean-card .mobile-clean-bottom > span, .market-page .product-availability, .market-favorites-page .product-availability, .market-cart-item .product-availability { width: 88px; min-width: 88px; box-sizing: border-box; text-align: center; }
 .market-cart-total { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; margin: 8px 20px 10px; padding: 10px 18px; border: 1px solid #d8a72c; border-radius: 18px; background: #f1f1f1; box-shadow: 0 8px 20px rgba(0,0,0,.16); font-size: 18px; font-weight: 800; letter-spacing: .08em; }
@@ -140,9 +140,68 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-overlay { align-items: stretch; justify-content: flex-end; padding: 0; }
   .market-cart-panel { width: 72vw; height: 100%; max-height: 100%; padding: 0 0 12px; border-radius: 0 0 18px 18px; }
   .market-cart-header { min-height: 64px; margin: 0; padding: 8px 10px; border-radius: 0; }.market-cart-title { gap: 12px; }.market-cart-title img { width: 44px; }.market-cart-title h2 { font-size: 18px; letter-spacing: .08em; white-space: nowrap; }
-  .market-cart-item { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 9px; }.market-cart-item > img { width: 58px; height: 52px; }.market-cart-item > img.xdj-rr-cart-image { transform: scale(1.2); }.market-cart-item > img.ddj-sx2-cart-image { transform: scale(1.2); }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }
+  .market-cart-items { gap: 5px; padding: 6px 0; }
+  .market-cart-item { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 6px; padding: 5px; }.market-cart-item > img { width: 46px; height: 42px; }.market-cart-item > div strong { font-size: 12px; }.market-cart-item > div > span { font-size: 9px; }.market-cart-item > img.xdj-rr-cart-image { transform: scale(1.2); }.market-cart-item > img.ddj-sx2-cart-image { transform: scale(1.2); }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }
   .market-cart-total { margin: 8px 10px 10px; padding: 10px 12px; border-radius: 16px; font-size: 14px; }.market-cart-total strong { font-size: 20px; }.market-cart-actions { gap: 8px; padding: 0 10px; }.market-cart-actions button { min-height: 42px; padding: 8px 6px; border-radius: 24px; font-size: 12px; }
   .mobile-clean-card .mobile-clean-bottom > span, .market-page .product-availability, .market-favorites-page .product-availability, .market-cart-item .product-availability { width: 64px; min-width: 64px; }
+}
+
+.market-cart-page { position: relative; min-height: 100vh; background: #f8f6f0 !important; color: #1b1813; font-family: Arial, sans-serif; }
+.cart-page-back-button { position: fixed; top: 20px; left: 40px; z-index: 1300; display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; border: 2px solid #d4af37; border-radius: 7px; background: #111; color: #fff; font: 800 12px Arial, sans-serif; letter-spacing: 1.2px; cursor: pointer; box-shadow: 0 5px 12px rgba(0,0,0,.30), 0 2px 4px rgba(0,0,0,.18); }
+.cart-page-back-button:hover { background: #d4af37; color: #000; }
+.market-cart-page-hero { display: flex; min-height: 220px; align-items: center; gap: 28px; padding: 82px clamp(24px,8vw,130px) 34px; background: #fff; border-bottom: 1px solid #d8a72c; }
+.market-cart-page-hero > img { width: 88px; height: auto; object-fit: contain; }
+.market-cart-page-hero span { color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
+.market-cart-page-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia, serif; font-size: 46px; line-height: .95; }
+.market-cart-page-hero p { margin: 0; color: #5d564d; }
+.market-cart-page-content { max-width: 1180px; margin: 0 auto; padding: 34px 4vw 70px; }
+.market-cart-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.market-cart-page-heading h2 { margin: 0; color: #1e1b16; font-size: 20px; letter-spacing: .08em; }
+.market-cart-page-heading button, .market-cart-page-empty button { padding: 10px 16px; border: 1px solid #b58a2d; background: transparent; color: #6f5519; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
+.market-cart-page-list { display: grid; gap: 10px; }
+.market-cart-page-item { display: grid; grid-template-columns: 112px minmax(0,1fr) auto; align-items: center; gap: 18px; padding: 12px; border: 1px solid #e0d5bf; background: #fff; }
+.market-cart-page-item > img { width: 112px; height: 92px; object-fit: contain; cursor: pointer; }
+.market-cart-page-item-info { display: grid; min-width: 0; gap: 4px; }
+.market-cart-page-item-info small { color: #817a70; font-size: 10px; letter-spacing: .06em; }
+.market-cart-page-item-info h3 { overflow: hidden; margin: 0; color: #1e1b16; font-size: 17px; text-overflow: ellipsis; white-space: nowrap; }
+.market-cart-page-item-info p { margin: 0; color: #6f675b; font-size: 12px; white-space: pre-line; }
+.market-cart-page-item-info strong { font-size: 15px; }
+.market-cart-page-item-info .product-availability { width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid #22c55e; background: #22c55e; color: #fff; font-size: 8px; font-weight: 800; text-align: center; }
+.market-cart-page-item-info .product-availability.sold { border-color: #c94a4a; background: #c94a4a; }
+.market-cart-page-item > button { padding: 7px 11px; border: 1px solid red; border-radius: 3px; background: transparent; color: red; font-size: 9px; font-weight: 700; cursor: pointer; }
+.market-cart-page-empty { padding: 44px 20px; border: 1px solid #e0d5bf; background: #fff; text-align: center; }
+.market-cart-page-empty p { margin: 0 0 22px; color: #6f675b; font-size: 13px; letter-spacing: .08em; }
+.market-cart-page-summary { display: flex; align-items: center; justify-content: space-between; margin: 22px 0 14px; padding: 14px 22px; border: 1px solid #d8a72c; border-radius: 18px; background: #f1f1f1; box-shadow: 0 8px 20px rgba(0,0,0,.12); font-size: 18px; font-weight: 800; letter-spacing: .08em; }
+.market-cart-page-summary strong { font-size: 26px; letter-spacing: 0; }
+.market-cart-page-actions { display: flex; gap: 14px; }
+.market-cart-page-actions button { flex: 1; min-height: 50px; padding: 10px 14px; border: 2px solid #101010; border-radius: 28px; cursor: pointer; font-size: 15px; font-weight: 800; letter-spacing: .04em; box-shadow: 0 4px 8px rgba(0,0,0,.18); }
+.market-cart-page-order { background: #20d463; color: #050505; }
+.market-cart-page-continue { background: #dfb72c; color: #191919; }
+@media (max-width: 767px) {
+  .cart-page-back-button { top: 14px; left: 14px; padding: 8px 12px; font-size: 9px; }
+  .market-cart-page-hero { min-height: 164px; gap: 14px; padding: 74px 18px 24px; }
+  .market-cart-page-hero > img { width: 54px; }
+  .market-cart-page-hero span { font-size: 8px; }
+  .market-cart-page-hero h1 { margin: 7px 0 5px; font-size: 30px; }
+  .market-cart-page-hero p { font-size: 10px; }
+  .market-cart-page-content { padding: 20px 12px 46px; }
+  .market-cart-page-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+  .market-cart-page-heading h2 { font-size: 14px; }
+  .market-cart-page-heading button { padding: 8px 11px; font-size: 8px; }
+  .market-cart-page-list { gap: 7px; }
+  .market-cart-page-item { grid-template-columns: 58px minmax(0,1fr) auto; gap: 9px; padding: 7px; }
+  .market-cart-page-item > img { width: 58px; height: 52px; }
+  .market-cart-page-item-info { gap: 2px; }
+  .market-cart-page-item-info small { font-size: 7px; }
+  .market-cart-page-item-info h3 { font-size: 12px; }
+  .market-cart-page-item-info p { font-size: 9px; }
+  .market-cart-page-item-info strong { font-size: 11px; }
+  .market-cart-page-item-info .product-availability { width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
+  .market-cart-page-item > button { padding: 5px 7px; font-size: 8px; }
+  .market-cart-page-summary { margin: 14px 0 10px; padding: 10px 12px; border-radius: 16px; font-size: 14px; }
+  .market-cart-page-summary strong { font-size: 20px; }
+  .market-cart-page-actions { gap: 8px; }
+  .market-cart-page-actions button { min-height: 42px; padding: 8px 6px; border-radius: 24px; font-size: 12px; }
 }
 
 /* Favorites is a separate route, so it must not inherit the home-page hiding rules. */
