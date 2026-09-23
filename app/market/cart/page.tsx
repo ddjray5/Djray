@@ -68,7 +68,7 @@ export default function CartPage() {
         <div>
           <span>DJ RAY MARKET</span>
           <h1>YOUR CART</h1>
-          <p>Review your selected DJ equipment and headphones.</p>
+          <p>Review your selected items.</p>
         </div>
       </section>
 

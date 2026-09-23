@@ -154,7 +154,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-hero { display: flex; min-height: 220px; align-items: center; gap: 28px; padding: 82px clamp(24px,8vw,130px) 34px; background: linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.91) 36%,rgba(255,255,255,.55) 68%,rgba(255,255,255,.15) 100%),url('/market/xdj-az-hero-v2.webp') center right/62% auto no-repeat; border-bottom: 1px solid #d8a72c; }
 .market-cart-page-hero > img { width: 88px; height: auto; object-fit: contain; }
 .market-cart-page-hero span { color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
-.market-cart-page-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia, serif; font-size: 46px; line-height: .95; }
+.market-cart-page-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia, serif; font-size: 38px; line-height: .95; }
 .market-cart-page-hero p { margin: 0; color: #5d564d; }
 .market-cart-page-content { max-width: 1180px; margin: 0 auto; padding: 34px 4vw 70px; background: #f8f6f0 !important; }
 .market-cart-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
@@ -190,7 +190,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-hero { min-height: 164px; gap: 14px; padding: 74px 18px 24px; background: linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.88) 42%,rgba(255,255,255,.35) 100%),url('/market/xdj-az-hero-v2.webp') center right/90% auto no-repeat; }
   .market-cart-page-hero > img { width: 54px; }
   .market-cart-page-hero span { font-size: 8px; }
-  .market-cart-page-hero h1 { margin: 7px 0 5px; font-size: 30px; }
+  .market-cart-page-hero h1 { margin: 7px 0 5px; font-size: 25px; }
   .market-cart-page-hero p { font-size: 10px; }
   .market-cart-page-content { padding: 20px 12px 46px; }
   .market-cart-page-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 12px; }
