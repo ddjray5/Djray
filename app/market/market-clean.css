@@ -162,7 +162,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-heading button, .market-cart-page-empty button { padding: 10px 16px; border: 1px solid #b58a2d; background: transparent; color: #6f5519; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .market-cart-page-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; }
 .market-cart-page-item { position: relative; display: flex; min-width: 0; flex-direction: column; gap: 0; overflow: hidden; padding: 0; border: 1px solid #e0d5bf; background: #fff; }
-.market-cart-page-item > img { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; cursor: pointer; border-bottom: 1px solid #eee6d7; }
+.market-cart-page-item > img { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; cursor: pointer; border-bottom: 0; }
 .market-cart-page-item > img.bowers-wilkins-p3-cart-page-image { transform: scale(.68); }
 .market-cart-page-item > img.xdj-rr-cart-page-image { transform: scale(1.25); }
 .market-cart-page-item > img.ddj-sx2-cart-page-image { transform: scale(1.35); }
