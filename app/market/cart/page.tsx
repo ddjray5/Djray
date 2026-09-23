@@ -46,7 +46,7 @@ export default function CartPage() {
     localStorage.setItem("djray-market-cart", JSON.stringify(updated));
   };
 
-  const orderNow = () => {
+  const buyNow = () => {
     const lines = items.map((item) => `• ${item.name} — ${item.price}`).join("\n");
     const message = `Hello DJ RAY, I would like to order:\n\n${lines}\n\nTOTAL: AED ${total.toLocaleString()}`;
     window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
@@ -116,7 +116,7 @@ export default function CartPage() {
               <strong>AED {total.toLocaleString()}</strong>
             </div>
             <div className="market-cart-page-actions">
-              <button type="button" className="market-cart-page-order" onClick={orderNow}>ORDER NOW</button>
+              <button type="button" className="market-cart-page-buy" onClick={buyNow}>BUY NOW</button>
               <button type="button" className="market-cart-page-contact" onClick={contactToBuy}>CONTACT TO BUY</button>
               <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
             </div>

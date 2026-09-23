@@ -154,7 +154,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-hero span { color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .market-cart-page-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia, serif; font-size: 46px; line-height: .95; }
 .market-cart-page-hero p { margin: 0; color: #5d564d; }
-.market-cart-page-content { max-width: 1180px; margin: 0 auto; padding: 34px 4vw 70px; }
+.market-cart-page-content { max-width: 1180px; margin: 0 auto; padding: 34px 4vw 70px; background: #f8f6f0 !important; }
 .market-cart-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
 .market-cart-page-heading h2 { margin: 0; color: #1e1b16; font-size: 20px; letter-spacing: .08em; }
 .market-cart-page-heading button, .market-cart-page-empty button { padding: 10px 16px; border: 1px solid #b58a2d; background: transparent; color: #6f5519; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
@@ -181,7 +181,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-summary strong { font-size: 26px; letter-spacing: 0; }
 .market-cart-page-actions { display: flex; gap: 14px; }
 .market-cart-page-actions button { flex: 1; min-height: 50px; padding: 10px 14px; border: 2px solid #101010; border-radius: 28px; cursor: pointer; font-size: 15px; font-weight: 800; letter-spacing: .04em; box-shadow: 0 4px 8px rgba(0,0,0,.18); }
-.market-cart-page-order { background: #20d463; color: #050505; }
+.market-cart-page-buy { background: #20d463; color: #050505; }
 .market-cart-page-contact { background: #2d9cdb; color: #fff; }
 .market-cart-page-continue { background: #dfb72c; color: #191919; }
 @media (max-width: 767px) {
