@@ -52,6 +52,12 @@ export default function CartPage() {
     window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
   };
 
+  const contactToBuy = () => {
+    const lines = items.map((item) => `• ${item.name} — ${item.price}`).join("\n");
+    const message = `Hello DJ RAY, I would like to contact you to buy:\n\n${lines}\n\nTOTAL: AED ${total.toLocaleString()}`;
+    window.open(`https://wa.me/971554057288?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
   return (
     <main className="market-cart-page">
       <button type="button" className="cart-page-back-button" onClick={() => router.push("/market")}>
@@ -94,11 +100,13 @@ export default function CartPage() {
                     <h3>{item.name}</h3>
                     <p>{item.condition}</p>
                     <strong>{item.price}</strong>
-                    <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
-                      {item.status}
-                    </span>
+                    <div className="market-cart-page-item-bottom">
+                      <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
+                        {item.status}
+                      </span>
+                      <button type="button" onClick={() => removeItem(item.id)}>REMOVE</button>
+                    </div>
                   </div>
-                  <button type="button" onClick={() => removeItem(item.id)}>REMOVE</button>
                 </article>
               ))}
             </div>
@@ -109,6 +117,7 @@ export default function CartPage() {
             </div>
             <div className="market-cart-page-actions">
               <button type="button" className="market-cart-page-order" onClick={orderNow}>ORDER NOW</button>
+              <button type="button" className="market-cart-page-contact" onClick={contactToBuy}>CONTACT TO BUY</button>
               <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
             </div>
           </>
