@@ -64,9 +64,12 @@ export default function CartPage() {
       </button>
 
       <section className="market-cart-page-hero">
-        <img src="/logo2.png" alt="DJ RAY" />
+        <img
+          className="market-cart-page-logo"
+          src="/dj-ray-market-text-logo.png"
+          alt="DJ RAY MARKET"
+        />
         <div>
-          <span>DJ RAY MARKET</span>
           <h1>YOUR CART</h1>
           <p>Review your selected items.</p>
         </div>
