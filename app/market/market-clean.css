@@ -85,8 +85,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-card span { display: inline-block; margin-top: 0; padding: 4px 7px; background: #e6bf54; color: #392a0a; font-size: 8px; font-weight: 800; }
 .mobile-clean-card span.sold { background: #d7d2ca; color: #4d4942; }
 .mobile-clean-add-to-cart { width: 100%; margin-top: auto; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
-.market-cart-page-item-buy { flex: 1; min-width: 0; padding: 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
-.market-cart-page-item-buy { width: calc(100% - 28px); margin: 0 14px 14px; }
+.market-cart-page-item-buy { display: flex; flex: 0 0 40px; align-items: center; justify-content: center; width: calc(100% - 28px); min-width: 0; height: 40px; margin: 0 14px 14px; padding: 0 10px; border: 0; background: #9e7621; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
 .mobile-clean-card span:not(.sold), .market-page .product-availability:not(.sold), .market-favorites-page .product-availability:not(.sold) { border: 1px solid #22c55e; background: #22c55e; color: #fff; }
 .mobile-clean-card span.sold, .market-page .product-availability.sold, .market-favorites-page .product-availability.sold { border: 1px solid #c94a4a; background: #c94a4a; color: #fff; }
 .market-cart-overlay { position: fixed !important; inset: 0; z-index: 1400 !important; display: flex !important; align-items: stretch; justify-content: flex-end; padding: 0; overflow: hidden; background: rgba(20,17,12,.48); }
@@ -174,8 +173,8 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-item-info strong { font-size: 15px; }
 .market-cart-page-item-info .product-availability { width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid #22c55e; background: #22c55e; color: #fff; font-size: 8px; font-weight: 800; text-align: center; }
 .market-cart-page-item-info .product-availability.sold { border-color: #c94a4a; background: #c94a4a; }
-.market-cart-page-item-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 6px; }
-.market-cart-page-item-bottom button { width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid red; border-radius: 3px; background: #fff; color: red; font-size: 8px; font-weight: 800; text-align: center; cursor: pointer; }
+.market-cart-page-item-bottom { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: auto; padding-top: 6px; }
+.market-cart-page-item-bottom button { position: absolute; top: 12px; right: 12px; width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid red; border-radius: 3px; background: #fff; color: red; font-size: 8px; font-weight: 800; text-align: center; cursor: pointer; }
 .market-cart-page-empty { padding: 44px 20px; border: 1px solid #e0d5bf; background: #fff; text-align: center; }
 .market-cart-page-empty p { margin: 0 0 22px; color: #6f675b; font-size: 13px; letter-spacing: .08em; }
 .market-cart-page-summary { display: flex; align-items: center; justify-content: space-between; margin: 18px 0 12px; padding: 9px 18px; border: 1px solid #d8a72c; border-radius: 12px; background: #fff; box-shadow: 0 5px 14px rgba(48,34,9,.10); font-size: 16px; font-weight: 800; letter-spacing: .08em; }
@@ -204,7 +203,8 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-item-info strong { font-size: 11px; }
   .market-cart-page-item-info .product-availability { width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
   .market-cart-page-item-bottom { gap: 5px; padding-top: 4px; }
-  .market-cart-page-item-bottom button { width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
+  .market-cart-page-item-bottom button { top: 8px; right: 8px; width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
+  .market-cart-page-item-buy { flex-basis: 32px; height: 32px; width: calc(100% - 18px); margin: 0 9px 9px; padding: 0 4px; font-size: 8px; }
   .market-cart-page-summary { margin: 12px 0 9px; padding: 8px 10px; border-radius: 10px; font-size: 12px; }
   .market-cart-page-summary strong { font-size: 17px; }
   .market-cart-page-actions { gap: 6px; }
