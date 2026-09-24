@@ -640,7 +640,7 @@ export default function MarketPage() {
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
                   </svg>
                 </button>
-                <img className={product.id === "hercules-inpulse-500" ? "hercules-market-image" : product.id === "flx10" ? "flx10-market-image" : product.id === "xdj-rr" ? "xdj-rr-market-image" : product.id === "ddj-sx2" ? "ddj-sx2-market-image" : product.id === "hdj-x5" ? "hdj-x5-market-image" : product.id === "jbl-live-770" ? "jbl-live-770-market-image" : ""} src={product.image} alt={product.name} />
+                <img className={product.id === "dj-bag" ? "dj-bag-market-image" : product.id === "hercules-inpulse-500" ? "hercules-market-image" : product.id === "flx10" ? "flx10-market-image" : product.id === "xdj-rr" ? "xdj-rr-market-image" : product.id === "ddj-sx2" ? "ddj-sx2-market-image" : product.id === "hdj-x5" ? "hdj-x5-market-image" : product.id === "jbl-live-770" ? "jbl-live-770-market-image" : ""} src={product.image} alt={product.name} />
                 <div>
                   <small>{product.brand}</small>
                   <h2>{product.name}</h2>
@@ -830,7 +830,7 @@ export default function MarketPage() {
                                 : product.image
                   }
                     alt={product.name}
-                    className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "xdj-rr" ? "xdj-rr-market-image" : ""} ${product.id === "ddj-sx2" ? "ddj-sx2-market-image" : ""} ${product.id === "hdj-x5" ? "hdj-x5-market-image" : ""} ${product.id === "jbl-live-770" ? "jbl-live-770-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                    className={`product-real-image ${product.id === "ddj-800" ? "ddj800-market-image" : ""} ${product.id === "dj-bag" ? "dj-bag-market-image" : ""} ${product.id === "dj-bag" && djBagImages[djBagImage].includes("61oZrjkTLLL.jpg") ? "djbag-full-frame-image" : ""} ${product.id === "flx10" ? "flx10-market-image" : product.id === "ddj-sb3" ? "ddjsb3-market-image" : ""} ${product.id === "hercules-inpulse-500" ? "hercules-market-image" : ""} ${product.id === "xdj-rr" ? "xdj-rr-market-image" : ""} ${product.id === "ddj-sx2" ? "ddj-sx2-market-image" : ""} ${product.id === "hdj-x5" ? "hdj-x5-market-image" : ""} ${product.id === "jbl-live-770" ? "jbl-live-770-market-image" : ""}`} style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
                   {(product.id === "ddj-sx" || product.id === "ddj-400" || product.id === "hercules-inpulse-500" || product.id === "dj-bag" || product.id === "dj-stand" || product.id === "macbook-pro-2012" || product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5" || product.id === "jbl-live-770") && (
                     <>

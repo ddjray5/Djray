@@ -495,7 +495,9 @@ export default function FavoritesPage() {
                                 : undefined
                           }
                           className={`product-real-image ${
-                            product.id === "ddj-800"
+                            product.id === "dj-bag"
+                              ? "dj-bag-market-image"
+                              : product.id === "ddj-800"
                               ? "ddj800-market-image"
                               : ""
                           } ${
