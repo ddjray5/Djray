@@ -676,7 +676,9 @@ export default function MarketPage() {
                   <p className="mobile-clean-condition">{product.condition.replace(/\n/g, " ")}</p>
                   <div className="mobile-clean-bottom">
                     <strong>{product.price}</strong>
-                    <span className={product.status === "SOLD" ? "sold" : ""}>{product.status}</span>
+                    <span className={product.status === "SOLD" ? "sold" : ""}>
+                      {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
+                    </span>
                   </div>
                   <button
                     type="button"
@@ -1020,7 +1022,9 @@ export default function MarketPage() {
 
                 <div className="product-bottom">
                   <strong>{product.price}</strong>
-                  <span className={`product-availability ${product.status === "SOLD" ? "sold" : ""}`}>{product.status}</span>
+                  <span className={`product-availability ${product.status === "SOLD" ? "sold" : ""}`}>
+                    {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
+                  </span>
 
 
 
@@ -1070,7 +1074,7 @@ export default function MarketPage() {
                       <strong>{item.name}</strong>
                       <span>{item.price}</span>
                       <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
-                        {item.status}
+                        {item.status === "AVAILABLE" ? "IN STOCK" : item.status}
                       </span>
                     </div>
                     <button className="search-close"

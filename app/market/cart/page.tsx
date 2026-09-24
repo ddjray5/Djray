@@ -103,7 +103,7 @@ export default function CartPage() {
                     <strong>{item.price}</strong>
                     <div className="market-cart-page-item-bottom">
                       <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
-                        {item.status}
+                        {item.status === "AVAILABLE" ? "IN STOCK" : item.status}
                       </span>
                       <button type="button" onClick={() => removeItem(item.id)}>REMOVE</button>
                     </div>

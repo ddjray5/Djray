@@ -519,7 +519,7 @@ export default function ProductPage({
           <div className="product-detail-price-row">
             <div className="product-detail-price">{product.price}</div>
             <span className={`product-detail-availability ${product.status === "SOLD" ? "sold" : ""}`}>
-              {product.status}
+              {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
             </span>
           </div>
 
