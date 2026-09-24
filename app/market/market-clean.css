@@ -290,6 +290,12 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     z-index: 1;
   }
 
+  .market-cart-page-hero {
+    background-image: linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.78) 34%,rgba(255,255,255,.30) 60%,rgba(255,255,255,.04) 100%),url('/market/xdj-az-hero-v2.webp');
+    background-position: right center;
+    background-size: min(45vw,860px) auto;
+  }
+
   .mobile-clean-nav {
     padding-right: clamp(16px,2vw,32px);
   }
