@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const products = {
   "ddj-sb3": {
@@ -380,6 +380,7 @@ export default function ProductPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = use(params);
+  const router = useRouter();
   const [currentImage, setCurrentImage] = useState(id === "ddj-flx4" ? 1 : 0);
 
   const product = products[id as keyof typeof products];
@@ -391,9 +392,9 @@ export default function ProductPage({
           <div>
             <h2>PRODUCT NOT FOUND</h2>
           </div>
-          <Link href="/market" className="market-contact-button">
+          <button type="button" onClick={() => router.back()} className="market-contact-button">
             BACK
-          </Link>
+          </button>
         </section>
       </main>
     );
@@ -403,9 +404,9 @@ export default function ProductPage({
   return (
     <main className="market-page market-product-detail-page">
       <section className="product-detail">
-        <Link href="/market" className="product-back">
+        <button type="button" onClick={() => router.back()} className="product-back">
           BACK
-        </Link>
+        </button>
 
         <div className="product-detail-gallery">
           <div className="product-main-photo">

@@ -384,7 +384,7 @@ export default function FavoritesPage() {
       <button
         type="button"
         className="favorites-back-button"
-        onClick={() => router.push("/market")}
+        onClick={() => router.back()}
       >
         BACK
       </button>
@@ -418,7 +418,7 @@ export default function FavoritesPage() {
 
             <button
               type="button"
-              onClick={() => router.push("/market")}
+              onClick={() => router.back()}
               style={{
                 display: "inline-block",
                 marginTop: "28px",

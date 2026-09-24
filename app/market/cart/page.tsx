@@ -59,7 +59,7 @@ export default function CartPage() {
 
   return (
     <main className="market-cart-page">
-      <button type="button" className="cart-page-back-button" onClick={() => router.push("/market")}>
+      <button type="button" className="cart-page-back-button" onClick={() => router.back()}>
         BACK
       </button>
 
