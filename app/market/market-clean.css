@@ -642,3 +642,48 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     left: 12px;
   }
 }
+
+/* Normalize the visible product bounds, not just the image element box. */
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="ddj-sx2-"] {
+  transform: scale(1.05) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="xdj-rr-"] {
+  transform: scale(1.04) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="hdj-x5-"] {
+  transform: scale(.66) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="jbl-live-770-"] {
+  transform: scale(.63) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="bowers-wilkins-p3-"] {
+  transform: scale(.67) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="dj-bag-"] {
+  transform: scale(.63) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="magma-ctrl-case-mc-707-"] {
+  transform: scale(.95) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="hercules-inpulse-500-"] {
+  transform: scale(.94) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="pioneer-dm-40d-"] {
+  transform: scale(1) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="pioneer-dm-50d-white-"] {
+  transform: scale(1) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="dj-stand-"] {
+  transform: scale(.82) !important;
+}

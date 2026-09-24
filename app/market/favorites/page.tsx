@@ -494,7 +494,7 @@ export default function FavoritesPage() {
                                 ? { transform: "scale(0.72)", transformOrigin: "center center" }
                                 : undefined
                           }
-                          className={`product-real-image ${
+                          className={`${product.id}-market-image product-real-image ${
                             product.id === "magma-ctrl-case-mc-707"
                               ? "magma-case-market-image"
                               : product.id === "dj-bag"
