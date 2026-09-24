@@ -274,3 +274,15 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-favorites-page .market-product-favorite { top: 6px; right: 6px; width: 24px; height: 24px; font-size: 13px; }
   .market-favorites-page .market-add-to-cart { width: calc(100% - 18px); margin: 0 9px 9px; padding: 8px 4px; font-size: 8px; }
 }
+
+@media (min-width: 1200px) {
+  .mobile-clean-grid,
+  .market-cart-page-list,
+  .market-favorites-page .products-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .market-favorites-page .market-hero {
+    background-size: 45% auto;
+  }
+}
