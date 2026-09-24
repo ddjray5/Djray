@@ -303,7 +303,7 @@ export const products = [
     price: "AED 400",
     status: "SOLD",
     description: "Magma CTRL Case MC-707 protective carrying case for the Roland MC-707 and compatible compact DJ gear.",
-    image: "/market/magma-ctrl-case/mc-707-main.jpg",
+    image: "/market/bags-hero.webp",
   },
 
   {

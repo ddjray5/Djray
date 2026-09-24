@@ -225,7 +225,7 @@ const products = {
     description:
       "Protective Magma CTRL Case MC-707 carrying case for the Roland MC-707 and compatible compact DJ gear.",
     images: [
-      "/market/magma-ctrl-case/mc-707-main.jpg",
+      "/market/bags-hero.webp",
       "/market/magma-ctrl-case/mc-707-side.webp",
       "/market/magma-ctrl-case/mc-707-front.webp",
       "/market/magma-ctrl-case/mc-707-open.webp",

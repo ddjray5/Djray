@@ -220,7 +220,7 @@ const products = [
     condition: "DJ Controller Case · Black",
     price: "AED 400",
     status: "SOLD",
-    image: "/market/magma-ctrl-case/mc-707-main.jpg",
+    image: "/market/bags-hero.webp",
   },
   {
     id: "dj-stand",
