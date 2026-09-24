@@ -560,3 +560,10 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     border-radius: 9px;
   }
 }
+
+/* Keep product detail content open without the large outer white frame. */
+.market-product-detail-page > .product-detail {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
