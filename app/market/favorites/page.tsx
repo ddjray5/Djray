@@ -150,6 +150,15 @@ const products = [
     image: "/market/ddj800/DDJ-800-4.jpg",
   },
   {
+    id: "ddj-1000",
+    brand: "Pioneer DJ",
+    name: "DDJ-1000",
+    condition: "Like New · 4 Channels",
+    price: "AED 3,500",
+    status: "SOLD",
+    image: "/market/ddj1000/ddj-1000-main.jpg",
+  },
+  {
     id: "flx6-gt",
     brand: "Pioneer DJ",
     name: "FLX6 GT",

@@ -67,6 +67,22 @@ const products = {
       "/market/ddj800/IMG_4898.JPG",
     ],
   },
+  "ddj-1000": {
+    name: "DDJ-1000",
+    brand: "PIONEER DJ",
+    condition: "Like New · 4 Channels",
+    price: "AED 3,500",
+    status: "SOLD",
+    description:
+      "Pioneer DJ DDJ-1000 in near-new condition. A professional 4-channel DJ controller with full-size jog wheels, club-style controls, and rekordbox integration.",
+    images: [
+      "/market/ddj1000/ddj-1000-main.jpg",
+      "/market/ddj1000/ddj-1000-laptop.jpg",
+      "/market/ddj1000/ddj-1000-front.jpg",
+      "/market/ddj1000/ddj-1000-angle.jpg",
+      "/market/ddj1000/ddj-1000-detail.webp",
+    ],
+  },
   "ddj-400": {
     name: "DDJ-400",
     brand: "PIONEER DJ",
