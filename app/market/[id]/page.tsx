@@ -226,10 +226,10 @@ const products = {
       "Protective Magma CTRL Case XDJ-AZ/XZ carrying case for Pioneer XDJ-AZ/XZ DJ systems.",
     images: [
       "/market/bags-hero.webp",
-      "/market/magma-ctrl-case/mc-707-side.webp",
       "/market/magma-ctrl-case/mc-707-front.webp",
-      "/market/magma-ctrl-case/mc-707-open.webp",
       "/market/magma-ctrl-case/mc-707-back.webp",
+      "/market/magma-ctrl-case/mc-707-open.webp",
+      "/market/magma-ctrl-case/mc-707-main.jpg",
     ],
   },
   "dj-stand": {
