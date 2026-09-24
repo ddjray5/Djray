@@ -14,7 +14,9 @@ main.market-page.market-product-detail-page > .product-detail { position: relati
 .market-product-detail-page .product-main-photo > img.ddj-sx2-detail-image { transform: scale(1.35); }
 .market-product-detail-page .product-gallery-arrow-left { left: -24px !important; right: auto !important; }
 .market-product-detail-page .product-gallery-arrow-right { right: -24px !important; left: auto !important; }
-.market-product-detail-page .product-thumbnails { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; margin-top: 10px; }
+.market-product-detail-page .product-thumbnails { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; margin-top: 10px; }
+.market-product-detail-page .product-main-photo:has(> img.xdj-rr-detail-image) + .product-thumbnails { margin-top: clamp(36px,9vw,76px); }
+.market-product-detail-page .product-main-photo:has(> img.ddj-sx2-detail-image) + .product-thumbnails { margin-top: clamp(44px,12vw,96px); }
 .market-product-detail-page .product-thumbnail { display: flex; min-width: 0; height: 76px; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; }
 .market-product-detail-page .product-thumbnail.active { border-color: #b58a2d; box-shadow: inset 0 0 0 1px #b58a2d; }
 .market-product-detail-page .product-thumbnail img { width: 100%; height: 100%; padding: 5px; object-fit: contain; }
