@@ -246,6 +246,20 @@ const products = {
       "/market/dm40d/dm-40d-back.webp",
     ],
   },
+  "pioneer-dm-50d-white": {
+    name: "DM-50D 5-Inch Active Monitor Speaker – White",
+    brand: "PIONEER DJ",
+    condition: "White Finish · 5-Inch Active Monitor Speaker",
+    price: "AED 750",
+    status: "SOLD",
+    description:
+      "Pioneer DJ DM-50D 5-inch active monitor speakers in white, designed for DJ setups, home studios, and desktop listening.",
+    images: [
+      "/market/dm50dw/dm-50dw-main.webp",
+      "/market/dm50dw/dm-50dw-angle.webp",
+      "/market/dm50dw/dm-50dw-back.webp",
+    ],
+  },
   "macbook-pro-2012": {
     name: "MacBook Pro 13-inch 2012",
     brand: "APPLE",

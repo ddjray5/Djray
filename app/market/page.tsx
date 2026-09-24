@@ -317,6 +317,17 @@ export const products = [
     description: "Pioneer DJ DM-40D 4-inch desktop monitor speakers in black, suitable for DJ setups, home studios, and desktop listening.",
     image: "/market/dm40d/dm-40d-main.jpg",
   },
+  {
+    id: "pioneer-dm-50d-white",
+    category: "DJ ACCESSORIES",
+    brand: "Pioneer DJ",
+    name: "DM-50D 5-Inch Active Monitor Speaker – White",
+    condition: "White Finish · 5-Inch Active Monitor Speaker",
+    price: "AED 750",
+    status: "SOLD",
+    description: "Pioneer DJ DM-50D 5-inch active monitor speakers in white, designed for DJ setups, home studios, and desktop listening.",
+    image: "/market/dm50dw/dm-50dw-main.webp",
+  },
 
   {
     id: "macbook-pro-2012",
