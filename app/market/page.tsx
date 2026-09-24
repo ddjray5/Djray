@@ -114,6 +114,17 @@ const jblLive770Images = [
   "/market/jbl-live-770/jbl-live-770-box.jpg",
 ];
 
+const MARKET_CATEGORY_STORAGE_KEY = "djray-market-active-category";
+const MARKET_CATEGORIES = [
+  "DJ EQUIPMENT",
+  "HEADPHONES",
+  "MACBOOKS",
+  "DJ BAGS & CASES",
+  "DJ ACCESSORIES",
+  "SPEAKERS & AUDIO",
+  "MICROPHONES",
+];
+
 const ddj400Images = [
   "/market/ddj400/IMG_4706.jpg",
   "/market/ddj400/IMG_4707.jpg",
@@ -412,6 +423,24 @@ export default function MarketPage() {
   const [cartItems, setCartItems] = useState<(typeof products)[number][]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
 
+  const selectCategory = (category: string) => {
+    setActiveCategory(category);
+    setShowAllProducts(false);
+    setSearchQuery("");
+    localStorage.setItem(MARKET_CATEGORY_STORAGE_KEY, category);
+  };
+
+  useEffect(() => {
+    try {
+      const savedCategory = localStorage.getItem(MARKET_CATEGORY_STORAGE_KEY);
+      if (savedCategory && MARKET_CATEGORIES.some((category) => category === savedCategory)) {
+        setActiveCategory(savedCategory);
+      }
+    } catch (error) {
+      console.error("LOAD MARKET CATEGORY ERROR:", error);
+    }
+  }, []);
+
   useEffect(() => {
     try {
       const saved = localStorage.getItem("djray-market-favorites");
@@ -578,7 +607,7 @@ export default function MarketPage() {
 
         <div className="mobile-clean-categories">
           {["DJ EQUIPMENT", "HEADPHONES", "MACBOOKS", "DJ BAGS & CASES", "DJ ACCESSORIES"].map((category) => (
-            <button key={category} type="button" className={activeCategory === category ? "active" : ""} onClick={() => { setActiveCategory(category); setShowAllProducts(false); setSearchQuery(""); }}>{category}</button>
+            <button key={category} type="button" className={activeCategory === category ? "active" : ""} onClick={() => selectCategory(category)}>{category}</button>
           ))}
         </div>
 
@@ -689,9 +718,7 @@ export default function MarketPage() {
               type="button"
               className={`market-new-category ${activeCategory === category ? "active" : ""}`}
               onClick={() => {
-                setActiveCategory(category);
-                setShowAllProducts(false);
-                setSearchQuery("");
+                selectCategory(category);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
