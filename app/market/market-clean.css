@@ -447,19 +447,19 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   left: 50%;
   width: min(calc(100% - 48px), 1240px);
   transform: translateX(-50%);
-  grid-template-columns: minmax(220px,.72fr) minmax(0,1.28fr);
-  gap: 16px;
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr);
+  gap: 12px;
+  padding: 6px 12px calc(6px + env(safe-area-inset-bottom));
   border: 1px solid #e1c06b;
   border-bottom: 0;
-  border-radius: 18px 18px 0 0;
+  border-radius: 14px 14px 0 0;
   background: rgba(250,248,242,.97);
-  box-shadow: 0 -8px 24px rgba(48,34,9,.16);
+  box-shadow: 0 -6px 18px rgba(48,34,9,.14);
 }
 
 .market-cart-page-summary {
-  min-height: 50px;
-  padding: 8px 4px;
+  min-height: 42px;
+  padding: 4px 2px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -475,13 +475,16 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 }
 
 .market-cart-page-actions {
-  gap: 10px;
+  display: block;
+  min-width: 0;
 }
 
 .market-cart-page-actions button {
-  min-height: 50px;
-  border-radius: 11px;
-  box-shadow: 0 3px 8px rgba(48,34,9,.12);
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border-radius: 9px;
+  box-shadow: 0 3px 7px rgba(48,34,9,.12);
 }
 
 .market-cart-page-buy {
@@ -516,7 +519,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   }
 
   .market-cart-page-actions {
-    gap: 6px;
+    display: block;
   }
 
   .market-cart-page-actions button {

@@ -76,10 +76,6 @@ export default function CartPage() {
       </section>
 
       <section className="market-cart-page-content">
-        <div className="market-cart-page-heading">
-          <button type="button" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
-        </div>
-
         {items.length === 0 ? (
           <div className="market-cart-page-empty">
             <p>YOUR CART IS EMPTY</p>
@@ -126,7 +122,6 @@ export default function CartPage() {
               </div>
               <div className="market-cart-page-actions">
                 <button type="button" className="market-cart-page-buy" onClick={buyNow}>BUY NOW</button>
-                <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
               </div>
             </div>
           </>
