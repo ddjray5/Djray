@@ -186,11 +186,14 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-cart-page-item-bottom button { position: absolute; top: 12px; right: 12px; width: 82px; min-width: 82px; box-sizing: border-box; padding: 4px 6px; border: 1px solid red; border-radius: 3px; background: #fff; color: red; font-size: 8px; font-weight: 800; text-align: center; cursor: pointer; }
 .market-cart-page-empty { padding: 44px 20px; border: 1px solid #e0d5bf; background: #fff; text-align: center; }
 .market-cart-page-empty p { margin: 0 0 22px; color: #6f675b; font-size: 13px; letter-spacing: .08em; }
-.market-cart-page-sticky-footer { position: fixed; right: 0; bottom: 0; left: 0; z-index: 1200; padding: 12px clamp(16px,4vw,48px) calc(16px + env(safe-area-inset-bottom)); border-top: 1px solid #d8a72c; background: rgba(248,246,240,.96); box-shadow: 0 -8px 22px rgba(48,34,9,.16); backdrop-filter: blur(8px); }
-.market-cart-page-summary { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto 12px; padding: 9px 18px; border: 1px solid #d8a72c; border-radius: 12px; background: #fff; box-shadow: 0 5px 14px rgba(48,34,9,.10); font-size: 16px; font-weight: 800; letter-spacing: .08em; }
-.market-cart-page-summary strong { font-size: 22px; letter-spacing: 0; }
-.market-cart-page-actions { display: flex; max-width: 1180px; gap: 10px; margin: 0 auto; }
-.market-cart-page-actions button { flex: 1; min-height: 42px; padding: 8px 12px; border: 1px solid #b58a2d; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 800; letter-spacing: .04em; box-shadow: 0 3px 8px rgba(48,34,9,.12); }
+.market-cart-page-sticky-footer { display: grid; position: fixed; right: 0; bottom: 0; left: 0; z-index: 1200; grid-template-columns: minmax(250px,.72fr) minmax(0,1.28fr); align-items: stretch; gap: 14px; padding: 14px clamp(16px,4vw,48px) calc(14px + env(safe-area-inset-bottom)); border-top: 1px solid #d8a72c; background: linear-gradient(180deg,rgba(255,255,255,.97),rgba(248,246,240,.98)); box-shadow: 0 -10px 28px rgba(48,34,9,.16); backdrop-filter: blur(10px); }
+.market-cart-page-summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; margin: 0; padding: 11px 18px; border: 1px solid #e0c276; border-left: 4px solid #b58a2d; border-radius: 14px; background: #fff; box-shadow: 0 5px 14px rgba(48,34,9,.08); color: #716656; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.market-cart-page-summary strong { color: #1e1b16; font-size: 25px; letter-spacing: 0; white-space: nowrap; }
+.market-cart-page-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; gap: 12px; margin: 0; }
+.market-cart-page-actions button { min-height: 52px; padding: 10px 16px; border: 1px solid #b58a2d; border-radius: 12px; cursor: pointer; font-size: 14px; font-weight: 800; letter-spacing: .05em; box-shadow: 0 4px 10px rgba(48,34,9,.12); transition: transform .18s ease, box-shadow .18s ease, filter .18s ease; }
+.market-cart-page-actions button:hover { filter: brightness(1.04); transform: translateY(-1px); box-shadow: 0 7px 14px rgba(48,34,9,.18); }
+.market-cart-page-actions button:active { transform: translateY(0); box-shadow: 0 3px 7px rgba(48,34,9,.12); }
+.market-cart-page-actions button:focus-visible { outline: 3px solid rgba(216,167,44,.45); outline-offset: 3px; }
 .market-cart-page-buy { background: #9e7621; color: #fff; }
 .market-cart-page-continue { background: #dfb72c; color: #191919; }
 @media (max-width: 767px) {
@@ -214,7 +217,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-item-bottom { gap: 5px; padding-top: 4px; }
   .market-cart-page-item-bottom button { top: 8px; right: 8px; width: 62px; min-width: 62px; padding: 3px 4px; font-size: 7px; }
   .market-cart-page-item-buy { flex: 0 0 auto; height: auto; width: calc(100% - 18px); margin: 0 9px 9px; padding: 8px 4px; font-size: 8px; }
-  .market-cart-page-sticky-footer { padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); }
+  .market-cart-page-sticky-footer { display: block; padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); }
   .market-cart-page-summary { margin: 0 auto 9px; padding: 8px 10px; border-radius: 10px; font-size: 12px; }
   .market-cart-page-summary strong { font-size: 17px; }
   .market-cart-page-actions { gap: 6px; }
