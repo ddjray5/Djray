@@ -75,12 +75,12 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-card .card-heart-icon, .market-favorites-page .card-heart-icon { width: 17px; height: 17px; }
 .mobile-clean-card > img { display: block; width: 100%; height: 290px; padding: 30px 24px 12px; object-fit: contain; }
 .mobile-clean-card > img.dj-bag-market-image { transform: scale(.74); transform-origin: center center; }
-.mobile-clean-card > img.magma-case-market-image { transform: scale(1.35); transform-origin: center center; }
+.mobile-clean-card > img.magma-case-market-image { transform: scale(.74); transform-origin: center center; }
 .mobile-clean-card > img.hercules-market-image { transform: translateY(-6px); }
 .mobile-clean-card > img.xdj-rr-market-image { transform: scale(1.25); }
 .market-page .product-real-image.xdj-rr-market-image { transform: scale(1.25); }
 .market-page .product-real-image.dj-bag-market-image, .market-favorites-page .product-real-image.dj-bag-market-image { transform: scale(.74); transform-origin: center center; }
-.market-page .product-real-image.magma-case-market-image, .market-favorites-page .product-real-image.magma-case-market-image { transform: scale(1.35); transform-origin: center center; }
+.market-page .product-real-image.magma-case-market-image, .market-favorites-page .product-real-image.magma-case-market-image { transform: scale(.74); transform-origin: center center; }
 .mobile-clean-card > img.ddj-sx2-market-image { transform: scale(1.35); }
 .market-page .product-real-image.ddj-sx2-market-image { transform: scale(1.35); }
 .mobile-clean-card > img.hdj-x5-market-image, .market-page .product-real-image.hdj-x5-market-image { transform: scale(1); transform-origin: center center; }
