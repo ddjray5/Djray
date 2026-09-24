@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import {
   Geist,
   Geist_Mono,
@@ -112,6 +113,7 @@ export default function RootLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(djRayBusinessSchema) }}
       />
         {children}
+        <Analytics />
       </body>
     </html>
   );
