@@ -374,9 +374,23 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     padding: 30px 24px 12px;
   }
 
+  .mobile-clean-card,
+  .market-cart-page-item,
+  .market-favorites-page .product-card {
+    height: 520px;
+    box-sizing: border-box;
+  }
+
+  .mobile-clean-card > div {
+    height: 230px;
+    min-height: 0;
+    box-sizing: border-box;
+  }
+
   .market-cart-page-item-info,
   .market-favorites-page .product-info {
-    min-height: 185px;
+    min-height: 0;
+    box-sizing: border-box;
     padding: 12px 14px 8px;
   }
 
