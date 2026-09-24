@@ -282,7 +282,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .mobile-clean-hero:not(.headphones-hero):not(.macbooks-hero):not(.bags-hero):not(.accessories-hero) {
     background-image: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.92) 24%,rgba(255,255,255,.42) 44%,rgba(255,255,255,.08) 70%,rgba(255,255,255,0) 100%),url('/market/xdj-az-hero-v2.webp');
     background-position: right center;
-    background-size: auto 100%;
+    background-size: min(70vw,1200px) auto;
   }
 
   .mobile-clean-hero.headphones-hero,
@@ -301,7 +301,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-page-hero {
     background-image: linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.78) 34%,rgba(255,255,255,.30) 60%,rgba(255,255,255,.04) 100%),url('/market/xdj-az-hero-v2.webp');
     background-position: right center;
-    background-size: auto 100%;
+    background-size: min(55vw,900px) auto;
   }
 
   .mobile-clean-nav {
@@ -437,7 +437,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   }
 
   .market-favorites-page .market-hero {
-    background-size: auto 100%;
+    background-size: min(60vw,1000px) auto;
   }
 }
 
