@@ -216,7 +216,7 @@ const products = [
   {
     id: "magma-ctrl-case-mc-707",
     brand: "Magma",
-    name: "CTRL Case MC-707",
+    name: "CTRL Case XDJ-AZ/XZ",
     condition: "DJ Controller Case · Black",
     price: "AED 400",
     status: "SOLD",

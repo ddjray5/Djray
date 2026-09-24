@@ -298,11 +298,11 @@ export const products = [
     id: "magma-ctrl-case-mc-707",
     category: "DJ BAGS & CASES",
     brand: "Magma",
-    name: "CTRL Case MC-707",
+    name: "CTRL Case XDJ-AZ/XZ",
     condition: "DJ Controller Case · Black",
     price: "AED 400",
     status: "SOLD",
-    description: "Magma CTRL Case MC-707 protective carrying case for the Roland MC-707 and compatible compact DJ gear.",
+    description: "Magma CTRL Case XDJ-AZ/XZ protective carrying case for Pioneer XDJ-AZ/XZ DJ systems.",
     image: "/market/bags-hero.webp",
   },
 
