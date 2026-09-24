@@ -153,7 +153,17 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .market-cart-items { gap: 5px; padding: 6px 0; }
   .market-cart-item { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 6px; padding: 5px; }.market-cart-item > img { width: 46px; height: 42px; }.market-cart-item > div strong { font-size: 12px; }.market-cart-item > div > span { font-size: 9px; }.market-cart-item > img.xdj-rr-cart-image { transform: scale(1.2); }.market-cart-item > img.ddj-sx2-cart-image { transform: scale(1.2); }.market-cart-item > button { grid-column: auto; align-self: center; justify-self: end; }
   .market-cart-total { margin: 8px 10px 10px; padding: 10px 12px; border-radius: 16px; font-size: 14px; }.market-cart-total strong { font-size: 20px; }.market-cart-actions { gap: 8px; padding: 0 10px; }.market-cart-actions button { min-height: 42px; padding: 8px 6px; border-radius: 24px; font-size: 12px; }
-  .mobile-clean-card .mobile-clean-bottom > span, .market-page .product-availability, .market-favorites-page .product-availability, .market-cart-item .product-availability { width: 64px; min-width: 64px; }
+  .mobile-clean-card .mobile-clean-bottom > span,
+  .market-page .product-availability,
+  .market-favorites-page .product-availability,
+  .market-cart-item .product-availability,
+  .market-cart-page-item-info .product-availability {
+    width: max-content;
+    min-width: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    white-space: nowrap;
+  }
 }
 
 .market-cart-page { position: relative; min-height: 100vh; background: #f8f6f0 !important; color: #1b1813; font-family: Arial, sans-serif; }
