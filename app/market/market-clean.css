@@ -288,6 +288,45 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     gap: 18px;
   }
 
+  .market-cart-page-sticky-footer {
+    grid-template-columns: minmax(300px,.62fr) minmax(0,1.38fr);
+    gap: 18px;
+    padding: 12px clamp(24px,5vw,120px) calc(12px + env(safe-area-inset-bottom));
+    border-radius: 20px 20px 0 0;
+  }
+
+  .market-cart-page-summary {
+    min-height: 58px;
+    padding: 10px 20px;
+    border: 1px solid #e4d1a0;
+    border-radius: 16px;
+    background: linear-gradient(135deg,#fff,#fffcf3);
+    box-shadow: 0 5px 14px rgba(48,34,9,.08);
+    font-size: 12px;
+    letter-spacing: .16em;
+  }
+
+  .market-cart-page-summary strong {
+    font-size: 24px;
+  }
+
+  .market-cart-page-actions {
+    gap: 12px;
+  }
+
+  .market-cart-page-actions button {
+    min-height: 58px;
+    border-radius: 15px;
+  }
+
+  .market-cart-page-buy {
+    background: linear-gradient(135deg,#b38624,#956c1b);
+  }
+
+  .market-cart-page-continue {
+    background: linear-gradient(135deg,#f0cd43,#dcae22);
+  }
+
   .mobile-clean-grid,
   .market-cart-page-list,
   .market-favorites-page .products-grid {
