@@ -68,7 +68,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-heading span { font-size: 13px; font-weight: 800; letter-spacing: .08em; }
 .mobile-clean-heading button { border: 0; background: transparent; color: #8a6a22; font-size: 10px; font-weight: 800; }
 .mobile-clean-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
-.mobile-clean-card { position: relative; min-width: 0; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.mobile-clean-card { position: relative; min-width: 0; overflow: hidden; border: 1px solid #e0d5bf; background: #fff; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
 .mobile-clean-card:hover { transform: translateY(-4px); box-shadow: 0 9px 22px rgba(60,42,10,.12); }
 .mobile-clean-card > button { position: absolute; z-index: 1; top: 12px; right: 12px; display: grid; width: 34px; height: 34px; padding: 0; place-items: center; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 4px 13px rgba(0,0,0,.18); color: #a37b24; font-size: 16px; }
 .mobile-clean-card > button.liked { color: #b30018; }
@@ -239,7 +239,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .market-favorites-page .market-products { max-width: 1500px; margin: 0 auto; padding: 42px 4vw 80px !important; background: #f8f6f0 !important; }
 .market-favorites-page .products-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
 .market-favorites-page .product-card { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid #e0d5bf; background: #fff; }
-.market-favorites-page .product-image { position: relative; min-height: 220px; background: #fff; cursor: pointer; }
+.market-favorites-page .product-image { position: relative; min-height: 220px; overflow: hidden; background: #fff; cursor: pointer; }
 .market-favorites-page .product-real-image { display: block; width: 100%; height: 220px; padding: 20px; object-fit: contain; }
 .market-favorites-page .bowers-p3-favorites-image { transform: scale(.68); transform-origin: center center; }
 .market-favorites-page .xdj-rr-favorites-image { transform: scale(1.25); transform-origin: center center; }
