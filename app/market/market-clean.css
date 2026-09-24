@@ -279,6 +279,15 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 }
 
 @media (min-width: 1200px) {
+  .mobile-clean-nav {
+    padding-right: clamp(16px,2vw,32px);
+  }
+
+  .mobile-clean-nav > div {
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
   .mobile-clean-grid,
   .market-cart-page-list,
   .market-favorites-page .products-grid {
