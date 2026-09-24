@@ -613,3 +613,15 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   background: transparent;
   box-shadow: none;
 }
+
+/* Keep every product thumbnail visually consistent across cards and cart views. */
+.mobile-clean-card > img,
+.market-page .product-real-image,
+.market-favorites-page .product-real-image,
+.market-cart-page-item > img,
+.market-cart-item > img {
+  transform: scale(.86) !important;
+  transform-origin: center center;
+  object-fit: contain;
+  object-position: center center;
+}
