@@ -163,7 +163,7 @@ export const products = [
     brand: "Pioneer DJ",
     name: "DDJ-SX",
     condition: "Excellent Condition",
-    price: "AED 3,800",
+    price: "AED 4,500",
     status: "AVAILABLE",
     description: "Excellent condition Pioneer DJ DDJ-SX. Fully functional and ready to use. A powerful professional DJ controller, ideal for DJs looking for reliable performance and a solid setup.",
     image: "/market/ddjsx/J00916000001000-00-500x500.webp",

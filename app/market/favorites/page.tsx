@@ -136,7 +136,7 @@ const products = [
     brand: "Pioneer DJ",
     name: "DDJ-SX",
     condition: "Excellent Condition",
-    price: "AED 3,800",
+    price: "AED 4,500",
     status: "AVAILABLE",
     image: "/market/ddjsx/J00916000001000-00-500x500.webp",
   },
