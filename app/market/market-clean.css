@@ -220,9 +220,10 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .favorites-back-button { position: fixed; top: 20px; left: 40px; z-index: 1300; display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; border: 2px solid #d4af37; border-radius: 7px; background: #111; color: #fff; font: 800 12px Arial, sans-serif; letter-spacing: 1.2px; cursor: pointer; box-shadow: 0 5px 12px rgba(0,0,0,.30), 0 2px 4px rgba(0,0,0,.18); }
 .favorites-back-button:hover { background: #d4af37; color: #000; }
 .market-favorites-page .market-hero { min-height: 220px; padding: 120px clamp(22px,8vw,130px) 38px; background: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.82) 34%,rgba(255,255,255,.28) 58%,rgba(255,255,255,.10) 100%),url('/market/xdj-az-hero-v2.webp') center right/62% auto no-repeat; background-color: #fff; background-blend-mode: normal; }
-.market-favorites-page .market-hero-content { max-width: 620px; }
-.market-favorites-page .market-favorites-page-logo { display: block; width: clamp(180px,22vw,280px); height: auto; margin-bottom: 12px; }
+.market-favorites-page .market-hero-content { display: flex; max-width: 620px; flex-direction: column; gap: 12px; }
+.market-favorites-page .market-favorites-page-logo { display: block; width: clamp(180px,22vw,280px); height: auto; margin-bottom: 0; }
 .market-favorites-page .market-favorites-page-logo { transform: translateY(28px); }
+.market-favorites-page .market-favorites-page-copy { display: block; }
 .market-favorites-page .market-eyebrow { color: #967022; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .market-favorites-page .market-hero h1 { margin: 10px 0 8px; color: #1b1813; font-family: Georgia,serif; font-size: 46px; line-height: .95; }
 .market-favorites-page .market-hero p { margin: 0; color: #5d564d; }
@@ -252,7 +253,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   .favorites-back-button { top: 14px; left: 14px; padding: 8px 12px; font-size: 9px; }
   .market-favorites-page .market-hero { min-height: 190px; padding: 92px 18px 28px; background: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.82) 38%,rgba(255,255,255,.26) 62%,rgba(255,255,255,.12) 100%),url('/market/xdj-az-hero-v2.webp') center right/90% auto no-repeat; background-color: #fff; background-blend-mode: normal; }
   .market-favorites-page .market-hero h1 { margin: 7px 0 5px; font-size: 31px !important; }
-  .market-favorites-page .market-favorites-page-logo { width: 150px; margin-bottom: 14px; }
+  .market-favorites-page .market-favorites-page-logo { width: 150px; margin-bottom: 0; }
   .market-favorites-page .market-products { padding: 24px 12px 50px !important; }
   .market-favorites-page .products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .market-favorites-page .product-image, .market-favorites-page .product-real-image { min-height: 130px; height: 130px; }
