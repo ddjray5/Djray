@@ -285,6 +285,70 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .market-cart-page-content,
+  .market-favorites-page .market-products {
+    max-width: 1700px;
+    padding-right: 2vw;
+    padding-left: 2vw;
+  }
+
+  .market-favorites-page .market-products {
+    padding-top: 42px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .market-cart-page-item > img,
+  .market-favorites-page .product-image,
+  .market-favorites-page .product-real-image {
+    height: 290px;
+    min-height: 290px;
+  }
+
+  .market-cart-page-item > img,
+  .market-favorites-page .product-real-image {
+    padding: 30px 24px 12px;
+  }
+
+  .market-cart-page-item-info,
+  .market-favorites-page .product-info {
+    min-height: 185px;
+    padding: 12px 14px 8px;
+  }
+
+  .market-cart-page-item-info small,
+  .market-favorites-page .product-brand {
+    font-size: 10px;
+  }
+
+  .market-cart-page-item-info h3,
+  .market-favorites-page .product-info h3 {
+    font-size: 14px;
+  }
+
+  .market-cart-page-item-info p,
+  .market-favorites-page .product-condition {
+    min-height: 28px;
+    font-size: 11px;
+  }
+
+  .market-cart-page-item-info strong,
+  .market-favorites-page .product-bottom strong {
+    font-size: 14px;
+  }
+
+  .market-cart-page-item-info .product-availability,
+  .market-favorites-page .product-availability {
+    width: 88px;
+    min-width: 88px;
+    padding: 4px 7px;
+  }
+
+  .market-cart-page-item-buy,
+  .market-favorites-page .market-add-to-cart {
+    padding: 10px;
+    font-size: 10px;
+  }
+
   .market-favorites-page .market-hero {
     background-size: 45% auto;
   }
