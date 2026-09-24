@@ -241,6 +241,15 @@ const products = [
     image: "/market/dm50dw/dm-50dw-main.webp",
   },
   {
+    id: "besign-lsx6n-laptop-stand",
+    brand: "BESIGN",
+    name: "LSX6N Laptop Stand",
+    condition: "Ergonomic Adjustable Notebook Riser · Silver",
+    price: "AED 100",
+    status: "SOLD",
+    image: "/market/besign-lsx6n/lsx6n-main.jpg",
+  },
+  {
     id: "macbook-pro-2012",
     brand: "Apple",
     name: "MacBook Pro 13-inch 2012",

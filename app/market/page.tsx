@@ -328,6 +328,17 @@ export const products = [
     description: "Pioneer DJ DM-50D 5-inch active monitor speakers in white, designed for DJ setups, home studios, and desktop listening.",
     image: "/market/dm50dw/dm-50dw-main.webp",
   },
+  {
+    id: "besign-lsx6n-laptop-stand",
+    category: "DJ ACCESSORIES",
+    brand: "BESIGN",
+    name: "LSX6N Laptop Stand",
+    condition: "Ergonomic Adjustable Notebook Riser · Silver",
+    price: "AED 100",
+    status: "SOLD",
+    description: "BESIGN LSX6N ergonomic adjustable laptop stand, compatible with Air, Pro, Dell, HP, Lenovo, and other 25.4–39.62cm laptops.",
+    image: "/market/besign-lsx6n/lsx6n-main.jpg",
+  },
 
   {
     id: "macbook-pro-2012",

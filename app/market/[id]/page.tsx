@@ -260,6 +260,22 @@ const products = {
       "/market/dm50dw/dm-50dw-back.webp",
     ],
   },
+  "besign-lsx6n-laptop-stand": {
+    name: "BESIGN LSX6N Laptop Stand, Ergonomic Adjustable Notebook Riser Holder, Computer Stand Compatible with Air, Pro, Dell, HP, Lenovo More 25.4-39.62cm Laptops",
+    brand: "BESIGN",
+    condition: "Ergonomic Adjustable Notebook Riser · Silver",
+    price: "AED 100",
+    status: "SOLD",
+    description:
+      "Computer stand compatible with Air, Pro, Dell, HP, Lenovo, and more 25.4–39.62cm laptops. Adjustable height and angle for a more comfortable desktop setup.",
+    images: [
+      "/market/besign-lsx6n/lsx6n-main.jpg",
+      "/market/besign-lsx6n/lsx6n-angle.webp",
+      "/market/besign-lsx6n/lsx6n-front.jpeg",
+      "/market/besign-lsx6n/lsx6n-height.webp",
+      "/market/besign-lsx6n/lsx6n-compatibility.webp",
+    ],
+  },
   "macbook-pro-2012": {
     name: "MacBook Pro 13-inch 2012",
     brand: "APPLE",
