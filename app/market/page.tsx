@@ -419,6 +419,7 @@ export default function MarketPage() {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const searchResultsScrolledRef = useRef(false);
   const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState<(typeof products)[number][]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -507,6 +508,23 @@ export default function MarketPage() {
   const displayedProducts = showAllProducts || searchQuery.trim()
     ? filteredProducts
     : filteredProducts.filter((product) => product.category === activeCategory);
+
+  useEffect(() => {
+    if (!searchOpen) {
+      searchResultsScrolledRef.current = false;
+      return;
+    }
+
+    if (!searchQuery.trim() || searchResultsScrolledRef.current) return;
+
+    searchResultsScrolledRef.current = true;
+    window.requestAnimationFrame(() => {
+      document.getElementById("mobile-products")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [searchOpen, searchQuery]);
   const [cartBounce, setCartBounce] = useState(false);
   const [flyingCart, setFlyingCart] = useState<{
     image: string;
