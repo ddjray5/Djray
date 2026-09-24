@@ -237,7 +237,7 @@ const products = {
     brand: "PIONEER DJ",
     condition: "Black · 4-Inch Desktop Monitor Speakers",
     price: "AED 600",
-    status: "AVAILABLE",
+    status: "SOLD",
     description:
       "Pioneer DJ DM-40D 4-inch desktop monitor speakers in black, suitable for DJ setups, home studios, and desktop listening.",
     images: [

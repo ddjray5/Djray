@@ -228,7 +228,7 @@ const products = [
     name: "DM-40D 4-Inch Desktop Monitor Speakers",
     condition: "Black · 4-Inch Desktop Monitor Speakers",
     price: "AED 600",
-    status: "AVAILABLE",
+    status: "SOLD",
     image: "/market/dm40d/dm-40d-main.jpg",
   },
   {
