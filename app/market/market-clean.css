@@ -299,7 +299,7 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   }
 
   .market-cart-page-hero {
-    background-image: linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.78) 34%,rgba(255,255,255,.30) 60%,rgba(255,255,255,.04) 100%),url('/market/xdj-az-hero-v2.webp');
+    background-image: linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.86) 27%,rgba(255,255,255,.34) 50%,rgba(255,255,255,.08) 72%,rgba(255,255,255,0) 100%),url('/market/xdj-az-hero-v2.webp');
     background-position: right center;
     background-size: min(55vw,900px) auto;
   }
@@ -437,7 +437,9 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   }
 
   .market-favorites-page .market-hero {
-    background-size: min(60vw,1000px) auto;
+    background-image: linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.86) 27%,rgba(255,255,255,.34) 50%,rgba(255,255,255,.08) 72%,rgba(255,255,255,0) 100%),url('/market/xdj-az-hero-v2.webp');
+    background-position: right center;
+    background-size: min(55vw,900px) auto;
   }
 }
 
