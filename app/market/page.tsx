@@ -655,7 +655,9 @@ export default function MarketPage() {
               onClick={() => {
                 setSearchQuery("");
                 setShowAllProducts(true);
-                document.getElementById("mobile-products")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.setTimeout(() => {
+                  document.getElementById("mobile-products")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 0);
               }}
             >
               VIEW ALL →
