@@ -534,57 +534,6 @@ export default function FavoritesPage() {
                           }`}
                         />
 
-                        {(product.id === "macbook-pro-m1-2021" || product.id === "xdj-rx" || product.id === "xdj-rr" || product.id === "ddj-sx2" || product.id === "hdj-x5" || product.id === "jbl-live-770") && (
-                          <>
-                            <button
-                              type="button"
-                              className="market-gallery-arrow market-gallery-arrow-left"
-                              aria-label="Previous image"
-                              onClick={(event) => {
-                                event.stopPropagation();
-                                if (product.id === "xdj-rx") {
-                                  setXdjRxImage((current) => (current - 1 + xdjRxImages.length) % xdjRxImages.length);
-                                } else if (product.id === "xdj-rr") {
-                                  setXdjRrImage((current) => (current - 1 + xdjRrImages.length) % xdjRrImages.length);
-                                } else if (product.id === "ddj-sx2") {
-                                  setDdjSx2Image((current) => (current - 1 + ddjSx2Images.length) % ddjSx2Images.length);
-                                } else if (product.id === "hdj-x5") {
-                                  setHdjX5Image((current) => (current - 1 + hdjX5Images.length) % hdjX5Images.length);
-                                } else if (product.id === "jbl-live-770") {
-                                  setJblLive770Image((current) => (current - 1 + jblLive770Images.length) % jblLive770Images.length);
-                                } else {
-                                  setMacbookM1Image((current) => (current - 1 + macbookM1Images.length) % macbookM1Images.length);
-                                }
-                              }}
-                            >
-                              <span>‹</span>
-                            </button>
-                            <button
-                              type="button"
-                              className="market-gallery-arrow market-gallery-arrow-right"
-                              aria-label="Next image"
-                              onClick={(event) => {
-                                event.stopPropagation();
-                                if (product.id === "xdj-rx") {
-                                  setXdjRxImage((current) => (current + 1) % xdjRxImages.length);
-                                } else if (product.id === "xdj-rr") {
-                                  setXdjRrImage((current) => (current + 1) % xdjRrImages.length);
-                                } else if (product.id === "ddj-sx2") {
-                                  setDdjSx2Image((current) => (current + 1) % ddjSx2Images.length);
-                                } else if (product.id === "hdj-x5") {
-                                  setHdjX5Image((current) => (current + 1) % hdjX5Images.length);
-                                } else if (product.id === "jbl-live-770") {
-                                  setJblLive770Image((current) => (current + 1) % jblLive770Images.length);
-                                } else {
-                                  setMacbookM1Image((current) => (current + 1) % macbookM1Images.length);
-                                }
-                              }}
-                            >
-                              <span>›</span>
-                            </button>
-                          </>
-                        )}
-
                       </>
                     ) : (
                       <div className="product-image-placeholder">
