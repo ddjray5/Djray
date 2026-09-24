@@ -306,6 +306,17 @@ export const products = [
     description: "Adjustable Hercules DJ stand for controllers and laptops, suitable for home setups, practice, and live performances.",
     image: "/market/stand/18063212_800.jpg",
   },
+  {
+    id: "pioneer-dm-40d",
+    category: "DJ ACCESSORIES",
+    brand: "Pioneer DJ",
+    name: "DM-40D 4-Inch Desktop Monitor Speakers",
+    condition: "Black · 4-Inch Desktop Monitor Speakers",
+    price: "AED 600",
+    status: "AVAILABLE",
+    description: "Pioneer DJ DM-40D 4-inch desktop monitor speakers in black, suitable for DJ setups, home studios, and desktop listening.",
+    image: "/market/dm40d/dm-40d-main.jpg",
+  },
 
   {
     id: "macbook-pro-2012",

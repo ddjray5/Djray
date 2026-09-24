@@ -223,6 +223,15 @@ const products = [
     image: "/market/stand/18063212_800.jpg",
   },
   {
+    id: "pioneer-dm-40d",
+    brand: "Pioneer DJ",
+    name: "DM-40D 4-Inch Desktop Monitor Speakers",
+    condition: "Black · 4-Inch Desktop Monitor Speakers",
+    price: "AED 600",
+    status: "AVAILABLE",
+    image: "/market/dm40d/dm-40d-main.jpg",
+  },
+  {
     id: "macbook-pro-2012",
     brand: "Apple",
     name: "MacBook Pro 13-inch 2012",
