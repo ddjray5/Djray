@@ -657,19 +657,19 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="jbl-live-770-"] {
-  transform: scale(.63) !important;
+  transform: scale(.52) !important;
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="bowers-wilkins-p3-"] {
-  transform: scale(.67) !important;
+  transform: scale(.53) !important;
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="dj-bag-"] {
-  transform: scale(.63) !important;
+  transform: scale(.52) !important;
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="magma-ctrl-case-mc-707-"] {
-  transform: scale(.95) !important;
+  transform: scale(.76) !important;
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="hercules-inpulse-500-"] {
@@ -685,5 +685,9 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 }
 
 :is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="dj-stand-"] {
-  transform: scale(.82) !important;
+  transform: scale(.62) !important;
+}
+
+:is(.mobile-clean-card, .market-page, .market-favorites-page, .market-cart-page-item, .market-cart-item) img[class*="besign-lsx6n-laptop-stand-"] {
+  transform: scale(.66) !important;
 }
