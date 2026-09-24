@@ -440,3 +440,89 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
     background-size: auto 100%;
   }
 }
+
+/* Compact checkout dock shared by desktop and mobile cart views. */
+.market-cart-page-sticky-footer {
+  right: auto;
+  left: 50%;
+  width: min(calc(100% - 48px), 1240px);
+  transform: translateX(-50%);
+  grid-template-columns: minmax(220px,.72fr) minmax(0,1.28fr);
+  gap: 16px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  border: 1px solid #e1c06b;
+  border-bottom: 0;
+  border-radius: 18px 18px 0 0;
+  background: rgba(250,248,242,.97);
+  box-shadow: 0 -8px 24px rgba(48,34,9,.16);
+}
+
+.market-cart-page-summary {
+  min-height: 50px;
+  padding: 8px 4px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #756a59;
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+
+.market-cart-page-summary strong {
+  color: #1e1b16;
+  font-size: 24px;
+}
+
+.market-cart-page-actions {
+  gap: 10px;
+}
+
+.market-cart-page-actions button {
+  min-height: 50px;
+  border-radius: 11px;
+  box-shadow: 0 3px 8px rgba(48,34,9,.12);
+}
+
+.market-cart-page-buy {
+  border-color: #a47820;
+  background: linear-gradient(135deg,#b48727,#956c1b);
+}
+
+.market-cart-page-continue {
+  border-color: #c69a32;
+  background: #fffdf7;
+  color: #755716;
+}
+
+@media (max-width: 767px) {
+  .market-cart-page-sticky-footer {
+    display: grid;
+    width: calc(100% - 16px);
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    border-radius: 14px 14px 0 0;
+  }
+
+  .market-cart-page-summary {
+    min-height: 36px;
+    padding: 2px 2px 0;
+    font-size: 10px;
+  }
+
+  .market-cart-page-summary strong {
+    font-size: 18px;
+  }
+
+  .market-cart-page-actions {
+    gap: 6px;
+  }
+
+  .market-cart-page-actions button {
+    min-height: 40px;
+    padding: 7px 4px;
+    border-radius: 9px;
+    font-size: 8px;
+  }
+}
