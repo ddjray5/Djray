@@ -625,3 +625,20 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   object-fit: contain;
   object-position: center center;
 }
+
+/* Keep the mobile total row full-width so its label and price never overlap. */
+@media (max-width: 767px) {
+  .market-cart-page-summary {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .market-cart-page-summary span {
+    left: 12px;
+  }
+}
