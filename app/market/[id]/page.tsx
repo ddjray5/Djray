@@ -216,6 +216,22 @@ const products = {
       "/market/djbag/71bAkx8KwsL.jpg",
     ],
   },
+  "magma-ctrl-case-mc-707": {
+    name: "Magma CTRL Case MC-707",
+    brand: "MAGMA",
+    condition: "DJ Controller Case · Black",
+    price: "AED 400",
+    status: "SOLD",
+    description:
+      "Protective Magma CTRL Case MC-707 carrying case for the Roland MC-707 and compatible compact DJ gear.",
+    images: [
+      "/market/magma-ctrl-case/mc-707-main.jpg",
+      "/market/magma-ctrl-case/mc-707-side.jpg",
+      "/market/magma-ctrl-case/mc-707-front.jpg",
+      "/market/magma-ctrl-case/mc-707-open.jpg",
+      "/market/magma-ctrl-case/mc-707-back.jpg",
+    ],
+  },
   "dj-stand": {
     name: "DJ Stand",
     brand: "HERCULES",

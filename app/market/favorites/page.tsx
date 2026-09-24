@@ -214,6 +214,15 @@ const products = [
     image: "/market/djbag/51aRQ7HIjdL.jpg",
   },
   {
+    id: "magma-ctrl-case-mc-707",
+    brand: "Magma",
+    name: "CTRL Case MC-707",
+    condition: "DJ Controller Case · Black",
+    price: "AED 400",
+    status: "SOLD",
+    image: "/market/magma-ctrl-case/mc-707-main.jpg",
+  },
+  {
     id: "dj-stand",
     brand: "Hercules",
     name: "DJ Stand",

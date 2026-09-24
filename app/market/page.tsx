@@ -294,6 +294,17 @@ export const products = [
     description: "DJ Bag suitable for Pioneer DJ DDJ-400, DDJ-FLX4, Hercules DJControl Inpulse 500, SB3, and SB2.",
     image: "/market/djbag/51aRQ7HIjdL.jpg",
   },
+  {
+    id: "magma-ctrl-case-mc-707",
+    category: "DJ BAGS & CASES",
+    brand: "Magma",
+    name: "CTRL Case MC-707",
+    condition: "DJ Controller Case · Black",
+    price: "AED 400",
+    status: "SOLD",
+    description: "Magma CTRL Case MC-707 protective carrying case for the Roland MC-707 and compatible compact DJ gear.",
+    image: "/market/magma-ctrl-case/mc-707-main.jpg",
+  },
 
   {
     id: "dj-stand",
