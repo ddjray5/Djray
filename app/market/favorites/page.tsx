@@ -620,7 +620,7 @@ export default function FavoritesPage() {
                     <div className="product-bottom">
                       <strong>{product.price}</strong>
                       <span className={`product-availability ${product.status === "SOLD" ? "sold" : ""}`}>
-                        {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
+                        {product.status === "AVAILABLE" ? "IN STOCK" : "OUT OF STOCK"}
                       </span>
 
                     </div>

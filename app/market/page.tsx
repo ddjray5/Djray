@@ -677,7 +677,7 @@ export default function MarketPage() {
                   <div className="mobile-clean-bottom">
                     <strong>{product.price}</strong>
                     <span className={product.status === "SOLD" ? "sold" : ""}>
-                      {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
+                      {product.status === "AVAILABLE" ? "IN STOCK" : "OUT OF STOCK"}
                     </span>
                   </div>
                   <button
@@ -1007,7 +1007,7 @@ export default function MarketPage() {
                   className="product-status sold"
                   style={{ display: "block", width: "max-content", margin: "-42px 0 0 12px" }}
                 >
-                  SOLD
+                  OUT OF STOCK
                 </span>
               )}
 
@@ -1023,7 +1023,7 @@ export default function MarketPage() {
                 <div className="product-bottom">
                   <strong>{product.price}</strong>
                   <span className={`product-availability ${product.status === "SOLD" ? "sold" : ""}`}>
-                    {product.status === "AVAILABLE" ? "IN STOCK" : product.status}
+                    {product.status === "AVAILABLE" ? "IN STOCK" : "OUT OF STOCK"}
                   </span>
 
 
@@ -1074,7 +1074,7 @@ export default function MarketPage() {
                       <strong>{item.name}</strong>
                       <span>{item.price}</span>
                       <span className={`product-availability ${item.status === "SOLD" ? "sold" : ""}`}>
-                        {item.status === "AVAILABLE" ? "IN STOCK" : item.status}
+                        {item.status === "AVAILABLE" ? "IN STOCK" : "OUT OF STOCK"}
                       </span>
                     </div>
                     <button className="search-close"
