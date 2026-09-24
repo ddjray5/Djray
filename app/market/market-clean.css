@@ -50,6 +50,8 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
 .mobile-clean-hero.headphones-hero { background-image: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 28%,rgba(255,255,255,.08) 52%,rgba(255,255,255,.02) 100%),url('/market/headphones-hero.jpeg'); background-position: center right; background-size: 46% auto; }
 .mobile-clean-hero.macbooks-hero { background-image: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 28%,rgba(255,255,255,.08) 52%,rgba(255,255,255,.02) 100%),url('/market/macbook-hero.webp'); background-position: center right; background-size: 46% auto; }
 .mobile-clean-hero.bags-hero { background-image: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 28%,rgba(255,255,255,.08) 52%,rgba(255,255,255,.02) 100%),url('/market/bags-hero.avif'); background-position: center right; background-size: 46% auto; }
+.mobile-clean-hero.bags-hero > div { width: max-content; min-width: 0; max-width: calc(100% - 36px); }
+.mobile-clean-hero.bags-hero h1 { white-space: nowrap; }
 .mobile-clean-hero.accessories-hero { background-image: linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 28%,rgba(255,255,255,.08) 52%,rgba(255,255,255,.02) 100%),url('/market/accessories-hero.webp'); background-position: center right; background-size: 46% auto; }
 .mobile-clean-hero.accessories-hero > div { width: max-content; min-width: 0; max-width: calc(100% - 36px); }
 .mobile-clean-hero.accessories-hero h1 { white-space: nowrap; }
