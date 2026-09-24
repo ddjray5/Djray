@@ -119,13 +119,15 @@ export default function CartPage() {
               ))}
             </div>
 
-            <div className="market-cart-page-summary">
-              <span>TOTAL</span>
-              <strong>AED {total.toLocaleString()}</strong>
-            </div>
-            <div className="market-cart-page-actions">
-              <button type="button" className="market-cart-page-buy" onClick={buyNow}>BUY NOW</button>
-              <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
+            <div className="market-cart-page-sticky-footer">
+              <div className="market-cart-page-summary">
+                <span>TOTAL</span>
+                <strong>AED {total.toLocaleString()}</strong>
+              </div>
+              <div className="market-cart-page-actions">
+                <button type="button" className="market-cart-page-buy" onClick={buyNow}>BUY NOW</button>
+                <button type="button" className="market-cart-page-continue" onClick={() => router.push("/market")}>CONTINUE SHOPPING</button>
+              </div>
             </div>
           </>
         )}
