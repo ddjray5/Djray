@@ -346,7 +346,11 @@ export default function FavoritesPage() {
 
       <section className="market-hero">
         <div className="market-hero-content">
-          <span className="market-eyebrow">DJ RAY MARKET</span>
+          <img
+            className="market-favorites-page-logo"
+            src="/dj-ray-market-text-logo.png"
+            alt="DJ RAY MARKET"
+          />
           <h1 style={{ fontSize: "46px" }}>MY FAVORITES</h1>
           <p>Your favorite DJ equipment and products.</p>
         </div>
