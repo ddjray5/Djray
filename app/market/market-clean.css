@@ -567,3 +567,9 @@ main.market-page.market-product-detail-page > .market-contact { display: flex !i
   background: transparent;
   box-shadow: none;
 }
+
+.market-product-detail-page .product-main-photo {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
