@@ -12,6 +12,14 @@ const clarityStyles = `
     100% { opacity: 0; visibility: hidden; pointer-events: none; }
   }
   @media (max-width: 639px) {
+    html,
+    body,
+    main {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+      overscroll-behavior-x: none !important;
+    }
     [class~="z-[9999]"] { padding: 1.25rem; text-align: center; }
     [class~="z-[9999]"] img { max-width: 78vw !important; }
     [class~="z-[9999]"] p {
