@@ -5,6 +5,22 @@ const clarityStyles = `
   [class~="bg-black/65"] { background-color: rgb(0 0 0 / 0.48) !important; }
   main img[class*="object-cover"] { filter: brightness(1.08) contrast(1.04); }
   [class~="z-[9999]"] { display: none !important; }
+  @media (max-width: 639px) {
+    main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child {
+      flex-direction: column !important;
+      gap: 0.5rem !important;
+      justify-content: center !important;
+    }
+    main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child > h3 {
+      order: 2 !important;
+      margin-top: 0 !important;
+    }
+    main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child > p {
+      order: 1 !important;
+      margin-top: 0 !important;
+      text-align: center !important;
+    }
+  }
 </style>`;
 
 function rewriteCourseUrls(html: string) {
