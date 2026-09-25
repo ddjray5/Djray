@@ -51,10 +51,15 @@ const clarityStyles = `
 function rewriteCourseUrls(html: string) {
   // Keep the course's existing Next.js markup and assets working while the
   // page is served through the main DJ RAY domain.
-  return html.replace(
-    /(\s(?:src|href|action|poster)=['"])\/(?!\/)/gi,
-    `$1${COURSE_ORIGIN}/`,
-  );
+  return html
+    .replace(
+      /(\s(?:src|href|action|poster)=['"])\/(?!\/)/gi,
+      `$1${COURSE_ORIGIN}/`,
+    )
+    // Next.js also keeps the original asset paths inside its inline RSC
+    // payload. Rewrite those strings too so hydration can attach all of the
+    // course's client-side button handlers on the proxied page.
+    .replace(/(["':])\/(?!\/)/g, `$1${COURSE_ORIGIN}/`);
 }
 
 export async function GET() {
