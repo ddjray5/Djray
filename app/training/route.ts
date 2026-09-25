@@ -1,4 +1,4 @@
-const COURSE_ORIGIN = "https://goldendjcourse.vercel.app";
+const COURSE_ORIGIN = "https://djray-training-7vg8l7y8k-dj-ray.vercel.app";
 
 const clarityStyles = `
 <style id="djray-course-clarity">
