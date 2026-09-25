@@ -23,13 +23,23 @@ const clarityStyles = `
     }
     main > section:nth-of-type(5) > div:nth-child(2) > p {
       white-space: nowrap !important;
-      font-size: clamp(0.72rem, 3.2vw, 0.92rem) !important;
-      letter-spacing: 0.14em !important;
+      font-size: clamp(0.92rem, 4.2vw, 1.1rem) !important;
+      letter-spacing: 0.1em !important;
     }
     main > section:nth-of-type(3) > div:nth-child(2) > p {
       white-space: nowrap !important;
-      font-size: clamp(0.72rem, 3.2vw, 0.92rem) !important;
-      letter-spacing: 0.14em !important;
+      font-size: clamp(0.92rem, 4.2vw, 1.1rem) !important;
+      letter-spacing: 0.1em !important;
+    }
+    main > section:nth-of-type(3) > div:nth-child(2) > h2,
+    main > section:nth-of-type(5) > div:nth-child(2) > h2 {
+      max-width: 20rem !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      font-size: clamp(1.65rem, 7.5vw, 2.1rem) !important;
+      line-height: 1.16 !important;
+      white-space: normal !important;
+      overflow-wrap: normal !important;
     }
     main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child {
       flex-direction: column !important;
