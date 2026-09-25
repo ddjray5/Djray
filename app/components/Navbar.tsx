@@ -162,13 +162,12 @@ export default function Navbar() {
           </a>
 
           {/* DJ COURSE */}
-          <a
+          <Link
             href="/training"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={closeMenu}
           >
             DJ Course
-          </a>
+          </Link>
 
         </nav>
 
@@ -296,13 +295,12 @@ export default function Navbar() {
           </Link>
 
           {/* DJ COURSE */}
-          <a
+          <Link
             href="/training"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={closeMenu}
           >
             DJ Course
-          </a>
+          </Link>
 
         </nav>
 
