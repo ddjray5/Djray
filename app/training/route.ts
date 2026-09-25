@@ -56,19 +56,218 @@ const clarityStyles = `
       text-align: center !important;
     }
   }
+
+  .djray-booking-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgb(0 0 0 / 0.82);
+    backdrop-filter: blur(8px);
+  }
+  .djray-booking-modal {
+    position: relative;
+    width: min(100%, 32rem);
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    padding: 2rem;
+    border: 1px solid rgb(212 175 55 / 0.7);
+    border-radius: 1.5rem;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 20px 80px rgb(0 0 0 / 0.7);
+  }
+  .djray-booking-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    border: 0;
+    background: transparent;
+    color: #d4af37;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .djray-booking-modal h2 {
+    margin: 0;
+    color: #d4af37;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .djray-booking-form {
+    display: grid;
+    gap: 1.15rem;
+    margin-top: 1.75rem;
+  }
+  .djray-booking-field {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .djray-booking-field label {
+    color: #f0c94a;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .djray-booking-field input,
+  .djray-booking-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-radius: 1rem;
+    outline: none;
+    background: #050505;
+    color: #fff;
+    font: inherit;
+  }
+  .djray-booking-field input:focus,
+  .djray-booking-field select:focus {
+    border-color: #d4af37;
+  }
+  .djray-booking-submit {
+    width: 100%;
+    margin-top: 0.35rem;
+    padding: 0.9rem 1.25rem;
+    border: 1px solid #f0c94a;
+    border-radius: 1rem;
+    background: #a97808;
+    color: #050505;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .djray-booking-submit:disabled {
+    cursor: wait;
+    opacity: 0.65;
+  }
+  .djray-booking-error {
+    margin: 0;
+    color: #ff8888;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .djray-booking-success {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 2.25rem 0.5rem 1rem;
+    color: #00e479;
+    text-align: center;
+  }
+  .djray-booking-success p {
+    max-width: 28rem;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 4vw, 1.75rem);
+    line-height: 1.55;
+  }
+  .djray-booking-check {
+    display: grid;
+    width: 5rem;
+    height: 5rem;
+    place-items: center;
+    border: 2px solid #00e479;
+    border-radius: 999px;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  @media (max-width: 639px) {
+    .djray-booking-modal { padding: 1.5rem; }
+    .djray-booking-modal h2 { padding: 0 1.5rem; font-size: 1.9rem; }
+  }
 </style>`;
 
 const interactionScript = `
 <script id="djray-course-interactions">
 (() => {
-  const bookingUrl = "https://wa.me/971554057288?text=Hello%20DJ%20RAY%2C%20I%20would%20like%20to%20book%20the%20DJ%20course.";
+  const bookingEndpoint = "https://script.google.com/macros/s/AKfycbzzuXsYvAJYpXVv9WpDGr5FddFslvyUaZVGS7b6hulQTeo3QdoWap3vaHCve2bBfyua/exec";
+
+  const closeBookingModal = (overlay, previousOverflow) => {
+    overlay.remove();
+    document.documentElement.style.overflow = previousOverflow;
+  };
+
+  const openBookingModal = () => {
+    if (document.querySelector(".djray-booking-overlay")) return;
+
+    const previousOverflow = document.documentElement.style.overflow;
+    const overlay = document.createElement("div");
+    overlay.className = "djray-booking-overlay";
+    overlay.innerHTML = [
+      '<div class="djray-booking-modal" role="dialog" aria-modal="true" aria-labelledby="djray-booking-title">',
+      '<button type="button" class="djray-booking-close" aria-label="Close booking form">×</button>',
+      '<h2 id="djray-booking-title">Book Your DJ Course</h2>',
+      '<form class="djray-booking-form">',
+      '<div class="djray-booking-field"><label for="djray-booking-name">Name</label><input id="djray-booking-name" name="name" type="text" required></div>',
+      '<div class="djray-booking-field"><label for="djray-booking-level">Level</label><select id="djray-booking-level" name="level"><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option></select></div>',
+      '<div class="djray-booking-field"><label for="djray-booking-mobile">Mobile Number</label><input id="djray-booking-mobile" name="mobile" type="tel" placeholder="+971 5X XXX XXXX" required></div>',
+      '<button type="submit" class="djray-booking-submit">SEND</button>',
+      '<p class="djray-booking-error" hidden>Unable to send your request. Please try again.</p>',
+      '</form>',
+      '<div class="djray-booking-success" hidden><p>Thank you! Your booking request has been sent successfully. We’ll contact you shortly to confirm the details of your DJ course.</p><div class="djray-booking-check" aria-hidden="true">✓</div></div>',
+      '</div>'
+    ].join("");
+
+    document.body.appendChild(overlay);
+    document.documentElement.style.overflow = "hidden";
+
+    const modal = overlay.querySelector(".djray-booking-modal");
+    const form = overlay.querySelector(".djray-booking-form");
+    const closeButton = overlay.querySelector(".djray-booking-close");
+    const success = overlay.querySelector(".djray-booking-success");
+    const error = overlay.querySelector(".djray-booking-error");
+    const submit = overlay.querySelector(".djray-booking-submit");
+
+    closeButton.addEventListener("click", () => closeBookingModal(overlay, previousOverflow));
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closeBookingModal(overlay, previousOverflow);
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      submit.disabled = true;
+      submit.textContent = "SENDING...";
+      error.hidden = true;
+
+      const data = new FormData(form);
+      try {
+        await fetch(bookingEndpoint, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            name: data.get("name"),
+            level: data.get("level"),
+            mobile: data.get("mobile")
+          })
+        });
+        form.hidden = true;
+        success.hidden = false;
+      } catch (submissionError) {
+        console.error("BOOKING SUBMISSION ERROR:", submissionError);
+        submit.disabled = false;
+        submit.textContent = "SEND";
+        error.hidden = false;
+      }
+    });
+
+    modal.querySelector("input")?.focus();
+  };
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest?.(".contact-course-button");
     if (!button) return;
     event.preventDefault();
     event.stopImmediatePropagation();
-    window.location.href = bookingUrl;
+    openBookingModal();
   }, true);
 })();
 </script>`;
