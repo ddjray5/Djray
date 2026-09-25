@@ -21,12 +21,12 @@ const clarityStyles = `
       line-height: 1.25 !important;
       text-align: center !important;
     }
-    main > section:nth-of-type(5) > div:first-child > p {
+    main > section:nth-of-type(5) > div:nth-child(2) > p {
       white-space: nowrap !important;
       font-size: clamp(0.72rem, 3.2vw, 0.92rem) !important;
       letter-spacing: 0.14em !important;
     }
-    main > section:nth-of-type(3) > div:first-child > :first-child {
+    main > section:nth-of-type(3) > div:nth-child(2) > p {
       white-space: nowrap !important;
       font-size: clamp(0.72rem, 3.2vw, 0.92rem) !important;
       letter-spacing: 0.14em !important;
