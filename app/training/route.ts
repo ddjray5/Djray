@@ -9,7 +9,10 @@ const clarityStyles = `
 function rewriteCourseUrls(html: string) {
   // Keep the course's existing Next.js markup and assets working while the
   // page is served through the main DJ RAY domain.
-  return html.replace(/(["'(=])\/(?!\/)/g, `$1${COURSE_ORIGIN}/`);
+  return html.replace(
+    /(\s(?:src|href|action|poster)=['"])\/(?!\/)/gi,
+    `$1${COURSE_ORIGIN}/`,
+  );
 }
 
 export async function GET() {
