@@ -61,15 +61,14 @@ const clarityStyles = `
 const interactionScript = `
 <script id="djray-course-interactions">
 (() => {
+  const bookingUrl = "https://wa.me/971554057288?text=Hello%20DJ%20RAY%2C%20I%20would%20like%20to%20book%20the%20DJ%20course.";
+
   document.addEventListener("click", (event) => {
     const button = event.target.closest?.(".contact-course-button");
     if (!button) return;
     event.preventDefault();
     event.stopImmediatePropagation();
-    const contact = document.getElementById("contact");
-    if (!contact) return;
-    history.pushState(null, "", "#contact");
-    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.location.href = bookingUrl;
   }, true);
 })();
 </script>`;
