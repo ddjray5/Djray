@@ -21,6 +21,11 @@ const clarityStyles = `
       line-height: 1.25 !important;
       text-align: center !important;
     }
+    main > section:nth-of-type(5) > div:first-child > p {
+      white-space: nowrap !important;
+      font-size: clamp(0.72rem, 3.2vw, 0.92rem) !important;
+      letter-spacing: 0.14em !important;
+    }
     main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child {
       flex-direction: column !important;
       gap: 0.5rem !important;
