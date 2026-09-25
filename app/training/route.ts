@@ -4,6 +4,7 @@ const clarityStyles = `
 <style id="djray-course-clarity">
   [class~="bg-black/65"] { background-color: rgb(0 0 0 / 0.48) !important; }
   main img[class*="object-cover"] { filter: brightness(1.08) contrast(1.04); }
+  [class~="z-[9999]"] { display: none !important; }
 </style>`;
 
 function rewriteCourseUrls(html: string) {
