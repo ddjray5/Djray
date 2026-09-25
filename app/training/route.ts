@@ -4,8 +4,23 @@ const clarityStyles = `
 <style id="djray-course-clarity">
   [class~="bg-black/65"] { background-color: rgb(0 0 0 / 0.48) !important; }
   main img[class*="object-cover"] { filter: brightness(1.08) contrast(1.04); }
-  [class~="z-[9999]"] { display: none !important; }
+  [class~="z-[9999]"] {
+    animation: djrayWelcomeExit 4.2s ease-in-out forwards;
+  }
+  @keyframes djrayWelcomeExit {
+    0%, 78% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; pointer-events: none; }
+  }
   @media (max-width: 639px) {
+    [class~="z-[9999]"] { padding: 1.25rem; text-align: center; }
+    [class~="z-[9999]"] img { max-width: 78vw !important; }
+    [class~="z-[9999]"] p {
+      max-width: 18rem !important;
+      margin: 1.5rem auto 0 !important;
+      font-size: clamp(1.35rem, 6vw, 2rem) !important;
+      line-height: 1.25 !important;
+      text-align: center !important;
+    }
     main > section:nth-of-type(6) > div:nth-child(2) > div[class*="mt-10"][class*="grid"] > div:last-child {
       flex-direction: column !important;
       gap: 0.5rem !important;
