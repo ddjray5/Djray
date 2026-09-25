@@ -48,6 +48,22 @@ const clarityStyles = `
   }
 </style>`;
 
+const interactionScript = `
+<script id="djray-course-interactions">
+(() => {
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest?.(".contact-course-button");
+    if (!button) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const contact = document.getElementById("contact");
+    if (!contact) return;
+    history.pushState(null, "", "#contact");
+    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, true);
+})();
+</script>`;
+
 function rewriteCourseUrls(html: string) {
   // Keep the course's existing Next.js markup and assets working while the
   // page is served through the main DJ RAY domain.
@@ -73,7 +89,7 @@ export async function GET() {
   }
 
   let html = rewriteCourseUrls(await upstream.text());
-  html = html.replace(/<\/head>/i, `${clarityStyles}</head>`);
+  html = html.replace(/<\/head>/i, `${clarityStyles}${interactionScript}</head>`);
 
   return new Response(html, {
     headers: {
