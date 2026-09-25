@@ -316,7 +316,8 @@ export async function GET() {
   }
 
   let html = rewriteCourseUrls(await upstream.text());
-  html = html.replace(/<\/head>/i, `${clarityStyles}${interactionScript}</head>`);
+    const mobileViewport = '<meta name="viewport" content="width=device-width, initial-scale=1" />';
+  html = html.replace(/<\/head>/i, `${mobileViewport}${clarityStyles}${interactionScript}</head>`);
 
   return new Response(html, {
     headers: {
