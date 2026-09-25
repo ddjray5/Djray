@@ -28,7 +28,7 @@ const clarityStyles = `
     }
     main > section:nth-of-type(3) > div:nth-child(2) > p {
       white-space: nowrap !important;
-      font-size: clamp(1.05rem, 4.8vw, 1.2rem) !important;
+      font-size: clamp(1.22rem, 5.6vw, 1.4rem) !important;
       letter-spacing: 0.1em !important;
     }
     main > section:nth-of-type(3) > div:nth-child(2) > h2,
