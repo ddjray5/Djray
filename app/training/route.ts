@@ -162,6 +162,10 @@ const clarityStyles = `
     color: #00e479;
     text-align: center;
   }
+  @keyframes djrayBookingCheckReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
   .djray-booking-success p {
     max-width: 28rem;
     margin: 0;
@@ -178,6 +182,11 @@ const clarityStyles = `
     border-radius: 999px;
     font-size: 2.5rem;
     font-weight: 700;
+  }
+  .djray-booking-check-mark {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: djrayBookingCheckReveal 0.9s ease-out 0.1s forwards;
   }
   @media (max-width: 639px) {
     .djray-booking-modal { padding: 1.5rem; }
@@ -212,7 +221,7 @@ const interactionScript = `
       '<button type="submit" class="djray-booking-submit">SEND</button>',
       '<p class="djray-booking-error" hidden>Unable to send your request. Please try again.</p>',
       '</form>',
-      '<div class="djray-booking-success" hidden><p>Thank you! Your booking request has been sent successfully. We’ll contact you shortly to confirm the details of your DJ course.</p><div class="djray-booking-check" aria-hidden="true">✓</div></div>',
+      '<div class="djray-booking-success" hidden><p>Thank you! Your booking request has been sent successfully. We’ll contact you shortly to confirm the details of your DJ course.</p><div class="djray-booking-check" aria-hidden="true"><span class="djray-booking-check-mark">✓</span></div></div>',
       '</div>'
     ].join("");
 
@@ -225,6 +234,7 @@ const interactionScript = `
     const success = overlay.querySelector(".djray-booking-success");
     const error = overlay.querySelector(".djray-booking-error");
     const submit = overlay.querySelector(".djray-booking-submit");
+    const title = overlay.querySelector("#djray-booking-title");
 
     closeButton.addEventListener("click", () => closeBookingModal(overlay, previousOverflow));
     overlay.addEventListener("click", (event) => {
@@ -250,6 +260,7 @@ const interactionScript = `
           })
         });
         form.hidden = true;
+        title.hidden = true;
         success.hidden = false;
       } catch (submissionError) {
         console.error("BOOKING SUBMISSION ERROR:", submissionError);
